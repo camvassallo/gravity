@@ -15,8 +15,8 @@ from sklearn.metrics import log_loss, roc_auc_score, brier_score_loss, accuracy_
 import warnings
 
 from gravity import run_gravity_pipeline
-from torvik import fetch_team_stats
-from predict import GamePredictor
+from torvik import fetch_team_stats, fetch_player_stats
+from predict import GamePredictor, build_player_features
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
@@ -54,7 +54,7 @@ def evaluate_predictions(y_true: np.ndarray, y_prob: np.ndarray, y_spread_true: 
         "spread_rmse": np.sqrt(np.mean((y_spread_true - y_spread_pred) ** 2)),
     }
 
-    # Upset detection: predicted underdog wins (prob < 0.5 and actually wins, or prob > 0.5 and actually loses)
+    # Upset detection
     underdogs = y_prob < 0.5
     if underdogs.sum() > 0:
         upset_correct = (y_pred[underdogs] == y_true[underdogs]).mean()
@@ -125,8 +125,10 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
 
     for year in train_years:
         print(f"  Loading {year} data...")
-        tgs, gravities, combined = run_gravity_pipeline(year, cutoff_date=cutoff if year == test_year else None)
+        tgs, _, _ = run_gravity_pipeline(year, cutoff_date=cutoff if year == test_year else None)
         teams_df = fetch_team_stats(year).set_index("team")
+        players_df = fetch_player_stats(year)
+        player_feats = build_player_features(players_df)
 
         # For training years != test year, use all games
         if year != test_year:
@@ -134,7 +136,7 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
         else:
             train_tgs, _ = split_regular_tournament(tgs, cutoff)
 
-        feat_df, y_win, y_spread = predictor.build_training_data(train_tgs, combined, teams_df)
+        feat_df, y_win, y_spread = predictor.build_training_data(train_tgs, teams_df, player_feats)
         all_train_X.append(feat_df)
         all_train_y_win.append(y_win)
         all_train_y_spread.append(y_spread)
@@ -149,8 +151,9 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
 
     # Test on tournament games
     print(f"  Testing on {test_year} tournament...")
-    test_tgs, test_grav, test_combined = run_gravity_pipeline(test_year, cutoff_date=cutoff)
-    test_teams_df = fetch_team_stats(test_year).set_index("team")
+    teams_df = fetch_team_stats(test_year).set_index("team")
+    players_df = fetch_player_stats(test_year)
+    player_feats = build_player_features(players_df)
 
     # Get full season data (including tournament) for test games
     full_tgs, _, _ = run_gravity_pipeline(test_year)
@@ -160,9 +163,9 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
         print(f"  No tournament games found for {test_year}")
         return {}
 
-    # Build test predictions using pre-tournament gravity
+    # Build test predictions using pre-tournament team/player stats
     test_feat_df, test_y_win, test_y_spread = predictor.build_training_data(
-        tourney, test_combined, test_teams_df
+        tourney, teams_df, player_feats
     )
 
     if len(test_feat_df) == 0:
@@ -228,7 +231,7 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("BACKTESTING: Gravity + Torvik Prediction Model")
+    print("BACKTESTING: Torvik + Player Prediction Model")
     print("=" * 60)
 
     results = []
