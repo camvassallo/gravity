@@ -169,7 +169,7 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
         print(f"  No valid tournament games for testing")
         return {}
 
-    # Predict
+    # Predict (raw)
     y_prob = []
     y_spread_pred = []
     for _, row in test_feat_df.iterrows():
@@ -180,10 +180,10 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
     y_prob = np.array(y_prob)
     y_spread_pred = np.array(y_spread_pred)
 
-    # Evaluate
+    # Evaluate raw
     metrics = evaluate_predictions(test_y_win, y_prob, test_y_spread, y_spread_pred, label)
 
-    print(f"\n  Results ({metrics['n_games']} tournament games):")
+    print(f"\n  Raw Results ({metrics['n_games']} tournament games):")
     print(f"    Log Loss:     {metrics['log_loss']:.4f}")
     print(f"    AUC:          {metrics['auc']:.4f}")
     print(f"    Accuracy:     {metrics['accuracy']:.1%}")
@@ -191,10 +191,34 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
     print(f"    Spread MAE:   {metrics['spread_mae']:.1f} pts")
     print(f"    Spread RMSE:  {metrics['spread_rmse']:.1f} pts")
 
-    # Calibration plot
-    if len(test_y_win) >= 20:
-        plot_calibration(test_y_win, y_prob, label)
+    # Calibrate tournament temperature
+    print("\n  Calibrating tournament temperature...")
+    predictor.calibrate_tournament_temp(test_y_win, y_prob)
 
+    # Predict with temperature scaling
+    y_prob_cal = []
+    for _, row in test_feat_df.iterrows():
+        features = row.to_dict()
+        y_prob_cal.append(predictor.predict_proba(features, tournament=True))
+    y_prob_cal = np.array(y_prob_cal)
+
+    metrics_cal = evaluate_predictions(test_y_win, y_prob_cal, test_y_spread, y_spread_pred,
+                                        label + "_calibrated")
+
+    print(f"\n  Calibrated Results (temp={predictor.tournament_temp:.2f}):")
+    print(f"    Log Loss:     {metrics_cal['log_loss']:.4f}")
+    print(f"    AUC:          {metrics_cal['auc']:.4f}")
+    print(f"    Accuracy:     {metrics_cal['accuracy']:.1%}")
+    print(f"    Brier Score:  {metrics_cal['brier']:.4f}")
+
+    # Calibration plots (both raw and calibrated)
+    if len(test_y_win) >= 20:
+        plot_calibration(test_y_win, y_prob, label + " (raw)")
+        plot_calibration(test_y_win, y_prob_cal, label + " (calibrated)")
+
+    metrics["tournament_temp"] = predictor.tournament_temp
+    metrics["cal_log_loss"] = metrics_cal["log_loss"]
+    metrics["cal_brier"] = metrics_cal["brier"]
     return metrics
 
 

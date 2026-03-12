@@ -117,6 +117,38 @@ def train(years: list[int], cutoff_current_year: bool = True):
     for feat, coef in coefs.head(20).items():
         print(f"  {feat:<45} {coef:+.4f}")
 
+    # Calibrate tournament temperature on historical tournament data
+    print("\n--- Tournament Calibration ---")
+    tourney_probs = []
+    tourney_y = []
+    for cal_year in years:
+        cutoff = TOURNAMENT_CUTOFFS.get(cal_year)
+        if cutoff is None:
+            continue
+        # Get full data (including tournament) and split
+        full_tgs, _, _ = run_gravity_pipeline(cal_year)
+        if "numdate" not in full_tgs.columns:
+            continue
+        pre_tgs, post_tgs = full_tgs[full_tgs["numdate"] <= cutoff], full_tgs[full_tgs["numdate"] > cutoff]
+        if len(post_tgs) == 0:
+            continue
+        # Use pre-tournament gravity for predictions
+        cal_tgs, _, cal_combined = run_gravity_pipeline(cal_year, cutoff_date=cutoff)
+        cal_teams = fetch_team_stats(cal_year).set_index("team")
+        cal_feat, cal_y_win, _ = predictor.build_training_data(post_tgs, cal_combined, cal_teams)
+        if len(cal_feat) == 0:
+            continue
+        for _, row in cal_feat.iterrows():
+            tourney_probs.append(predictor.predict_proba(row.to_dict()))
+        tourney_y.extend(cal_y_win.tolist())
+
+    if len(tourney_y) >= 20:
+        tourney_probs = np.array(tourney_probs)
+        tourney_y = np.array(tourney_y)
+        predictor.calibrate_tournament_temp(tourney_y, tourney_probs)
+    else:
+        print("  Not enough tournament data for calibration")
+
     # Save
     print(f"\nSaving models to {MODELS_DIR}...")
     predictor.save()

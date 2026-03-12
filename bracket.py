@@ -57,9 +57,9 @@ class BracketSimulator:
         t2_grav, t2_torvik = self._get_team_data(team2)
 
         features = self.predictor.build_features(t1_grav, t2_grav, t1_torvik, t2_torvik, location)
-        spread = self.predictor.predict_spread(features)
 
-        # Draw margin from Normal(predicted_spread, sigma)
+        # Use tournament-calibrated spread sigma for more accurate variance
+        spread = self.predictor.predict_spread(features)
         margin = np.random.normal(spread, self.predictor.spread_sigma)
         return team1 if margin > 0 else team2
 

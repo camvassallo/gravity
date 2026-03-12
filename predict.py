@@ -32,10 +32,11 @@ class GamePredictor:
         self.feature_names = []
         self.spread_sigma = 11.0  # empirical residual std, updated during training
         self.gbm_weight = 0.0  # ensemble weight for GBM (0 = logistic only)
+        self.tournament_temp = 1.0  # temperature for tournament calibration (>1 = shrink toward 0.5)
 
     def build_features(self, t1_gravity: dict, t2_gravity: dict,
                        t1_torvik: dict, t2_torvik: dict,
-                       location: float = 0.0) -> dict:
+                       location: float = 0.0) -> np.ndarray:
         """Build feature vector for a single game.
 
         Args:
@@ -188,8 +189,37 @@ class GamePredictor:
                 self.gbm = None
                 self.gbm_weight = 0.0
 
-    def predict_proba(self, features: dict) -> float:
-        """Predict win probability for team 1."""
+    def calibrate_tournament_temp(self, tourney_y: np.ndarray, tourney_probs: np.ndarray):
+        """Find optimal temperature scaling for tournament predictions.
+
+        Temperature > 1 shrinks probabilities toward 0.5, compensating for
+        the model being overconfident on the more competitive tournament field.
+        """
+        from sklearn.metrics import log_loss
+
+        best_temp = 1.0
+        best_ll = log_loss(tourney_y, tourney_probs)
+
+        for temp in np.arange(0.8, 2.01, 0.05):
+            # Apply temperature: convert prob to logit, divide by temp, convert back
+            logits = np.log(np.clip(tourney_probs, 1e-7, 1 - 1e-7) /
+                           np.clip(1 - tourney_probs, 1e-7, 1 - 1e-7))
+            scaled = 1 / (1 + np.exp(-logits / temp))
+            ll = log_loss(tourney_y, scaled)
+            if ll < best_ll:
+                best_ll = ll
+                best_temp = temp
+
+        self.tournament_temp = best_temp
+        print(f"  Tournament temperature: {best_temp:.2f} (log loss {best_ll:.4f})")
+
+    def predict_proba(self, features: dict, tournament: bool = False) -> float:
+        """Predict win probability for team 1.
+
+        Args:
+            features: feature dict from build_features()
+            tournament: if True, apply temperature scaling for tournament calibration
+        """
         X = pd.DataFrame([features])[self.feature_names].values
         X_scaled = self.scaler.transform(X)
 
@@ -200,6 +230,10 @@ class GamePredictor:
             prob = (1 - self.gbm_weight) * logistic_prob + self.gbm_weight * gbm_prob
         else:
             prob = logistic_prob
+
+        if tournament and self.tournament_temp != 1.0:
+            logit = np.log(max(prob, 1e-7) / max(1 - prob, 1e-7))
+            prob = 1 / (1 + np.exp(-logit / self.tournament_temp))
 
         return float(prob)
 
@@ -258,6 +292,7 @@ class GamePredictor:
             "feature_names": self.feature_names,
             "spread_sigma": self.spread_sigma,
             "gbm_weight": self.gbm_weight,
+            "tournament_temp": self.tournament_temp,
         }, path / "game_predictor.joblib")
 
     @classmethod
@@ -274,4 +309,5 @@ class GamePredictor:
         pred.feature_names = data["feature_names"]
         pred.spread_sigma = data["spread_sigma"]
         pred.gbm_weight = data["gbm_weight"]
+        pred.tournament_temp = data.get("tournament_temp", 1.0)
         return pred
