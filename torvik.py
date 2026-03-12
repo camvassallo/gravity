@@ -118,6 +118,15 @@ def fetch_game_stats(year: int = 2026, force_refresh: bool = False) -> pd.DataFr
     return df
 
 
+def fetch_all_for_year(year: int = 2026, force_refresh: bool = False) -> dict:
+    """Fetch all data types for a given year. Returns dict with keys: players, teams, games."""
+    return {
+        "players": fetch_player_stats(year, force_refresh),
+        "teams": fetch_team_stats(year, force_refresh),
+        "games": fetch_game_stats(year, force_refresh),
+    }
+
+
 if __name__ == "__main__":
     year = 2026
 
