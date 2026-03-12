@@ -12,6 +12,8 @@ where gamma_t is team t's gravity coefficient:
     >1.0  = over-imposes beyond their own average
 """
 
+from __future__ import annotations
+
 import warnings
 
 import numpy as np
@@ -32,6 +34,9 @@ _BOX_COLS = [
     "two_pm", "two_pa", "tpm", "tpa", "ftm", "fta",
 ]
 
+# Columns to propagate as first-value (not summed) per team-game
+_FIRST_COLS = ["win1", "loc", "numdate"]
+
 # Stats where each team has its own value per game (offense vs opponent defense).
 # Format: (name, off_col, def_col)
 PAIRED_STATS = [
@@ -41,6 +46,9 @@ PAIRED_STATS = [
     ("ft_rate", "ft_rate", "opp_ft_rate"),
     ("to_rate", "to_rate", "opp_to_rate"),
     ("orb_rate", "orb_rate", "opp_orb_rate"),
+    ("ast_rate", "ast_rate", "opp_ast_rate"),
+    ("stl_rate", "stl_rate", "opp_stl_rate"),
+    ("two_pt_pct", "two_pt_pct", "opp_two_pt_pct"),
 ]
 
 
@@ -52,8 +60,16 @@ def build_team_game_stats(games: pd.DataFrame) -> pd.DataFrame:
     g = games.copy()
     for col in _BOX_COLS:
         g[col] = pd.to_numeric(g[col], errors="coerce")
+    for col in _FIRST_COLS:
+        if col in g.columns:
+            g[col] = pd.to_numeric(g[col], errors="coerce")
 
-    agg = g.groupby(["muid", "tt"])[_BOX_COLS].sum().reset_index()
+    # Build aggregation: sum box stats, take first value for metadata cols
+    agg_dict = {col: "sum" for col in _BOX_COLS}
+    for col in _FIRST_COLS:
+        if col in g.columns:
+            agg_dict[col] = "first"
+    agg = g.groupby(["muid", "tt"]).agg(agg_dict).reset_index()
 
     agg["fga"] = agg["two_pa"] + agg["tpa"]
     # Standard possessions estimate: FGA - OREB + TOV + 0.44 * FTA
@@ -69,16 +85,25 @@ def build_team_game_stats(games: pd.DataFrame) -> pd.DataFrame:
     agg["to_rate"] = np.where(agg["poss"] > 0, agg["tov"] / agg["poss"] * 100, np.nan)
     # ORB rate needs opponent DRB, so we compute it after the merge
 
+    # Assist rate: assists / field goal attempts
+    agg["ast_rate"] = np.where(agg["fga"] > 0, agg["ast"] / agg["fga"] * 100, np.nan)
+    # Steal rate: steals / opponent possessions (computed after merge, placeholder here)
+    # Two-point FG%
+    agg["two_pt_pct"] = np.where(agg["two_pa"] > 0, agg["two_pm"] / agg["two_pa"] * 100, np.nan)
+
     # Keep only games with exactly 2 teams
     team_counts = agg.groupby("muid")["tt"].transform("count")
     agg = agg[team_counts == 2].copy()
 
     # Join opponent stats via self-merge
-    opp_cols = ["muid", "tt", "poss", "off_eff", "pts", "efg", "tp_rate", "ft_rate", "to_rate", "orb", "drb"]
+    opp_cols = ["muid", "tt", "poss", "off_eff", "pts", "efg", "tp_rate", "ft_rate", "to_rate",
+                "orb", "drb", "ast_rate", "two_pt_pct", "stl", "fga"]
     opp = agg[opp_cols].rename(columns={
         "tt": "opp", "poss": "opp_poss", "off_eff": "opp_off_eff", "pts": "opp_pts",
         "efg": "opp_efg", "tp_rate": "opp_tp_rate", "ft_rate": "opp_ft_rate",
         "to_rate": "opp_to_rate", "orb": "opp_orb", "drb": "opp_drb",
+        "ast_rate": "opp_ast_rate", "two_pt_pct": "opp_two_pt_pct",
+        "stl": "opp_stl", "fga": "opp_fga",
     })
     merged = agg.merge(opp, on="muid")
     merged = merged[merged["tt"] != merged["opp"]].copy()
@@ -94,6 +119,10 @@ def build_team_game_stats(games: pd.DataFrame) -> pd.DataFrame:
     merged["orb_rate"] = np.where(orb_total > 0, merged["orb"] / orb_total * 100, np.nan)
     opp_orb_total = merged["opp_orb"] + merged["drb"]
     merged["opp_orb_rate"] = np.where(opp_orb_total > 0, merged["opp_orb"] / opp_orb_total * 100, np.nan)
+
+    # Steal rate: steals / opponent possessions
+    merged["stl_rate"] = np.where(merged["opp_poss"] > 0, merged["stl"] / merged["opp_poss"] * 100, np.nan)
+    merged["opp_stl_rate"] = np.where(merged["poss"] > 0, merged["opp_stl"] / merged["poss"] * 100, np.nan)
 
     return merged
 
@@ -231,6 +260,32 @@ def build_combined_table(gravities: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
+# Pipeline
+# ---------------------------------------------------------------------------
+
+def run_gravity_pipeline(year: int, cutoff_date: int | None = None):
+    """Run the full gravity pipeline for a given year.
+
+    Args:
+        year: season year (e.g. 2026)
+        cutoff_date: optional numeric date (YYYYMMDD) to filter games before
+                     computing gravity (prevents tournament data leakage)
+
+    Returns:
+        (tgs, gravities, combined) — team-game stats, gravity dict, combined table
+    """
+    games = fetch_game_stats(year)
+    tgs = build_team_game_stats(games)
+
+    if cutoff_date is not None and "numdate" in tgs.columns:
+        tgs = tgs[tgs["numdate"] <= cutoff_date].copy()
+
+    gravities = compute_all_gravities(tgs)
+    combined = build_combined_table(gravities)
+    return tgs, gravities, combined
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -238,22 +293,14 @@ if __name__ == "__main__":
     year = 2026
 
     print("Loading data...")
-    games = fetch_game_stats(year)
-    teams = fetch_team_stats(year)
-
-    print("Building team-game stats...")
-    tgs = build_team_game_stats(games)
+    tgs, gravities, combined = run_gravity_pipeline(year)
     print(f"  {tgs['muid'].nunique()} games, {tgs['tt'].nunique()} teams\n")
-
-    gravities = compute_all_gravities(tgs)
 
     for key, df in gravities.items():
         r2 = df.attrs["r2"]
         n = df.attrs["n_obs"]
         print(f"  {key:<16} R² = {r2:.4f}  ({n} obs)")
 
-    # Combined table
-    combined = build_combined_table(gravities)
     out_path = "data/gravity_scores.csv"
     combined.to_csv(out_path)
     print(f"\nSaved combined gravity table -> {out_path}")
