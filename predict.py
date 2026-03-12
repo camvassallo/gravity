@@ -35,7 +35,7 @@ class GamePredictor:
 
     def build_features(self, t1_gravity: dict, t2_gravity: dict,
                        t1_torvik: dict, t2_torvik: dict,
-                       location: float = 0.0) -> np.ndarray:
+                       location: float = 0.0) -> dict:
         """Build feature vector for a single game.
 
         Args:

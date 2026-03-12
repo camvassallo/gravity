@@ -15,7 +15,7 @@ from sklearn.metrics import log_loss, roc_auc_score, brier_score_loss, accuracy_
 import warnings
 
 from gravity import run_gravity_pipeline
-from torvik import fetch_team_stats, fetch_game_stats
+from torvik import fetch_team_stats
 from predict import GamePredictor
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
@@ -27,7 +27,7 @@ OUT_DIR.mkdir(exist_ok=True)
 TOURNAMENT_CUTOFFS = {
     2024: 20240318,
     2025: 20250317,
-    2026: 20250316,
+    2026: 20260316,
 }
 
 
