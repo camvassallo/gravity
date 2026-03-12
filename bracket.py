@@ -10,7 +10,6 @@ import json
 import numpy as np
 import pandas as pd
 from pathlib import Path
-from scipy.stats import norm
 
 from predict import GamePredictor
 
@@ -143,7 +142,6 @@ class BracketSimulator:
 
         # Initialize tracker
         round_cols = ["R64", "R32", "S16", "E8", "F4", "Championship", "Champion"]
-        tracker_template = {r: 0 for r in round_cols}
 
         results = []
         for sim in range(n_sims):
