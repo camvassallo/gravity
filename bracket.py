@@ -1,4 +1,4 @@
-"""Phase 3: March Madness bracket simulator.
+"""March Madness bracket simulator.
 
 Monte Carlo simulation engine that uses the GamePredictor to simulate
 tournament outcomes across N iterations.
@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-from predict import GamePredictor
+from predict import GamePredictor, build_player_features, _TORVIK_COLS, _TEAM_DIFF_STATS
 
 BRACKETS_DIR = Path(__file__).resolve().parent / "brackets"
 
@@ -21,44 +21,34 @@ ROUND_NAMES = ["R64", "R32", "S16", "E8", "F4", "Championship"]
 class BracketSimulator:
     """Monte Carlo bracket simulator for March Madness."""
 
-    def __init__(self, predictor: GamePredictor, combined: pd.DataFrame,
-                 teams_df: pd.DataFrame):
+    def __init__(self, predictor: GamePredictor, teams_df: pd.DataFrame,
+                 player_feats: dict):
         """
         Args:
             predictor: trained GamePredictor
-            combined: gravity combined table (team -> gravity coefficients)
             teams_df: Torvik team stats indexed by team name
+            player_feats: dict from build_player_features()
         """
         self.predictor = predictor
-        self.combined = combined
         self.teams_df = teams_df
-        self.grav_cols = [c for c in combined.columns if "gravity" in c]
+        self.player_feats = player_feats
 
     def _get_team_data(self, team: str) -> tuple[dict, dict]:
-        """Get gravity and Torvik data for a team."""
-        grav = {}
-        if team in self.combined.index:
-            grav = {col: self.combined.loc[team, col] for col in self.grav_cols}
-
+        """Get Torvik and player data for a team."""
         torvik = {}
         if team in self.teams_df.index:
-            for s in ["adjoe", "adjde", "barthag", "adj_tempo", "sos"]:
-                if s in self.teams_df.columns:
-                    torvik[s] = self.teams_df.loc[team, s]
+            torvik = {s: pd.to_numeric(self.teams_df.loc[team, s], errors="coerce")
+                      for s in _TORVIK_COLS + _TEAM_DIFF_STATS if s in self.teams_df.columns}
 
-        return grav, torvik
+        players = self.player_feats.get(team, {})
+        return torvik, players
 
     def simulate_game(self, team1: str, team2: str, location: float = 0.0) -> str:
-        """Simulate a single game, return winner name.
+        """Simulate a single game, return winner name."""
+        t1_torvik, t1_players = self._get_team_data(team1)
+        t2_torvik, t2_players = self._get_team_data(team2)
 
-        Uses the spread model with Gaussian noise for stochastic outcomes.
-        """
-        t1_grav, t1_torvik = self._get_team_data(team1)
-        t2_grav, t2_torvik = self._get_team_data(team2)
-
-        features = self.predictor.build_features(t1_grav, t2_grav, t1_torvik, t2_torvik, location)
-
-        # Use tournament-calibrated spread sigma for more accurate variance
+        features = self.predictor.build_features(t1_torvik, t2_torvik, t1_players, t2_players, location)
         spread = self.predictor.predict_spread(features)
         margin = np.random.normal(spread, self.predictor.spread_sigma)
         return team1 if margin > 0 else team2
@@ -82,19 +72,14 @@ class BracketSimulator:
         return matchups
 
     def _simulate_region(self, teams: list[tuple[str, str]], tracker: dict) -> str:
-        """Simulate a region from first round matchups to Elite Eight winner.
-
-        Returns the region champion.
-        """
+        """Simulate a region from first round matchups to Elite Eight winner."""
         current_teams = []
 
-        # Round of 64
         for t1, t2 in teams:
             winner = self.simulate_game(t1, t2, location=0.0)
             current_teams.append(winner)
             tracker[winner]["R32"] += 1
 
-        # Round of 32
         next_round = []
         for i in range(0, len(current_teams), 2):
             winner = self.simulate_game(current_teams[i], current_teams[i + 1], location=0.0)
@@ -102,7 +87,6 @@ class BracketSimulator:
             tracker[winner]["S16"] += 1
         current_teams = next_round
 
-        # Sweet 16
         next_round = []
         for i in range(0, len(current_teams), 2):
             winner = self.simulate_game(current_teams[i], current_teams[i + 1], location=0.0)
@@ -110,55 +94,38 @@ class BracketSimulator:
             tracker[winner]["E8"] += 1
         current_teams = next_round
 
-        # Elite Eight
         winner = self.simulate_game(current_teams[0], current_teams[1], location=0.0)
         tracker[winner]["F4"] += 1
-
         return winner
 
     def simulate_tournament(self, bracket: dict, n_sims: int = 1000,
                             seed: int | None = 42) -> pd.DataFrame:
-        """Run Monte Carlo simulation of the full tournament.
-
-        Args:
-            bracket: bracket dict with regions and final_four_matchups
-            n_sims: number of simulations
-            seed: random seed (None for no seed)
-
-        Returns:
-            DataFrame with advancement probabilities per team per round
-        """
+        """Run Monte Carlo simulation of the full tournament."""
         if seed is not None:
             np.random.seed(seed)
 
         regions = bracket["regions"]
         ff_matchups = bracket.get("final_four_matchups", [["East", "West"], ["South", "Midwest"]])
 
-        # Collect all teams
         all_teams = set()
         for region_name, seeds in regions.items():
             for s, team in seeds.items():
                 all_teams.add(team)
 
-        # Initialize tracker
         round_cols = ["R64", "R32", "S16", "E8", "F4", "Championship", "Champion"]
 
         results = []
         for sim in range(n_sims):
             tracker = {t: {r: 0 for r in round_cols} for t in all_teams}
-
-            # All teams make R64
             for t in all_teams:
                 tracker[t]["R64"] += 1
 
-            # Simulate each region
             region_winners = {}
             for region_name, seeds in regions.items():
                 matchups = self._build_region_matchups(seeds)
                 winner = self._simulate_region(matchups, tracker)
                 region_winners[region_name] = winner
 
-            # Final Four
             ff_winners = []
             for r1, r2 in ff_matchups:
                 t1 = region_winners[r1]
@@ -167,33 +134,24 @@ class BracketSimulator:
                 tracker[winner]["Championship"] += 1
                 ff_winners.append(winner)
 
-            # Championship
             champion = self.simulate_game(ff_winners[0], ff_winners[1], location=0.0)
             tracker[champion]["Champion"] += 1
-
             results.append(tracker)
 
-        # Aggregate
         agg = {t: {r: 0 for r in round_cols} for t in all_teams}
         for sim_result in results:
             for team, rounds in sim_result.items():
                 for r, count in rounds.items():
                     agg[team][r] += count
 
-        # Convert to probabilities
         df = pd.DataFrame(agg).T
-        df = df / n_sims * 100  # as percentages
+        df = df / n_sims * 100
         df.index.name = "Team"
-
-        # Expected wins
         df["E[Wins]"] = (
             df["R32"] / 100 + df["S16"] / 100 + df["E8"] / 100 +
             df["F4"] / 100 + df["Championship"] / 100 + df["Champion"] / 100
         )
-
-        # Sort by championship probability
         df = df.sort_values("Champion", ascending=False)
-
         return df
 
     def print_results(self, results: pd.DataFrame, top_n: int = 30):
@@ -217,63 +175,49 @@ class BracketSimulator:
         """Determine most likely bracket based on simulation probabilities."""
         regions = bracket["regions"]
         ff_matchups = bracket.get("final_four_matchups", [["East", "West"], ["South", "Midwest"]])
-
-        most_likely = {"regions": {}, "final_four": {}, "champion": None}
+        most_likely = {"regions": {}, "champion": None}
 
         for region_name, seeds in regions.items():
             matchups = self._build_region_matchups(seeds)
             current_teams = []
-
-            # R64: pick higher seed (more likely winner)
             for t1, t2 in matchups:
-                # Use simulation results to pick more likely winner
                 t1_r32 = results.loc[t1, "R32"] if t1 in results.index else 0
                 t2_r32 = results.loc[t2, "R32"] if t2 in results.index else 0
-                winner = t1 if t1_r32 >= t2_r32 else t2
-                current_teams.append(winner)
+                current_teams.append(t1 if t1_r32 >= t2_r32 else t2)
 
-            # R32
             next_round = []
             for i in range(0, len(current_teams), 2):
                 t1, t2 = current_teams[i], current_teams[i + 1]
-                t1_s16 = results.loc[t1, "S16"] if t1 in results.index else 0
-                t2_s16 = results.loc[t2, "S16"] if t2 in results.index else 0
-                winner = t1 if t1_s16 >= t2_s16 else t2
-                next_round.append(winner)
+                t1_v = results.loc[t1, "S16"] if t1 in results.index else 0
+                t2_v = results.loc[t2, "S16"] if t2 in results.index else 0
+                next_round.append(t1 if t1_v >= t2_v else t2)
             current_teams = next_round
 
-            # S16
             next_round = []
             for i in range(0, len(current_teams), 2):
                 t1, t2 = current_teams[i], current_teams[i + 1]
-                t1_e8 = results.loc[t1, "E8"] if t1 in results.index else 0
-                t2_e8 = results.loc[t2, "E8"] if t2 in results.index else 0
-                winner = t1 if t1_e8 >= t2_e8 else t2
-                next_round.append(winner)
+                t1_v = results.loc[t1, "E8"] if t1 in results.index else 0
+                t2_v = results.loc[t2, "E8"] if t2 in results.index else 0
+                next_round.append(t1 if t1_v >= t2_v else t2)
             current_teams = next_round
 
-            # E8
             t1, t2 = current_teams[0], current_teams[1]
-            t1_f4 = results.loc[t1, "F4"] if t1 in results.index else 0
-            t2_f4 = results.loc[t2, "F4"] if t2 in results.index else 0
-            winner = t1 if t1_f4 >= t2_f4 else t2
-            most_likely["regions"][region_name] = winner
+            t1_v = results.loc[t1, "F4"] if t1 in results.index else 0
+            t2_v = results.loc[t2, "F4"] if t2 in results.index else 0
+            most_likely["regions"][region_name] = t1 if t1_v >= t2_v else t2
 
-        # Final Four
         ff_winners = []
         for r1, r2 in ff_matchups:
             t1 = most_likely["regions"][r1]
             t2 = most_likely["regions"][r2]
-            t1_champ = results.loc[t1, "Championship"] if t1 in results.index else 0
-            t2_champ = results.loc[t2, "Championship"] if t2 in results.index else 0
-            winner = t1 if t1_champ >= t2_champ else t2
-            ff_winners.append(winner)
+            t1_v = results.loc[t1, "Championship"] if t1 in results.index else 0
+            t2_v = results.loc[t2, "Championship"] if t2 in results.index else 0
+            ff_winners.append(t1 if t1_v >= t2_v else t2)
 
-        # Championship
         t1, t2 = ff_winners[0], ff_winners[1]
-        t1_c = results.loc[t1, "Champion"] if t1 in results.index else 0
-        t2_c = results.loc[t2, "Champion"] if t2 in results.index else 0
-        most_likely["champion"] = t1 if t1_c >= t2_c else t2
+        t1_v = results.loc[t1, "Champion"] if t1 in results.index else 0
+        t2_v = results.loc[t2, "Champion"] if t2 in results.index else 0
+        most_likely["champion"] = t1 if t1_v >= t2_v else t2
 
         return most_likely
 
@@ -284,6 +228,7 @@ class BracketSimulator:
 
 if __name__ == "__main__":
     import sys
+    from torvik import fetch_team_stats, fetch_player_stats
 
     bracket_path = sys.argv[1] if len(sys.argv) > 1 else BRACKETS_DIR / "bracket_2026.json"
 
@@ -295,13 +240,12 @@ if __name__ == "__main__":
     print("Loading model...")
     predictor = GamePredictor.load()
 
-    from gravity import run_gravity_pipeline
-    from torvik import fetch_team_stats
-    tgs, gravities, combined = run_gravity_pipeline(2026)
     teams_df = fetch_team_stats(2026).set_index("team")
+    players_df = fetch_player_stats(2026)
+    player_feats = build_player_features(players_df)
 
     print("Loading bracket...")
-    sim = BracketSimulator(predictor, combined, teams_df)
+    sim = BracketSimulator(predictor, teams_df, player_feats)
     bracket = sim.load_bracket(bracket_path)
 
     n_sims = int(sys.argv[2]) if len(sys.argv) > 2 else 1000
@@ -311,7 +255,6 @@ if __name__ == "__main__":
     sim.print_results(results)
     sim.export_csv(results)
 
-    # Most likely bracket
     likely = sim.most_likely_bracket(bracket, results)
     print("\nMost Likely Bracket:")
     for region, winner in likely["regions"].items():

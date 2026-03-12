@@ -1,7 +1,7 @@
-"""Phase 5: Model training pipeline.
+"""Model training pipeline.
 
-One-shot script that fetches data, computes gravities, trains the
-prediction models, and saves them to disk.
+Fetches data, builds player features, trains the prediction models,
+calibrates tournament temperature, and saves to disk.
 
 Usage:
     python train.py                          # Train on 2026 data
@@ -16,9 +16,9 @@ import pandas as pd
 from pathlib import Path
 from sklearn.metrics import log_loss, roc_auc_score, accuracy_score
 
-from gravity import run_gravity_pipeline, PAIRED_STATS
-from torvik import fetch_team_stats, fetch_all_for_year
-from predict import GamePredictor, MODELS_DIR
+from gravity import run_gravity_pipeline
+from torvik import fetch_team_stats, fetch_player_stats, fetch_all_for_year
+from predict import GamePredictor, build_player_features, MODELS_DIR, _TORVIK_COLS, _TEAM_DIFF_STATS
 
 
 TOURNAMENT_CUTOFFS = {
@@ -29,12 +29,7 @@ TOURNAMENT_CUTOFFS = {
 
 
 def train(years: list[int], cutoff_current_year: bool = True):
-    """Train prediction models on specified years.
-
-    Args:
-        years: list of season years to include in training
-        cutoff_current_year: if True, filter the latest year to exclude tournament games
-    """
+    """Train prediction models on specified years."""
     print("=" * 60)
     print("TRAINING PIPELINE")
     print("=" * 60)
@@ -46,31 +41,24 @@ def train(years: list[int], cutoff_current_year: bool = True):
 
     for year in years:
         print(f"\n--- {year} ---")
-
-        # Fetch data
         print(f"  Fetching data...")
         fetch_all_for_year(year)
 
-        # Compute gravity (with cutoff for current year to prevent leakage)
         cutoff = TOURNAMENT_CUTOFFS.get(year) if cutoff_current_year else None
-        print(f"  Computing gravity (cutoff={cutoff})...")
-        tgs, gravities, combined = run_gravity_pipeline(year, cutoff_date=cutoff)
+        print(f"  Building features (cutoff={cutoff})...")
 
-        # Filter games if cutoff
+        # Get team-game stats (for game outcomes)
+        tgs, _, _ = run_gravity_pipeline(year, cutoff_date=cutoff)
         if cutoff is not None and "numdate" in tgs.columns:
             tgs = tgs[tgs["numdate"] <= cutoff].copy()
 
         teams_df = fetch_team_stats(year).set_index("team")
+        players_df = fetch_player_stats(year)
+        player_feats = build_player_features(players_df)
 
         print(f"  {tgs['muid'].nunique()} games, {tgs['tt'].nunique()} teams")
 
-        # Print gravity model R²
-        for key, df in gravities.items():
-            r2 = df.attrs["r2"]
-            print(f"    {key:<16} R² = {r2:.4f}")
-
-        # Build training data
-        feat_df, y_win, y_spread = predictor.build_training_data(tgs, combined, teams_df)
+        feat_df, y_win, y_spread = predictor.build_training_data(tgs, teams_df, player_feats)
         print(f"  {len(feat_df)} training rows")
 
         all_X.append(feat_df)
@@ -108,14 +96,13 @@ def train(years: list[int], cutoff_current_year: bool = True):
     print(f"  Accuracy:     {accuracy_score(train_y_win, (y_prob_train >= 0.5).astype(int)):.1%}")
     print(f"  Spread RMSE:  {np.sqrt(np.mean((train_y_spread - y_spread_train) ** 2)):.1f} pts")
     print(f"  Spread Sigma: {predictor.spread_sigma:.1f} pts")
-    print(f"  GBM Weight:   {predictor.gbm_weight:.3f}")
 
-    # Feature importance (logistic coefficients)
-    print("\n--- Top Feature Coefficients (Logistic) ---")
+    # Feature importance
+    print("\n--- Feature Coefficients (Logistic) ---")
     coefs = pd.Series(predictor.logistic.coef_[0], index=predictor.feature_names)
     coefs = coefs.reindex(coefs.abs().sort_values(ascending=False).index)
-    for feat, coef in coefs.head(20).items():
-        print(f"  {feat:<45} {coef:+.4f}")
+    for feat, coef in coefs.items():
+        print(f"  {feat:<30} {coef:+.4f}")
 
     # Calibrate tournament temperature on historical tournament data
     print("\n--- Tournament Calibration ---")
@@ -125,17 +112,16 @@ def train(years: list[int], cutoff_current_year: bool = True):
         cutoff = TOURNAMENT_CUTOFFS.get(cal_year)
         if cutoff is None:
             continue
-        # Get full data (including tournament) and split
         full_tgs, _, _ = run_gravity_pipeline(cal_year)
         if "numdate" not in full_tgs.columns:
             continue
-        pre_tgs, post_tgs = full_tgs[full_tgs["numdate"] <= cutoff], full_tgs[full_tgs["numdate"] > cutoff]
+        post_tgs = full_tgs[full_tgs["numdate"] > cutoff]
         if len(post_tgs) == 0:
             continue
-        # Use pre-tournament gravity for predictions
-        cal_tgs, _, cal_combined = run_gravity_pipeline(cal_year, cutoff_date=cutoff)
         cal_teams = fetch_team_stats(cal_year).set_index("team")
-        cal_feat, cal_y_win, _ = predictor.build_training_data(post_tgs, cal_combined, cal_teams)
+        cal_players = fetch_player_stats(cal_year)
+        cal_pf = build_player_features(cal_players)
+        cal_feat, cal_y_win, _ = predictor.build_training_data(post_tgs, cal_teams, cal_pf)
         if len(cal_feat) == 0:
             continue
         for _, row in cal_feat.iterrows():
