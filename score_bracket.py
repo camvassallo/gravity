@@ -16,8 +16,8 @@ from pathlib import Path
 
 from gravity import run_gravity_pipeline
 from torvik import fetch_team_stats, fetch_player_stats
-from predict import GamePredictor, build_player_features, _TORVIK_COLS, _TEAM_DIFF_STATS
-from bracket import BracketSimulator, ROUND_NAMES
+from predict import GamePredictor, build_player_features
+from bracket import BracketSimulator
 
 BRACKETS_DIR = Path(__file__).resolve().parent / "brackets"
 
@@ -202,42 +202,15 @@ def actual_winners_per_round(actual: dict, bracket: dict) -> dict[str, list[str]
     return winners
 
 
-def score_picks(picks: dict, actual: dict, bracket: dict) -> dict:
-    """Score a set of bracket picks against actual results.
-
-    picks: dict with regions (region -> list of winners per round) and champion
-    actual: dict team -> furthest round
-    """
-    regions = bracket["regions"]
-    ff_matchups = bracket["final_four_matchups"]
-    actual_by_round = actual_winners_per_round(actual, bracket)
-
-    total_score = 0
-    round_scores = {}
-    round_correct = {}
-    round_total = {}
-
-    # Build picks per round from the most_likely_bracket structure
-    # We need to replay the bracket to get all picks, not just region winners
-    sim_bracket = picks  # This is the full picks structure
-
-    # For detailed scoring, we need to simulate the bracket pick-by-pick
-    # Let's use a simpler approach: check if each actual winner was predicted
-    # by comparing simulation probabilities
-
-    return total_score, round_scores
-
 
 def generate_deterministic_bracket(sim: BracketSimulator, bracket: dict,
                                     results: pd.DataFrame) -> dict:
     """Generate full bracket picks from simulation results.
 
-    Returns dict mapping round -> list of (team, correct) tuples.
+    Returns dict mapping round -> list of picked teams.
     """
     regions = bracket["regions"]
     ff_matchups = bracket["final_four_matchups"]
-
-    all_picks = {}
 
     # Track picks per round
     r32_picks = []
