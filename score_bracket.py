@@ -36,6 +36,81 @@ TOURNAMENT_CUTOFFS = {
     2025: 20250317,
 }
 
+# 2024 actual results: team -> furthest round reached
+ACTUAL_RESULTS_2024 = {
+    # Champion
+    "Connecticut": "Champion",
+    # Runner-up (lost in Championship)
+    "Purdue": "Championship",
+    # Final Four (lost in F4)
+    "Alabama": "F4",
+    "N.C. State": "F4",
+    # Elite Eight (lost in E8)
+    "Illinois": "E8",
+    "Clemson": "E8",
+    "Tennessee": "E8",
+    "Duke": "E8",
+    # Sweet 16 (lost in S16)
+    "Iowa St.": "S16",
+    "San Diego St.": "S16",
+    "North Carolina": "S16",
+    "Arizona": "S16",
+    "Gonzaga": "S16",
+    "Creighton": "S16",
+    "Marquette": "S16",
+    "Houston": "S16",
+    # Round of 32 (lost in R32)
+    "Michigan St.": "R32",
+    "Grand Canyon": "R32",
+    "Baylor": "R32",
+    "Dayton": "R32",
+    "Northwestern": "R32",
+    "Yale": "R32",
+    "Duquesne": "R32",
+    "Washington St.": "R32",
+    "Texas A&M": "R32",
+    "James Madison": "R32",
+    "Oakland": "R32",
+    "Colorado": "R32",
+    "Utah St.": "R32",
+    "Kansas": "R32",
+    "Oregon": "R32",
+    "Texas": "R32",
+    # Round of 64 (lost in R64)
+    "Stetson": "R64",
+    "Florida Atlantic": "R64",
+    "UAB": "R64",
+    "Auburn": "R64",
+    "BYU": "R64",
+    "Morehead St.": "R64",
+    "Drake": "R64",
+    "South Dakota St.": "R64",
+    "Mississippi St.": "R64",
+    "Nevada": "R64",
+    "New Mexico": "R64",
+    "Saint Mary's": "R64",
+    "Charleston": "R64",
+    "Colgate": "R64",
+    "Long Beach St.": "R64",
+    "Wagner": "R64",
+    "Longwood": "R64",
+    "Nebraska": "R64",
+    "Wisconsin": "R64",
+    "Texas Tech": "R64",
+    "Florida": "R64",
+    "Kentucky": "R64",
+    "Vermont": "R64",
+    "Western Kentucky": "R64",
+    "TCU": "R64",
+    "South Carolina": "R64",
+    "McNeese St.": "R64",
+    "Samford": "R64",
+    "Akron": "R64",
+    "Saint Peter's": "R64",
+    "Grambling St.": "R64",
+    "Colorado St.": "R64",
+}
+
 # 2025 actual results: team -> furthest round reached
 ACTUAL_RESULTS_2025 = {
     # Champion
@@ -271,24 +346,35 @@ def score_bracket_picks(picks: dict, actual: dict) -> tuple[int, dict]:
     return total, details
 
 
-if __name__ == "__main__":
+def score_year(target_year: int, n_sims: int = 10000):
+    """Train on pre-tournament data and score bracket for a given year."""
+    actual_results = {
+        2024: ACTUAL_RESULTS_2024,
+        2025: ACTUAL_RESULTS_2025,
+    }
+
+    if target_year not in actual_results:
+        print(f"No actual results for {target_year}")
+        return
+
     print("=" * 60)
-    print("2025 BRACKET SCORING")
+    print(f"{target_year} BRACKET SCORING")
     print("=" * 60)
 
-    # Train model on 2024 + 2025 regular season (pre-tournament)
-    print("\nTraining model on pre-tournament data...")
+    # Train on available pre-tournament data
+    train_years = [y for y in sorted(TOURNAMENT_CUTOFFS) if y <= target_year]
+    print(f"\nTraining model on pre-tournament data ({train_years})...")
     predictor = GamePredictor()
     all_X, all_y_win, all_y_spread = [], [], []
 
-    for year in [2024, 2025]:
+    for year in train_years:
         cutoff = TOURNAMENT_CUTOFFS[year]
-        tgs, _, _ = run_gravity_pipeline(year, cutoff_date=cutoff if year == 2025 else None)
+        tgs, _, _ = run_gravity_pipeline(year, cutoff_date=cutoff if year == target_year else None)
         teams_df = fetch_team_stats(year).set_index("team")
         players_df = fetch_player_stats(year)
         player_feats = build_player_features(players_df)
 
-        if year == 2025:
+        if year == target_year:
             tgs = tgs[tgs["numdate"] <= cutoff].copy()
 
         feat_df, y_win, y_spread = predictor.build_training_data(tgs, teams_df, player_feats)
@@ -304,34 +390,31 @@ if __name__ == "__main__":
     print(f"  Total: {len(train_X)} training games")
     predictor.fit(train_X, train_y_win, train_y_spread)
 
-    # Load 2025 bracket
-    bracket_path = BRACKETS_DIR / "bracket_2025.json"
+    # Load bracket
+    bracket_path = BRACKETS_DIR / f"bracket_{target_year}.json"
     with open(bracket_path) as f:
         bracket = json.load(f)
 
-    # Set up simulator with 2025 pre-tournament data
-    teams_df = fetch_team_stats(2025).set_index("team")
-    players_df = fetch_player_stats(2025)
+    # Set up simulator
+    teams_df = fetch_team_stats(target_year).set_index("team")
+    players_df = fetch_player_stats(target_year)
     player_feats = build_player_features(players_df)
 
     sim = BracketSimulator(predictor, teams_df, player_feats)
 
-    # Run simulation
-    n_sims = 10000
     print(f"\nRunning {n_sims} simulations...")
     results = sim.simulate_tournament(bracket, n_sims=n_sims)
 
-    # Show top teams
     print("\nTop 20 Teams by Championship Probability:")
     sim.print_results(results, top_n=20)
 
-    # Generate deterministic bracket (always pick higher probability)
+    # Score
     print("\n" + "=" * 60)
     print("BRACKET PICKS (chalk / most likely)")
     print("=" * 60)
     picks = generate_deterministic_bracket(sim, bracket, results)
 
-    total_score, details = score_bracket_picks(picks, ACTUAL_RESULTS_2025)
+    total_score, details = score_bracket_picks(picks, actual_results[target_year])
 
     for round_name in ["R32", "S16", "E8", "F4", "Championship", "Champion"]:
         rd = details[round_name]
@@ -341,23 +424,22 @@ if __name__ == "__main__":
             print(f"    [{mark}] {team}")
 
     print(f"\n{'=' * 60}")
-    print(f"TOTAL SCORE: {total_score} points")
     max_possible = sum(ROUND_POINTS[r] * details[r]["total"] for r in details)
-    print(f"MAX POSSIBLE: {max_possible} points")
-    print(f"PERCENTAGE: {total_score / max_possible * 100:.1f}%")
+    print(f"TOTAL SCORE: {total_score} / {max_possible} points ({total_score / max_possible * 100:.1f}%)")
 
-    # Also show what a perfect bracket would score
-    perfect = sum(ROUND_POINTS.get(r, 320) * details[r]["total"] for r in details)
-
-    # Compare to chalk (always pick higher seed)
-    print(f"\n{'=' * 60}")
-    print("CHAMPIONSHIP PICK ANALYSIS")
-    print("=" * 60)
     champ_pick = picks["Champion"][0]
-    actual_champ = [t for t, r in ACTUAL_RESULTS_2025.items() if r == "Champion"][0]
-    print(f"  Our pick:      {champ_pick}")
-    print(f"  Actual champ:  {actual_champ}")
+    actual_champ = [t for t, r in actual_results[target_year].items() if r == "Champion"][0]
     champ_prob = results.loc[champ_pick, "Champion"] if champ_pick in results.index else 0
     actual_prob = results.loc[actual_champ, "Champion"] if actual_champ in results.index else 0
-    print(f"  Our pick prob: {champ_prob:.1f}%")
-    print(f"  Actual prob:   {actual_prob:.1f}%")
+    print(f"\n  Our champion:    {champ_pick} ({champ_prob:.1f}%)")
+    print(f"  Actual champion: {actual_champ} ({actual_prob:.1f}%)")
+
+    return total_score, max_possible, details
+
+
+if __name__ == "__main__":
+    import sys
+    years = [int(y) for y in sys.argv[1:]] if len(sys.argv) > 1 else [2024, 2025]
+    for year in years:
+        score_year(year)
+        print("\n")
