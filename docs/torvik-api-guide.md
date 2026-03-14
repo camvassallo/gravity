@@ -11,6 +11,7 @@ Unofficial documentation for the barttorvik.com data endpoints used for college 
 | Endpoint | URL | Format | Compression | Description |
 |---|---|---|---|---|
 | Player Stats | `https://barttorvik.com/getadvstats.php?year={year}&csv=1` | CSV | None | Season averages for all D1 players |
+| Player Stats (Date Range) | `https://barttorvik.com/pslice.php?year={year}&top=364&start={start}&end={end}&csv=1` | CSV | None | Player stats filtered to a date range |
 | Team Stats | `https://barttorvik.com/{year}_team_results.json` | JSON | None | Team-level rankings and efficiency metrics |
 | Game Stats | `https://barttorvik.com/{year}_all_advgames.json.gz` | JSON | Gzip | Per-game, per-player box scores for all D1 games |
 
@@ -24,7 +25,7 @@ No known rate limits, but be respectful -- these are not officially published AP
 
 ### Date Filtering
 
-None available at the API level. All endpoints return the complete dataset for the requested season year. Any date-range filtering must be done client-side after ingestion.
+The `pslice.php` endpoint supports server-side date filtering for player stats (see Section 1b). Other endpoints return the complete dataset; date filtering must be done client-side.
 
 ---
 
@@ -123,6 +124,42 @@ curl "https://barttorvik.com/getadvstats.php?year=2026&csv=1"
 ```csv
 Antwann Jones,UNC Greensboro,SoCon,25,12.3,98.2,14.1,...
 Elijah Elliott,New Mexico St.,CUSA,24,28.5,105.1,21.3,...
+```
+
+---
+
+## 1b. Player Stats (Date Range)
+
+**URL:** `GET https://barttorvik.com/pslice.php?year={year}&top=364&start={start}&end={end}&csv=1`
+
+**Format:** CSV (headerless -- columns are positional, same schema as `getadvstats.php`)
+
+**Response:** One row per player, containing stats aggregated only over games within the specified date range. Critical for preventing tournament data leakage during model training.
+
+### Parameters
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `year` | integer | Yes | NCAA season year (e.g., `2026`) |
+| `top` | integer | Yes | Number of teams to include (use `364` for all D1 teams) |
+| `start` | string | Yes | Start date in `YYYYMMDD` format (e.g., `20251101`) |
+| `end` | string | Yes | End date in `YYYYMMDD` format (e.g., `20260316`) |
+| `csv` | integer | Yes | Must be `1` to get CSV format |
+
+### Column Schema
+
+Same positional column layout as `getadvstats.php` (see Section 1 above). All 64 columns are present in the same order.
+
+### Usage Notes
+
+- Use `start={year-1}1101` (November 1) to capture the full regular season from the start
+- Use `end` set to the tournament cutoff date to exclude tournament games from player aggregates
+- This prevents data leakage when building player features for training/backtesting
+
+### Example Request
+
+```
+curl "https://barttorvik.com/pslice.php?year=2026&top=364&start=20251101&end=20260316&csv=1"
 ```
 
 ---

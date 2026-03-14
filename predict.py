@@ -3,10 +3,11 @@
 GamePredictor uses Torvik efficiency ratings, team quality metrics,
 and player-derived features to predict win probability and point spread.
 
-Optimized feature set (14 features):
-- 6 core Torvik: efficiency gaps, barthag diff, tempo, SOS diff, location
+Feature set (18 features):
+- 5 core Torvik: net efficiency gap, barthag diff, tempo, SOS diff, location
 - 4 team quality: fun, elite SOS, quality games, WAB diffs
-- 4 player-derived: top-5 BPM sum, top porpag, top OBPM, top DBPM diffs
+- 9 player-derived: BPM sum, porpag, OBPM, DBPM, weighted BPM,
+  weighted porpag, ast/tov, stops, GBPM (all diffs)
 """
 
 from __future__ import annotations
@@ -29,14 +30,24 @@ MODELS_DIR = Path(__file__).resolve().parent / "models"
 _TEAM_DIFF_STATS = ["fun", "elite_sos", "qual_games", "wab"]
 
 # Player-derived stats used as diffs
-_PLAYER_DIFF_STATS = ["top5_bpm_sum", "top_porpag", "top_obpm", "top_dbpm"]
+_PLAYER_DIFF_STATS = [
+    "top5_bpm_sum", "top_porpag", "top_obpm", "top_dbpm",
+    "top5_bpm_weighted", "top5_porpag_weighted",
+    "top_ast_tov", "top5_stops_sum", "top_gbpm",
+]
 
 # Torvik columns needed per team
 _TORVIK_COLS = ["adjoe", "adjde", "barthag", "adj_tempo", "sos"]
 
 
-def build_player_features(players_df: pd.DataFrame) -> dict[str, dict]:
+def build_player_features(players_df: pd.DataFrame,
+                          exclusions: dict | None = None) -> dict[str, dict]:
     """Aggregate player stats into team-level features.
+
+    Args:
+        players_df: player stats DataFrame
+        exclusions: optional dict mapping team name -> list of player names
+                    to exclude (e.g. injured players)
 
     Returns dict mapping team name -> {stat_name: value}.
     """
@@ -44,15 +55,40 @@ def build_player_features(players_df: pd.DataFrame) -> dict[str, dict]:
     feats = {}
     for team in players_df["team"].unique():
         tp = players_df[players_df["team"] == team].copy()
+
+        # Exclude injured/unavailable players
+        if exclusions and team in exclusions:
+            tp = tp[~tp["player_name"].isin(exclusions[team])]
+
         tp["min_total"] = pd.to_numeric(tp["mp"], errors="coerce")
         tp = tp.sort_values("min_total", ascending=False)
         top5 = tp.head(5)
 
         pf = {}
-        pf["top5_bpm_sum"] = pd.to_numeric(top5["bpm"], errors="coerce").sum()
-        pf["top_porpag"] = pd.to_numeric(top5["porpag"], errors="coerce").max()
-        pf["top_obpm"] = pd.to_numeric(top5["obpm"], errors="coerce").max()
-        pf["top_dbpm"] = pd.to_numeric(top5["dbpm"], errors="coerce").max()
+        # Original unweighted features
+        bpm = pd.to_numeric(top5["bpm"], errors="coerce")
+        porpag = pd.to_numeric(top5["porpag"], errors="coerce")
+        obpm = pd.to_numeric(top5["obpm"], errors="coerce")
+        dbpm = pd.to_numeric(top5["dbpm"], errors="coerce")
+        min_per = pd.to_numeric(top5["min_per"], errors="coerce")
+        usg = pd.to_numeric(top5["usg"], errors="coerce")
+
+        pf["top5_bpm_sum"] = bpm.sum()
+        pf["top_porpag"] = porpag.max()
+        pf["top_obpm"] = obpm.max()
+        pf["top_dbpm"] = dbpm.max()
+
+        # Weighted features (Phase 3)
+        min_sum = min_per.sum()
+        pf["top5_bpm_weighted"] = (bpm * min_per).sum() / min_sum if min_sum > 0 else 0.0
+        usg_sum = usg.sum()
+        pf["top5_porpag_weighted"] = (porpag * usg).sum() / usg_sum if usg_sum > 0 else 0.0
+
+        # Exploratory features (Phase 5)
+        pf["top_ast_tov"] = pd.to_numeric(top5["ast_tov"], errors="coerce").max()
+        pf["top5_stops_sum"] = pd.to_numeric(top5["stops"], errors="coerce").sum()
+        pf["top_gbpm"] = pd.to_numeric(top5["gbpm"], errors="coerce").max()
+
         feats[team] = pf
     return feats
 
@@ -84,9 +120,9 @@ class GamePredictor:
         """
         features = {}
 
-        # Core Torvik (6 features)
-        features["eff_gap_t1_off"] = t1_torvik.get("adjoe", 0) - t2_torvik.get("adjde", 0)
-        features["eff_gap_t2_off"] = t2_torvik.get("adjoe", 0) - t1_torvik.get("adjde", 0)
+        # Core Torvik (5 features — net_eff_gap is symmetric)
+        features["net_eff_gap"] = ((t1_torvik.get("adjoe", 0) - t2_torvik.get("adjde", 0))
+                                   - (t2_torvik.get("adjoe", 0) - t1_torvik.get("adjde", 0)))
         features["barthag_diff"] = t1_torvik.get("barthag", 0) - t2_torvik.get("barthag", 0)
         features["expected_tempo"] = (t1_torvik.get("adj_tempo", 67) + t2_torvik.get("adj_tempo", 67)) / 2
         features["sos_diff"] = t1_torvik.get("sos", 0) - t2_torvik.get("sos", 0)

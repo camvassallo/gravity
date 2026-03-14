@@ -15,7 +15,7 @@ from sklearn.metrics import log_loss, roc_auc_score, brier_score_loss, accuracy_
 import warnings
 
 from gravity import run_gravity_pipeline
-from torvik import fetch_team_stats, fetch_player_stats
+from torvik import fetch_team_stats, fetch_player_stats, fetch_player_stats_daterange
 from predict import GamePredictor, build_player_features
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
@@ -125,9 +125,15 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
 
     for year in train_years:
         print(f"  Loading {year} data...")
-        tgs, _, _ = run_gravity_pipeline(year, cutoff_date=cutoff if year == test_year else None)
+        year_cutoff = cutoff if year == test_year else TOURNAMENT_CUTOFFS.get(year)
+        tgs, _, _ = run_gravity_pipeline(year, cutoff_date=year_cutoff)
         teams_df = fetch_team_stats(year).set_index("team")
-        players_df = fetch_player_stats(year)
+        if year_cutoff is not None:
+            start = f"{year - 1}1101"
+            end = str(year_cutoff)
+            players_df = fetch_player_stats_daterange(year, start, end)
+        else:
+            players_df = fetch_player_stats(year)
         player_feats = build_player_features(players_df)
 
         # For training years != test year, use all games
@@ -149,10 +155,12 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
     print(f"  Training on {len(train_X)} games...")
     predictor.fit(train_X, train_y_win, train_y_spread)
 
-    # Test on tournament games
+    # Test on tournament games (using pre-tournament player stats)
     print(f"  Testing on {test_year} tournament...")
     teams_df = fetch_team_stats(test_year).set_index("team")
-    players_df = fetch_player_stats(test_year)
+    start = f"{test_year - 1}1101"
+    end = str(cutoff)
+    players_df = fetch_player_stats_daterange(test_year, start, end)
     player_feats = build_player_features(players_df)
 
     # Get full season data (including tournament) for test games

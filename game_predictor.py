@@ -8,11 +8,26 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
+from pathlib import Path
 
 import pandas as pd
 from torvik import fetch_team_stats, fetch_player_stats
 from predict import GamePredictor, build_player_features, _TORVIK_COLS, _TEAM_DIFF_STATS
+
+CONFIG_DIR = Path(__file__).resolve().parent / "config"
+
+
+def load_injuries(year: int) -> dict | None:
+    """Load player exclusions from config/injuries.json."""
+    path = CONFIG_DIR / "injuries.json"
+    if not path.exists():
+        return None
+    with open(path) as f:
+        data = json.load(f)
+    exclusions = data.get(str(year), {})
+    return exclusions if exclusions else None
 
 
 def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
@@ -21,7 +36,8 @@ def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
 
     teams_df = fetch_team_stats(year).set_index("team")
     players_df = fetch_player_stats(year)
-    player_feats = build_player_features(players_df)
+    exclusions = load_injuries(year)
+    player_feats = build_player_features(players_df, exclusions=exclusions)
 
     # Validate teams
     for team in [team1, team2]:

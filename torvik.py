@@ -55,6 +55,34 @@ def _ensure_cache_dir() -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def fetch_player_stats_daterange(year: int, start: str, end: str,
+                                  force_refresh: bool = False) -> pd.DataFrame:
+    """Fetch date-range player stats via pslice.php. Prevents tournament leakage.
+
+    Args:
+        year: season year (e.g. 2026)
+        start: start date as YYYYMMDD string (e.g. "20251101")
+        end: end date as YYYYMMDD string (e.g. "20260316")
+        force_refresh: bypass cache
+    """
+    path = _cache_path(year, f"player_stats_{start}_{end}")
+    if path.exists() and not force_refresh:
+        return pd.read_csv(path)
+
+    url = (f"{BASE_URL}/pslice.php?year={year}&top=364"
+           f"&start={start}&end={end}&csv=1")
+    resp = requests.get(url, timeout=30)
+    resp.raise_for_status()
+
+    df = pd.read_csv(io.StringIO(resp.text), header=None,
+                     names=PLAYER_STATS_COLUMNS)
+
+    _ensure_cache_dir()
+    df.to_csv(path, index=False)
+    print(f"Cached {len(df)} date-range player rows -> {path}")
+    return df
+
+
 def fetch_player_stats(year: int = 2026, force_refresh: bool = False) -> pd.DataFrame:
     """Fetch season-level player stats. Returns cached CSV if available."""
     path = _cache_path(year, "player_stats")

@@ -227,6 +227,7 @@ class BracketSimulator:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    import json as _json
     import sys
     from torvik import fetch_team_stats, fetch_player_stats
 
@@ -242,7 +243,16 @@ if __name__ == "__main__":
 
     teams_df = fetch_team_stats(2026).set_index("team")
     players_df = fetch_player_stats(2026)
-    player_feats = build_player_features(players_df)
+
+    # Load injury exclusions
+    injuries_path = Path(__file__).resolve().parent / "config" / "injuries.json"
+    exclusions = None
+    if injuries_path.exists():
+        with open(injuries_path) as _f:
+            _injuries = _json.load(_f)
+        exclusions = _injuries.get("2026", {}) or None
+
+    player_feats = build_player_features(players_df, exclusions=exclusions)
 
     print("Loading bracket...")
     sim = BracketSimulator(predictor, teams_df, player_feats)

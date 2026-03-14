@@ -17,7 +17,7 @@ from pathlib import Path
 from sklearn.metrics import log_loss, roc_auc_score, accuracy_score
 
 from gravity import run_gravity_pipeline
-from torvik import fetch_team_stats, fetch_player_stats, fetch_all_for_year
+from torvik import fetch_team_stats, fetch_player_stats, fetch_player_stats_daterange, fetch_all_for_year
 from predict import GamePredictor, build_player_features, MODELS_DIR, _TORVIK_COLS, _TEAM_DIFF_STATS
 
 
@@ -53,7 +53,12 @@ def train(years: list[int], cutoff_current_year: bool = True):
             tgs = tgs[tgs["numdate"] <= cutoff].copy()
 
         teams_df = fetch_team_stats(year).set_index("team")
-        players_df = fetch_player_stats(year)
+        if cutoff is not None:
+            start = f"{year - 1}1101"
+            end = str(cutoff)
+            players_df = fetch_player_stats_daterange(year, start, end)
+        else:
+            players_df = fetch_player_stats(year)
         player_feats = build_player_features(players_df)
 
         print(f"  {tgs['muid'].nunique()} games, {tgs['tt'].nunique()} teams")
@@ -119,7 +124,9 @@ def train(years: list[int], cutoff_current_year: bool = True):
         if len(post_tgs) == 0:
             continue
         cal_teams = fetch_team_stats(cal_year).set_index("team")
-        cal_players = fetch_player_stats(cal_year)
+        cal_start = f"{cal_year - 1}1101"
+        cal_end = str(cutoff)
+        cal_players = fetch_player_stats_daterange(cal_year, cal_start, cal_end)
         cal_pf = build_player_features(cal_players)
         cal_feat, cal_y_win, _ = predictor.build_training_data(post_tgs, cal_teams, cal_pf)
         if len(cal_feat) == 0:
