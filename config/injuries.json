@@ -1,3 +1,715 @@
 {
-  "2026": {}
+  "2026": {
+    "Alabama": [
+      "Charles Bediako"
+    ],
+    "Appalachian St.": [
+      "KJ Vasser"
+    ],
+    "Arizona St.": [
+      "Adante' Holiman",
+      "Dame Salane",
+      "Jovan Icitovic",
+      "Kash Polk",
+      "Quentin McCoy",
+      "Vijay Wallace"
+    ],
+    "Auburn": [
+      "Emeka Opurum"
+    ],
+    "BYU": [
+      "Brody Kozlowski",
+      "Dawson Baker",
+      "KJ Perry",
+      "Nate Pickens",
+      "Richie Saunders"
+    ],
+    "Baylor": [
+      "Andre Iguodala II",
+      "Juslin Bodo Bodo",
+      "Maikcol Perez",
+      "Mayo Soyoye"
+    ],
+    "Belmont": [
+      "Nic McClain"
+    ],
+    "Bethune Cookman": [
+      "Reggie Ward"
+    ],
+    "Boise St.": [
+      "Julian Bowie"
+    ],
+    "Boston University": [
+      "Kyrone Alexander"
+    ],
+    "Butler": [
+      "Azavier Robinson",
+      "Jalen Jackson"
+    ],
+    "California": [
+      "Jovani Ruff",
+      "Rytis Petraitis"
+    ],
+    "Charleston": [
+      "Mister Dean"
+    ],
+    "Cincinnati": [
+      "Jalen Haynes"
+    ],
+    "Clemson": [
+      "Blake Davidson",
+      "Carter Welling",
+      "Zac Foster"
+    ],
+    "Colorado": [
+      "Jon Mani",
+      "Leonardo Van Elswyk"
+    ],
+    "Creighton": [
+      "Aleksa Dimitrijevic",
+      "Jackson McAndrew"
+    ],
+    "Dayton": [
+      "Jaron McKie"
+    ],
+    "DePaul": [
+      "Amsal Delalic",
+      "Isaiah Medina"
+    ],
+    "Delaware": [
+      "Tyler Houser"
+    ],
+    "Duke": [
+      "Ifeanyi Ufochukwu",
+      "Sebastian Wilkins"
+    ],
+    "East Carolina": [
+      "Daithi Quinn",
+      "Grant Smith",
+      "Jayshayne Woodard",
+      "Trevion LaBeaux"
+    ],
+    "Eastern Washington": [
+      "Andrew Cook"
+    ],
+    "FIU": [
+      "Amarion Nimmers",
+      "Gvidas Gicevicius",
+      "Jorge Santos",
+      "Mikey Kelvin"
+    ],
+    "Florida Atlantic": [
+      "Zion Sampaio"
+    ],
+    "Florida St.": [
+      "AJ Swinton"
+    ],
+    "Fresno St.": [
+      "Nathan Zulemie"
+    ],
+    "George Mason": [
+      "Brayden O'Connor"
+    ],
+    "George Washington": [
+      "Jalen Rougier-Roane"
+    ],
+    "Georgetown": [
+      "DeShawn Harris-Smith",
+      "KJ Lewis"
+    ],
+    "Hawaii": [
+      "Aaron Hunkin-Claytor",
+      "Tanner Cuff"
+    ],
+    "Houston": [
+      "Bryce Jackson",
+      "Kordel Jefferson"
+    ],
+    "Illinois": [
+      "Jason Jakstys",
+      "Toni Bilic"
+    ],
+    "Indiana": [
+      "Jordan Rayford"
+    ],
+    "Iowa": [
+      "Peyton McCollum"
+    ],
+    "Iowa St.": [
+      "Mason Williams"
+    ],
+    "Jackson St.": [
+      "Keiveon Hunt"
+    ],
+    "Kansas": [
+      "Corbin Allen"
+    ],
+    "Kennesaw St.": [
+      "Brendan Tousignaut",
+      "Chase Clemmons",
+      "Davin Cosby"
+    ],
+    "Kentucky": [
+      "Braydon Hawthorne",
+      "Jaland Lowe",
+      "Reece Potter"
+    ],
+    "LSU": [
+      "Dedan Thomas",
+      "Jalen Reed",
+      "Owen Foxwell"
+    ],
+    "La Salle": [
+      "Bowyn Beatty",
+      "Jaeden Marshall",
+      "Jerome Brewer",
+      "Justin Archer",
+      "Noah Collier"
+    ],
+    "Louisiana": [
+      "Jamyron Keller",
+      "Sean Elkinton"
+    ],
+    "Louisiana Tech": [
+      "A'Meir Williams",
+      "Will Jeffress"
+    ],
+    "Louisville": [
+      "London Johnson",
+      "Mouhamed Camara"
+    ],
+    "Marquette": [
+      "Ian Miletic",
+      "Nash Walker",
+      "Sean Jones",
+      "Sheek Pearson"
+    ],
+    "Maryland": [
+      "Rakease Passmore"
+    ],
+    "Miami FL": [
+      "Marcus Allen"
+    ],
+    "Miami OH": [
+      "Evan Ipsaro"
+    ],
+    "Michigan": [
+      "L.J. Cason",
+      "Ricky Liburd"
+    ],
+    "Michigan St.": [
+      "Divine Ugochukwu",
+      "Kaleb Glenn"
+    ],
+    "Minnesota": [
+      "BJ Omot",
+      "Chansey Willis",
+      "Max Lorenson",
+      "Robert Vaihola"
+    ],
+    "Mississippi": [
+      "TJ Clark"
+    ],
+    "Mississippi St.": [
+      "Gai Chol"
+    ],
+    "Missouri": [
+      "Annor Boateng"
+    ],
+    "NC State": [
+      "Jerry Deng"
+    ],
+    "Nebraska": [
+      "Connor Essegian"
+    ],
+    "New Mexico": [
+      "Kallai Patton",
+      "Sir Marius Jones"
+    ],
+    "North Carolina": [
+      "Caleb Wilson",
+      "James Brown"
+    ],
+    "North Texas": [
+      "Will McClendon"
+    ],
+    "Ohio St.": [
+      "Myles Herro"
+    ],
+    "Oklahoma St.": [
+      "Parsa Fallah",
+      "Robert Jennings"
+    ],
+    "Oregon": [
+      "Ege Demir",
+      "Jackson Shelstad"
+    ],
+    "Pacific": [
+      "Damarion Vann-Kelly"
+    ],
+    "Penn St.": [
+      "Reggie Grodin"
+    ],
+    "Pittsburgh": [
+      "Brandin Cummings",
+      "Dishon Jackson",
+      "Papa Amadou Kante"
+    ],
+    "Portland": [
+      "Austin Foxwell",
+      "NaVaughn Long",
+      "Preston Lee",
+      "Riley Parker",
+      "Timo George"
+    ],
+    "Providence": [
+      "Daquan Davis",
+      "Jaylen Harrell"
+    ],
+    "Purdue": [
+      "Caden Pierce"
+    ],
+    "Rhode Island": [
+      "Javon Perry",
+      "Moek Icke",
+      "Mouhamed Sow"
+    ],
+    "Rice": [
+      "Aaron Powell"
+    ],
+    "Rutgers": [
+      "Dorian Jones"
+    ],
+    "Saint Louis": [
+      "Kalu Anya"
+    ],
+    "Sam Houston St.": [
+      "Cheikh Ndiaye",
+      "Isaiah Manning",
+      "Jackson Rogers",
+      "Jaxson Ford",
+      "Justin Begg",
+      "Nathan Nguyen",
+      "Noah Benny"
+    ],
+    "Santa Clara": [
+      "Chris Tadjo"
+    ],
+    "Seton Hall": [
+      "Jahseem Felton"
+    ],
+    "Siena": [
+      "Tasman Goodrick"
+    ],
+    "South Carolina": [
+      "Abu Yarmah",
+      "Cam Scott"
+    ],
+    "South Florida": [
+      "De'Ante Green",
+      "Xavier Brown"
+    ],
+    "St. John's": [
+      "Casper Pohto",
+      "Imran Suljanovic"
+    ],
+    "Stanford": [
+      "Chisom Okpara"
+    ],
+    "Syracuse": [
+      "Aaron Womack"
+    ],
+    "TCU": [
+      "Malick Diallo"
+    ],
+    "Temple": [
+      "AJ Smith"
+    ],
+    "Tennessee": [
+      "Cade Phillips"
+    ],
+    "Texas A&M": [
+      "Mackenzie Mgbako",
+      "Neiko Mundey"
+    ],
+    "Texas Tech": [
+      "JT Toppin",
+      "LaTrell Hoover"
+    ],
+    "UAB": [
+      "Joao Das Chagas"
+    ],
+    "UNC Wilmington": [
+      "CJ Luster"
+    ],
+    "UNLV": [
+      "Myles Che"
+    ],
+    "USC": [
+      "Rodney Rice"
+    ],
+    "UTEP": [
+      "Tyreese Watson"
+    ],
+    "UTSA": [
+      "Macaleab Rich",
+      "Pierce Spencer",
+      "Vasean Allette"
+    ],
+    "Utah": [
+      "Babacar Faye"
+    ],
+    "Vanderbilt": [
+      "Frankie Collins",
+      "George Kimble"
+    ],
+    "Villanova": [
+      "Matthew Hodge"
+    ],
+    "Virginia Tech": [
+      "Sin'Cere Jones"
+    ],
+    "Washington": [
+      "Christian Nitu",
+      "Desmond Claude",
+      "JJ Mandaquit",
+      "Jasir Rencher",
+      "Mady Traore"
+    ],
+    "Washington St.": [
+      "Casey Jones",
+      "Dominik Robinson",
+      "Emmanuel Ugbo"
+    ],
+    "West Virginia": [
+      "Abraham Oyeadier"
+    ],
+    "Western Kentucky": [
+      "Bryant Selebangue",
+      "Lawson Rice"
+    ],
+    "Wichita St.": [
+      "Jaret Valencia",
+      "Pierre Couisnard",
+      "Tyrus Rathan-Mayes"
+    ],
+    "Xavier": [
+      "Kason Westphal"
+    ]
+  },
+  "_out_pending_2026": {
+    "_note": "Players currently 'Out' - review and move to main section as needed",
+    "Alabama": [
+      "Collins Onyejiaka",
+      "Davion Hannah",
+      "Keitenn Bristow"
+    ],
+    "Arizona St.": [
+      "Marcus Adams"
+    ],
+    "Arkansas": [
+      "Karter Knox"
+    ],
+    "Arkansas Pine Bluff": [
+      "Jaquan Scott"
+    ],
+    "Arkansas St.": [
+      "Chudi Dioramma"
+    ],
+    "Boston University": [
+      "Malcolm Chimezie"
+    ],
+    "Buffalo": [
+      "Daniel Freitag"
+    ],
+    "Charleston": [
+      "Will Mortimore"
+    ],
+    "Charlotte": [
+      "David Gomez",
+      "Frank Oguche",
+      "Major Freeman"
+    ],
+    "Clemson": [
+      "Trent Steinour"
+    ],
+    "Creighton": [
+      "Josh Townley-Thomas",
+      "Liam McChesney"
+    ],
+    "Davidson": [
+      "Joe Hurlburt"
+    ],
+    "Dayton": [
+      "Evan Dickey"
+    ],
+    "DePaul": [
+      "Jeremy Lorenz"
+    ],
+    "Delaware": [
+      "Bouna Kebe",
+      "Cavan Reilly",
+      "Jameel Brown",
+      "Lance Piper",
+      "Mason Ellison"
+    ],
+    "Delaware St.": [
+      "Camian Shell"
+    ],
+    "Duke": [
+      "Caleb Foster",
+      "Patrick Ngongba"
+    ],
+    "Eastern Kentucky": [
+      "Amarr Knox"
+    ],
+    "Eastern Michigan": [
+      "Carlos Hart"
+    ],
+    "Fordham": [
+      "Jack Whitbourn",
+      "Ryan Pettis"
+    ],
+    "George Washington": [
+      "Mohamed Binzagr",
+      "Ty Bevins"
+    ],
+    "Georgetown": [
+      "Gabriel Landeira",
+      "Hashem Asadallah"
+    ],
+    "Georgia St.": [
+      "Clash Peters"
+    ],
+    "Gonzaga": [
+      "Braden Huff"
+    ],
+    "Idaho": [
+      "Kristian Gonzalez"
+    ],
+    "Illinois": [
+      "Ty Rodgers"
+    ],
+    "Indiana": [
+      "Jason Drake",
+      "Josh Harris"
+    ],
+    "Iowa St.": [
+      "Xzavion Mitchell"
+    ],
+    "Jackson St.": [
+      "Daeshun Ruffin"
+    ],
+    "Jacksonville St.": [
+      "Bencao Vungo",
+      "Jordan Vick"
+    ],
+    "Kansas St.": [
+      "Mobi Ikegwuruka"
+    ],
+    "Kennesaw St.": [
+      "Simeon Cottle"
+    ],
+    "Kentucky": [
+      "Jayden Quaintance"
+    ],
+    "LSU": [
+      "Robert Miller"
+    ],
+    "La Salle": [
+      "Josue Grullon"
+    ],
+    "Loyola Chicago": [
+      "Caleb Reese",
+      "Chuck Love",
+      "Dominick Harris",
+      "Justin Moore",
+      "Kymany Houinsou"
+    ],
+    "Marist": [
+      "Jason Schofield"
+    ],
+    "Maryland": [
+      "Lukas Sotell",
+      "Pharrel Payne"
+    ],
+    "Memphis": [
+      "Ashton Hardaway"
+    ],
+    "Miami FL": [
+      "Treyvon Maddox"
+    ],
+    "Michigan": [
+      "Winters Grady"
+    ],
+    "Middle Tennessee": [
+      "Brandon Oloumou",
+      "Charvez Ambrose",
+      "Jax Howard",
+      "Savon Wykle"
+    ],
+    "Minnesota": [
+      "Chance Stephens"
+    ],
+    "Mississippi": [
+      "Koren Johnson"
+    ],
+    "Missouri St.": [
+      "Amar Kuljuhovic",
+      "Antwan Burnett"
+    ],
+    "N.C. A&T": [
+      "Zamoku Weluche-Ume"
+    ],
+    "NC State": [
+      "Colt Langdon"
+    ],
+    "Nebraska": [
+      "Henry Burt",
+      "Ugnius Jarusevicius"
+    ],
+    "New Mexico": [
+      "Chris Howell",
+      "Kevin Patton"
+    ],
+    "New Orleans": [
+      "James White"
+    ],
+    "Ohio St.": [
+      "Josh Ojianwuna",
+      "Taison Chatman"
+    ],
+    "Oklahoma": [
+      "Jeff Nwankwo"
+    ],
+    "Oregon": [
+      "Devon Pryor"
+    ],
+    "Penn": [
+      "Ethan Roberts"
+    ],
+    "Providence": [
+      "Rich Barron"
+    ],
+    "Rhode Island": [
+      "Jaymien Aponte"
+    ],
+    "Richmond": [
+      "Bryson McGlothin"
+    ],
+    "Rutgers": [
+      "Baye Fall",
+      "Chris Nwuli"
+    ],
+    "Sacramento St.": [
+      "Jeremiah Cherry"
+    ],
+    "Saint Joseph's": [
+      "Owen Verna",
+      "Steven Solano",
+      "Will Lange"
+    ],
+    "San Diego": [
+      "Ty-Laur Johnson"
+    ],
+    "San Diego St.": [
+      "Elzie Harrington"
+    ],
+    "San Francisco": [
+      "Ndewedo Newbury"
+    ],
+    "San Jose St.": [
+      "Ben Roseborough",
+      "Christian Wise",
+      "JaVaughn Hannah",
+      "Jaden Goodall",
+      "Pasha Goodarzi",
+      "Yaphet Moundi"
+    ],
+    "Santa Clara": [
+      "Gehrig Normand"
+    ],
+    "Seton Hall": [
+      "Godswill Erheriene",
+      "Patrick Suemnick"
+    ],
+    "Siena": [
+      "Owen Schlager",
+      "Reid Ducharme",
+      "Tajae Jones"
+    ],
+    "St. Bonaventure": [
+      "Amar'e Marshall",
+      "Ilia Ermakov",
+      "Xander Wedlow"
+    ],
+    "St. John's": [
+      "Kelvin Odih"
+    ],
+    "Stanford": [
+      "Anthony Batson"
+    ],
+    "Temple": [
+      "CJ Hines"
+    ],
+    "Tennessee St.": [
+      "Brandon Weston"
+    ],
+    "Texas Southern": [
+      "Oumar Koureissi"
+    ],
+    "Tulsa": [
+      "Terrance Ford"
+    ],
+    "UC Santa Barbara": [
+      "Jason Fontenet"
+    ],
+    "UCF": [
+      "Tanner Jones"
+    ],
+    "UCLA": [
+      "Evan Manjikian"
+    ],
+    "UConn": [
+      "Jaylin Stewart"
+    ],
+    "UNC Wilmington": [
+      "Gavin Walsh"
+    ],
+    "UNLV": [
+      "Ladji Dembele"
+    ],
+    "UTEP": [
+      "David Tubek"
+    ],
+    "Utah": [
+      "Jacob Patrick"
+    ],
+    "VCU": [
+      "Christian Fermin",
+      "Obinnaya Okafor"
+    ],
+    "Virginia": [
+      "Carter Lang"
+    ],
+    "Western Kentucky": [
+      "Louie Semona"
+    ],
+    "Wichita St.": [
+      "Joy Ighovodja"
+    ],
+    "Wisconsin": [
+      "Jack Janicki",
+      "Nolan Winter"
+    ],
+    "Wyoming": [
+      "Jared Harris",
+      "Matija Belic"
+    ],
+    "Xavier": [
+      "Gabriel Pozzato",
+      "Luke Naser",
+      "Michael Wolf"
+    ]
+  }
 }

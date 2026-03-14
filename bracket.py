@@ -167,7 +167,8 @@ class BracketSimulator:
     def export_csv(self, results: pd.DataFrame, path: str | Path = None):
         """Export results to CSV."""
         if path is None:
-            path = Path(__file__).resolve().parent / "data" / "bracket_simulation.csv"
+            path = Path(__file__).resolve().parent / "results" / "bracket_simulation.csv"
+            path.parent.mkdir(exist_ok=True)
         results.to_csv(path)
         print(f"\nSaved results -> {path}")
 
@@ -270,3 +271,29 @@ if __name__ == "__main__":
     for region, winner in likely["regions"].items():
         print(f"  {region}: {winner}")
     print(f"  Champion: {likely['champion']}")
+
+    # Save text report
+    results_dir = Path(__file__).resolve().parent / "results"
+    results_dir.mkdir(exist_ok=True)
+    report_path = results_dir / "bracket_report.txt"
+    with open(report_path, "w") as rpt:
+        rpt.write(f"Bracket Simulation Report ({n_sims} simulations)\n")
+        rpt.write(f"{'=' * 85}\n\n")
+        if exclusions:
+            rpt.write("Injuries/Exclusions:\n")
+            for team, players in exclusions.items():
+                rpt.write(f"  {team}: {', '.join(players)}\n")
+            rpt.write("\n")
+        header = (f"{'Team':<22} | {'R64':>5} | {'R32':>5} | {'S16':>5} | {'E8':>5} | "
+                  f"{'F4':>5} | {'Champ':>5} | {'E[Wins]':>7}")
+        rpt.write(header + "\n")
+        rpt.write("-" * 85 + "\n")
+        for team, row in results.iterrows():
+            rpt.write(f"{team:<22} | {row['R64']:>5.1f} | {row['R32']:>5.1f} | {row['S16']:>5.1f} | "
+                      f"{row['E8']:>5.1f} | {row['F4']:>5.1f} | {row['Champion']:>5.1f} | "
+                      f"{row['E[Wins]']:>7.2f}\n")
+        rpt.write(f"\nMost Likely Bracket:\n")
+        for region, winner in likely["regions"].items():
+            rpt.write(f"  {region}: {winner}\n")
+        rpt.write(f"  Champion: {likely['champion']}\n")
+    print(f"\nSaved report -> {report_path}")
