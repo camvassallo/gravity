@@ -71,8 +71,21 @@ def fetch_player_stats_daterange(year: int, start: str, end: str,
 
     url = (f"{BASE_URL}/pslice.php?year={year}&top=364"
            f"&start={start}&end={end}&csv=1")
-    resp = requests.get(url, timeout=30)
-    resp.raise_for_status()
+
+    last_err = None
+    for attempt in range(2):
+        try:
+            resp = requests.get(url, timeout=300)
+            resp.raise_for_status()
+            break
+        except requests.exceptions.RequestException as e:
+            last_err = e
+            if attempt == 0:
+                import time
+                print(f"fetch_player_stats_daterange attempt 1 failed: {e}. Retrying in 5s...")
+                time.sleep(5)
+    else:
+        raise last_err
 
     df = pd.read_csv(io.StringIO(resp.text), header=None,
                      names=PLAYER_STATS_COLUMNS)
@@ -90,7 +103,7 @@ def fetch_player_stats(year: int = 2026, force_refresh: bool = False) -> pd.Data
         return pd.read_csv(path)
 
     url = f"{BASE_URL}/getadvstats.php?year={year}&csv=1"
-    resp = requests.get(url, timeout=30)
+    resp = requests.get(url, timeout=120)
     resp.raise_for_status()
 
     df = pd.read_csv(io.StringIO(resp.text), header=None, names=PLAYER_STATS_COLUMNS)
@@ -108,7 +121,7 @@ def fetch_team_stats(year: int = 2026, force_refresh: bool = False) -> pd.DataFr
         return pd.read_csv(path)
 
     url = f"{BASE_URL}/{year}_team_results.json"
-    resp = requests.get(url, timeout=30)
+    resp = requests.get(url, timeout=120)
     resp.raise_for_status()
 
     rows = resp.json()

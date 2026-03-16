@@ -49,9 +49,8 @@ class BracketSimulator:
         t2_torvik, t2_players = self._get_team_data(team2)
 
         features = self.predictor.build_features(t1_torvik, t2_torvik, t1_players, t2_players, location)
-        spread = self.predictor.predict_spread(features)
-        margin = np.random.normal(spread, self.predictor.spread_sigma)
-        return team1 if margin > 0 else team2
+        win_prob = self.predictor.ensemble_prob(features, tournament=True)
+        return team1 if np.random.random() < win_prob else team2
 
     def load_bracket(self, path: str | Path) -> dict:
         """Load bracket from JSON file."""
@@ -245,15 +244,17 @@ if __name__ == "__main__":
     teams_df = fetch_team_stats(2026).set_index("team")
     players_df = fetch_player_stats(2026)
 
-    # Load injury exclusions
+    # Load injury exclusions and weights
     injuries_path = Path(__file__).resolve().parent / "config" / "injuries.json"
     exclusions = None
+    weights = None
     if injuries_path.exists():
         with open(injuries_path) as _f:
             _injuries = _json.load(_f)
         exclusions = _injuries.get("2026", {}) or None
+        weights = _injuries.get("_weights_2026", {}) or None
 
-    player_feats = build_player_features(players_df, exclusions=exclusions)
+    player_feats = build_player_features(players_df, exclusions=exclusions, weights=weights)
 
     print("Loading bracket...")
     sim = BracketSimulator(predictor, teams_df, player_feats)

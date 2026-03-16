@@ -30,6 +30,17 @@ def load_injuries(year: int) -> dict | None:
     return exclusions if exclusions else None
 
 
+def load_injury_weights(year: int) -> dict | None:
+    """Load partial-availability weights from config/injuries.json."""
+    path = CONFIG_DIR / "injuries.json"
+    if not path.exists():
+        return None
+    with open(path) as f:
+        data = json.load(f)
+    weights = data.get(f"_weights_{year}", {})
+    return weights if weights else None
+
+
 def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
     """Predict a single game and display results."""
     predictor = GamePredictor.load()
@@ -37,7 +48,8 @@ def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
     teams_df = fetch_team_stats(year).set_index("team")
     players_df = fetch_player_stats(year)
     exclusions = load_injuries(year)
-    player_feats = build_player_features(players_df, exclusions=exclusions)
+    weights = load_injury_weights(year)
+    player_feats = build_player_features(players_df, exclusions=exclusions, weights=weights)
 
     # Validate teams
     for team in [team1, team2]:
