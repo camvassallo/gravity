@@ -229,7 +229,7 @@ class BracketSimulator:
 if __name__ == "__main__":
     import json as _json
     import sys
-    from torvik import fetch_team_stats, fetch_player_stats
+    from torvik import fetch_team_stats, fetch_player_stats, fetch_player_stats_daterange
 
     bracket_path = sys.argv[1] if len(sys.argv) > 1 else BRACKETS_DIR / "bracket_2026.json"
 
@@ -244,6 +244,14 @@ if __name__ == "__main__":
     teams_df = fetch_team_stats(2026).set_index("team")
     players_df = fetch_player_stats(2026)
 
+    # Recent 30-day window for form features
+    cutoff_dt = pd.to_datetime("20260316", format="%Y%m%d")
+    recent_start = (cutoff_dt - pd.Timedelta(days=30)).strftime("%Y%m%d")
+    try:
+        recent_players_df = fetch_player_stats_daterange(2026, recent_start, "20260316")
+    except Exception:
+        recent_players_df = None
+
     # Load injury exclusions and weights
     injuries_path = Path(__file__).resolve().parent / "config" / "injuries.json"
     exclusions = None
@@ -254,7 +262,8 @@ if __name__ == "__main__":
         exclusions = _injuries.get("2026", {}) or None
         weights = _injuries.get("_weights_2026", {}) or None
 
-    player_feats = build_player_features(players_df, exclusions=exclusions, weights=weights)
+    player_feats = build_player_features(players_df, recent_players_df=recent_players_df,
+                                         exclusions=exclusions, weights=weights)
 
     print("Loading bracket...")
     sim = BracketSimulator(predictor, teams_df, player_feats)

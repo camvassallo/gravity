@@ -3,12 +3,12 @@
 GamePredictor uses Torvik efficiency ratings, team quality metrics,
 and player-derived features to predict win probability and point spread.
 
-Feature set (21 features):
-- 5 core Torvik: net efficiency gap, barthag diff, tempo, SOS diff, location
-- 4 team quality: fun, elite SOS, quality games, WAB diffs
-- 12 player-derived: BPM sum, porpag, OBPM, DBPM, weighted BPM,
-  weighted porpag, ast/tov, stops, GBPM, TS% sum, bench BPM,
-  usage spread (all diffs)
+Feature set (19 features):
+- 2 core Torvik: barthag diff, SOS diff
+- 5 team quality: fun, elite SOS, quality games, WAB, quality barthag diffs
+- 12 player-derived: BPM sum, weighted BPM, weighted porpag, ast/tov,
+  stops, GBPM, TS% sum, bench BPM, experience, height,
+  BPM trend, porpag trend (all diffs)
 """
 
 from __future__ import annotations
@@ -48,27 +48,42 @@ def compute_recency_weights(dates: np.ndarray, cutoff: int,
     return np.exp(-decay * days_before)
 
 # Team-level stats used as diffs
-_TEAM_DIFF_STATS = ["fun", "elite_sos", "qual_games", "wab"]
+_TEAM_DIFF_STATS = ["fun", "elite_sos", "qual_games", "wab", "qual_barthag"]
 
 # Player-derived stats used as diffs
 _PLAYER_DIFF_STATS = [
-    "top5_bpm_sum", "top_porpag", "top_obpm", "top_dbpm",
-    "top5_bpm_weighted", "top5_porpag_weighted",
+    "top5_bpm_sum", "top5_bpm_weighted", "top5_porpag_weighted",
     "top_ast_tov", "top5_stops_sum", "top_gbpm",
-    "top5_ts_sum", "bench_bpm_sum", "top5_usage_spread",
+    "top5_ts_sum", "bench_bpm_sum",
+    "avg_experience", "avg_height",
+    "top5_bpm_trend", "top_porpag_trend",
 ]
 
 # Torvik columns needed per team
 _TORVIK_COLS = ["adjoe", "adjde", "barthag", "adj_tempo", "sos"]
 
+_YR_MAP = {"Fr": 1, "So": 2, "Jr": 3, "Sr": 4}
+
+
+def _parse_height(ht_str):
+    """Convert height string like '6-8' to inches (80)."""
+    try:
+        parts = str(ht_str).split("-")
+        return int(parts[0]) * 12 + int(parts[1])
+    except (ValueError, IndexError):
+        return 78  # default ~6-6
+
 
 def build_player_features(players_df: pd.DataFrame,
+                          recent_players_df: pd.DataFrame | None = None,
                           exclusions: dict | None = None,
                           weights: dict | None = None) -> dict[str, dict]:
     """Aggregate player stats into team-level features.
 
     Args:
         players_df: player stats DataFrame
+        recent_players_df: optional player stats for recent window (last 30 days),
+                           used to compute form/trend features
         exclusions: optional dict mapping team name -> list of player names
                     to exclude (e.g. injured players)
         weights: optional dict mapping team name -> {player_name: float}
@@ -108,18 +123,13 @@ def build_player_features(players_df: pd.DataFrame,
         top8 = tp.head(8)
 
         pf = {}
-        # Original unweighted features
+        # Core player stats
         bpm = pd.to_numeric(top5["bpm"], errors="coerce")
         porpag = pd.to_numeric(top5["porpag"], errors="coerce")
-        obpm = pd.to_numeric(top5["obpm"], errors="coerce")
-        dbpm = pd.to_numeric(top5["dbpm"], errors="coerce")
         min_per = pd.to_numeric(top5["min_per"], errors="coerce")
         usg = pd.to_numeric(top5["usg"], errors="coerce")
 
         pf["top5_bpm_sum"] = bpm.sum()
-        pf["top_porpag"] = porpag.max()
-        pf["top_obpm"] = obpm.max()
-        pf["top_dbpm"] = dbpm.max()
 
         # Weighted features
         min_sum = min_per.sum()
@@ -132,7 +142,7 @@ def build_player_features(players_df: pd.DataFrame,
         pf["top5_stops_sum"] = pd.to_numeric(top5["stops"], errors="coerce").sum()
         pf["top_gbpm"] = pd.to_numeric(top5["gbpm"], errors="coerce").max()
 
-        # New features: shooting efficiency, bench depth, usage balance
+        # Shooting efficiency and bench depth
         ts = pd.to_numeric(top5["ts_per"], errors="coerce")
         pf["top5_ts_sum"] = ts.sum()
 
@@ -142,7 +152,29 @@ def build_player_features(players_df: pd.DataFrame,
         else:
             pf["bench_bpm_sum"] = 0.0
 
-        pf["top5_usage_spread"] = usg.std() if len(usg) > 1 else 0.0
+        # Experience (minutes-weighted class year)
+        yr_numeric = top5["yr"].map(_YR_MAP).fillna(2)
+        pf["avg_experience"] = (yr_numeric * min_per).sum() / min_sum if min_sum > 0 else 2.0
+
+        # Height (minutes-weighted, in inches)
+        heights = top5["ht"].apply(_parse_height)
+        pf["avg_height"] = (heights * min_per).sum() / min_sum if min_sum > 0 else 78.0
+
+        # Late-season form trends (default 0.0 if no recent data)
+        pf["top5_bpm_trend"] = 0.0
+        pf["top_porpag_trend"] = 0.0
+        if recent_players_df is not None:
+            rtp = recent_players_df[recent_players_df["team"] == team].copy()
+            if exclusions and team in exclusions:
+                rtp = rtp[~rtp["player_name"].isin(exclusions[team])]
+            rtp["min_total"] = pd.to_numeric(rtp["mp"], errors="coerce")
+            rtp = rtp.sort_values("min_total", ascending=False)
+            rtop5 = rtp.head(5)
+            if len(rtop5) > 0:
+                recent_bpm = pd.to_numeric(rtop5["bpm"], errors="coerce")
+                recent_porpag = pd.to_numeric(rtop5["porpag"], errors="coerce")
+                pf["top5_bpm_trend"] = recent_bpm.sum() - bpm.sum()
+                pf["top_porpag_trend"] = recent_porpag.max() - porpag.max()
 
         feats[team] = pf
     return feats
@@ -176,19 +208,15 @@ class GamePredictor:
         """
         features = {}
 
-        # Core Torvik (5 features — net_eff_gap is symmetric)
-        features["net_eff_gap"] = ((t1_torvik.get("adjoe", 0) - t2_torvik.get("adjde", 0))
-                                   - (t2_torvik.get("adjoe", 0) - t1_torvik.get("adjde", 0)))
+        # Core Torvik (2 features)
         features["barthag_diff"] = t1_torvik.get("barthag", 0) - t2_torvik.get("barthag", 0)
-        features["expected_tempo"] = (t1_torvik.get("adj_tempo", 67) + t2_torvik.get("adj_tempo", 67)) / 2
         features["sos_diff"] = t1_torvik.get("sos", 0) - t2_torvik.get("sos", 0)
-        features["location"] = location
 
-        # Team quality diffs (4 features)
+        # Team quality diffs (5 features)
         for stat in _TEAM_DIFF_STATS:
             features[f"diff_{stat}"] = t1_torvik.get(stat, 0) - t2_torvik.get(stat, 0)
 
-        # Player diffs (4 features)
+        # Player diffs (12 features)
         for stat in _PLAYER_DIFF_STATS:
             features[f"diff_{stat}"] = t1_players.get(stat, 0) - t2_players.get(stat, 0)
 
@@ -345,7 +373,7 @@ class GamePredictor:
         spread = self.predict_spread(features)
         spread_wp = self.spread_win_prob(features)
 
-        pace = features["expected_tempo"]
+        pace = (t1_torvik.get("adj_tempo", 67) + t2_torvik.get("adj_tempo", 67)) / 2
         t1_eff = t1_torvik.get("adjoe", 100)
         t2_eff = t2_torvik.get("adjoe", 100)
         predicted_total = (t1_eff * pace / 100) + (t2_eff * pace / 100)

@@ -69,9 +69,17 @@ def train(years: list[int], cutoff_current_year: bool = True, half_life: int = 6
             except Exception as e:
                 print(f"  Date-range fetch failed ({e.__class__.__name__}), falling back to full-season stats")
                 players_df = fetch_player_stats(year)
+            # Recent 30-day window for form features
+            cutoff_dt = pd.to_datetime(str(cutoff), format="%Y%m%d")
+            recent_start = (cutoff_dt - pd.Timedelta(days=30)).strftime("%Y%m%d")
+            try:
+                recent_players_df = fetch_player_stats_daterange(year, recent_start, end)
+            except Exception:
+                recent_players_df = None
         else:
             players_df = fetch_player_stats(year)
-        player_feats = build_player_features(players_df)
+            recent_players_df = None
+        player_feats = build_player_features(players_df, recent_players_df=recent_players_df)
 
         print(f"  {tgs['muid'].nunique()} games, {tgs['tt'].nunique()} teams")
 
@@ -150,7 +158,13 @@ def train(years: list[int], cutoff_current_year: bool = True, half_life: int = 6
         cal_start = f"{cal_year - 1}1101"
         cal_end = str(cutoff)
         cal_players = fetch_player_stats_daterange(cal_year, cal_start, cal_end)
-        cal_pf = build_player_features(cal_players)
+        cutoff_dt = pd.to_datetime(str(cutoff), format="%Y%m%d")
+        cal_recent_start = (cutoff_dt - pd.Timedelta(days=30)).strftime("%Y%m%d")
+        try:
+            cal_recent = fetch_player_stats_daterange(cal_year, cal_recent_start, cal_end)
+        except Exception:
+            cal_recent = None
+        cal_pf = build_player_features(cal_players, recent_players_df=cal_recent)
         cal_feat, cal_y_win, _, _ = predictor.build_training_data(post_tgs, cal_teams, cal_pf)
         if len(cal_feat) == 0:
             continue

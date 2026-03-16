@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
-from torvik import fetch_team_stats, fetch_player_stats
+from torvik import fetch_team_stats, fetch_player_stats, fetch_player_stats_daterange
 from predict import GamePredictor, build_player_features, _TORVIK_COLS, _TEAM_DIFF_STATS
 
 CONFIG_DIR = Path(__file__).resolve().parent / "config"
@@ -49,7 +49,17 @@ def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
     players_df = fetch_player_stats(year)
     exclusions = load_injuries(year)
     weights = load_injury_weights(year)
-    player_feats = build_player_features(players_df, exclusions=exclusions, weights=weights)
+
+    # Recent 30-day window for form features
+    cutoff_dt = pd.to_datetime("20260316", format="%Y%m%d")
+    recent_start = (cutoff_dt - pd.Timedelta(days=30)).strftime("%Y%m%d")
+    try:
+        recent_players_df = fetch_player_stats_daterange(year, recent_start, "20260316")
+    except Exception:
+        recent_players_df = None
+
+    player_feats = build_player_features(players_df, recent_players_df=recent_players_df,
+                                         exclusions=exclusions, weights=weights)
 
     # Validate teams
     for team in [team1, team2]:
@@ -110,10 +120,10 @@ def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
 
     # Player comparison
     print(f"\n  Top Player Stats:")
-    print(f"    {'':>25} {'Top5 BPM':>9} {'Porpag':>7} {'OBPM':>6} {'DBPM':>6}")
+    print(f"    {'':>25} {'Top5 BPM':>9} {'Exp':>5} {'Ht':>5} {'BPM Trnd':>9}")
     for team, pf in [(team1, t1_players), (team2, t2_players)]:
-        print(f"    {team:<25} {pf.get('top5_bpm_sum', 0):>9.1f} {pf.get('top_porpag', 0):>7.1f} "
-              f"{pf.get('top_obpm', 0):>6.1f} {pf.get('top_dbpm', 0):>6.1f}")
+        print(f"    {team:<25} {pf.get('top5_bpm_sum', 0):>9.1f} {pf.get('avg_experience', 0):>5.1f} "
+              f"{pf.get('avg_height', 0):>5.0f} {pf.get('top5_bpm_trend', 0):>9.1f}")
     print()
 
 

@@ -235,9 +235,16 @@ def backtest_year(train_years: list[int], test_year: int, half_life: int = 60) -
             start = f"{year - 1}1101"
             end = str(year_cutoff)
             players_df = fetch_player_stats_daterange(year, start, end)
+            cutoff_dt = pd.to_datetime(str(year_cutoff), format="%Y%m%d")
+            recent_start = (cutoff_dt - pd.Timedelta(days=30)).strftime("%Y%m%d")
+            try:
+                recent_players_df = fetch_player_stats_daterange(year, recent_start, end)
+            except Exception:
+                recent_players_df = None
         else:
             players_df = fetch_player_stats(year)
-        player_feats = build_player_features(players_df)
+            recent_players_df = None
+        player_feats = build_player_features(players_df, recent_players_df=recent_players_df)
 
         # For training years != test year, use all games
         if year != test_year:
@@ -309,7 +316,13 @@ def backtest_year(train_years: list[int], test_year: int, half_life: int = 60) -
     start = f"{test_year - 1}1101"
     end = str(cutoff)
     players_df = fetch_player_stats_daterange(test_year, start, end)
-    player_feats = build_player_features(players_df)
+    cutoff_dt = pd.to_datetime(str(cutoff), format="%Y%m%d")
+    recent_start = (cutoff_dt - pd.Timedelta(days=30)).strftime("%Y%m%d")
+    try:
+        recent_players_df = fetch_player_stats_daterange(test_year, recent_start, end)
+    except Exception:
+        recent_players_df = None
+    player_feats = build_player_features(players_df, recent_players_df=recent_players_df)
 
     # Get full season data (including tournament) for test games
     full_tgs, _, _ = run_gravity_pipeline(test_year)
