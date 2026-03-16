@@ -10,6 +10,9 @@ import requests
 
 BASE_URL = "https://barttorvik.com"
 CACHE_DIR = Path(__file__).resolve().parent / "data"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+}
 
 PLAYER_STATS_COLUMNS = [
     "player_name", "team", "conf", "gp", "min_per", "o_rtg", "usg", "e_fg",
@@ -75,7 +78,7 @@ def fetch_player_stats_daterange(year: int, start: str, end: str,
     last_err = None
     for attempt in range(2):
         try:
-            resp = requests.get(url, timeout=300)
+            resp = requests.get(url, timeout=300, headers=HEADERS)
             resp.raise_for_status()
             break
         except requests.exceptions.RequestException as e:
@@ -103,7 +106,7 @@ def fetch_player_stats(year: int = 2026, force_refresh: bool = False) -> pd.Data
         return pd.read_csv(path)
 
     url = f"{BASE_URL}/getadvstats.php?year={year}&csv=1"
-    resp = requests.get(url, timeout=120)
+    resp = requests.get(url, timeout=120, headers=HEADERS)
     resp.raise_for_status()
 
     df = pd.read_csv(io.StringIO(resp.text), header=None, names=PLAYER_STATS_COLUMNS)
@@ -121,7 +124,7 @@ def fetch_team_stats(year: int = 2026, force_refresh: bool = False) -> pd.DataFr
         return pd.read_csv(path)
 
     url = f"{BASE_URL}/{year}_team_results.json"
-    resp = requests.get(url, timeout=120)
+    resp = requests.get(url, timeout=120, headers=HEADERS)
     resp.raise_for_status()
 
     rows = resp.json()
@@ -141,7 +144,7 @@ def fetch_game_stats(year: int = 2026, force_refresh: bool = False) -> pd.DataFr
         return pd.read_csv(path, low_memory=False)
 
     url = f"{BASE_URL}/{year}_all_advgames.json.gz"
-    resp = requests.get(url, timeout=60)
+    resp = requests.get(url, timeout=60, headers=HEADERS)
     resp.raise_for_status()
 
     # Server or requests may auto-decompress; try raw first, fall back to gzip

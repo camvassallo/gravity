@@ -22,13 +22,19 @@ from predict import GamePredictor, build_player_features, compute_recency_weight
 
 
 TOURNAMENT_CUTOFFS = {
+    2018: 20180312,
+    2019: 20190318,
+    # 2020: no tournament (COVID)
+    2021: 20210315,
+    2022: 20220314,
+    2023: 20230313,
     2024: 20240318,
     2025: 20250317,
     2026: 20260316,
 }
 
 
-def train(years: list[int], cutoff_current_year: bool = True):
+def train(years: list[int], cutoff_current_year: bool = True, half_life: int = 60):
     """Train prediction models on specified years."""
     print("=" * 60)
     print("TRAINING PIPELINE")
@@ -74,7 +80,10 @@ def train(years: list[int], cutoff_current_year: bool = True):
 
         # Compute recency weights for this year
         year_cutoff = cutoff if cutoff is not None else TOURNAMENT_CUTOFFS.get(year, year * 10000 + 316)
-        weights = compute_recency_weights(dates, year_cutoff)
+        if half_life > 0:
+            weights = compute_recency_weights(dates, year_cutoff, half_life_days=half_life)
+        else:
+            weights = np.ones(len(dates))
 
         all_X.append(feat_df)
         all_y_win.append(y_win)
@@ -95,7 +104,8 @@ def train(years: list[int], cutoff_current_year: bool = True):
 
     # Train
     print("\nTraining models...")
-    predictor.fit(train_X, train_y_win, train_y_spread, sample_weight=train_weights)
+    sw = train_weights if half_life > 0 else None
+    predictor.fit(train_X, train_y_win, train_y_spread, sample_weight=sw)
 
     # Training metrics
     print("\n--- Training Metrics ---")
@@ -182,6 +192,8 @@ if __name__ == "__main__":
                         help="Season years to train on (default: 2026)")
     parser.add_argument("--no-cutoff", action="store_true",
                         help="Don't filter tournament games from training data")
+    parser.add_argument("--half-life", type=int, default=60,
+                        help="Recency weighting half-life in days (0=disabled, default=60)")
     args = parser.parse_args()
 
-    train(args.years, cutoff_current_year=not args.no_cutoff)
+    train(args.years, cutoff_current_year=not args.no_cutoff, half_life=args.half_life)

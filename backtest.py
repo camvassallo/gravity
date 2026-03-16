@@ -27,6 +27,12 @@ OUT_DIR.mkdir(exist_ok=True)
 
 # Tournament typically starts mid-March. Cutoff dates (YYYYMMDD format).
 TOURNAMENT_CUTOFFS = {
+    2018: 20180312,
+    2019: 20190318,
+    # 2020: no tournament (COVID)
+    2021: 20210315,
+    2022: 20220314,
+    2023: 20230313,
     2024: 20240318,
     2025: 20250317,
     2026: 20260316,
@@ -195,8 +201,11 @@ def plot_calibration(y_true: np.ndarray, y_prob: np.ndarray, label: str = ""):
     plt.close(fig)
 
 
-def backtest_year(train_years: list[int], test_year: int) -> dict:
+def backtest_year(train_years: list[int], test_year: int, half_life: int = 60) -> dict:
     """Train on regular season of train_years, test on tournament of test_year.
+
+    Args:
+        half_life: recency weighting half-life in days. 0 = no weighting.
 
     Returns metrics dict.
     """
@@ -237,8 +246,11 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
             train_tgs, _ = split_regular_tournament(tgs, cutoff)
 
         feat_df, y_win, y_spread, dates = predictor.build_training_data(train_tgs, teams_df, player_feats)
-        year_cutoff_val = year_cutoff if year_cutoff is not None else TOURNAMENT_CUTOFFS.get(year, year * 10000 + 316)
-        weights = compute_recency_weights(dates, year_cutoff_val)
+        if half_life > 0:
+            year_cutoff_val = year_cutoff if year_cutoff is not None else TOURNAMENT_CUTOFFS.get(year, year * 10000 + 316)
+            weights = compute_recency_weights(dates, year_cutoff_val, half_life_days=half_life)
+        else:
+            weights = np.ones(len(dates))
         all_train_X.append(feat_df)
         all_train_y_win.append(y_win)
         all_train_y_spread.append(y_spread)
@@ -262,8 +274,9 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
     fit_y_spread = train_y_spread[~holdout_mask]
     fit_weights = train_weights[~holdout_mask]
 
+    sw_fit = fit_weights if half_life > 0 else None
     print(f"  Training on {len(fit_X)} games (holdout: {len(holdout_X)})...")
-    predictor.fit(fit_X, fit_y_win, fit_y_spread, sample_weight=fit_weights)
+    predictor.fit(fit_X, fit_y_win, fit_y_spread, sample_weight=sw_fit)
 
     # Evaluate on regular-season holdout
     if len(holdout_X) > 0:
@@ -286,8 +299,9 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
 
     # Now retrain on ALL training data for tournament evaluation
     print(f"\n  Retraining on full {n_train} games for tournament eval...")
+    sw_full = train_weights if half_life > 0 else None
     predictor_full = GamePredictor()
-    predictor_full.fit(train_X, train_y_win, train_y_spread, sample_weight=train_weights)
+    predictor_full.fit(train_X, train_y_win, train_y_spread, sample_weight=sw_full)
 
     # Test on tournament games (using pre-tournament player stats)
     print(f"  Testing on {test_year} tournament...")
@@ -416,21 +430,35 @@ def backtest_year(train_years: list[int], test_year: int) -> dict:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Backtest prediction model")
+    parser.add_argument("--half-life", type=int, default=60,
+                        help="Recency weighting half-life in days (0=disabled, default=60)")
+    args = parser.parse_args()
+
+    hl = args.half_life
     print("=" * 60)
-    print("BACKTESTING: Torvik + Player Prediction Model")
+    print(f"BACKTESTING: Torvik + Player Prediction Model (half_life={hl})")
     print("=" * 60)
 
+    # Test on each available tournament year with cumulative training
     results = []
 
-    # Test 1: Train 2024 regular season -> test 2024 tournament
-    m = backtest_year([2024], 2024)
-    if m:
-        results.append(m)
+    cumulative_tests = [
+        ([2018], 2018),
+        ([2018, 2019], 2019),
+        ([2018, 2019, 2021], 2021),
+        ([2018, 2019, 2021, 2022], 2022),
+        ([2018, 2019, 2021, 2022, 2023], 2023),
+        ([2018, 2019, 2021, 2022, 2023, 2024], 2024),
+        ([2018, 2019, 2021, 2022, 2023, 2024, 2025], 2025),
+    ]
 
-    # Test 2: Train 2024 + 2025 regular season -> test 2025 tournament
-    m = backtest_year([2024, 2025], 2025)
-    if m:
-        results.append(m)
+    for train_years, test_year in cumulative_tests:
+        m = backtest_year(train_years, test_year, half_life=hl)
+        if m:
+            results.append(m)
 
     # Summary table
     if results:
@@ -446,3 +474,8 @@ if __name__ == "__main__":
             cols += ["holdout_log_loss", "holdout_accuracy"]
         available = [c for c in cols if c in summary.columns]
         print(summary[available].to_string(index=False))
+
+        # Print averages for easy comparison
+        print(f"\n  Average Log Loss:     {summary['log_loss'].mean():.4f}")
+        print(f"  Average Cal Log Loss: {summary['cal_log_loss'].mean():.4f}")
+        print(f"  Average Accuracy:     {summary['accuracy'].mean():.1%}")
