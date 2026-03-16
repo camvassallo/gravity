@@ -35,6 +35,68 @@ Trained on 8 years (2018, 2019, 2021–2026) with half-life=30, tournament temp=
 
 ---
 
+---
+
+## Why This Model Configuration Is Best
+
+### Model evolution
+
+The prediction system has gone through four major iterations:
+
+1. **PR #1 — Gravity features** (initial): Used gravity scores (how teams impose style) as predictive features alongside basic Torvik stats. Logistic regression + spread model.
+2. **PR #2 — Temperature calibration**: Added tournament temperature scaling to push probabilities toward 50/50, reflecting tournament variance. Improved log loss.
+3. **PR #3 — Torvik + player features**: Removed gravity features (didn't improve accuracy), replaced with 14-feature model using Torvik efficiency + team quality + player-derived stats (BPM, porpag, DBPM). This was the major architecture improvement.
+4. **Current — Recency weighting + expanded dataset**: Added exponential recency weighting (half-life=30), expanded features to 21 (bench BPM, weighted stats, usage spread), expanded training/eval to 8 years.
+
+### Why hl=30 over alternatives
+
+We swept 6 half-life values across 7 tournament years (~844 games). The result is unambiguous on the proper scoring metric:
+
+**hl=30 wins 7/7 years on calibrated log loss.**
+
+| Year | N | hl=0 Cal LL | hl=30 Cal LL | Delta | hl=0 Acc | hl=30 Acc | Delta |
+|------|---|------------|-------------|-------|---------|----------|-------|
+| 2018 | 130 | 0.5385 | 0.5324 | -0.006 | 70.0% | 70.8% | +0.8% |
+| 2019 | 139 | 0.5498 | 0.5366 | -0.013 | 71.2% | 75.5% | +4.3% |
+| 2021 | 89 | 0.5611 | 0.5553 | -0.006 | 73.0% | 73.0% | +0.0% |
+| 2022 | 130 | 0.5286 | 0.5278 | -0.001 | 73.8% | 73.1% | -0.7% |
+| 2023 | 113 | 0.5990 | 0.5934 | -0.006 | 73.5% | 73.5% | +0.0% |
+| 2024 | 120 | 0.5178 | 0.5170 | -0.001 | 73.3% | 70.0% | -3.3% |
+| 2025 | 123 | 0.4370 | 0.4278 | -0.009 | 80.5% | 81.3% | +0.8% |
+| **Avg** | | **0.5331** | **0.5272** | **-0.006** | **73.6%** | **73.9%** | **+0.3%** |
+
+Accuracy is mixed (3/7 wins) because accuracy only measures whether you're on the right side of 50% — it doesn't reward better-calibrated probabilities. Log loss is the correct metric because our bracket simulator uses the full probability distribution, not just pick-the-favorite. A model that says 62% for a true 60% game outperforms one that says 55% for the same game, even though both "get it right."
+
+### Why log loss > accuracy for this use case
+
+1. **Bracket simulation uses probabilities**: The Monte Carlo simulator draws from win probabilities. Better-calibrated probabilities → more realistic simulations → better bracket recommendations.
+2. **Spread predictions matter**: The spread model's sigma (10.9 pts) feeds into the normal CDF for spread-derived win probability. Better log loss means the probability surface is more truthful.
+3. **Tournament games are high-variance**: With only ~120 games per tournament, accuracy fluctuates heavily (70-81% across years). Log loss is smoother and more reliable as an evaluation metric.
+4. **Proper scoring rule**: Log loss is strictly proper — it's uniquely minimized when predicted probabilities match true outcome frequencies. Accuracy is not proper.
+
+### Why the ensemble didn't help
+
+The blend weight consistently calibrates to 1.0 (logistic-only) across 5 of 7 years. The two years where blending helped (2019: w=0.80, 2021: w=0.75) showed only marginal improvement (~0.002 log loss). This makes sense: the logistic and spread models use identical features, so the spread-derived probability is just a noisier version of the logistic probability. If they used different feature sets, blending might help.
+
+### What we tried that didn't work
+
+| Idea | Result | Why |
+|------|--------|-----|
+| Gravity features (PR #1→#3) | Removed — no lift | Gravity measures style imposition, not matchup advantage |
+| Ensemble logistic+spread | Blend=1.0 | Same features → redundant signals |
+| Long half-life (90-120 days) | Worse than hl=30 | November games add noise, not signal |
+| No recency weighting | Worst config | Equal weighting dilutes late-season signal |
+
+### Confidence in the current config
+
+- **844 tournament games** across 7 years — enough to distinguish real effects from noise
+- **Monotonic improvement** as half-life decreases from 120→30 (then diminishing returns)
+- **7/7 years improved** on the proper scoring metric — not a fluke of one outlier year
+- **Cumulative training** mirrors real usage (train on all prior years, predict next year)
+- **2023 is the hardest year** for every config (log loss ~0.59) — likely a high-upset tournament, not a model failure
+
+---
+
 ## Previous Baseline (2-year backtest)
 
 | Year | Log Loss | Accuracy | Cal Log Loss | Temp | Blend |
