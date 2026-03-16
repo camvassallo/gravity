@@ -120,10 +120,10 @@ def predict_game(team1: str, team2: str, location: str = "N", year: int = 2026):
 
     # Player comparison
     print(f"\n  Top Player Stats:")
-    print(f"    {'':>25} {'Top5 BPM':>9} {'Exp':>5} {'Ht':>5} {'BPM Trnd':>9}")
+    print(f"    {'':>25} {'Top5 BPM':>9} {'Wt BPM':>7} {'BPM Trnd':>9} {'PPG Trnd':>9}")
     for team, pf in [(team1, t1_players), (team2, t2_players)]:
-        print(f"    {team:<25} {pf.get('top5_bpm_sum', 0):>9.1f} {pf.get('avg_experience', 0):>5.1f} "
-              f"{pf.get('avg_height', 0):>5.0f} {pf.get('top5_bpm_trend', 0):>9.1f}")
+        print(f"    {team:<25} {pf.get('top5_bpm_sum', 0):>9.1f} {pf.get('top5_bpm_weighted', 0):>7.1f} "
+              f"{pf.get('top5_bpm_trend', 0):>9.1f} {pf.get('top_porpag_trend', 0):>9.2f}")
     print()
 
 

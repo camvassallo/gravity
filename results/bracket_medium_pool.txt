@@ -1,0 +1,133 @@
+MEDIUM POOL BRACKET (20-100 entries)
+Strategy: Chalk core + one contrarian region winner
+======================================================================
+Michigan champion (best EV at 26.0%). Differentiate with Arkansas winning
+the West over Arizona — Arkansas is a strong 4-seed (13.3% F4) that most
+entrants will overlook. Purdue path is riskier but still viable.
+
+Model: v2 (19 features, half-life=30, 8-year training)
+Updated: 2026-03-16
+
+Total Expected Score: ~950 pts
+  EV cost breakdown:
+    Arkansas over Arizona E8:  -23 pts (big swing — 80 pts if right, others miss it)
+    N.C. State over BYU:       - 4 pts (low cost, high leverage if right)
+
+EAST REGION (all chalk)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Duke              over (16) Siena              P=99.5%
+    ( 8) Ohio St.          over ( 9) TCU                P=63.5%
+    ( 5) St. John's        over (12) Northern Iowa      P=94.8%
+    ( 4) Kansas            over (13) Cal Baptist         P=92.8%
+    ( 6) Louisville        over (11) South Florida       P=79.2%
+    ( 3) Michigan St.      over (14) North Dakota St.    P=96.7%
+    ( 7) UCLA              over (10) UCF                 P=61.1%
+    ( 2) Connecticut       over (15) Furman              P=99.1%
+
+  Round of 32 (20 pts each):
+    Duke              over Ohio St.             P=82.0%
+    St. John's        over Kansas               P=50.8%
+    Michigan St.      over Louisville            P=65.9%
+    Connecticut       over UCLA                  P=64.1%
+
+  Sweet 16 (40 pts each):
+    Duke              over St. John's           P=74.5%
+    Michigan St.      over Connecticut           P=57.3%
+
+  Elite 8 (80 pts each):
+    Duke              over Michigan St.          P=69.7%
+
+WEST REGION (contrarian Arkansas)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Arizona           over (16) LIU                P=99.7%
+    ( 9) Utah St.          over ( 8) Villanova *UPSET*  P=50.1%
+    ( 5) Wisconsin         over (12) High Point          P=93.9%
+    ( 4) Arkansas          over (13) Hawaii              P=97.6%
+    (11) N.C. State        over ( 6) BYU *CONTRARIAN*    P=31.2%  (-4 pts vs chalk)
+    ( 3) Gonzaga           over (14) Kennesaw St.        P=97.9%
+    ( 7) Miami FL          over (10) Missouri            P=57.0%
+    ( 2) Purdue            over (15) Queens              P=99.2%
+
+  Round of 32 (20 pts each):
+    Arizona           over Utah St.              P=88.5%
+    Arkansas          over Wisconsin              P=63.0%
+    Gonzaga           over N.C. State             P=56.2%
+    Purdue            over Miami FL               P=76.6%
+
+  Sweet 16 (40 pts each):
+    Arizona           over Arkansas              P=68.6%
+    Purdue            over Gonzaga               P=64.3%
+
+  Elite 8 (80 pts each):
+    Arkansas          over Purdue *CONTRARIAN*    P=23.9%  (-23 pts vs chalk)
+
+SOUTH REGION (all chalk)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Florida           over (16) Prairie View A&M   P=99.8%
+    ( 8) Clemson           over ( 9) Iowa               P=50.6%
+    ( 5) Vanderbilt        over (12) McNeese St.         P=90.8%
+    ( 4) Nebraska          over (13) Troy                P=97.9%
+    ( 6) North Carolina    over (11) VCU                 P=70.7%
+    ( 3) Illinois          over (14) Penn                P=97.6%
+    ( 7) Saint Mary's      over (10) Texas A&M           P=57.1%
+    ( 2) Houston           over (15) Idaho               P=98.6%
+
+  Round of 32 (20 pts each):
+    Florida           over Clemson               P=78.8%
+    Vanderbilt        over Nebraska               P=53.9%
+    Illinois          over North Carolina         P=62.8%
+    Houston           over Saint Mary's           P=73.2%
+
+  Sweet 16 (40 pts each):
+    Florida           over Vanderbilt            P=52.9%
+    Houston           over Illinois              P=56.8%
+
+  Elite 8 (80 pts each):
+    Florida           over Houston               P=50.9%
+
+MIDWEST REGION (all chalk)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Michigan          over (16) UMBC               P=99.7%
+    ( 8) Georgia           over ( 9) Saint Louis         P=66.7%
+    ( 5) Texas Tech        over (12) Akron               P=87.6%
+    ( 4) Alabama           over (13) Hofstra             P=95.6%
+    ( 6) Tennessee         over (11) SMU                 P=65.9%
+    ( 3) Virginia          over (14) Wright St.          P=97.3%
+    ( 7) Kentucky          over (10) Santa Clara         P=58.7%
+    ( 2) Iowa St.          over (15) Tennessee St.       P=99.0%
+
+  Round of 32 (20 pts each):
+    Michigan          over Georgia               P=89.5%
+    Alabama           over Texas Tech             P=62.4%
+    Virginia          over Tennessee              P=61.5%
+    Iowa St.          over Kentucky               P=63.4%
+
+  Sweet 16 (40 pts each):
+    Michigan          over Alabama               P=77.2%
+    Iowa St.          over Virginia              P=53.5%
+
+  Elite 8 (80 pts each):
+    Michigan          over Iowa St.              P=77.3%
+
+FINAL FOUR (160 pts each)
+──────────────────────────────────────────────────
+  Duke              over Florida               P=69.6%
+    (East vs South)
+  Michigan          over Arkansas              P=71.3%
+    (West vs Midwest — Michigan still favored even vs contrarian Arkansas)
+
+CHAMPIONSHIP (320 pts)
+──────────────────────────────────────────────────
+  Michigan          over Duke                  P=54.2%
+
+==================================================
+CHAMPION: Michigan (26.0% win probability)
+TIEBREAKER: 155 pts
+TOTAL EXPECTED SCORE: ~950 pts
+  The -25 EV buys differentiation: if Arkansas wins the West
+  (13.3% F4), you gain 80 pts that ~95% of the pool misses.
+==================================================

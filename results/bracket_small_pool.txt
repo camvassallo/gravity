@@ -1,0 +1,132 @@
+SMALL POOL BRACKET (2-20 entries)
+Strategy: Max Expected Value — pick model favorite in every game
+======================================================================
+This IS the mathematically optimal bracket for ESPN scoring. Every pick
+maximizes expected points for that slot. No contrarian plays needed
+in small pools — just be right as often as possible.
+
+Model: v2 (19 features, half-life=30, 8-year training)
+Updated: 2026-03-16
+
+EAST REGION
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Duke              over (16) Siena              P=99.5%  EV= 9.9
+    ( 8) Ohio St.          over ( 9) TCU                P=63.5%  EV= 6.4
+    ( 5) St. John's        over (12) Northern Iowa      P=94.8%  EV= 9.5
+    ( 4) Kansas            over (13) Cal Baptist         P=92.8%  EV= 9.3
+    ( 6) Louisville        over (11) South Florida       P=79.2%  EV= 7.9
+    ( 3) Michigan St.      over (14) North Dakota St.    P=96.7%  EV= 9.7
+    ( 7) UCLA              over (10) UCF                 P=61.1%  EV= 6.1
+    ( 2) Connecticut       over (15) Furman              P=99.1%  EV= 9.9
+
+  Round of 32 (20 pts each):
+    Duke              over Ohio St.             P=82.0%  EV=16.4
+    St. John's        over Kansas               P=50.8%  EV=10.2  (coin flip — SJU now slight model fav)
+    Michigan St.      over Louisville            P=65.9%  EV=13.2
+    Connecticut       over UCLA                  P=64.1%  EV=12.8
+
+  Sweet 16 (40 pts each):
+    Duke              over St. John's           P=74.5%  EV=29.8
+    Michigan St.      over Connecticut           P=57.3%  EV=22.9
+
+  Elite 8 (80 pts each):
+    Duke              over Michigan St.          P=69.7%  EV=55.8
+
+WEST REGION
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Arizona           over (16) LIU                P=99.7%  EV=10.0
+    ( 9) Utah St.          over ( 8) Villanova *UPSET*  P=50.1%  EV= 5.0  (coin flip)
+    ( 5) Wisconsin         over (12) High Point          P=93.9%  EV= 9.4
+    ( 4) Arkansas          over (13) Hawaii              P=97.6%  EV= 9.8
+    ( 6) BYU               over (11) N.C. State          P=68.8%  EV= 6.9
+    ( 3) Gonzaga           over (14) Kennesaw St.        P=97.9%  EV= 9.8
+    ( 7) Miami FL          over (10) Missouri            P=57.0%  EV= 5.7
+    ( 2) Purdue            over (15) Queens              P=99.2%  EV= 9.9
+
+  Round of 32 (20 pts each):
+    Arizona           over Utah St.              P=88.5%  EV=17.7
+    Arkansas          over Wisconsin              P=63.0%  EV=12.6
+    Gonzaga           over BYU                    P=56.2%  EV=11.2
+    Purdue            over Miami FL               P=76.6%  EV=15.3
+
+  Sweet 16 (40 pts each):
+    Arizona           over Arkansas              P=68.6%  EV=27.4
+    Purdue            over Gonzaga               P=64.3%  EV=25.7
+
+  Elite 8 (80 pts each):
+    Arizona           over Purdue                P=66.3%  EV=53.0
+
+SOUTH REGION
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Florida           over (16) Prairie View A&M   P=99.8%  EV=10.0
+    ( 8) Clemson           over ( 9) Iowa               P=50.6%  EV= 5.1  (coin flip)
+    ( 5) Vanderbilt        over (12) McNeese St.         P=90.8%  EV= 9.1
+    ( 4) Nebraska          over (13) Troy                P=97.9%  EV= 9.8
+    ( 6) North Carolina    over (11) VCU                 P=70.7%  EV= 7.1
+    ( 3) Illinois          over (14) Penn                P=97.6%  EV= 9.8
+    ( 7) Saint Mary's      over (10) Texas A&M           P=57.1%  EV= 5.7
+    ( 2) Houston           over (15) Idaho               P=98.6%  EV= 9.9
+
+  Round of 32 (20 pts each):
+    Florida           over Clemson               P=78.8%  EV=15.8
+    Vanderbilt        over Nebraska               P=53.9%  EV=10.8  (was Nebraska — Vandy now model fav)
+    Illinois          over North Carolina         P=62.8%  EV=12.6
+    Houston           over Saint Mary's           P=73.2%  EV=14.6
+
+  Sweet 16 (40 pts each):
+    Florida           over Vanderbilt            P=52.9%  EV=21.2
+    Houston           over Illinois              P=56.8%  EV=22.7
+
+  Elite 8 (80 pts each):
+    Florida           over Houston               P=50.9%  EV=40.7  (dead heat — Florida slight edge)
+
+MIDWEST REGION
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Michigan          over (16) UMBC               P=99.7%  EV=10.0
+    ( 8) Georgia           over ( 9) Saint Louis         P=66.7%  EV= 6.7
+    ( 5) Texas Tech        over (12) Akron               P=87.6%  EV= 8.8
+    ( 4) Alabama           over (13) Hofstra             P=95.6%  EV= 9.6
+    ( 6) Tennessee         over (11) SMU                 P=65.9%  EV= 6.6
+    ( 3) Virginia          over (14) Wright St.          P=97.3%  EV= 9.7
+    ( 7) Kentucky          over (10) Santa Clara         P=58.7%  EV= 5.9
+    ( 2) Iowa St.          over (15) Tennessee St.       P=99.0%  EV= 9.9
+
+  Round of 32 (20 pts each):
+    Michigan          over Georgia               P=89.5%  EV=17.9
+    Alabama           over Texas Tech             P=62.4%  EV=12.5
+    Virginia          over Tennessee              P=61.5%  EV=12.3
+    Iowa St.          over Kentucky               P=63.4%  EV=12.7
+
+  Sweet 16 (40 pts each):
+    Michigan          over Alabama               P=77.2%  EV=30.9
+    Iowa St.          over Virginia              P=53.5%  EV=21.4  (was Virginia — ISU now model fav)
+
+  Elite 8 (80 pts each):
+    Michigan          over Iowa St.              P=77.3%  EV=61.8
+
+FINAL FOUR (160 pts each)
+──────────────────────────────────────────────────
+  Duke              over Florida               P=69.6%  EV=111.4
+    (East vs South)
+  Michigan          over Arizona               P=53.2%  EV=85.1
+    (West vs Midwest)
+
+CHAMPIONSHIP (320 pts)
+──────────────────────────────────────────────────
+  Michigan          over Duke                  P=54.2%  EV=173.4
+
+==================================================
+CHAMPION: Michigan (26.0% win probability)
+TIEBREAKER: 155 pts
+==================================================
+
+KEY CHANGES FROM PRIOR MODEL:
+  - St. John's now slight favorite over Kansas (R32)
+  - Vanderbilt now favorite over Nebraska (R32)
+  - Iowa St. now favorite over Virginia (S16)
+  - Florida takes South E8 over Houston (coin flip)
+  - Michigan champion prob up from 23.3% to 26.0%

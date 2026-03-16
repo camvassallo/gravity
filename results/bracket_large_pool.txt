@@ -1,0 +1,145 @@
+LARGE POOL BRACKET (100+ entries)
+Strategy: Contrarian champion — be RIGHT and DIFFERENT
+======================================================================
+Purdue as champion (5.0% win prob, likely <5% public ownership).
+Strong 2-seed with elite efficiency. Path: beat Arizona in West E8,
+beat Michigan in F4, beat Duke in final.
+
+Model: v2 (19 features, half-life=30, 8-year training)
+Updated: 2026-03-16
+
+Total Expected Score: ~830 pts (-145 vs optimal chalk)
+  This is the tradeoff: you sacrifice ~145 EV pts for a bracket that,
+  IF Purdue wins it all, scores 320+160+80 = 560 pts in the late
+  rounds that virtually no one else in a 100+ pool will have.
+
+  Key EV costs:
+    Purdue champion:          -60 pts (but 320 pts if right and unique)
+    Purdue over Michigan F4:  -43 pts (but 160 pts if right)
+    Purdue over Arizona E8:   -21 pts (but 80 pts if right)
+    6 early-round upsets:     -14 pts (cheap differentiation)
+
+EAST REGION (all chalk)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Duke              over (16) Siena              P=99.5%
+    ( 8) Ohio St.          over ( 9) TCU                P=63.5%
+    ( 5) St. John's        over (12) Northern Iowa      P=94.8%
+    ( 4) Kansas            over (13) Cal Baptist         P=92.8%
+    ( 6) Louisville        over (11) South Florida       P=79.2%
+    ( 3) Michigan St.      over (14) North Dakota St.    P=96.7%
+    (10) UCF               over ( 7) UCLA *CONTRARIAN*   P=38.9%  (-2.2)
+    ( 2) Connecticut       over (15) Furman              P=99.1%
+
+  Round of 32 (20 pts each):
+    Duke              over Ohio St.             P=82.0%
+    St. John's        over Kansas               P=50.8%
+    Michigan St.      over Louisville            P=65.9%
+    Connecticut       over UCF                   P=64.1%
+
+  Sweet 16 (40 pts each):
+    Duke              over St. John's           P=74.5%
+    Michigan St.      over Connecticut           P=57.3%
+
+  Elite 8 (80 pts each):
+    Duke              over Michigan St.          P=69.7%
+
+WEST REGION (contrarian Purdue champion path)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Arizona           over (16) LIU                P=99.7%
+    ( 9) Utah St.          over ( 8) Villanova *UPSET*  P=50.1%
+    ( 5) Wisconsin         over (12) High Point          P=93.9%
+    ( 4) Arkansas          over (13) Hawaii              P=97.6%
+    (11) N.C. State        over ( 6) BYU *CONTRARIAN*    P=31.2%  (-3.8)
+    ( 3) Gonzaga           over (14) Kennesaw St.        P=97.9%
+    (10) Missouri          over ( 7) Miami FL *CONTRARIAN* P=43.0%  (-1.4)
+    ( 2) Purdue            over (15) Queens              P=99.2%
+
+  Round of 32 (20 pts each):
+    Arizona           over Utah St.              P=88.5%
+    Arkansas          over Wisconsin              P=63.0%
+    Gonzaga           over N.C. State             P=56.2%
+    Purdue            over Missouri               P=76.6%
+
+  Sweet 16 (40 pts each):
+    Arizona           over Arkansas              P=68.6%
+    Purdue            over Gonzaga               P=64.3%
+
+  Elite 8 (80 pts each):
+    Purdue            over Arizona *CONTRARIAN*   P=33.7%  (-21)
+
+SOUTH REGION (one contrarian R64)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Florida           over (16) Prairie View A&M   P=99.8%
+    ( 8) Clemson           over ( 9) Iowa               P=50.6%
+    ( 5) Vanderbilt        over (12) McNeese St.         P=90.8%
+    ( 4) Nebraska          over (13) Troy                P=97.9%
+    ( 6) North Carolina    over (11) VCU                 P=70.7%
+    ( 3) Illinois          over (14) Penn                P=97.6%
+    (10) Texas A&M         over ( 7) Saint Mary's *CONTRARIAN* P=42.9%  (-1.4)
+    ( 2) Houston           over (15) Idaho               P=98.6%
+
+  Round of 32 (20 pts each):
+    Florida           over Clemson               P=78.8%
+    Vanderbilt        over Nebraska               P=53.9%
+    Illinois          over North Carolina         P=62.8%
+    Houston           over Texas A&M              P=73.2%
+
+  Sweet 16 (40 pts each):
+    Florida           over Vanderbilt            P=52.9%
+    Houston           over Illinois              P=56.8%
+
+  Elite 8 (80 pts each):
+    Florida           over Houston               P=50.9%
+
+MIDWEST REGION (two contrarian R64s)
+──────────────────────────────────────────────────
+  Round of 64 (10 pts each):
+    ( 1) Michigan          over (16) UMBC               P=99.7%
+    ( 8) Georgia           over ( 9) Saint Louis         P=66.7%
+    ( 5) Texas Tech        over (12) Akron               P=87.6%
+    ( 4) Alabama           over (13) Hofstra             P=95.6%
+    (11) SMU               over ( 6) Tennessee *CONTRARIAN* P=34.1%  (-3.2)
+    ( 3) Virginia          over (14) Wright St.          P=97.3%
+    (10) Santa Clara       over ( 7) Kentucky *CONTRARIAN* P=41.3%  (-1.7)
+    ( 2) Iowa St.          over (15) Tennessee St.       P=99.0%
+
+  Round of 32 (20 pts each):
+    Michigan          over Georgia               P=89.5%
+    Alabama           over Texas Tech             P=62.4%
+    Virginia          over SMU                    P=61.5%
+    Iowa St.          over Santa Clara            P=63.4%
+
+  Sweet 16 (40 pts each):
+    Michigan          over Alabama               P=77.2%
+    Iowa St.          over Virginia              P=53.5%
+
+  Elite 8 (80 pts each):
+    Michigan          over Iowa St.              P=77.3%
+
+FINAL FOUR (160 pts each)
+──────────────────────────────────────────────────
+  Duke              over Florida               P=69.6%
+    (East vs South)
+  Purdue            over Michigan *CONTRARIAN*  P=30.8%  (-43)
+    (West vs Midwest)
+
+CHAMPIONSHIP (320 pts)
+──────────────────────────────────────────────────
+  Purdue            over Duke *CONTRARIAN*      P= 5.0%  (-60)
+
+==================================================
+CHAMPION: Purdue (5.0% win probability)
+TIEBREAKER: 155 pts
+TOTAL EXPECTED SCORE: ~830 pts (-145 vs optimal chalk)
+
+  The math: In a 100-person pool, ~25-30 will pick Michigan.
+  If Michigan wins, you're fighting 25+ people for 1st place.
+  If Purdue wins (5.0%), you likely have the ONLY Purdue bracket
+  and gain 560 pts of unique late-round scoring.
+
+  Breakeven: Purdue needs ~4% probability to justify in a pool
+  where ~25% pick Michigan as champion. The model says 5.0%.
+==================================================
