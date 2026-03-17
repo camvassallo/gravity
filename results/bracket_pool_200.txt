@@ -2,105 +2,105 @@ OPTIMIZED BRACKET (pool size: 200)
 ======================================================================
 Strategy: High leverage — differentiate where model has edge over public
 
-CHAMPION: Duke (model: 31.2%, public: ~20.1%, leverage: 1.5x)
+CHAMPION: Duke (model: 25.8%, public: ~20.1%, leverage: 1.3x)
 
-R64 upsets: 2  |  Contrarian late-round picks: 4
+R64 upsets: 2  |  Contrarian late-round picks: 1
 
 EAST REGION
 --------------------------------------------------
   R64 (10 pts):
-    ( 1) Duke                   over (16) Siena              P=99.8%
-    ( 8) Ohio St.               over ( 9) TCU                P=67.1%
-    ( 5) St. John's             over (12) Northern Iowa      P=95.6%
-    ( 4) Kansas                 over (13) Cal Baptist        P=94.0%
-    ( 6) Louisville             over (11) South Florida      P=83.9%
-    ( 3) Michigan St.           over (14) North Dakota St.   P=97.9%
-    ( 7) UCLA                   over (10) UCF                P=69.6%
-    ( 2) Connecticut            over (15) Furman             P=99.6%
+    ( 1) Duke                   over (16) Siena              P=99.4%
+    ( 8) Ohio St.               over ( 9) TCU                P=63.3%
+    ( 5) St. John's             over (12) Northern Iowa      P=91.6%
+    ( 4) Kansas                 over (13) Cal Baptist        P=89.3%
+    ( 6) Louisville             over (11) South Florida      P=78.1%
+    ( 3) Michigan St.           over (14) North Dakota St.   P=95.0%
+    ( 7) UCLA                   over (10) UCF                P=65.3%
+    ( 2) Connecticut            over (15) Furman             P=98.5%
   R32 (20 pts):
-    Duke                       P=93.9%
-    St. John's                 P=56.7%
-    Michigan St.               P=70.6%
-    Connecticut                P=76.3%
+    Duke                       P=88.8%
+    St. John's                 P=54.1%
+    Michigan St.               P=65.8%
+    Connecticut                P=70.7%
   S16 (40 pts):
-    Duke                       P=83.8%
-    Michigan St.               P=39.9%
+    Duke                       P=74.4%
+    Michigan St.               P=37.2%
   E8 (80 pts):
-    Duke                       P=71.7%  [1.3x]
+    Duke                       P=60.2%
 
 WEST REGION
 --------------------------------------------------
   R64 (10 pts):
-    ( 1) Arizona                over (16) LIU                P=99.9%
-    ( 9) Utah St.               over ( 8) Villanova          P=55.8%
-    ( 5) Wisconsin              over (12) High Point         P=96.2%
-    ( 4) Arkansas               over (13) Hawaii             P=98.3%
-    ( 6) BYU                    over (11) N.C. State         P=73.6%
-    ( 3) Gonzaga                over (14) Kennesaw St.       P=98.7%
-    ( 7) Miami FL               over (10) Missouri           P=63.7%
-    ( 2) Purdue                 over (15) Queens             P=99.6%
+    ( 1) Arizona                over (16) LIU                P=99.4%
+    ( 9) Utah St.               over ( 8) Villanova          P=54.7%
+    ( 5) Wisconsin              over (12) High Point         P=92.6%
+    ( 4) Arkansas               over (13) Hawaii             P=95.7%
+    ( 6) BYU                    over (11) N.C. State         P=69.1%
+    ( 3) Gonzaga                over (14) Kennesaw St.       P=96.6%
+    ( 7) Miami FL               over (10) Missouri           P=60.7%
+    ( 2) Purdue                 over (15) Queens             P=98.7%
   R32 (20 pts):
-    Arizona                    P=95.0%
-    Arkansas                   P=61.6%
-    Gonzaga                    P=74.1%
-    Purdue                     P=88.3%
+    Arizona                    P=90.4%
+    Arkansas                   P=58.8%
+    Gonzaga                    P=68.6%
+    Purdue                     P=81.9%
   S16 (40 pts):
-    Arizona                    P=81.8%
-    Purdue                     P=65.7%
+    Arizona                    P=73.2%
+    Purdue                     P=58.3%
   E8 (80 pts):
-    Arizona                    P=64.2%  [1.3x]
+    Arizona                    P=55.1%
 
 SOUTH REGION
 --------------------------------------------------
   R64 (10 pts):
-    ( 1) Florida                over (16) Prairie View A&M   P=99.9%
-    ( 9) Iowa                   over ( 8) Clemson            P=57.2%
-    ( 5) Vanderbilt             over (12) McNeese St.        P=93.8%
-    ( 4) Nebraska               over (13) Troy               P=98.8%
-    ( 6) North Carolina         over (11) VCU                P=78.3%
-    ( 3) Illinois               over (14) Penn               P=98.7%
-    ( 7) Saint Mary's           over (10) Texas A&M          P=71.3%
-    ( 2) Houston                over (15) Idaho              P=99.3%
+    ( 1) Florida                over (16) Prairie View A&M   P=99.5%
+    ( 9) Iowa                   over ( 8) Clemson            P=55.6%
+    ( 5) Vanderbilt             over (12) McNeese St.        P=89.1%
+    ( 4) Nebraska               over (13) Troy               P=96.4%
+    ( 6) North Carolina         over (11) VCU                P=73.0%
+    ( 3) Illinois               over (14) Penn               P=96.4%
+    ( 7) Saint Mary's           over (10) Texas A&M          P=66.9%
+    ( 2) Houston                over (15) Idaho              P=97.6%
   R32 (20 pts):
-    Florida                    P=88.8%
-    Vanderbilt                 P=52.6%
-    Illinois                   P=77.2%
-    Houston                    P=86.2%
+    Florida                    P=83.1%
+    Nebraska                   P=48.8%
+    Illinois                   P=71.1%
+    Houston                    P=79.7%
   S16 (40 pts):
-    Florida                    P=61.0%
-    Houston                    P=53.4%
+    Florida                    P=54.4%
+    Houston                    P=48.4%
   E8 (80 pts):
-    Florida                    P=35.2%
+    Florida                    P=31.1%
 
 MIDWEST REGION
 --------------------------------------------------
   R64 (10 pts):
-    ( 1) Michigan               over (16) UMBC               P=99.9%
-    ( 8) Georgia                over ( 9) Saint Louis        P=60.6%
-    ( 5) Texas Tech             over (12) Akron              P=92.8%
-    ( 4) Alabama                over (13) Hofstra            P=96.5%
-    ( 6) Tennessee              over (11) SMU                P=73.1%
-    ( 3) Virginia               over (14) Wright St.         P=98.7%
-    ( 7) Kentucky               over (10) Santa Clara        P=56.1%
-    ( 2) Iowa St.               over (15) Tennessee St.      P=99.5%
+    ( 1) Michigan               over (16) UMBC               P=99.4%
+    ( 8) Georgia                over ( 9) Saint Louis        P=58.4%
+    ( 5) Texas Tech             over (12) Akron              P=87.6%
+    ( 4) Alabama                over (13) Hofstra            P=93.2%
+    ( 6) Tennessee              over (11) SMU                P=68.5%
+    ( 3) Virginia               over (14) Wright St.         P=96.4%
+    ( 7) Kentucky               over (10) Santa Clara        P=54.6%
+    ( 2) Iowa St.               over (15) Tennessee St.      P=98.4%
   R32 (20 pts):
-    Michigan                   P=96.2%
-    Alabama                    P=53.5%
-    Virginia                   P=69.5%  [1.3x]
-    Iowa St.                   P=81.4%
+    Michigan                   P=92.1%
+    Alabama                    P=52.9%
+    Virginia                   P=64.6%
+    Iowa St.                   P=75.3%
   S16 (40 pts):
-    Michigan                   P=85.9%
-    Iowa St.                   P=51.8%
+    Michigan                   P=76.9%
+    Virginia                   P=32.9%  [1.4x]
   E8 (80 pts):
-    Michigan                   P=73.2%  [1.4x]
+    Michigan                   P=61.5%
 
 FINAL FOUR (160 pts)
 --------------------------------------------------
-  Duke                       (East vs South)  P=55.2%
-  Michigan                   (West vs Midwest)  P=45.6%
+  Duke                       (East vs South)  P=44.0%
+  Michigan                   (West vs Midwest)  P=38.2%
 
 CHAMPIONSHIP (320 pts)
 --------------------------------------------------
-  Duke                       P=31.2% (leverage: 1.5x)
+  Duke                       P=25.8% (leverage: 1.3x)
 
-Estimated Expected Score: 1187 / 1920
+Estimated Expected Score: 1060 / 1920

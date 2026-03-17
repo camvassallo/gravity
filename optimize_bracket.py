@@ -266,16 +266,15 @@ def compute_pick_ev(model_prob: float, points: int, public_prob: float,
     """Compute expected value of a bracket pick in a pool context.
 
     Core idea: in a pool of N people, you don't just need to be right —
-    you need to be right AND different. The value of a correct pick is
-    diminished when everyone else also picked it, because you don't gain
-    ground on competitors.
+    you need to be right AND different. Being correct on a pick that 90%
+    of the field also made gains you almost nothing over competitors.
 
-    Uniqueness bonus: if you pick team X correctly and only K of N-1
-    opponents also picked it, you gain points over (N-1-K) people.
-    E[opponents who also picked X] = public_prob × (N-1).
-
-    So: pick_value ∝ model_prob × points × (1 - public_prob)^(alpha)
-    where alpha scales with pool size (no differentiation needed in small pools).
+    Two factors:
+    1. Field gain: discount high-ownership picks because being correct gains
+       little ground when everyone else also picked it.
+       field_gain = 1 - alpha * ownership * 0.7
+    2. Edge bonus: picks where model > public are more valuable because
+       you're getting a higher hit rate than the field on a contrarian pick.
     """
     base_ev = model_prob * points
 
@@ -286,20 +285,18 @@ def compute_pick_ev(model_prob: float, points: int, public_prob: float,
     # Ramps from ~0.15 at pool_size=10 to ~1.0 at pool_size=500+
     alpha = min(np.log(pool_size / 5) / np.log(100), 1.0)
 
-    # Differentiation factor: picks that fewer opponents make are more valuable
-    # when correct. This models the fraction of the field you "beat" with this pick.
-    # ownership = expected fraction of opponents who also picked this team
-    ownership = min(public_prob, 0.95)  # cap to avoid degenerate cases
+    ownership = min(public_prob, 0.95)
 
-    # Edge ratio: how much better is our model than public on this pick?
-    # If model says 30% and public says 20%, we're getting a 30% hit rate
-    # on a pick only 20% of opponents have → good deal.
-    # Conversely if model=20% and public=30%, we hit less often but so does everyone.
+    # Field gain: in a pool, being correct on a high-ownership pick
+    # gains little ground because most opponents also picked it.
+    # Discounts chalk picks more aggressively in larger pools.
+    field_gain = 1 - alpha * ownership * 0.7
+
+    # Edge bonus: picks where model outperforms public consensus
     edge = model_prob / max(public_prob, 0.005)
+    edge_factor = edge ** (alpha * 0.5)
 
-    # Differentiation-adjusted EV:
-    # Base EV × (edge ^ alpha) gives more weight to contrarian picks in large pools
-    return base_ev * (edge ** (alpha * 0.65))
+    return base_ev * field_gain * edge_factor
 
 
 def optimize_bracket(bracket: dict, sim_results: pd.DataFrame,
@@ -637,7 +634,8 @@ if __name__ == "__main__":
 
     print(f"Running {n_sims} simulations...")
     sim = BracketSimulator(predictor, teams_df, player_feats,
-                           consensus=consensus, consensus_weight=0.3)
+                           consensus=consensus, consensus_weight=0.3,
+                           sim_temp=1.3)
     sim_results = sim.simulate_tournament(bracket, n_sims=n_sims)
 
     # Load consensus projections

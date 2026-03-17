@@ -23,7 +23,7 @@ class BracketSimulator:
 
     def __init__(self, predictor: GamePredictor, teams_df: pd.DataFrame,
                  player_feats: dict, consensus: dict | None = None,
-                 consensus_weight: float = 0.0):
+                 consensus_weight: float = 0.0, sim_temp: float = 1.0):
         """
         Args:
             predictor: trained GamePredictor
@@ -31,12 +31,18 @@ class BracketSimulator:
             player_feats: dict from build_player_features()
             consensus: optional dict from load_consensus_projections()
             consensus_weight: blend weight for consensus (0.0 = model only)
+            sim_temp: simulation temperature applied to final win probability.
+                >1.0 pushes probabilities toward 50% (more upsets/variance).
+                The model's tournament_temp (0.85) is calibrated for per-game
+                log loss, but compounding over 6 rounds inflates top-team
+                probabilities. sim_temp compensates for this.
         """
         self.predictor = predictor
         self.teams_df = teams_df
         self.player_feats = player_feats
         self.consensus = consensus or {}
         self.consensus_weight = consensus_weight
+        self.sim_temp = sim_temp
 
     def _get_team_data(self, team: str) -> tuple[dict, dict]:
         """Get Torvik and player data for a team."""
@@ -79,6 +85,14 @@ class BracketSimulator:
                 win_prob = model_prob
         else:
             win_prob = model_prob
+
+        # Apply simulation temperature to add variance for bracket simulation.
+        # The model's tournament_temp (0.85) is calibrated per-game, but
+        # compounding over 6 rounds inflates top-team F4/champ probabilities.
+        if self.sim_temp != 1.0:
+            win_prob = np.clip(win_prob, 1e-7, 1 - 1e-7)
+            logit = np.log(win_prob / (1 - win_prob))
+            win_prob = float(1 / (1 + np.exp(-logit / self.sim_temp)))
 
         return team1 if np.random.random() < win_prob else team2
 
@@ -305,7 +319,8 @@ if __name__ == "__main__":
 
     print("Loading bracket...")
     sim = BracketSimulator(predictor, teams_df, player_feats,
-                           consensus=consensus, consensus_weight=0.3)
+                           consensus=consensus, consensus_weight=0.3,
+                           sim_temp=1.3)
     bracket = sim.load_bracket(bracket_path)
 
     n_sims = int(sys.argv[2]) if len(sys.argv) > 2 else 1000
