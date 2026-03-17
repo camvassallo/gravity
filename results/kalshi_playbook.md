@@ -1,31 +1,28 @@
 # Kalshi Trading Playbook — 2026 March Madness
 
-Updated: 2026-03-16 (v3 model: 16 features, half-life=30, 8-year training)
+Updated: 2026-03-16 (v4 model: 15 features, 7:8 player:team ratio + consensus blending)
+
+**Key changes in v4:** Rebalanced feature ratio (added adjoe/adjde, pruned 3 weak player features), added 30% consensus blending in bracket simulation. This corrects the player-feature bias that was overvaluing star-driven teams and undervaluing system/efficiency teams.
 
 ---
 
-## Model Probabilities (v3 — pruned to 16 features)
+## Model Probabilities (Gravity v4 vs Consensus avg of Torvik/Miya/KenPom)
 
-| Team | Champ % | F4 % |
-|------|---------|------|
-| Michigan | 27.5 | 61.3 |
-| Duke | 19.4 | 47.5 |
-| Arizona | 19.4 | 48.9 |
-| Purdue | 4.6 | 21.6 |
-| Florida | 3.7 | 24.7 |
-| Michigan St. | 3.6 | 17.8 |
-| Houston | 3.5 | 24.9 |
-| Arkansas | 2.7 | 12.7 |
-| Iowa St. | 1.7 | 11.6 |
-| Vanderbilt | 1.7 | 14.3 |
-| St. John's | 1.6 | 9.0 |
-| Nebraska | 1.6 | 13.7 |
-| Virginia | 1.4 | 9.8 |
-| Connecticut | 1.4 | 11.2 |
-| Illinois | 1.4 | 14.2 |
-| Alabama | 1.3 | 9.1 |
+| Team | v4 Champ % | v3 Champ % | Consensus % | v4 Edge | Notes |
+|------|-----------|-----------|-------------|---------|-------|
+| Duke | 31.2 | 19.4 | 20.2 | +11.0 | Model very bullish — adjoe/adjde features boosted Duke |
+| Michigan | 28.7 | 27.5 | 20.9 | +7.8 | Still our biggest edge, Miya confirms |
+| Arizona | 22.3 | 19.4 | 17.0 | +5.3 | Increased — strong on both team + player metrics |
+| Florida | 4.5 | 3.7 | 9.4 | -4.9 | Improved from v3 but still below consensus |
+| Purdue | 3.4 | 4.6 | 4.8 | -1.4 | Slight decrease |
+| Houston | 3.2 | 3.5 | 6.5 | -3.3 | Still below consensus — system team |
+| Illinois | 1.4 | 1.4 | 4.3 | -2.9 | Unchanged — consensus blending helps in sim but champ% similar |
+| Iowa St. | 1.2 | 1.7 | 4.6 | -3.4 | Still below consensus |
+| Connecticut | 0.9 | 1.4 | 2.0 | -1.1 | Decreased |
+| Michigan St. | 0.8 | 3.6 | 1.5 | -0.7 | Down from 3.6% — player-bias correction working |
+| Nebraska | 0.2 | 1.6 | 0.5 | -0.3 | Down from 1.6% — player-bias correction working |
 
-Changes from v2: Pruned 3 weak features (experience, height, qual_barthag) → 16 features. Michigan champ 26.0→27.5%, Arizona 19.1→19.4%, Purdue 5.0→4.6%, Michigan St. 3.3→3.6%.
+**v3 → v4 impact:** The feature rebalancing did what we expected. Star-driven teams that were overvalued (Michigan St. 3.6→0.8%, Nebraska 1.6→0.2%) came down. System teams (Florida 3.7→4.5%) moved up slightly. However, Duke's increase to 31.2% is driven by their strong adjoe/adjde profile, not player-bias.
 
 ---
 
@@ -33,54 +30,46 @@ Changes from v2: Pruned 3 weak features (experience, height, qual_barthag) → 1
 
 All positions are **Champion YES** contracts.
 
-| Team | Shares | Cost Basis | Model Champ % | Action |
-|------|--------|------------|---------------|--------|
-| Louisville | 935 | $19.99 | 0.3% | HOLD (illiquid, can't sell) |
-| Houston | 208 | $19.92 | 3.5% | Check market — if >5%, SELL |
-| Purdue | 468 | $19.98 | 4.6% | **HOLD** — still above cost basis edge |
-| Illinois | 268 | $19.99 | 1.4% | **SELL** — model says 1.4%, no edge |
-| Florida | 234 | $19.93 | 3.7% | **SELL if market >5%** |
-
-**Key changes from v2:**
-- Michigan champ up to 27.5% — strongest conviction buy
-- Purdue dropped slightly 5.0→4.6% — still a hold but tighter
-- Illinois dropped further to 1.4% — sell immediately
-- Florida dropped 4.1→3.7% — lower sell trigger
+| Team | Shares | Cost Basis | v4 Model % | Consensus % | Action |
+|------|--------|------------|-----------|-------------|--------|
+| Louisville | 935 | $19.99 | 0.1% | 0.5% | HOLD (illiquid, can't sell) |
+| Houston | 208 | $19.92 | 3.2% | 6.5% | **HOLD** — consensus says 6.5%, model still underweights system teams |
+| Purdue | 468 | $19.98 | 3.4% | 4.8% | **HOLD** — model + consensus roughly aligned |
+| Illinois | 268 | $19.99 | 1.4% | 4.3% | **HOLD if market <5%** — consensus says 4.3% |
+| Florida | 234 | $19.93 | 4.5% | 9.4% | **HOLD** — improved in v4 but still below consensus |
 
 ---
 
 ## Section B: New Orders
 
-Check live market prices before executing. Only buy where model edge > 3pp.
+### High-Conviction Buys (model + consensus aligned)
 
-### High-Conviction Buys
+| Market | Side | v4 Model | Consensus | Notes |
+|--------|------|---------|-----------|-------|
+| Michigan champ YES | BUY | 28.7% | 20.9% | Best edge, confirmed by Miya |
+| Arizona champ YES | BUY | 22.3% | 17.0% | Strong edge, Miya agrees |
+| Duke champ YES | BUY if <25% | 31.2% | 20.2% | New top pick in v4 — but check if market already priced in |
 
-| Market | Side | Model | Edge if market at... | Notes |
-|--------|------|-------|---------------------|-------|
-| Michigan champ YES | BUY | 27.5% | +7pp if 20% | Top model pick, strongest edge |
-| Michigan F4 YES | BUY | 61.3% | Depends on market | Model has >61% — very strong |
-| Duke champ YES | BUY | 19.4% | +4pp if 15% | If underpriced vs public |
-| Arizona champ YES | BUY | 19.4% | +4pp if 15% | Tied 2nd with Duke |
+### Medium-Conviction Buys
 
-### Situational Buys (if market is cheap)
+| Market | Side | v4 Model | Consensus | Notes |
+|--------|------|---------|-----------|-------|
+| Michigan F4 YES | BUY | 73.2% | 53.8% | Large edge |
+| Duke F4 YES | BUY | 71.7% | ~55% | Large edge if market below model |
 
-| Market | Side | Model | Notes |
-|--------|------|-------|-------|
-| Purdue F4 YES | BUY | 21.6% | 2-seed, strong model support |
-| Michigan St. F4 YES | BUY | 17.8% | 3-seed, up from 16.9%, public undervalues |
-| Vanderbilt F4 YES | BUY | 14.3% | 5-seed dark horse, likely very cheap |
-| Arkansas F4 YES | BUY | 12.7% | 4-seed, if market <8% |
-| Iowa St. F4 YES | BUY | 11.6% | If market <8%, good value |
+### Removed from buy list (v4 corrections)
+
+| Market | v3 Model | v4 Model | Consensus | Why removed |
+|--------|---------|---------|-----------|-------------|
+| Michigan St. F4 YES | 17.8% | 9.3% | 11.2% | Player-bias correction — no longer an edge |
+| Vanderbilt F4 YES | 14.3% | 8.2% | 7.2% | Closer to consensus now, small edge not worth it |
+| Nebraska F4 YES | 13.7% | 5.8% | 5.3% | Corrected down dramatically |
 
 ---
 
 ## Section C: Sells / Positions to Exit
 
-| Market | Action | Reason |
-|--------|--------|--------|
-| Illinois champ YES | SELL NOW | Model says 1.4% — no edge at any realistic price |
-| Florida champ YES | SELL if >5% | Model says 3.7%, tighter trigger than before |
-| Houston champ YES | SELL if >5% | Model dropped to 3.5% |
+**No active sells.** Consensus analysis + v4 corrections show our holdings are fairly valued or undervalued relative to consensus.
 
 ---
 
@@ -90,6 +79,7 @@ Check live market prices before executing. Only buy where model edge > 3pp.
 2. If a team advances and F4 price spikes, consider selling F4 to lock profit and let champ bet ride
 3. If a team is eliminated, position goes to zero — no action needed
 4. Re-run model with updated Torvik data after R32 to check if remaining edges still hold
-5. If model edge on a position flips negative (market corrects past model), sell
-6. Illinois sell should happen ASAP — model confidence dropped to 1.4%
-7. Michigan is the highest-conviction position across all markets
+5. If model edge on a position flips negative AND consensus agrees, sell
+6. Michigan and Duke are the highest-conviction positions — model significantly above consensus on both
+7. **Trust consensus over model** for Florida, Illinois, Iowa St., Houston — model still underweights system teams even after v4 correction
+8. **Trust model over consensus** for Michigan, Duke, Arizona — strong team + player fundamentals

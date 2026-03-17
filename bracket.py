@@ -22,16 +22,21 @@ class BracketSimulator:
     """Monte Carlo bracket simulator for March Madness."""
 
     def __init__(self, predictor: GamePredictor, teams_df: pd.DataFrame,
-                 player_feats: dict):
+                 player_feats: dict, consensus: dict | None = None,
+                 consensus_weight: float = 0.0):
         """
         Args:
             predictor: trained GamePredictor
             teams_df: Torvik team stats indexed by team name
             player_feats: dict from build_player_features()
+            consensus: optional dict from load_consensus_projections()
+            consensus_weight: blend weight for consensus (0.0 = model only)
         """
         self.predictor = predictor
         self.teams_df = teams_df
         self.player_feats = player_feats
+        self.consensus = consensus or {}
+        self.consensus_weight = consensus_weight
 
     def _get_team_data(self, team: str) -> tuple[dict, dict]:
         """Get Torvik and player data for a team."""
@@ -43,13 +48,38 @@ class BracketSimulator:
         players = self.player_feats.get(team, {})
         return torvik, players
 
+    def _consensus_win_prob(self, team1: str, team2: str) -> float | None:
+        """Derive pairwise win probability from consensus champion probabilities.
+
+        Uses log-ratio of champion probabilities as a strength proxy,
+        converted to pairwise probability via logistic function.
+        Returns None if either team has 0 champion probability.
+        """
+        c1 = self.consensus.get(team1, {}).get("Champion", 0)
+        c2 = self.consensus.get(team2, {}).get("Champion", 0)
+        if c1 <= 0 or c2 <= 0:
+            return None
+        log_ratio = np.log(c1 / c2)
+        return float(1 / (1 + np.exp(-0.8 * log_ratio)))
+
     def simulate_game(self, team1: str, team2: str, location: float = 0.0) -> str:
         """Simulate a single game, return winner name."""
         t1_torvik, t1_players = self._get_team_data(team1)
         t2_torvik, t2_players = self._get_team_data(team2)
 
         features = self.predictor.build_features(t1_torvik, t2_torvik, t1_players, t2_players, location)
-        win_prob = self.predictor.ensemble_prob(features, tournament=True)
+        model_prob = self.predictor.ensemble_prob(features, tournament=True)
+
+        w = self.consensus_weight
+        if w > 0 and self.consensus:
+            cons_prob = self._consensus_win_prob(team1, team2)
+            if cons_prob is not None:
+                win_prob = (1 - w) * model_prob + w * cons_prob
+            else:
+                win_prob = model_prob
+        else:
+            win_prob = model_prob
+
         return team1 if np.random.random() < win_prob else team2
 
     def load_bracket(self, path: str | Path) -> dict:
@@ -265,8 +295,17 @@ if __name__ == "__main__":
     player_feats = build_player_features(players_df, recent_players_df=recent_players_df,
                                          exclusions=exclusions, weights=weights)
 
+    # Load consensus projections for blending
+    from optimize_bracket import load_consensus_projections
+    consensus = load_consensus_projections(set())
+    if consensus:
+        print("Loaded consensus projections for blending (weight=0.3)")
+    else:
+        print("No consensus projections found — using model only")
+
     print("Loading bracket...")
-    sim = BracketSimulator(predictor, teams_df, player_feats)
+    sim = BracketSimulator(predictor, teams_df, player_feats,
+                           consensus=consensus, consensus_weight=0.3)
     bracket = sim.load_bracket(bracket_path)
 
     n_sims = int(sys.argv[2]) if len(sys.argv) > 2 else 1000

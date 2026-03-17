@@ -628,8 +628,16 @@ if __name__ == "__main__":
     with open(bracket_path) as f:
         bracket = json.load(f)
 
+    # Load consensus for simulation blending
+    consensus = load_consensus_projections(set())
+    if consensus:
+        print("Loaded consensus projections for blending (weight=0.3)")
+    else:
+        print("No consensus projections found — using model only")
+
     print(f"Running {n_sims} simulations...")
-    sim = BracketSimulator(predictor, teams_df, player_feats)
+    sim = BracketSimulator(predictor, teams_df, player_feats,
+                           consensus=consensus, consensus_weight=0.3)
     sim_results = sim.simulate_tournament(bracket, n_sims=n_sims)
 
     # Load consensus projections

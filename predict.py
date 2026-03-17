@@ -3,11 +3,11 @@
 GamePredictor uses Torvik efficiency ratings, team quality metrics,
 and player-derived features to predict win probability and point spread.
 
-Feature set (16 features):
+Feature set (15 features, 7:8 player:team ratio):
 - 2 core Torvik: barthag diff, SOS diff
-- 4 team quality: fun, elite SOS, quality games, WAB diffs
-- 10 player-derived: BPM sum, weighted BPM, weighted porpag, ast/tov,
-  stops, GBPM, TS% sum, bench BPM, BPM trend, porpag trend (all diffs)
+- 6 team quality: adjoe, adjde, fun, elite SOS, quality games, WAB diffs
+- 7 player-derived: BPM sum, weighted BPM, stops, GBPM, bench BPM,
+  BPM trend, porpag trend (all diffs)
 """
 
 from __future__ import annotations
@@ -47,13 +47,13 @@ def compute_recency_weights(dates: np.ndarray, cutoff: int,
     return np.exp(-decay * days_before)
 
 # Team-level stats used as diffs
-_TEAM_DIFF_STATS = ["fun", "elite_sos", "qual_games", "wab"]
+_TEAM_DIFF_STATS = ["adjoe", "adjde", "fun", "elite_sos", "qual_games", "wab"]
 
 # Player-derived stats used as diffs
 _PLAYER_DIFF_STATS = [
-    "top5_bpm_sum", "top5_bpm_weighted", "top5_porpag_weighted",
-    "top_ast_tov", "top5_stops_sum", "top_gbpm",
-    "top5_ts_sum", "bench_bpm_sum",
+    "top5_bpm_sum", "top5_bpm_weighted",
+    "top5_stops_sum", "top_gbpm",
+    "bench_bpm_sum",
     "top5_bpm_trend", "top_porpag_trend",
 ]
 
@@ -191,11 +191,11 @@ class GamePredictor:
         features["barthag_diff"] = t1_torvik.get("barthag", 0) - t2_torvik.get("barthag", 0)
         features["sos_diff"] = t1_torvik.get("sos", 0) - t2_torvik.get("sos", 0)
 
-        # Team quality diffs (4 features)
+        # Team quality diffs (6 features)
         for stat in _TEAM_DIFF_STATS:
             features[f"diff_{stat}"] = t1_torvik.get(stat, 0) - t2_torvik.get(stat, 0)
 
-        # Player diffs (10 features)
+        # Player diffs (7 features)
         for stat in _PLAYER_DIFF_STATS:
             features[f"diff_{stat}"] = t1_players.get(stat, 0) - t2_players.get(stat, 0)
 
