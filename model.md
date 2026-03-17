@@ -524,31 +524,64 @@ Based on v3 model (16 features) + consensus comparison revealing a 10:6 player-t
 | 11 | Gradient boosted trees | -0.010 to -0.030 | Medium | High | |
 | 12 | Style matchup features | -0.001 to -0.010 | High | Medium | |
 | 13 | Round-aware temp | -0.002 to -0.005 | Low | Low | |
+| 14 | Injury data refresh | N/A (data quality) | Low | None | **Pre-tournament** |
+| 15 | Tempo mismatch feature | -0.001 to -0.005 | Low | Low | |
+| 16 | Historical seed-pair calibration | N/A (simulation) | Low | Low | |
+| 17 | Live line movement | -0.005 to -0.015 | High | Medium | Future |
+| 18 | Conference strength adjustment | -0.001 to -0.005 | Low | Low | |
 
 Items 1-9 done. v4 model (15 features, 7:8 player:team ratio) with consensus blending is the current production model.
 
 ---
 
-## 5. Matchup Style Features (Future Work)
+## v5 Roadmap: What To Try Next
 
-**Rationale:** Some teams have stylistic advantages against certain opponents (e.g., a team that forces turnovers vs. a turnover-prone team). The gravity scores from `gravity.py` measure how much a team imposes its style, but they were removed from the model in PR #3 because raw gravity features didn't improve accuracy. A more targeted approach — computing pairwise style matchup advantages — could capture these dynamics.
+### Pre-Tournament (before 2026-03-20)
 
-**Possible approach:**
-- For each game, compute the gap between Team A's offensive style and Team B's defensive vulnerability in specific dimensions (tempo, 3PT rate, TO rate, etc.)
-- Use interaction terms rather than raw gravity scores
-- Requires careful feature selection to avoid overfitting on small tournament samples
+**14. Injury Data Refresh**
+- `config/injuries.json` is a static snapshot. Review and update for all 64 tournament teams.
+- `_weights_2026` currently only has Tyler Bilodeau (UCLA, GTD). Add any game-time decisions for tournament teams — this is the single highest-leverage manual input since a missing starter can shift win probability by 5-10pp.
+- Check beat reporter Twitter/X for late-breaking injury news on key teams (Michigan, Duke, Arizona, Houston especially).
 
-**Why deferred:** High effort relative to uncertain impact. Needs more research on which style dimensions actually matter in tournament play.
+### Post-Tournament / Next Season
 
----
+**10. Shooting Profile Features**
+Available but unused player columns: `rim_pct`, `mid_pct`, `tp_per`, `e_fg`, `ftr`, `tpa`, `two_p_per`.
 
-## 6. Seed-Specific Calibration (Future Work)
+Two candidate features:
+- `top5_3pt_reliance` = sum(tpa) / sum(two_pa + tpa) for top 5 by minutes. Three-point-dependent teams are higher variance in March — this captures "live by the three, die by the three" risk.
+- `top5_ftr` = average free throw rate for top 5. Teams that get to the line close out tight games; this is especially predictive in later tournament rounds.
 
-**Rationale:** Tournament upsets follow known seed-matchup patterns (e.g., 12-over-5 is historically ~35%). Current temperature scaling is global — it doesn't account for the fact that the model may be differently calibrated for top seeds vs. mid-majors.
+Projected impact: -0.002 to -0.008 cal LL. Low risk since data already exists.
 
-**Possible approach:**
-- Bin tournament games by seed differential
-- Fit per-bin temperature or probability adjustments
-- Requires enough historical data per bin to be reliable
+**15. Tempo Mismatch Feature**
+`adj_tempo` is available in team stats but unused. Compute `|tempo1 - tempo2|` as a feature. Large tempo mismatches create chaos and correlate with upsets — the fast team wants to push pace, the slow team wants to grind. The team that controls pace usually wins.
 
-**Why deferred:** Limited tournament sample size makes per-bin calibration noisy. The global temperature already helps. Could be revisited with more years of backtest data.
+Could also add `adj_tempo_diff` (signed) to capture whether faster or slower teams have an edge.
+
+**16. Historical Seed-Pair Calibration**
+Our model underestimates 11-seed (model: 27-32% vs historical: 35-45%) and 12-seed (model: 8-12% vs historical: 31-44%) upset rates. A post-hoc seed-pair adjustment using 40 years of NCAA data would be simple and well-motivated:
+- Compute historical win rate by seed matchup (1v16, 2v15, ..., 8v9)
+- Blend model probability with historical base rate: `final = 0.8 * model + 0.2 * historical_rate`
+- Only apply during bracket simulation, not per-game prediction
+
+This addresses the "too chalky" problem at its root rather than via sim_temp hacks.
+
+**18. Conference Strength Adjustment**
+Available but unused team columns: `conf_adj_o`, `conf_adj_d`, `conf_sos`, `nconf_sos`. Teams from weak conferences have inflated stats from playing bad opponents. Adding `nconf_sos_diff` (non-conference SOS) would help distinguish legit mid-majors from stat-padders.
+
+**11. Gradient Boosted Trees**
+Replace logistic regression with LightGBM/XGBoost. Key risk: 844 tournament test games is thin for a tree model. Would need aggressive regularization (max_depth=3, min_child_samples=50+). Best attempted after accumulating another 1-2 years of tournament data.
+
+**17. Live Line Movement**
+Vegas lines move for reasons our model can't see: private injury intel, matchup scouting reports, sharp money. Scraping opening vs closing lines before each round and using the delta as a feature (or as a consensus signal alongside Torvik/Miya/KenPom) would add genuinely new information.
+
+Requires: line data source (e.g., odds-api.com), pre-game scraping pipeline, integration into `bracket.py` between rounds.
+
+**12. Style Matchup Features**
+Compute pairwise style gaps: `turnover_vulnerability` = team1's TO-forcing gravity × team2's TO rate. Previous attempt (PR #3) using raw gravity scores failed, but interaction terms between matchup-specific dimensions could work.
+
+High effort, uncertain payoff. Best attempted as a research project with thorough backtest validation.
+
+**13. Round-Aware Temperature**
+Fit per-round temperatures (R64, R32, S16, E8, F4, Championship) on historical data. Early rounds are more predictable; later rounds have more variance. With ~844 games split across 6 rounds, per-round calibration will be noisy but could help at the extremes.

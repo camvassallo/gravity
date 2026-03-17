@@ -6,25 +6,25 @@ Generated: 2026-03-17 | Model: Gravity v4 (15 features, consensus blending, sim_
 
 - **Gravity v4 model**: 15-feature logistic regression + spread model, trained on 2018-2026 (42,560 games)
 - **Consensus projections**: Average of Torvik, Miya, KenPom
-- **Public ownership**: Yahoo bracket pick rates (Image: KenPom vs Yahoo)
+- **Public ownership**: Yahoo bracket pick rates + ESPN "Most Picked Champions"
 - **Historical base rates**: NCAA tournament results by seed since 1985 (Stathead)
 
 ## Key Insights
 
 ### Public Ownership vs Model (Champion %)
 
-| Team | KenPom | Public (Yahoo) | Gravity v4 | Edge vs Public |
-|------|--------|---------------|------------|----------------|
-| Duke | 21.1% | **30.2%** | 25.8% | Public overvalues by 9pp |
-| Michigan | 18.6% | 14.5% | 24.5% | **Undervalued by 4pp — best contrarian champ** |
-| Arizona | 18.2% | 19.4% | 20.7% | Fairly priced |
-| Florida | 7.5% | 6.5% | 5.6% | Slight public undervalue |
-| Houston | 6.0% | 5.2% | 4.3% | Slight public undervalue |
-| Iowa St. | 5.5% | 1.8% | 2.2% | **Public severely undervalues (+3.7pp)** |
-| Illinois | 4.7% | 1.1% | 2.3% | **Public severely undervalues (+3.6pp)** |
-| Purdue | 4.4% | 3.2% | 4.8% | Slight public undervalue |
-| UConn | 1.9% | 3.6% | 1.5% | Public overvalues |
-| Kansas | 0.5% | 1.6% | 0.1% | Public overvalues |
+| Team | KenPom | ESPN | Yahoo | Gravity v4 | Edge vs Public |
+|------|--------|------|-------|------------|----------------|
+| Duke | 21.1% | 25.3% | **30.2%** | 25.8% | Public overvalues — 25-30% ownership for ~26% true prob |
+| Michigan | 18.6% | 14.4% | 14.5% | 24.5% | **Undervalued by 10pp — best contrarian champ** |
+| Arizona | 18.2% | 19.6% | 19.4% | 20.7% | Fairly priced across all sources |
+| Florida | 7.5% | 7.5% | 6.5% | 5.6% | Slight public overvalue |
+| Houston | 6.0% | 5.8% | 5.2% | 4.3% | Slight public overvalue |
+| Iowa St. | 5.5% | 2.7% | 1.8% | 2.2% | **Public severely undervalues (+3pp KenPom edge)** |
+| Illinois | 4.7% | 1.3% | 1.1% | 2.3% | **Public severely undervalues (+3.4pp KenPom edge)** |
+| Purdue | 4.4% | 3.0% | 3.2% | 4.8% | Slight public undervalue |
+| UConn | 1.9% | 3.5% | 3.6% | 1.5% | Public overvalues by 2pp |
+| Kansas | 0.5% | — | 1.6% | 0.1% | Public overvalues |
 
 ### Historical R64 Upset Rates (Since 1985)
 
