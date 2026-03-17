@@ -1,6 +1,44 @@
 # Model Improvements
 
-## Latest Results: v2 Model (19 features, pruned + new features)
+## Latest Results: v3 Model (16 features, pruned weak features)
+
+Pruned 3 more weak features from v2: `avg_experience` (-0.023 coef), `avg_height` (-0.011 coef), `qual_barthag` (-0.046 coef). These were absorbed by existing features. Net: 19 → 16 features. Backtest shows strict improvement across all metrics.
+
+### v2 → v3 Comparison
+
+| Metric | v2 (19 feat) | v3 (16 feat) | Delta |
+|--------|-------------|-------------|-------|
+| Avg Log Loss | 0.5329 | 0.5318 | -0.0011 |
+| Avg Cal Log Loss | 0.5272 | 0.5271 | -0.0001 |
+| Avg Accuracy | 74.2% | 74.3% | +0.1pp |
+| 2025 Accuracy | 81.3% | 82.1% | +0.8pp |
+
+Fewer parameters, better results. The 16-feature model is the current production model.
+
+### Feature Coefficients (v3 final model)
+
+| Feature | Coefficient | Notes |
+|---------|-------------|-------|
+| barthag_diff | +0.956 | Dominant feature |
+| diff_fun | +0.389 | Fun rating |
+| diff_top5_bpm_weighted | +0.307 | Minutes-weighted BPM |
+| diff_qual_games | +0.172 | Quality game count |
+| diff_top5_bpm_sum | +0.152 | Raw BPM sum |
+| diff_bench_bpm_sum | +0.140 | Bench depth |
+| sos_diff | +0.132 | Strength of schedule |
+| diff_elite_sos | +0.104 | Elite SOS |
+| diff_top5_bpm_trend | +0.094 | Late-season BPM improvement |
+| diff_top5_stops_sum | +0.091 | Defensive stops |
+| diff_top_porpag_trend | +0.081 | Late-season porpag improvement |
+| diff_top_gbpm | +0.048 | Game BPM |
+| diff_top5_ts_sum | -0.036 | True shooting |
+| diff_top5_porpag_weighted | +0.033 | Usage-weighted porpag |
+| diff_wab | -0.031 | Wins above bubble |
+| diff_top_ast_tov | +0.022 | Assist/turnover ratio |
+
+---
+
+## Previous Results: v2 Model (19 features, pruned + new features)
 
 Pruned 7 dead features, added 5 new ones: `qual_barthag` (quality-adjusted efficiency), `avg_experience` (minutes-weighted class year), `avg_height` (minutes-weighted height), `top5_bpm_trend` (last-30-day BPM vs season), `top_porpag_trend` (last-30-day porpag vs season). Net: 21 → 19 features.
 
@@ -164,11 +202,13 @@ The blend weight consistently calibrates to 1.0 (logistic-only) across 5 of 7 ye
 | 3 | Consistent Daterange Player Stats | Low | Low | Implemented (cleanup) |
 | 4 | Expanded Dataset (2018–2025, 7 years) | High | Low | Implemented |
 | 5 | Feature Pruning (21→14 core) | Low | Low | **Implemented** (v2) |
-| 6 | Quality-Adjusted Efficiency (qual_barthag) | Low | Low | **Implemented** (v2, coef -0.046) |
-| 7 | Late-Season Form Features (BPM/porpag trend) | Medium | Medium | **Implemented** (v2, coefs +0.094/+0.081) |
-| 8 | Experience & Height Features | Low | Low | **Implemented** (v2, weak — prune candidates) |
-| 9 | Matchup Style Features | Medium | High | Future work |
-| 10 | Seed-Specific Calibration | Low | Medium | Future work |
+| 6 | Quality-Adjusted Efficiency (qual_barthag) | Low | Low | **Implemented** (v2) → **Pruned** (v3) |
+| 7 | Late-Season Form Features (BPM/porpag trend) | Medium | Medium | **Implemented** (v2, +0.094/+0.081) |
+| 8 | Experience & Height Features | Low | Low | **Implemented** (v2) → **Pruned** (v3) |
+| 9 | Feature Pruning v3 (19→16) | Low | Low | **Implemented** (v3, all metrics improved) |
+| 10 | Bracket Pool Optimizer | Medium | Medium | **Implemented** (leverage-based) |
+| 11 | Matchup Style Features | Medium | High | Future work |
+| 12 | Seed-Specific Calibration | Low | Medium | Future work |
 
 ---
 
@@ -304,9 +344,10 @@ Based on analysis of the current 19-feature v2 model across 844 tournament games
 | 6 | Gradient boosted trees | -0.010 to -0.030 | Medium | High | |
 | 7 | Style matchup features | -0.001 to -0.010 | High | Medium | |
 | 8 | Round-aware temp | -0.002 to -0.005 | Low | Low | |
-| 9 | Prune experience + height | +0.001 (cleanup) | Low | Very low | Next |
+| 9 | ~~Prune experience + height + qual_barthag~~ | ~~+0.001 (cleanup)~~ | ~~Low~~ | ~~Very low~~ | **Done** (v3) |
+| 10 | ~~Bracket pool optimizer~~ | ~~N/A (strategy)~~ | ~~Medium~~ | ~~Low~~ | **Done** |
 
-Items 1-4 are done. Next: shooting profiles and pruning the weak experience/height features.
+Items 1-4 done (v2), items 5+9+10 done (v3). Next: shooting profiles or gradient boosted trees.
 
 ---
 

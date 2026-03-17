@@ -44,11 +44,11 @@ All data comes from the Barttorvik API (`torvik.py`). Three data types are fetch
 Team names must match Barttorvik conventions exactly (e.g., "Michigan St." not "Michigan State", "Connecticut" not "UConn").
 
 ### Prediction Model (`predict.py`: GamePredictor)
-A 14-feature model using team-pair differences:
+A 16-feature model (v3) using team-pair differences:
 
-- **Torvik features (6)**: offensive/defensive efficiency gaps, barthag diff, expected tempo, SOS diff, location
+- **Torvik features (2)**: barthag diff, SOS diff
 - **Team quality (4)**: fun, elite SOS, quality games, wins above bubble (all diffs)
-- **Player-derived (4)**: top-5 BPM sum, top porpag, top OBPM, top DBPM (all diffs)
+- **Player-derived (10)**: top-5 BPM sum, top-5 BPM weighted, top-5 porpag weighted, ast/tov, stops, game BPM, true shooting, bench BPM, BPM trend, porpag trend (all diffs)
 
 Two models are trained together:
 1. **Logistic regression** → win probability (with tournament temperature scaling 1.0–2.0)

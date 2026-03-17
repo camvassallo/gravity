@@ -21,6 +21,7 @@ from pathlib import Path
 from predict import GamePredictor, build_player_features, _TORVIK_COLS, _TEAM_DIFF_STATS
 from bracket import BracketSimulator, ROUND_NAMES
 
+DATA_DIR = Path(__file__).resolve().parent / "data"
 RESULTS_DIR = Path(__file__).resolve().parent / "results"
 RESULTS_DIR.mkdir(exist_ok=True)
 
@@ -64,104 +65,197 @@ PUBLIC_CHAMPION_BY_SEED = {
 MATCHUP_ORDER = [(1, 16), (8, 9), (5, 12), (4, 13), (6, 11), (3, 14), (7, 10), (2, 15)]
 
 
+# Team name normalization: external sources → Barttorvik convention
+_NAME_MAP = {
+    "Michigan State": "Michigan St.",
+    "Iowa State": "Iowa St.",
+    "Ohio State": "Ohio St.",
+    "Utah State": "Utah St.",
+    "McNeese State": "McNeese St.",
+    "Kennesaw State": "Kennesaw St.",
+    "Wright State": "Wright St.",
+    "North Dakota State": "North Dakota St.",
+    "Tennessee State": "Tennessee St.",
+    "California Baptist": "Cal Baptist",
+    "Cal Baptist": "Cal Baptist",
+    "Miami (Fla.)": "Miami FL",
+    "Miami (OH)": "Miami OH",
+    "Miami OH": "Miami OH",
+    "NC State": "N.C. State",
+    "N.C. State": "N.C. State",
+    "Long Island": "LIU",
+    "LIU": "LIU",
+    "McNeese": "McNeese St.",
+    "Prairie View": "Prairie View A&M",
+    "St. John's": "St. John's",
+    "Saint Mary's": "Saint Mary's",
+}
+
+# Round name normalization across sources
+_ROUND_COLS = ["R32", "S16", "E8", "F4", "Championship", "Champion"]
+
+
+def _normalize_name(name: str) -> str:
+    """Map external team name to Barttorvik convention."""
+    return _NAME_MAP.get(name, name)
+
+
+def load_consensus_projections(bracket_teams: set) -> dict | None:
+    """Load consensus projections (average of Torvik, Miya, KenPom).
+
+    First tries the pre-built consensus CSV. Falls back to parsing
+    the individual source files if consensus CSV doesn't exist.
+
+    Returns dict: {team_name: {round: probability}} or None.
+    """
+    # Try pre-built consensus file first
+    consensus_path = DATA_DIR / "consensus_projections.csv"
+    if consensus_path.exists():
+        df = pd.read_csv(consensus_path)
+        consensus = {}
+        for _, row in df.iterrows():
+            team = row["Team"]
+            consensus[team] = {}
+            for rnd in _ROUND_COLS:
+                col = f"{rnd}_Consensus"
+                consensus[team][rnd] = row.get(col, 0) / 100 if col in df.columns else 0.0
+        return consensus
+
+    # Fall back to parsing individual source files
+    sources = []
+
+    tv_path = DATA_DIR / "torvik_proj.csv"
+    if tv_path.exists():
+        tv = pd.read_csv(tv_path)
+        tv_data = {}
+        for _, row in tv.iterrows():
+            team = _normalize_name(row["Team"])
+            tv_data[team] = {
+                "R32": pd.to_numeric(row.get("R32", 0), errors="coerce") / 100,
+                "S16": pd.to_numeric(row.get("S16", 0), errors="coerce") / 100,
+                "E8": pd.to_numeric(row.get("E8", 0), errors="coerce") / 100,
+                "F4": pd.to_numeric(row.get("F4", 0), errors="coerce") / 100,
+                "Championship": pd.to_numeric(row.get("F2", 0), errors="coerce") / 100,
+                "Champion": pd.to_numeric(row.get("Champ", 0), errors="coerce") / 100,
+            }
+        sources.append(("Torvik", tv_data))
+
+    miya_path = DATA_DIR / "miya_proj.csv"
+    if miya_path.exists():
+        with open(miya_path) as f:
+            lines = [l.strip() for l in f.readlines()]
+        miya_data = {}
+        data_lines = lines[8:]
+        for i in range(0, len(data_lines), 8):
+            chunk = data_lines[i:i + 8]
+            if len(chunk) < 8:
+                break
+            team = _normalize_name(chunk[0])
+            try:
+                miya_data[team] = {
+                    "R32": float(chunk[2].replace("%", "")) / 100,
+                    "S16": float(chunk[3].replace("%", "")) / 100,
+                    "E8": float(chunk[4].replace("%", "")) / 100,
+                    "F4": float(chunk[5].replace("%", "")) / 100,
+                    "Championship": float(chunk[6].replace("%", "")) / 100,
+                    "Champion": float(chunk[7].replace("%", "")) / 100,
+                }
+            except (ValueError, IndexError):
+                continue
+        sources.append(("Miya", miya_data))
+
+    kp_path = DATA_DIR / "kenpom_proj.csv"
+    if kp_path.exists():
+        kp = pd.read_csv(kp_path)
+        total_sims = kp["Rd2"].max() / 0.998
+        kp_data = {}
+        for _, row in kp.iterrows():
+            team = _normalize_name(row["Team"])
+            kp_data[team] = {
+                "R32": row.get("Rd2", 0) / total_sims,
+                "S16": row.get("Swt16", 0) / total_sims,
+                "E8": row.get("Elite8", 0) / total_sims,
+                "F4": row.get("Final4", 0) / total_sims,
+                "Championship": row.get("Final", 0) / total_sims,
+                "Champion": row.get("Champ", 0) / total_sims,
+            }
+        sources.append(("KenPom", kp_data))
+
+    if not sources:
+        return None
+
+    consensus = {}
+    all_teams = set()
+    for _, data in sources:
+        all_teams.update(data.keys())
+
+    for team in all_teams:
+        consensus[team] = {}
+        for rnd in _ROUND_COLS:
+            values = [data[team][rnd] for _, data in sources
+                      if team in data and not np.isnan(data[team].get(rnd, 0))]
+            consensus[team][rnd] = np.mean(values) if values else 0.0
+
+    return consensus
+
+
 def estimate_public_picks(bracket: dict, sim_results: pd.DataFrame) -> dict:
     """Estimate public pick distributions for every bracket slot.
 
-    Returns dict with structure:
-        {team_name: {round_name: estimated_public_pick_pct}}
+    First tries to load real consensus projections from Torvik/Miya/KenPom
+    CSV files. Falls back to seed-based heuristics if no data available.
 
-    All probabilities are UNCONDITIONAL (P(team reaches round)), matching
-    the format of sim_results. Public estimates are derived from seed-based
-    priors blended with model probabilities (since the public loosely
-    follows efficiency-based reasoning but with a stronger seed bias).
+    Returns dict: {team_name: {round_name: unconditional_probability}}
     """
+    # Try loading real consensus data
+    bracket_teams = set()
+    for seeds in bracket["regions"].values():
+        bracket_teams.update(seeds.values())
+
+    consensus = load_consensus_projections(bracket_teams)
+
+    if consensus:
+        # Use consensus projections directly as public picks
+        public = {}
+        for team in sim_results.index:
+            if team in consensus:
+                public[team] = dict(consensus[team])
+            else:
+                # Team not in projections — use tiny defaults
+                public[team] = {rnd: 0.001 for rnd in _ROUND_COLS}
+        return public
+
+    # Fallback: seed-based heuristic estimates
+    return _estimate_public_from_seeds(bracket, sim_results)
+
+
+def _estimate_public_from_seeds(bracket: dict, sim_results: pd.DataFrame) -> dict:
+    """Fallback: estimate public picks from seed position + model blend."""
     regions = bracket["regions"]
     public = {}
 
-    # Build seed lookup: team -> (region, seed)
     seed_lookup = {}
     for region_name, seeds in regions.items():
         for seed_str, team in seeds.items():
             seed_lookup[team] = (region_name, int(seed_str))
 
-    # Initialize all teams
     for team in sim_results.index:
         public[team] = {"R32": 0.0, "S16": 0.0, "E8": 0.0,
                         "F4": 0.0, "Championship": 0.0, "Champion": 0.0}
 
     for region_name, seeds in regions.items():
-        matchups = [(seeds[str(s1)], seeds[str(s2)], s1, s2)
+        matchups = [(seeds[str(s1)], seeds[str(s2)])
                     for s1, s2 in MATCHUP_ORDER]
 
-        # R64 → R32: unconditional P(win R64) from seed-based rates
-        r32_probs = {}  # team -> unconditional P(reach R32)
-        r32_winners = []
-        for t1, t2, s1, s2 in matchups:
+        for (t1, t2), (s1, s2) in zip(matchups, MATCHUP_ORDER):
             rate = PUBLIC_R64_RATES.get((s1, s2), 0.55)
-            r32_probs[t1] = rate
-            r32_probs[t2] = 1 - rate
             public[t1]["R32"] = rate
             public[t2]["R32"] = 1 - rate
-            r32_winners.append((t1, t2))
 
-        # For later rounds, blend seed prior with model probabilities
-        # (public is ~70% seed-driven, 30% quality-driven)
-        def _blend(t1, t2, round_name, seed_weight=0.4):
-            s1 = seed_lookup.get(t1, ("", 8))[1]
-            s2 = seed_lookup.get(t2, ("", 8))[1]
-            # Seed prior: lower seed = better
-            if s1 < s2:
-                seed_p = 0.65
-            elif s1 > s2:
-                seed_p = 0.35
-            else:
-                seed_p = 0.5
-            # Model-based component (what smart public would think)
-            m1 = sim_results.loc[t1, round_name] if t1 in sim_results.index else 1
-            m2 = sim_results.loc[t2, round_name] if t2 in sim_results.index else 1
-            model_p = m1 / (m1 + m2 + 1e-9)
-            return seed_weight * seed_p + (1 - seed_weight) * model_p
-
-        # R32 → S16: P(reach S16) = P(reach R32) × P(win R32 matchup)
-        s16_probs = {}
-        s16_winners = []
-        for i in range(0, len(r32_winners), 2):
-            t1, _ = r32_winners[i]
-            t2, _ = r32_winners[i + 1]
-            cond = _blend(t1, t2, "S16", seed_weight=0.4)
-            s16_probs[t1] = r32_probs[t1] * cond
-            s16_probs[t2] = r32_probs[t2] * (1 - cond)
-            public[t1]["S16"] = s16_probs[t1]
-            public[t2]["S16"] = s16_probs[t2]
-            s16_winners.append((t1, t2))
-
-        # S16 → E8
-        e8_probs = {}
-        e8_winners = []
-        for i in range(0, len(s16_winners), 2):
-            t1, _ = s16_winners[i]
-            t2, _ = s16_winners[i + 1]
-            cond = _blend(t1, t2, "E8", seed_weight=0.35)
-            e8_probs[t1] = s16_probs[t1] * cond
-            e8_probs[t2] = s16_probs[t2] * (1 - cond)
-            public[t1]["E8"] = e8_probs[t1]
-            public[t2]["E8"] = e8_probs[t2]
-            e8_winners.append((t1, t2))
-
-        # E8 → F4
-        t1, _ = e8_winners[0]
-        t2, _ = e8_winners[1]
-        cond = _blend(t1, t2, "F4", seed_weight=0.35)
-        public[t1]["F4"] = e8_probs[t1] * cond
-        public[t2]["F4"] = e8_probs[t2] * (1 - cond)
-
-    # Champion: use seed-based public ownership (already unconditional)
+    # Champion: seed-based
     for team in sim_results.index:
         _, seed = seed_lookup.get(team, ("", 16))
         public[team]["Champion"] = PUBLIC_CHAMPION_BY_SEED.get(seed, 0.0005)
-
-    # Championship: ~2x champion probability (rough unconditional estimate)
-    for team in sim_results.index:
         public[team]["Championship"] = min(public[team]["Champion"] * 2, 0.5)
 
     return public
@@ -205,7 +299,7 @@ def compute_pick_ev(model_prob: float, points: int, public_prob: float,
 
     # Differentiation-adjusted EV:
     # Base EV × (edge ^ alpha) gives more weight to contrarian picks in large pools
-    return base_ev * (edge ** (alpha * 0.5))
+    return base_ev * (edge ** (alpha * 0.65))
 
 
 def optimize_bracket(bracket: dict, sim_results: pd.DataFrame,
@@ -538,20 +632,27 @@ if __name__ == "__main__":
     sim = BracketSimulator(predictor, teams_df, player_feats)
     sim_results = sim.simulate_tournament(bracket, n_sims=n_sims)
 
+    # Load consensus projections
+    consensus = load_consensus_projections(set())
+    if consensus:
+        print("Loaded consensus projections (Torvik + Miya + KenPom)")
+    else:
+        print("No projection CSVs found — using seed-based public estimates")
+
     print("Estimating public pick distributions...")
     public_picks = estimate_public_picks(bracket, sim_results)
 
     # Show leverage analysis for top teams
     print("\n" + "=" * 70)
-    print("LEVERAGE ANALYSIS — Champion Pick")
-    print(f"{'Team':<22} {'Model':>7} {'Public':>8} {'Leverage':>9}")
+    print("LEVERAGE ANALYSIS — Model vs Consensus")
+    print(f"{'Team':<22} {'Model':>7} {'Consensus':>10} {'Leverage':>9}")
     print("-" * 50)
-    top_teams = sim_results.nlargest(15, "Champion")
+    top_teams = sim_results.nlargest(20, "Champion")
     for team in top_teams.index:
         model_p = sim_results.loc[team, "Champion"] / 100
         pub_p = public_picks.get(team, {}).get("Champion", 0.001)
         lev = model_p / max(pub_p, 0.001)
-        print(f"{team:<22} {model_p:>7.1%} {pub_p:>8.1%} {lev:>8.1f}x")
+        print(f"{team:<22} {model_p:>7.1%} {pub_p:>10.1%} {lev:>8.1f}x")
 
     # Generate optimized brackets for each pool size
     for ps in pool_sizes:

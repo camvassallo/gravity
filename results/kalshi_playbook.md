@@ -1,31 +1,31 @@
 # Kalshi Trading Playbook — 2026 March Madness
 
-Updated: 2026-03-16 (v2 model: 19 features, half-life=30, 8-year training)
+Updated: 2026-03-16 (v3 model: 16 features, half-life=30, 8-year training)
 
 ---
 
-## Model Probabilities (updated)
+## Model Probabilities (v3 — pruned to 16 features)
 
 | Team | Champ % | F4 % |
 |------|---------|------|
-| Michigan | 26.0 | 59.1 |
-| Duke | 19.7 | 47.6 |
-| Arizona | 19.1 | 47.6 |
-| Purdue | 5.0 | 22.4 |
-| Florida | 4.1 | 25.2 |
-| Houston | 3.7 | 25.2 |
-| Michigan St. | 3.3 | 16.9 |
-| Arkansas | 3.0 | 13.3 |
-| Iowa St. | 2.0 | 12.5 |
-| Vanderbilt | 1.8 | 14.0 |
-| Illinois | 1.6 | 15.6 |
-| St. John's | 1.5 | 8.5 |
-| Connecticut | 1.5 | 11.3 |
-| Alabama | 1.4 | 9.8 |
-| Nebraska | 1.3 | 12.1 |
-| Virginia | 1.3 | 9.4 |
+| Michigan | 27.5 | 61.3 |
+| Duke | 19.4 | 47.5 |
+| Arizona | 19.4 | 48.9 |
+| Purdue | 4.6 | 21.6 |
+| Florida | 3.7 | 24.7 |
+| Michigan St. | 3.6 | 17.8 |
+| Houston | 3.5 | 24.9 |
+| Arkansas | 2.7 | 12.7 |
+| Iowa St. | 1.7 | 11.6 |
+| Vanderbilt | 1.7 | 14.3 |
+| St. John's | 1.6 | 9.0 |
+| Nebraska | 1.6 | 13.7 |
+| Virginia | 1.4 | 9.8 |
+| Connecticut | 1.4 | 11.2 |
+| Illinois | 1.4 | 14.2 |
+| Alabama | 1.3 | 9.1 |
 
-Changes from prior model: Michigan champ up 23.3→26.0%, Purdue up 4.1→5.0%, Houston down 4.4→3.7%, Illinois down 1.7→1.6%. New features (experience, form trends) benefit Michigan and Arizona most.
+Changes from v2: Pruned 3 weak features (experience, height, qual_barthag) → 16 features. Michigan champ 26.0→27.5%, Arizona 19.1→19.4%, Purdue 5.0→4.6%, Michigan St. 3.3→3.6%.
 
 ---
 
@@ -35,16 +35,17 @@ All positions are **Champion YES** contracts.
 
 | Team | Shares | Cost Basis | Model Champ % | Action |
 |------|--------|------------|---------------|--------|
-| Louisville | 935 | $19.99 | 0.4% | HOLD (illiquid, can't sell) |
-| Houston | 208 | $19.92 | 3.7% | Check market — if >5%, SELL |
-| Purdue | 468 | $19.98 | 5.0% | **HOLD** — model confirms edge, up from 4.1% |
-| Illinois | 268 | $19.99 | 1.6% | **SELL** — model says 1.6%, no edge |
-| Florida | 234 | $19.93 | 4.1% | **SELL if market >6%** |
+| Louisville | 935 | $19.99 | 0.3% | HOLD (illiquid, can't sell) |
+| Houston | 208 | $19.92 | 3.5% | Check market — if >5%, SELL |
+| Purdue | 468 | $19.98 | 4.6% | **HOLD** — still above cost basis edge |
+| Illinois | 268 | $19.99 | 1.4% | **SELL** — model says 1.4%, no edge |
+| Florida | 234 | $19.93 | 3.7% | **SELL if market >5%** |
 
-**Key changes from prior model:**
-- Purdue champ probability UP from 4.1% to 5.0% — stronger hold
-- Illinois still at 1.6% — sell at any price above model
-- Houston dropped from 4.4% to 3.7% — tighter sell trigger
+**Key changes from v2:**
+- Michigan champ up to 27.5% — strongest conviction buy
+- Purdue dropped slightly 5.0→4.6% — still a hold but tighter
+- Illinois dropped further to 1.4% — sell immediately
+- Florida dropped 4.1→3.7% — lower sell trigger
 
 ---
 
@@ -56,20 +57,20 @@ Check live market prices before executing. Only buy where model edge > 3pp.
 
 | Market | Side | Model | Edge if market at... | Notes |
 |--------|------|-------|---------------------|-------|
-| Michigan champ YES | BUY | 26.0% | +6pp if 20% | Top model pick, strongest edge |
-| Michigan F4 YES | BUY | 59.1% | Depends on market | Model has >59% — very strong |
-| Duke champ YES | BUY | 19.7% | +5pp if 15% | If underpriced vs public |
-| Arizona champ YES | BUY | 19.1% | +4pp if 15% | 3rd highest model probability |
+| Michigan champ YES | BUY | 27.5% | +7pp if 20% | Top model pick, strongest edge |
+| Michigan F4 YES | BUY | 61.3% | Depends on market | Model has >61% — very strong |
+| Duke champ YES | BUY | 19.4% | +4pp if 15% | If underpriced vs public |
+| Arizona champ YES | BUY | 19.4% | +4pp if 15% | Tied 2nd with Duke |
 
 ### Situational Buys (if market is cheap)
 
 | Market | Side | Model | Notes |
 |--------|------|-------|-------|
-| Purdue F4 YES | BUY | 22.4% | Up from 19.9%, strong 2-seed |
-| Arkansas F4 YES | BUY | 13.3% | 4-seed dark horse, likely cheap |
-| Michigan St. F4 YES | BUY | 16.9% | 3-seed, public undervalues |
-| Vanderbilt F4 YES | BUY | 14.0% | New model favors them over Nebraska |
-| Iowa St. F4 YES | BUY | 12.5% | If market <8%, good value |
+| Purdue F4 YES | BUY | 21.6% | 2-seed, strong model support |
+| Michigan St. F4 YES | BUY | 17.8% | 3-seed, up from 16.9%, public undervalues |
+| Vanderbilt F4 YES | BUY | 14.3% | 5-seed dark horse, likely very cheap |
+| Arkansas F4 YES | BUY | 12.7% | 4-seed, if market <8% |
+| Iowa St. F4 YES | BUY | 11.6% | If market <8%, good value |
 
 ---
 
@@ -77,9 +78,9 @@ Check live market prices before executing. Only buy where model edge > 3pp.
 
 | Market | Action | Reason |
 |--------|--------|--------|
-| Illinois champ YES | SELL NOW | Model says 1.6% — no edge at any realistic price |
-| Florida champ YES | SELL if >6% | Model says 4.1%, was overpriced last check |
-| Houston champ YES | SELL if >5% | Model dropped to 3.7% |
+| Illinois champ YES | SELL NOW | Model says 1.4% — no edge at any realistic price |
+| Florida champ YES | SELL if >5% | Model says 3.7%, tighter trigger than before |
+| Houston champ YES | SELL if >5% | Model dropped to 3.5% |
 
 ---
 
@@ -90,5 +91,5 @@ Check live market prices before executing. Only buy where model edge > 3pp.
 3. If a team is eliminated, position goes to zero — no action needed
 4. Re-run model with updated Torvik data after R32 to check if remaining edges still hold
 5. If model edge on a position flips negative (market corrects past model), sell
-6. Illinois sell should happen ASAP — model confidence has dropped further
-7. Purdue is now the strongest-conviction hold — model edge improved
+6. Illinois sell should happen ASAP — model confidence dropped to 1.4%
+7. Michigan is the highest-conviction position across all markets

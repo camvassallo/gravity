@@ -2,9 +2,9 @@ OPTIMIZED BRACKET (pool size: 50)
 ======================================================================
 Strategy: Moderate leverage — chalk core with selective contrarian picks
 
-CHAMPION: Michigan (model: 27.5%, public: ~20.0%, leverage: 1.4x)
+CHAMPION: Michigan (model: 27.5%, public: ~20.9%, leverage: 1.3x)
 
-R64 upsets: 1  |  Deep contrarian picks: 9
+R64 upsets: 1  |  Contrarian late-round picks: 2
 
 EAST REGION
 --------------------------------------------------
@@ -24,9 +24,9 @@ EAST REGION
     Connecticut                P=67.5%
   S16 (40 pts):
     Duke                       P=62.8%
-    Michigan St.               P=44.3%  [442.6x]
+    Michigan St.               P=44.3%  [1.4x]
   E8 (80 pts):
-    Michigan St.               P=17.8%  [177.9x]
+    Duke                       P=47.5%
 
 WEST REGION
 --------------------------------------------------
@@ -45,10 +45,10 @@ WEST REGION
     Gonzaga                    P=62.9%
     Purdue                     P=78.2%
   S16 (40 pts):
-    Arkansas                   P=23.0%  [230.0x]
-    Purdue                     P=53.2%  [531.8x]
+    Arizona                    P=65.1%
+    Purdue                     P=53.2%
   E8 (80 pts):
-    Purdue                     P=21.6%  [215.8x]
+    Arizona                    P=48.9%
 
 SOUTH REGION
 --------------------------------------------------
@@ -67,10 +67,10 @@ SOUTH REGION
     Illinois                   P=64.1%
     Houston                    P=75.3%
   S16 (40 pts):
-    Nebraska                   P=25.8%  [258.0x]
-    Houston                    P=46.7%  [467.1x]
+    Florida                    P=43.0%  [0.7x]
+    Houston                    P=46.7%
   E8 (80 pts):
-    Houston                    P=24.9%  [249.2x]
+    Houston                    P=24.9%
 
 MIDWEST REGION
 --------------------------------------------------
@@ -90,17 +90,17 @@ MIDWEST REGION
     Iowa St.                   P=66.7%
   S16 (40 pts):
     Michigan                   P=75.3%
-    Iowa St.                   P=38.4%  [384.3x]
+    Virginia                   P=35.5%  [1.5x]
   E8 (80 pts):
-    Michigan                   P=61.3%  [0.8x]
+    Michigan                   P=61.3%
 
 FINAL FOUR (160 pts)
 --------------------------------------------------
-  Michigan St.               (East vs South)  P=9.9%
+  Duke                       (East vs South)  P=35.2%
   Michigan                   (West vs Midwest)  P=39.3%
 
 CHAMPIONSHIP (320 pts)
 --------------------------------------------------
-  Michigan                   P=27.5% (leverage: 1.4x)
+  Michigan                   P=27.5% (leverage: 1.3x)
 
-Estimated Expected Score: 910 / 1920
+Estimated Expected Score: 1018 / 1920
