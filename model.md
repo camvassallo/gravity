@@ -55,20 +55,30 @@ Bracket simulation now blends model win probability with consensus-derived pairw
 | 2025 | 123 | 0.443 | 0.422 | 82.9% | 0.80 | 1.00 |
 | **Avg** | **844** | **0.522** | **0.517** | **75.4%** | | |
 
-### Bracket Simulation Results (v4 + consensus blending)
+### Simulation Calibration: sim_temp + EV formula
 
-| Team | Champ % | F4 % | vs v3 Champ | vs Consensus |
-|------|---------|------|-------------|--------------|
-| Duke | 31.2 | 71.7 | +11.8pp | +11.0pp |
-| Michigan | 28.7 | 73.2 | +1.2pp | +7.8pp |
-| Arizona | 22.3 | 64.2 | +2.9pp | +5.3pp |
-| Florida | 4.5 | 35.2 | +0.8pp | -4.9pp |
-| Purdue | 3.4 | 22.9 | -1.2pp | -1.4pp |
-| Houston | 3.2 | 29.8 | -0.3pp | -3.3pp |
-| Illinois | 1.4 | 18.6 | +0.0pp | -2.9pp |
-| Iowa St. | 1.2 | 13.0 | -0.5pp | -3.4pp |
+Two additional fixes applied to bracket simulation (not to per-game prediction):
 
-Florida rose from 3.7% to 4.5% champion (consensus blending pulling up). Michigan St. dropped from 3.6% to 0.8% and Nebraska from 1.6% to 0.2% — the feature rebalancing corrected the player-bias overvaluation as expected.
+**1. Simulation temperature (`sim_temp=1.3`):** The model's tournament temp (0.85) is calibrated for per-game log loss, but compounding over 6 rounds inflates top-team F4/champ probabilities (e.g., Duke 72% F4 was unrealistic). `sim_temp` applies a second temperature scaling to push probabilities back toward 50% during simulation only. At 1.3, Duke F4 drops to ~60%, which is more realistic for a historically great team.
+
+**2. Pool EV formula:** The optimizer's `compute_pick_ev` now discounts high-ownership picks via `field_gain = 1 - alpha * ownership * 0.7`. Previously, when model and public agreed (edge≈1.0), the formula returned raw EV and always picked favorites. The ownership discount makes chalk picks less valuable in large pools because being correct on a pick that 90% of the field also made gains almost no ground over competitors.
+
+### Bracket Simulation Results (v4 final: consensus + sim_temp=1.3)
+
+| Team | Champ % | F4 % | vs Consensus |
+|------|---------|------|--------------|
+| Duke | 25.8 | 60.2 | +5.6pp |
+| Michigan | 24.5 | 61.5 | +3.6pp |
+| Arizona | 20.7 | 55.1 | +3.7pp |
+| Florida | 5.6 | 31.1 | -3.8pp |
+| Purdue | 4.8 | 23.8 | +0.0pp |
+| Houston | 4.3 | 27.4 | -2.2pp |
+| Illinois | 2.3 | 19.0 | -2.0pp |
+| Iowa St. | 2.2 | 15.5 | -2.4pp |
+| Michigan St. | 1.6 | 11.8 | +0.1pp |
+| Connecticut | 1.5 | 12.4 | -0.5pp |
+
+Distribution is less concentrated and closer to consensus than earlier v4 iterations. Florida/Houston/Illinois still below consensus but gap reduced. Feature rebalancing corrected Michigan St. (3.6→1.6%) and Nebraska (1.6→0.5%) overvaluation.
 
 ---
 
