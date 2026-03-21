@@ -1,0 +1,2519 @@
+[00:00:00] The previous basket is under review.
+[00:00:11] Welcome back to Stats by Will and Jim,
+[00:00:13] the college basketball podcast that
+[00:00:15] focuses on the numbers. I'm your host
+[00:00:18] Jim Root, joined as always by Will
+[00:00:19] Warren, and we are proudly a part of
+[00:00:22] Basket Under Review, the very best
+[00:00:23] college basketball community on the
+[00:00:25] internet. Please check out the site and
+[00:00:27] the Discord if you have not yet. Only
+[00:00:29] $10 a month gets you access to all kinds
+[00:00:31] of written content. Region previews from
+[00:00:34] all of the brilliant writers. I believe
+[00:00:36] we've got one by Jordan Majeski, one by
+[00:00:38] Will Warren, one by Matthew Winnick, and
+[00:00:40] one by Brian Ralph. So, every single
+[00:00:42] region is broken down for you there on
+[00:00:44] Basket Under Review. Got our ticket
+[00:00:46] punch series with every single team that
+[00:00:48] won an auto bid. That is, I believe, all
+[00:00:50] 31 are now live. So, if you want to
+[00:00:52] learn about one of those mid- major
+[00:00:53] teams or hey, you're a Purdue fan, you
+[00:00:55] just want to read a little more about
+[00:00:56] Purdue, that's up there as well. You've
+[00:00:58] also got the basket under review podcast
+[00:01:01] with even Brendan and Tate Frasier.
+[00:01:02] They've got their kind of storyline
+[00:01:04] breakdown of the NCA tournament, a
+[00:01:07] weekend under reviews. Got episode scout
+[00:01:09] team with Kevin Sweeney and Eric Faucet.
+[00:01:11] All kinds of great content as we get
+[00:01:13] into this March Madness week. And will
+[00:01:16] that's what it is. It's a glorious week
+[00:01:19] of the NCA tournament. It's here. We're
+[00:01:21] recording on Tuesday morning. So, we do
+[00:01:23] not know the Well, will Stradamus the
+[00:01:25] playin games tonight just to make sure
+[00:01:27] people are ready for those?
+[00:01:28] >> Toss in an idea or two as well.
+[00:01:30] >> Yes. Perfect. How are you feeling? I
+[00:01:32] know this is an incredibly busy day or
+[00:01:34] two of content. So, are you ready for
+[00:01:37] the actual games to start?
+[00:01:39] >> Uh, viewers will be able to tell I'm
+[00:01:40] extremely tired, but uh
+[00:01:42] >> I said it the second we started we got
+[00:01:44] on air here, folks. I could see it in
+[00:01:46] Will's face. [laughter]
+[00:01:48] >> Yeah, exhaustion is real. But no, I'm
+[00:01:49] very excited. I think like to be honest,
+[00:01:52] Monday is the most annoying day of all
+[00:01:54] of this because it's there's no hoop on
+[00:01:56] and we're just kind of talking about
+[00:01:57] hypotheticals, but starting with Tuesday
+[00:01:58] and onward, especially Thursday,
+[00:02:00] obviously it's actual basketball and
+[00:02:03] that's way more fun. Like I I enjoy
+[00:02:05] talking about the games as hypotheticals
+[00:02:07] and like you know going into what may or
+[00:02:09] may not happen, but to be honest, I it's
+[00:02:12] all just kind of toying around until the
+[00:02:14] actual hoop starts. And that first tip
+[00:02:16] at 12:15 on Thursday, it's going to be
+[00:02:18] so much fun. 11:15 if you live in a
+[00:02:20] better time zone than I do, but maybe
+[00:02:22] 10:15, maybe 9:15, maybe, god forbid,
+[00:02:26] you are Hawaiian and you get to watch
+[00:02:29] this, it'd be 7:15 or 8:15 there. I
+[00:02:31] don't remember.
+[00:02:32] >> It might even be 6:15. It's it's it's a
+[00:02:34] ways back there.
+[00:02:36] >> I can't remember exactly either. When I
+[00:02:37] was out there for the Maui Invitational,
+[00:02:40] brag, brag, brag. It was crazy how early
+[00:02:42] some of the East Coast games would
+[00:02:44] start.
+[00:02:44] >> That's when I saw your reaction.
+[00:02:46] >> So, it starts at 6:15 for them.
+[00:02:48] Yes. [laughter]
+[00:02:49] Okay. Yeah. Breakfast ball, man. More
+[00:02:51] than anything you can imagine.
+[00:02:53] >> I I do my annual trip to Las Vegas and I
+[00:02:55] love that it's 9:15 because it's roll
+[00:02:57] out of bed type of stuff and
+[00:02:59] >> get down to the bar, have a bloody merry
+[00:03:01] wheel and just watch some basketball.
+[00:03:03] There's nothing wrong with that.
+[00:03:04] >> That has to be nice. That's a little
+[00:03:05] better than 12:15 and then, you know,
+[00:03:08] the late game on both Thursday and
+[00:03:10] Friday inevitably is going to start at
+[00:03:11] about we're going to say 10:33. Uh, so
+[00:03:14] that game's going to end at about 12:40
+[00:03:16] my time and I'll be up at 6 to run and
+[00:03:20] we'll just do it all over again.
+[00:03:22] >> That's right. And the late game Friday
+[00:03:24] night is my Missouri Tigers. I'm kind of
+[00:03:26] furious. It's the last game of the
+[00:03:27] round. I'm just going to be waiting. Uh,
+[00:03:29] but hey, maybe that won't ruin the
+[00:03:30] weekend for me then because I won't just
+[00:03:32] be sitting there furious that they get
+[00:03:34] schooled by Jay Lucas in Miami, Florida.
+[00:03:37] All right, because it is turning time,
+[00:03:38] we had a little bit of an edit of the
+[00:03:40] format here. And we're going to go back
+[00:03:42] and forth, but we're doing it by region.
+[00:03:44] So, we each assigned ourselves two
+[00:03:46] different regions, and we have four
+[00:03:48] numbers each. So, we'll have eight total
+[00:03:50] numbers. It's similar to our normal
+[00:03:52] format of of stat back and forth. Uh,
+[00:03:55] but I'm going to start with the east,
+[00:03:57] then we'll go to Willil for the Midwest.
+[00:03:58] So, that's the bottom right region on
+[00:04:00] your brackets. then up to my west region
+[00:04:03] and [clears throat] finishing in the
+[00:04:04] bottom left with the south. That's it.
+[00:04:07] Will uh before we do it though, stat of
+[00:04:09] the day, we're gonna keep this one
+[00:04:11] pretty simple. I want to make sure we
+[00:04:12] get into the tournament in the bracket
+[00:04:13] to
+[00:04:14] >> There are 68 teams. That's the stat.
+[00:04:16] >> Yes. How many teams are in the NCA
+[00:04:18] tournament? How many should be in the
+[00:04:19] NCA tournament? There's a right answer.
+[00:04:21] >> Did you see their post about the number
+[00:04:23] of games in the tournament,
+[00:04:24] >> which has been the same for 15 years,
+[00:04:26] and you're like, "Oh, I can't believe
+[00:04:27] it's 67 this year."
+[00:04:30] Who posted that?
+[00:04:31] >> March Madness the account.
+[00:04:33] >> Oh my god, that's that's not great.
+[00:04:36] Okay, the theme of this stat of the day
+[00:04:38] is when's the last time? So for any
+[00:04:40] clips fans out there, when the last time
+[00:04:43] Okay, that might that might go over most
+[00:04:44] people's heads, but that's all right. Uh
+[00:04:46] when's the last time the WCC got three
+[00:04:49] bits?
+[00:04:52] >> 2022.
+[00:04:52] >> This year 2022 is correct.
+[00:04:55] >> S it was um Gonzaga, St. Mary's San
+[00:04:58] Francisco.
+[00:05:00] >> Yes, be San Francisco with Todd Golden
+[00:05:03] getting into the NCA tournament there.
+[00:05:05] All right, they're they're supposed to
+[00:05:06] get progressively harder. We'll see if I
+[00:05:08] succeeded in that endeavor or not. Uh or
+[00:05:11] maybe you've researched all this and you
+[00:05:12] know exactly the answers. When's the
+[00:05:14] last time the Mountain West got one bid?
+[00:05:17] >> Um I'm going to say 2016 because that's
+[00:05:20] year Fresno State would have won the
+[00:05:22] tournament.
+[00:05:23] >> Uh it was 2017. So very close. Very well
+[00:05:26] done there. Uh 2017 was Nevada and Eric
+[00:05:30] Muscleman team
+[00:05:31] >> getting I think it was an 11 seed 12
+[00:05:34] seed. Yes.
+[00:05:34] >> Because they lost in the round of 64 to
+[00:05:38] to somebody
+[00:05:39] >> Iowa State. Yes. Well done.
+[00:05:41] >> It was either I was thinking Ohio State,
+[00:05:43] but I knew that was the next year. So,
+[00:05:44] okay. Iowa State.
+[00:05:46] >> And then Colorado State, Boise State,
+[00:05:47] Fresno all went to the NIT that year.
+[00:05:50] >> We got two more. When's the last time
+[00:05:52] the MAC got two bids? Maybe this is
+[00:05:54] something you saw on TV, but
+[00:05:57] >> I believe this would be 1999 or 2002.
+[00:06:00] >> 1999. Look at him go, folks. I I would
+[00:06:03] not have gotten that. So, very
+[00:06:05] impressive. Miami of Ohio and Kent
+[00:06:06] State, two teams that are still in the
+[00:06:08] league. I will say in 2019, Buffalo got
+[00:06:11] a six seed. It could have been a two bid
+[00:06:13] MAC, but they won the MAC tournament.
+[00:06:14] So, yeah,
+[00:06:15] >> did not have to deal with that
+[00:06:17] nightmare, I guess.
+[00:06:18] >> And when's the last time the ACC got
+[00:06:21] eight bids?
+[00:06:23] This one's going to be tough. Obviously,
+[00:06:24] not any of the last few years. I am
+[00:06:26] going to wager
+[00:06:29] because I'm trying to think it. So, they
+[00:06:30] would have had 15 teams in the early
+[00:06:32] 2010s, right?
+[00:06:33] >> Yep. They've had them for a while. And I
+[00:06:36] >> I'm going to guess 2013. 2013.
+[00:06:38] >> Okay. 2018, they got nine, actually. So,
+[00:06:42] uh this this used to be your powerful
+[00:06:44] conference, arguably the best in the
+[00:06:46] country. I think there was a time back
+[00:06:47] in I don't remember what year, but they
+[00:06:50] had nine teams and still got eight in.
+[00:06:51] It was so good one year.
+[00:06:53] >> There there's probably people like ACC
+[00:06:55] super fans who are gonna be yelling and
+[00:06:57] it's going to be the same sensation I
+[00:06:59] had listening to the Simmons pod with
+[00:07:01] cousin Sal where they broke down the win
+[00:07:03] totals for the NFL and the entire time
+[00:07:05] they thought the Lions had the third
+[00:07:06] place schedule
+[00:07:08] >> and I was just bang I was on the run. I
+[00:07:10] was like banging and I was like third
+[00:07:11] place schedule.
+[00:07:13] >> It's actually the fourth
+[00:07:15] >> it's the fourth place schedule. You're
+[00:07:16] thinking about that as you as you put
+[00:07:18] one foot in front of the other instead
+[00:07:20] of just, you know, thinking about your
+[00:07:21] run. You're so focused on the anger.
+[00:07:23] >> I was so mad. I was like, [laughter]
+[00:07:25] there's going to be an ACC. It's like
+[00:07:26] 2018 and well, I'm sorry. I don't know.
+[00:07:30] >> And suddenly Will's done with like 18
+[00:07:32] miles and he doesn't even have to think
+[00:07:34] about it because that's what Bill and
+[00:07:35] Sty do. They they they get him going.
+[00:07:37] >> All right, that was the stat of the day.
+[00:07:39] Just looking back at some of those
+[00:07:40] conferences, I don't think any of the
+[00:07:41] other ones are remarkable in a sense or
+[00:07:44] outside the norms particularly. Um, now
+[00:07:47] I want to give a shout out to Homefield,
+[00:07:49] Homefield Apparel, our loyal sponsor
+[00:07:51] here at Basket Under Review and on Stats
+[00:07:53] by Wool and Jim. It is the best place to
+[00:07:55] get your college sports apparel. We've
+[00:07:56] got March Madness arriving right now.
+[00:07:58] So, be sure to check out their hoop
+[00:08:00] society drop. The campus court
+[00:08:02] collection is amazing. You've got a
+[00:08:04] bunch of shooting shirts and mesh
+[00:08:05] shorts. Uh, also some logo hoodies for
+[00:08:08] some of the sports most iconic programs.
+[00:08:09] Your blueb bloodoods, couple others. I
+[00:08:12] think my Missou Tigers even slipped in
+[00:08:13] there, which I'm excited about. The
+[00:08:15] shooting shirt is stylish. I need to
+[00:08:17] need to go ahead and purchase one. And
+[00:08:20] when I do, and when you do, folks, you
+[00:08:21] should use promo code burner 15 for 15%
+[00:08:24] off. If you don't want to hit the court
+[00:08:26] collection, just go ahead and check out
+[00:08:27] all their t-shirts, hoodies, sweaters,
+[00:08:30] sweatshirts, jackets, hats, joggers,
+[00:08:33] anything you want. They continue to
+[00:08:34] expand the brand. That's
+[00:08:35] homefieldapparel.com.
+[00:08:37] Wear one for the team and promo code
+[00:08:39] burner15. Homefield Apparel. All right,
+[00:08:42] let's get into our bracket breakdown
+[00:08:44] here. Will, as mentioned, we're going to
+[00:08:46] start in the East region with my numbers
+[00:08:48] for that region. Then we'll go to yours
+[00:08:50] in the Midwest, back to mine in the
+[00:08:52] West, and finish up in the South. All
+[00:08:55] right, the number in the East I'm going
+[00:08:57] to start with is 22. And that is the
+[00:09:00] number of final fours reached by coaches
+[00:09:02] in this region. Got one from John Shire,
+[00:09:04] one from Mc Cronin, two from Dan Hurley,
+[00:09:07] three from Bill Self. I was actually
+[00:09:08] kind of surprised Bill Self's only at
+[00:09:09] three given his longevity and the amount
+[00:09:11] of really good teams he's had. Uh Rick
+[00:09:14] Patino at seven and Tom Isizo at eight.
+[00:09:17] It all adds up to 22. It's pretty tough
+[00:09:20] to gain an edge via coaching in this
+[00:09:22] region. There's just a lot of really
+[00:09:24] good coaches. I know some people might
+[00:09:26] not quite place Shire on that level
+[00:09:28] quite yet. He's he's only, you know,
+[00:09:30] early in his tenure, but I think he has
+[00:09:32] gotten quite a a boost for his
+[00:09:34] performance this year. Like really
+[00:09:36] really good coaching job. I think
+[00:09:38] Mcronin is a Final Four coach. Yes. And
+[00:09:40] then I saw Jeff Goodman in a in a
+[00:09:42] selection Sunday night tweet. I made fun
+[00:09:44] of it. He he tweeted this list of
+[00:09:46] coaches and added Pat Kelsey. I was
+[00:09:48] like, "Wait, the guy who's never won an
+[00:09:50] NCA tournament game. Why is he getting
+[00:09:52] to be on this list with every guy who's
+[00:09:54] been in a Final Four?" Uh, I just I I
+[00:09:57] think it's remarkable how strong and
+[00:09:59] stacked this region is with coach as
+[00:10:02] well.
+[00:10:02] >> It's like how Kim and Kanye have
+[00:10:03] combined for 21 Grammys. [laughter]
+[00:10:07] >> Exactly.
+[00:10:09] >> It is kind of nuts that the the highest
+[00:10:11] seed here without a coach who's been to
+[00:10:13] a final four is Louisville a program
+[00:10:15] with multiple national titles. I I mean
+[00:10:19] like that kind of goes to show you how
+[00:10:21] strong and TV ready this region is. Like
+[00:10:25] if you go past Louisville, it's Ohio
+[00:10:26] State who's made multiple final fours
+[00:10:28] and has a title at some point in their
+[00:10:30] history. I think further further back,
+[00:10:32] but they've made multiple final fours. I
+[00:10:35] mean, TCU, I understand, has not made a
+[00:10:37] deep run, but you've got Jamie Dixon,
+[00:10:38] who's a deeply experienced coach, uh, in
+[00:10:41] March. You've got Johnny Dawkins at UCF,
+[00:10:44] uh, my perennial underrated fave. South
+[00:10:48] Florida with Hodgson. Great storyline
+[00:10:50] there, by the way, uh, with Hodchin's
+[00:10:52] father. I don't know if you've seen all
+[00:10:53] that where Hoden's Hodgen's father has
+[00:10:55] dementia, has never seen his son coach a
+[00:10:58] game in person. This is being played in
+[00:11:00] Buffalo, I believe, right?
+[00:11:02] >> Uh yes. Yes, that's right.
+[00:11:04] >> So, it'll be the first time he's ever
+[00:11:06] seen his son coach. That's a really cool
+[00:11:07] story line. Uh if you believe in fate
+[00:11:09] and all that, maybe you should pick
+[00:11:10] South Florida. I don't know. But, um
+[00:11:13] really fun region with a lot of great
+[00:11:16] coaches and a lot of great storylines in
+[00:11:18] general. 22 Final Fours. I would be
+[00:11:21] surprised, you know, without adding up
+[00:11:23] the rest of the field if the entire
+[00:11:25] three regions combined have 22 final
+[00:11:28] fours together.
+[00:11:29] >> I started to like not not fully do that,
+[00:11:32] but then you just go through like Samson
+[00:11:35] I think has three at two different
+[00:11:37] schools. Todd Golden's got one. Hubert
+[00:11:40] Davis has one. Remarkably, that is that
+[00:11:42] is a true fact. Uh then you go over
+[00:11:45] Dusty May's got one. A Oats has got one.
+[00:11:48] They're just like I almost everybody
+[00:11:50] with multiple final fours is in this
+[00:11:52] region. It is it is very very loaded in
+[00:11:55] that regard. If Coach K was still at
+[00:11:57] Duke, it'd be even more remarkable based
+[00:11:59] on uh him having a bunch more than
+[00:12:01] Shire. But yeah, that this there's a lot
+[00:12:04] of blueb blood big-time programs,
+[00:12:06] storied squads at the top of the sport
+[00:12:09] from Yukon, UCLA, Michigan State,
+[00:12:12] Kansas, St. John's Duke, as you
+[00:12:14] mentioned, Ohio State and and some
+[00:12:17] sneaky strongman majors. North Dakota
+[00:12:19] State can shoot. South Florida can get
+[00:12:21] up and down the floor with a lot of
+[00:12:23] talent. There's some really good shot
+[00:12:25] volume teams like Cal Baptist in South
+[00:12:27] Florida are really good. We we talk
+[00:12:29] about that a lot on the show. So, all
+[00:12:30] right, that's the overarching
+[00:12:32] first number. My my second number
+[00:12:36] is 4th verse 11th. It's it's a small gap
+[00:12:39] here, but I think it's notable because
+[00:12:41] that is Yukon's ranking in the
+[00:12:43] non-conference. First, their ranking in
+[00:12:45] league play per Bart Torvvic. And of
+[00:12:49] course, we know the NCA tournament is a
+[00:12:51] non-conference event. That's where Yukon
+[00:12:53] was better this year. They pulled off a
+[00:12:55] bunch of really big-time wins. It's it's
+[00:12:58] what had them close to getting a one
+[00:12:59] seed despite not winning the Big East
+[00:13:01] regular season or semi or or tournament.
+[00:13:04] They've been awesome outside of league
+[00:13:06] play for years. Dan Hurley's got the
+[00:13:08] best against the spread record in
+[00:13:10] non-conference play over the last five
+[00:13:11] years. I think there might be something
+[00:13:14] to that will where Yukon is better
+[00:13:16] against non- Big East foes because those
+[00:13:19] teams are a little more well schooled in
+[00:13:21] how they run their offense, how to
+[00:13:22] disrupt them. Perhaps there's a lot more
+[00:13:24] physicality in those games. Maybe the
+[00:13:26] refs are sick of Danny Hurley in the in
+[00:13:28] the Big East and he gets outside of that
+[00:13:30] and there's a little bit more uh
+[00:13:32] flexibility there. But in general, which
+[00:13:35] version do you buy of Yukon? Is it the
+[00:13:38] one out in the non-conference that was a
+[00:13:40] top five team or the one that's not even
+[00:13:42] top 10? If you're filtering for just
+[00:13:44] league play,
+[00:13:46] >> I kind of buy that they're somewhere in
+[00:13:47] the middle. I definitely think they're
+[00:13:48] the least of the two seeds. Uh with the
+[00:13:51] non-con performance, I would add a small
+[00:13:53] qualifier. Their opponent shot 27% from
+[00:13:56] three in non-con play. That's going to
+[00:13:59] be really hard to replicate. uh though I
+[00:14:01] mean in general they do a very good job
+[00:14:03] of making you finish one-on-one and they
+[00:14:05] don't allow many threes to begin with
+[00:14:07] but I worry about them in the sense of
+[00:14:11] like yeah they had some really nice wins
+[00:14:13] in non-con play you know can't forget
+[00:14:16] the Florida win which has aged
+[00:14:17] incredibly well or the Illinois neutral
+[00:14:19] site or winning straight up at Kansas
+[00:14:22] >> but I do worry about them in the sets
+[00:14:26] like against top 100 foes this year they
+[00:14:28] weren't bad by any means they were top
+[00:14:30] 10 in
+[00:14:31] but had a negative turnover margin. They
+[00:14:34] foul a lot, which could be really
+[00:14:36] worrying in certain setups. I I think
+[00:14:39] that their rim protection is excellent,
+[00:14:41] and that's going to save their bacon
+[00:14:43] against a lot of teams, but there's some
+[00:14:45] weird matchups that are plausible for
+[00:14:47] them. Like, I could see UCLA giving them
+[00:14:49] some real trouble in the second round. I
+[00:14:51] don't I don't buy it with UCF, to be
+[00:14:53] honest. Uh, I could see if they make it
+[00:14:56] to the Sweet 16, like obviously Michigan
+[00:14:58] State presents some real problems. And
+[00:15:01] as strange as it sounds, and I know a
+[00:15:03] lot of people would think this is
+[00:15:04] baffling, Louisville could be a real
+[00:15:06] matchup curveball for them just because
+[00:15:08] of how they space the floor, like how
+[00:15:11] good Muel Brown is at getting to the
+[00:15:12] rim. I know their front court is uh kind
+[00:15:15] of hot garbage at times, and that
+[00:15:17] presents a real challenge, especially
+[00:15:19] against Michigan State in a perspective
+[00:15:20] matchup there. But I if I were I'm
+[00:15:24] trying to think of what the fair line
+[00:15:26] would be. So I'm looking at Ken or sorry
+[00:15:28] Torvvic right now who's got it about
+[00:15:30] 6040 no that Yukon doesn't make the
+[00:15:33] Elite 8. I'd take the no side.
+[00:15:36] >> Okay. So 60% no they're they're not
+[00:15:39] going to make it.
+[00:15:40] >> Yeah.
+[00:15:40] >> Yeah. I it's it to your point you said
+[00:15:43] they the least of the twos. I I tend to
+[00:15:46] agree. Um, just the performance in
+[00:15:48] league play, the the real end to the
+[00:15:51] season, like getting blown out in the
+[00:15:54] Big East tournament final, losing at
+[00:15:55] Marquette on the season's final day with
+[00:15:58] a chance to clinch the regular season. A
+[00:16:00] couple like big time spots there where
+[00:16:02] you expect Dan Hurley and staff to rise
+[00:16:04] up. They weren't able to do it and and
+[00:16:06] that is concerning. I'm curious about
+[00:16:08] the Louisville one too if they were to
+[00:16:10] see them. The spacing is is
+[00:16:12] unconventional. Louisville doesn't
+[00:16:14] typically succeed in those Q1A games
+[00:16:16] when they're playing up against the
+[00:16:18] highest level, but I don't know what the
+[00:16:21] health status will be of Muel Brown Jr.
+[00:16:24] Matt Matt Cox, my cohort, said he
+[00:16:26] watched the Pat Kelsey presser and it
+[00:16:27] was like this long answer of not
+[00:16:29] actually answering like, "Oh, you know,
+[00:16:31] he's trying to get back out there. He's
+[00:16:32] looking better." Like, how many
+[00:16:33] platitudes can you give without actually
+[00:16:35] saying he's going to play for sure and
+[00:16:37] and be back at full strength?
+[00:16:39] >> So, that is somewhat of a concern. Uh,
+[00:16:41] but yeah, Yukon. We I I didn't dive too
+[00:16:45] deep into Duke here because I think
+[00:16:46] everybody knows what what Duke is even
+[00:16:48] after winning the ACC tournament, but
+[00:16:50] I'm curious about where where Yukon ends
+[00:16:52] up.
+[00:16:53] >> All right, I'll go to my third number
+[00:16:56] for this region,
+[00:16:57] >> and it is number eight. We we kind of
+[00:17:00] hinted at this team succeeding a lot
+[00:17:02] recently, but since February 18th, the
+[00:17:04] day after they got blitzed by Michigan
+[00:17:07] State, this is UCLA's ranking nationally
+[00:17:10] for Torvvic. It's an eightgame sample.
+[00:17:12] This has been when Donovan Dent has gone
+[00:17:14] absolutely nuts over that span. 78
+[00:17:17] assists and six turnovers. And he'd have
+[00:17:19] a lot more assists if he hadn't had to
+[00:17:20] leave the Purdue game early with an
+[00:17:23] injury. Uh their three-point
+[00:17:25] percentages, both offense and defense,
+[00:17:27] are generally in line with their seasonl
+[00:17:29] long numbers over that span. So, it's
+[00:17:31] not some like shooting aberration. Uh
+[00:17:33] they're a really good shooting team. So,
+[00:17:35] they're making around 39% in that span.
+[00:17:38] I would also mention the injuries to
+[00:17:40] Donovan Denton and Tyler Bido seem like
+[00:17:42] they're going to be okay. Cronin said
+[00:17:44] yesterday on Monday that Dent looks
+[00:17:46] totally fine and Bilo needs a day or two
+[00:17:50] and okay, he's going to get that. He
+[00:17:52] doesn't have to play on Tuesday
+[00:17:53] fortunately. Uh they do have to go cross
+[00:17:55] country and play in Philadelphia. It's
+[00:17:58] going to be especially in the second
+[00:17:59] round against Yukon, a very heavy pro
+[00:18:02] Yukon crowd. But for Bill's sake, at
+[00:18:04] least they're playing on Friday and not
+[00:18:06] Thursday. that extra day matters and
+[00:18:08] it's just a talented team with two
+[00:18:10] really good wings, Clark and Perry, that
+[00:18:13] I think has pretty high upside and these
+[00:18:15] numbers kind of show that. Well,
+[00:18:16] >> I do kind of wonder if Mick could be
+[00:18:18] fueled by pure spite for being sent out
+[00:18:20] east.
+[00:18:21] >> Oh yeah.
+[00:18:22] >> Like I had this convo with our our guy
+[00:18:25] Morrison crying uh yesterday on Twitter
+[00:18:28] and we were think you know we're trying
+[00:18:30] to figure out like because there's
+[00:18:31] usually a two seed that will lose in the
+[00:18:33] round of 32. Uh, and this year the odds
+[00:18:36] I think are something in the realm of
+[00:18:39] 70% that at least one will drop. Uh,
+[00:18:42] which is quite nice. We need that after
+[00:18:44] last year. Uh, whether it's Yukon or
+[00:18:46] not, we'll see. But I think UCLA's got
+[00:18:49] quite a good shot. I the number eight
+[00:18:51] thing is really nice.
+[00:18:53] >> The thing where they I really do not
+[00:18:55] think they've been as bad away from home
+[00:18:57] as people believe. like yeah third I
+[00:18:59] mean six and 10 is not great but in like
+[00:19:02] in neutral set games they've been quite
+[00:19:04] solid. They had a really nice
+[00:19:05] performance in the Big 10 tournament
+[00:19:07] this weekend.
+[00:19:08] >> Yep. I I mean you filter I don't love
+[00:19:10] filtering just for neutral sight games
+[00:19:12] because it's such a small sample but
+[00:19:13] when you do they do pop up as a top 25
+[00:19:16] team and I just I I believe in these
+[00:19:20] guys a bit more than perhaps I should
+[00:19:23] perhaps more than is medically advisable
+[00:19:25] but if you have them in like a straight
+[00:19:27] up game against Yukon they've got
+[00:19:29] perurvic about a 37% chance to win
+[00:19:31] they're more than live in a round of 32
+[00:19:34] battle with Yukon I think they'd have a
+[00:19:35] real shot um we've covered many times
+[00:19:38] times were not huge believers in this
+[00:19:40] edition of Yukon. So, I I think the
+[00:19:43] Bruins could be this year's and it is
+[00:19:46] funny, you know, it's going to end up
+[00:19:47] being the five-year anniversary of the
+[00:19:48] CO tournament. Could Mick do it again?
+[00:19:52] >> Yes. Out of the I guess not quite from
+[00:19:54] the playin game as he did in that
+[00:19:56] tournament with Juang and Co.
+[00:19:58] >> But yeah, they might have the best
+[00:20:00] player on the floor in a lot of these
+[00:20:02] games because Dent is playing at such an
+[00:20:04] elite level right now. Got some
+[00:20:06] shooting. Eric Daly is sort of the
+[00:20:07] forgotten man. He had a nice tournament
+[00:20:10] run. We scored in double digits in every
+[00:20:12] game at the Big 10 tournament. Like I
+[00:20:15] said, it sounds like Billo is going to
+[00:20:17] be good to go. There's enough there.
+[00:20:20] There's enough there for UCLA, I think,
+[00:20:21] to potentially make a run. And perhaps
+[00:20:22] Yukon stomps this out immediately and
+[00:20:24] Husky fans listening to this are
+[00:20:26] probably just hating the the two things
+[00:20:27] we just did, those two points I made.
+[00:20:29] But, um, I I still think UCLA has a
+[00:20:32] chance to make a run. I would also
+[00:20:33] mention that over that same time horizon
+[00:20:36] since February 18th, Ohio State is 12th.
+[00:20:38] They are playing really really well too.
+[00:20:41] Awesome backcourt, I I I think a lot of
+[00:20:44] people talked about Duke's path being
+[00:20:46] difficult because of the coaches in the
+[00:20:48] region. I think they got arguably the
+[00:20:51] toughest 89 game, too. I think TCU's
+[00:20:53] shown they can play up. I mean, they
+[00:20:55] beat Florida. They were with Michigan
+[00:20:57] for the entire game. That's two one
+[00:20:59] seeds already. And then Ohio State's
+[00:21:02] just played with Michigan really well
+[00:21:03] and is kind of on fire lately and has
+[00:21:06] has a senior point guard that that can
+[00:21:08] make big-time plays. So, I I don't envy
+[00:21:11] Duke's draw, although it does sound like
+[00:21:13] they're going to get Big Pat back uh for
+[00:21:16] the NCA tournament.
+[00:21:17] >> I I don't think that Duke got a
+[00:21:19] particularly great or horrible draw. I
+[00:21:22] think it was kind of about right for
+[00:21:23] them. Uh there I did see a lot of people
+[00:21:26] who are like, "Oh my god, they got to
+[00:21:28] play Ohio State in the second round."
+[00:21:30] And it's like that's fine. I I
+[00:21:32] understand. But Ohio State like didn't
+[00:21:35] have a quad 1A win until three weeks
+[00:21:38] ago. [laughter]
+[00:21:39] >> Yeah. Yeah.
+[00:21:42] >> And I know people are afraid of the TCU
+[00:21:43] thing and TCU's dramatically played up
+[00:21:46] or down to the level of whoever they
+[00:21:48] were happening to play at the time, but
+[00:21:51] I mean they got to get past Ohio State
+[00:21:53] first. And this Ohio State team, as you
+[00:21:55] mentioned, playing exceptionally well
+[00:21:56] right now.
+[00:21:58] >> Yep. All right. My last number for the
+[00:22:01] East region is 138th. And this I don't
+[00:22:03] want to beat a dead horse, but it's
+[00:22:05] something we've mentioned on the show
+[00:22:07] before. This is Kansas rank for CBB
+[00:22:09] analytics in rebound and turnover
+[00:22:11] differential in the country. Teams right
+[00:22:14] around them, such luminaries as LSU,
+[00:22:17] Virginia Tech, Georgetown, Oklahoma
+[00:22:19] State, Monmouth, that's like their
+[00:22:22] company in terms of their uh rebound and
+[00:22:25] turnover differential. So, kind of like
+[00:22:27] a a back door shot volume type of thing.
+[00:22:30] This concerns me because their draw
+[00:22:32] could be two top 20 teams. Cal Baptist
+[00:22:35] is an elite rebounding mid- major.
+[00:22:38] They've got three 610 or taller guys in
+[00:22:40] the front court that they rotate
+[00:22:41] through. They're fantastic in the in the
+[00:22:44] rebound margin department. I think they
+[00:22:45] can bug Kansas there. And then a
+[00:22:47] potential game against St. John's in the
+[00:22:49] second round is not fun either. like a a
+[00:22:52] bruising front court that can play big
+[00:22:54] while also remaining somewhat versatile.
+[00:22:57] And then if you do get to the Sweet 16,
+[00:22:59] Duke is number two in this category. So
+[00:23:01] I like I have a hard time buying any
+[00:23:04] sort of deep run for Kansas will. And
+[00:23:06] it's because of this. Like they're going
+[00:23:07] to play teams that are going to own the
+[00:23:09] shot volume battle against them. How
+[00:23:12] many times can they overcome that? I
+[00:23:13] don't think it's three. It might not
+[00:23:15] even be two.
+[00:23:16] >> Yeah. I mean, they would have to shoot
+[00:23:18] the lights out basically three straight
+[00:23:19] games. So, with Cal Baptist, I I don't
+[00:23:22] feel quite as concerned as I perhaps
+[00:23:24] should. They're going to win the
+[00:23:25] rebounding battle for sure, but uh I
+[00:23:29] mean, it is the 284th best half court
+[00:23:31] offense [laughter] for Calbat. So, I
+[00:23:34] would like for them to win, but I don't
+[00:23:35] really see it. The So, the St. John's
+[00:23:38] piece is for sure one item. The other
+[00:23:40] item is that if they play Northern Iowa,
+[00:23:42] I don't think that's particularly a good
+[00:23:43] matchup either because Northern Iowa
+[00:23:45] slows the game dramatically down uh to a
+[00:23:48] crawl. And you know, besides the whole
+[00:23:50] history aspect of this already happening
+[00:23:52] once in 2010,
+[00:23:54] uh the thing that my number if I had had
+[00:23:56] this region would have been 48th, which
+[00:23:58] in games where Tristan Smith has played
+[00:24:01] for Northern Iowa, that's their ranking
+[00:24:02] at Bart Torvvic. Northern Iowa is a like
+[00:24:05] a legit top 50 team when fully healthy.
+[00:24:08] and they're a dramatically wor like it
+[00:24:11] is the worst 12 seed you could have
+[00:24:13] drawn uh if you're a four or a five. So
+[00:24:16] I do think that like if Kansas can make
+[00:24:20] it to the round of 32 and just get
+[00:24:22] Northern Iowa instead of St. John's,
+[00:24:23] they've obviously got better odds, but I
+[00:24:26] they're going to be overpicked this
+[00:24:29] year, I think. Though I did notice that
+[00:24:32] more people have St. John's in the Sweet
+[00:24:34] 16 than Kansas, which is interesting.
+[00:24:36] Yeah, I I'm a big fan of the St. John's
+[00:24:38] team the way they're playing, but I if
+[00:24:41] you pick them far, you're gonna have to
+[00:24:43] sweat the first game. Like they're not
+[00:24:45] going to waltz over Iowa State. I would
+[00:24:47] be surprised if they do. So that's like,
+[00:24:50] >> all right, I want I want to have this
+[00:24:52] team to the Elite 8. Well, it's not safe
+[00:24:53] any single game. So, all right, the
+[00:24:56] other little tiny number is not actually
+[00:24:58] that relevant. This is my nod to Duke
+[00:25:00] fans being the number one here. The
+[00:25:01] number is three. That's the number of of
+[00:25:04] Duke's five NCA titles. Three have been
+[00:25:06] won in Indie and that is where the Final
+[00:25:08] Four is this year. So, Blue Devils, I'm
+[00:25:10] sure you're excited about that. They
+[00:25:12] also did play a game in Washington DC
+[00:25:13] already against Michigan. Got a big win
+[00:25:15] there. So, they've got a little bit of
+[00:25:16] familiarity with that arena. Of course,
+[00:25:18] Yukon and St. John's both played at
+[00:25:20] Georgetown in league play, so also have
+[00:25:23] played in that arena. But that's it.
+[00:25:25] Well, that's what I got for the East.
+[00:25:27] So, we can head to you and the Midwest
+[00:25:29] to kick it off.
+[00:25:31] >> All right. Uh, Midwest. I want to try
+[00:25:33] and go top to bottom here. So, I try and
+[00:25:36] do like one per pod, uh, or, you know,
+[00:25:38] pod regions, whatever it is. The big one
+[00:25:41] for me, surprisingly, is 14%. This is
+[00:25:44] the number of people picking Michigan to
+[00:25:46] win it all uh, at both ESPN and Yahoo,
+[00:25:48] despite Michigan having 19% odds at
+[00:25:51] KenPom, 18% at Torvvic, and
+[00:25:53] surprisingly, I did double check this to
+[00:25:55] make sure it was right, 26% at Evansite.
+[00:25:59] Um, yeah, which is astonishing. So, I
+[00:26:02] know that Michigan did just lose their
+[00:26:04] last game, so they're automatically the
+[00:26:05] worst one seed in the field. Uh,
+[00:26:07] replacing Florida, who is the worst one
+[00:26:09] seed in the field for 24 hours.
+[00:26:11] >> Um, yeah, and replacing Houston, who is
+[00:26:14] the worst one seed in the field for four
+[00:26:15] hours. Um, but I like I understand all
+[00:26:20] that. I know LJ Kase's out. They're
+[00:26:23] still outstanding. Like even Sans Kase,
+[00:26:25] they've played quite well. people are
+[00:26:27] freaking out a bit over them having to
+[00:26:29] skate past Ohio State and Wisconsin. I
+[00:26:31] would simply point to your stat that
+[00:26:33] Ohio State has played exceptionally well
+[00:26:34] lately. And I would also point to the
+[00:26:36] fact that Wisconsin already beat
+[00:26:37] Michigan this year and uh you know had a
+[00:26:40] player hit five threes in a row. So like
+[00:26:43] how easy to replicate is that you know
+[00:26:46] your mileage is going to vary. I've
+[00:26:48] picked Michigan to win it all. I'm just
+[00:26:50] going to spoil it because they are the
+[00:26:51] best bracket value pick. I I look at
+[00:26:54] their top half of the bracket. It's
+[00:26:56] really hard for me to envision the bad
+[00:26:58] matchup for them. A lot of people are
+[00:27:00] going to point to Alabama and I'm gonna
+[00:27:02] get to them next, but I like if Texas
+[00:27:06] Tech was at full strength, I'd be more
+[00:27:07] of a believer, but neither eight or nine
+[00:27:10] particularly interests me. Um, Georgia
+[00:27:13] feels like a crock-potting. Uh, which is
+[00:27:16] my way of saying like a slow blowout.
+[00:27:19] >> St. Louis feels like either a close game
+[00:27:22] or a 40point demolition. So, I I have a
+[00:27:26] hard time seeing Michigan be truly
+[00:27:28] threatened for 40 minutes prior to the
+[00:27:30] Elite 8.
+[00:27:32] >> Yeah, I think I'd be all over Texas Tech
+[00:27:34] if they had JT Toppin, but they probably
+[00:27:35] wouldn't be seated here. They'd be a
+[00:27:37] three seed somewhere. So, I it's hard
+[00:27:40] for me to get invested there. You've got
+[00:27:41] short-handed four, five seeds.
+[00:27:44] Michigan's floor is still really really
+[00:27:45] high. Like, yes, they lost a home game
+[00:27:48] to Wisconsin, a team that's only a five
+[00:27:50] seed, but I can't see them getting
+[00:27:52] upset. the the high level like ceiling
+[00:27:56] access without Kin maybe does hurt and
+[00:27:58] down the stretch Iowa really almost beat
+[00:28:01] them. Ohio State almost beat them.
+[00:28:02] Wisconsin almost beat them. I think
+[00:28:03] that's something that's easy to site.
+[00:28:04] They weren't blowing teams out by 30 the
+[00:28:07] way they were back in November and
+[00:28:09] December and even early January. But
+[00:28:12] they're still a super high floor team
+[00:28:14] because they're awesome at the rim on
+[00:28:16] both ends of the court. Top five and
+[00:28:17] two-point percentage on both ends.
+[00:28:19] Pretty darn good rebounding team. They
+[00:28:21] can play big. They can play a little bit
+[00:28:23] through their big guys. The passing of
+[00:28:25] Mara, the passing of Lendborg. It
+[00:28:27] doesn't have to all be on Kadau.
+[00:28:30] Maybe not like the most elite shot
+[00:28:32] volume for a number one seed because
+[00:28:33] they're not great in the turnover
+[00:28:35] department, but I still think their rim
+[00:28:37] dominance and the fact that they don't
+[00:28:39] need to shoot that great from three to
+[00:28:41] to move forward is a good sign for them.
+[00:28:44] I am surprised they're being a little
+[00:28:45] bit underpicked like you mentioned and
+[00:28:47] it's probably because the standout
+[00:28:49] memory of the last game that ended
+[00:28:51] before the selection show was them
+[00:28:52] losing by not convincingly but Purdue
+[00:28:56] controlled that entire second half.
+[00:28:58] >> Yeah. And it could I do genuinely think
+[00:29:01] that uh Purdue is just a bad matchup for
+[00:29:03] them which is interesting interesting
+[00:29:05] because they can play them in the final
+[00:29:08] four if they get there. But yeah,
+[00:29:10] >> I I mean that's kind of like a you sort
+[00:29:12] that problem out once it happens, I
+[00:29:14] imagine.
+[00:29:15] >> Yep. Yeah, I they did kind of I wouldn't
+[00:29:18] say drilled Purdue at Purdue, but
+[00:29:20] handled that game, but Purdue couldn't
+[00:29:22] make a shot. So, it wasn't like uh a
+[00:29:25] complete, you know, aberrational
+[00:29:27] dominance, but it does,
+[00:29:29] >> you know, they're they're so sustainable
+[00:29:31] because of their size that they can do
+[00:29:33] that to teams.
+[00:29:35] >> All right, my next stat here is 13 for
+[00:29:38] 41. This is not my shooting performance.
+[00:29:41] This is the 41 3 through5 seeds
+[00:29:45] historically that have been outrebounded
+[00:29:47] on the average night.
+[00:29:49] 13 of them have made the Sweet 16.
+[00:29:53] This applies to the Alabama Crimson Tide
+[00:29:55] who have been outrebounded on average
+[00:29:56] this season and have had a hell of a
+[00:29:58] time protecting the defensive boards.
+[00:30:01] Only Kansas, Nebraska, and Alabama this
+[00:30:03] year among the one through six lines are
+[00:30:05] outrebounded on the average night. Uh
+[00:30:07] they've got a lot of holes, man. I
+[00:30:09] understand that people are really into
+[00:30:10] the offense and I get that. The Aiden
+[00:30:13] Holloway thing, we're going to see how
+[00:30:14] that affects them uh with his because it
+[00:30:16] seems like he's very much missing at
+[00:30:17] least throughout 64 if not further. Uh
+[00:30:20] if he missed it, he got arrested for uh
+[00:30:24] what we'll say is a drug issue problem
+[00:30:27] dealing. Who knows? uh, you know, we
+[00:30:31] don't want to do liel here, but Alabama,
+[00:30:35] if you're looking for a team to beat uh,
+[00:30:37] Michigan, only four of these 41 have
+[00:30:40] made the Elite 8. They get outrebounded.
+[00:30:42] They have a defense outside the top 60.
+[00:30:44] They have the worst defense on the one
+[00:30:46] through six seed lines this year. Uh,
+[00:30:49] one through four seeds with a defense
+[00:30:51] outside of the top 60 historically have
+[00:30:53] not done well. Uh, exactly two out of um
+[00:30:59] 41 have made the final four and
+[00:31:02] >> one of them was
+[00:31:04] >> Alabama.
+[00:31:05] >> Yeah.
+[00:31:05] >> But they did shoot the lights out. I
+[00:31:07] mean the other one for the record was
+[00:31:08] 2012 2013 Michigan. Uh but I just don't
+[00:31:13] really buy it with them. Like even that
+[00:31:15] Michigan team was quite a bit better at,
+[00:31:17] you know, forcing turnovers or at least,
+[00:31:20] you know, not torn turning it over
+[00:31:22] either than Alabama was. and the Alabama
+[00:31:24] team of two years ago way way better on
+[00:31:27] the boards than this addition of
+[00:31:29] Alabama. So, I just don't really buy it.
+[00:31:32] It's really hard to find in history
+[00:31:34] successful upper tier seeds with
+[00:31:36] negative rebounding and turnover
+[00:31:38] margins, which Alabama's got both, by
+[00:31:40] the way. Um, when paired with a bad
+[00:31:45] defense, it's like I'm running the
+[00:31:47] numbers for people right now. So, there
+[00:31:50] have been across history teams with
+[00:31:53] defenses outside of the top 50 and
+[00:31:56] negative rebound and turnover margins.
+[00:31:59] We have a total of three other
+[00:32:01] candidates ever.
+[00:32:03] 2014R Kraton out in the round of 32.
+[00:32:06] 2010 Vandy out in the round of 64 lost
+[00:32:09] to Murray State. 2002 Arizona lost in
+[00:32:12] the Sweet 16. It's not a great hit rate.
+[00:32:15] >> Yeah, not a lot of deep runs. And it's
+[00:32:17] just it shows how rare that kind of a
+[00:32:19] team is. And
+[00:32:21] >> the only way Alabama's the best way they
+[00:32:23] found to compensate for it is they don't
+[00:32:25] turn it over themselves. And they can
+[00:32:28] win the math game because they take 54%
+[00:32:30] of their shots from three. The problem
+[00:32:33] is if you take out Aiden Holloway, who's
+[00:32:36] very arguably their best shooter, I
+[00:32:38] think maybe not even arguably, he is
+[00:32:40] their best shooter, then that removes
+[00:32:42] some of that crutch they can lean on
+[00:32:44] with the with the shooting. like filing
+[00:32:46] can still get hot. Right can make shots.
+[00:32:48] Everybody on the team is allowed to
+[00:32:50] shoot. Maybe they play a little more.
+[00:32:52] Julia Bethea, the the former five-star
+[00:32:54] recruit, barely seen the games or barely
+[00:32:57] seen the the court in recent stretches.
+[00:33:00] But I just think if you're already bad
+[00:33:02] at the defense and rebounding aspects
+[00:33:04] and now you remove the best shooter, I'm
+[00:33:06] really concerned here. I I think Hostra
+[00:33:08] slowing the game down is a tough matchup
+[00:33:11] for them. And if you go into that second
+[00:33:14] round meeting with potentially Texas
+[00:33:16] Tech or even Akran, you might not have
+[00:33:18] the best back court anymore because
+[00:33:19] Holloway's not a part of the game. So I
+[00:33:22] am also very concerned about Alabama.
+[00:33:24] I'm it's there's not going to be a lot
+[00:33:26] of early round upsets in the one through
+[00:33:28] four, even one through five seeds, but
+[00:33:30] Hopster is one that I'm actually talking
+[00:33:32] myself into.
+[00:33:33] >> Same here. Uh the Alabama thing I will
+[00:33:35] note, so I ran it at Hoop Explorer
+[00:33:37] really quick. Uh Sans Holloway. So with
+[00:33:40] Holloway, they're plus 32.6 adjusted for
+[00:33:43] opponent, venue, all of that per 100. Uh
+[00:33:46] without Holloway, plus 21.6 per 100. The
+[00:33:49] offensive efficiency falls by 12 points
+[00:33:51] per 100 when he leaves the court almost
+[00:33:54] entirely because they go from shooting
+[00:33:56] 38% from three to 33. They get fewer
+[00:33:59] offensive rebounds because of that. They
+[00:34:02] turn it over more, which is interesting
+[00:34:04] to me. Like the turnover rate actually
+[00:34:06] jumps by about 2%. and their rim rate
+[00:34:08] falls quite dramatically, which it is
+[00:34:10] kind of funny. We don't think of
+[00:34:11] Holloway as this unbelievable amazing
+[00:34:14] driver to the rim. But it just goes to
+[00:34:16] show that like Alabama does become a bit
+[00:34:18] more limited. Like they become extremely
+[00:34:20] threepoint reliant. And does that mean
+[00:34:22] that they could, you know, hit 47% of
+[00:34:25] their threes and demolish Hofra? Of
+[00:34:27] course it does. But if you're not
+[00:34:29] hitting them and you're not getting your
+[00:34:30] misses and you're allowing a lot of
+[00:34:33] offensive rebounds in the other end of
+[00:34:34] the court, you're gonna open yourself up
+[00:34:36] to a really interesting uh day at the
+[00:34:38] office.
+[00:34:39] >> Yep. And and their two most likely
+[00:34:41] matchups, Texas Tech and already, of
+[00:34:43] course, they're going to play Hofra.
+[00:34:46] Both teams do an awesome job of limiting
+[00:34:48] rim attempts. They're top 20 and average
+[00:34:50] two-point attempt distance. And you
+[00:34:52] know, Oats isn't going to take the trap,
+[00:34:54] take the cheese of
+[00:34:56] >> taking mid-range twos. So they're
+[00:34:58] probably going to launch a lot of
+[00:34:59] threes. I think I guessed on the weep
+[00:35:00] pod that they take like 67% of their
+[00:35:03] attempts from the field from three
+[00:35:04] against Hofra. And that just sets up a
+[00:35:07] really high variance outcome, especially
+[00:35:09] if they're going to be taking less shots
+[00:35:10] than Hofra because of the rebounding
+[00:35:12] battle. It's it's a kind of a thin
+[00:35:15] needle to thread that you don't want to
+[00:35:17] have to have as a four seed in the first
+[00:35:18] round.
+[00:35:20] >> Yeah. I so my other number here actually
+[00:35:22] would have been uh 14th which is Texas
+[00:35:26] Tech's ranking at Torvvic since the top
+[00:35:28] in injury and I I have applied that both
+[00:35:32] to the Akran game which I don't know if
+[00:35:34] you've seen this Akran is easily the
+[00:35:36] most popular 12 over five which I
+[00:35:37] personally don't really understand. Um
+[00:35:39] >> yeah I guess they're like well this team
+[00:35:41] won a conference tournament that has an
+[00:35:43] undefeated team in it and JJ Toppen's
+[00:35:45] out. sort of I I see where that's coming
+[00:35:47] from, I guess, but
+[00:35:48] >> I see where they're coming from, but if
+[00:35:49] you look at the matchup itself and how
+[00:35:51] Texas Tech's actually played, it's hard
+[00:35:53] for me to really get to it. But point
+[00:35:54] being, Texas Tech is not going to be
+[00:35:57] this bad five seed that Alabama gets to
+[00:36:00] draw. They're still quite strong. I
+[00:36:02] mean, 14th is better than Alabama's full
+[00:36:05] season ranking of 17th at Ken Pop. So,
+[00:36:08] >> yep.
+[00:36:08] >> I Yeah, I'm fading the Crimson Tide for
+[00:36:12] sure.
+[00:36:13] >> Yeah, I'm I'm assuming Christian
+[00:36:14] Anderson will be healthy. Sounds like he
+[00:36:16] has the the little growing pole on the
+[00:36:17] slippery LED floor. Sounds like it's
+[00:36:19] okay. Sounds like Lan Watts's ankle is
+[00:36:21] okay. And Texas Tech sort of reset up
+[00:36:24] its identity recently, playing a lot
+[00:36:26] more Bamoy at center. They obviously had
+[00:36:29] to with no Tyrie Bryant has gotten back
+[00:36:32] in the lineup. He gives them more upside
+[00:36:34] as a three-point shooter off the bench,
+[00:36:35] too. So,
+[00:36:37] >> I don't think either team can beat
+[00:36:39] Michigan unless either Bama or Texas
+[00:36:41] Tech make like 17 threes, something like
+[00:36:44] that. It might need to be at least that
+[00:36:46] number.
+[00:36:47] >> But, um, I I think I'm buying Texas Tech
+[00:36:50] out of that little pod there.
+[00:36:52] >> Yeah, for sure.
+[00:36:54] >> Okay. So, my next number here, apologies
+[00:36:58] for interrupting. Uh, it's not
+[00:37:00] surrounding Miami. It's not surrounding
+[00:37:02] SMU, Virginia, or right state. Uh, of
+[00:37:04] course it's got to surround Tennessee,
+[00:37:06] but the big one here, 10, there are only
+[00:37:10] 10, five or six seeds in history to get
+[00:37:13] back 40% or more of their missed shots.
+[00:37:16] Tennessee is nearly at 46%. Which is
+[00:37:18] like historically a I mean, Tennessee is
+[00:37:20] posting numbers you would have seen in
+[00:37:22] like 1999 2000 era of college shoots.
+[00:37:25] [laughter]
+[00:37:26] Does that say something bad about
+[00:37:28] Tennessee shooting? Possibly. I would be
+[00:37:30] open to that interpretation. But the
+[00:37:32] Vaults do get back a lot of their missed
+[00:37:34] shots. Uh, and these 10 teams went 8-2
+[00:37:36] in the round of 64. And the only two
+[00:37:38] teams who lost 2006 Oklahoma to I think
+[00:37:41] a directional Michigan, but I'm not
+[00:37:43] recalling for sure. Uh, in 2016, Baylor,
+[00:37:46] who lost the Yale game, if you recall
+[00:37:48] Torian Prince doing the postgame
+[00:37:50] interview about what a rebound was. Um
+[00:37:53] hopefully Tennessee does not have to do
+[00:37:55] the same thing, but their average win
+[00:37:57] expectancy in this round of 78% when you
+[00:38:00] split the Miami and the SMU games uh is
+[00:38:03] nearly 10% more than any of those who
+[00:38:05] went before them in this category. The
+[00:38:07] highest previous was 69% which was 2005.
+[00:38:10] Villanova made the Sweet 16. Um both
+[00:38:13] Baylor and Oklahoma were more towards
+[00:38:15] 60% or lower. Tennessee profiles as an
+[00:38:18] unusually safe type of five or six seed
+[00:38:21] sort of bully ball team down low. The
+[00:38:24] Nate Ament piece is obviously the thing
+[00:38:26] people will look for as well as Jacobe
+[00:38:27] Gillespie. But perhaps the most
+[00:38:29] overlooked part of the Tennessee
+[00:38:30] experience is that these guys simply
+[00:38:32] just get back a ton of missed shots even
+[00:38:34] in losses. So they I mean they've really
+[00:38:38] only been blown out once all year by
+[00:38:40] Florida who is what I would call plus
+[00:38:42] Tennessee or luxury Tennessee. So, I
+[00:38:45] feel that Tennessee is quite safe in the
+[00:38:47] opening round and feels like a decent
+[00:38:49] bet to come out of this pod, especially
+[00:38:50] when the majority of people have UVA
+[00:38:52] coming out of it.
+[00:38:54] >> Yeah, I think they're they're a decent
+[00:38:56] Darkhorse pick with it um to to get the
+[00:38:58] sweet 16. I do not worry too much about
+[00:39:01] their either 11 seed. I I'm not sure
+[00:39:04] what's going to happen if Miami is going
+[00:39:05] to actually stand up for the mid- majors
+[00:39:07] and and get the win over SMU potentially
+[00:39:09] short-handed with no BJ Edwards. That
+[00:39:12] matters a little bit. former V BJ
+[00:39:14] Edwards there. Sure Mr. Warren is aware
+[00:39:17] >> chased off per my memory for Chaz
+[00:39:19] Laneir. So probably a decent tradeoff.
+[00:39:22] >> Yeah, it worked out all right there for
+[00:39:24] you.
+[00:39:24] >> But like obviously this year I'd rather
+[00:39:26] have him than quote unquote Bishop
+[00:39:28] Boswell.
+[00:39:29] >> Yes, I I was that 2006 Oklahoma team you
+[00:39:32] mentioned coached by Kelvin Samson
+[00:39:34] >> knocked off in the first round by
+[00:39:37] Milwaukee. I was I was going to say it
+[00:39:38] was Bruce, but by that point it was Rob
+[00:39:40] Jeter. Actually, it was not not Bruce
+[00:39:43] Pearl anymore, but Joah Tucker, a legend
+[00:39:45] of the the Bruce Pearl
+[00:39:47] >> run at Milwaukee Sweet 16 the prior
+[00:39:49] year. Uh, yeah, I'm I'm buying Tennessee
+[00:39:52] quite a bit for for the Athletic. I did
+[00:39:54] a power rankings of the top 16 teams and
+[00:39:57] I included Tennessee at 16th over
+[00:40:00] Alabama.
+[00:40:02] Debatably whether I should have included
+[00:40:03] them over Vandy. I was trying to factor
+[00:40:05] in draw a little bit there, too. Um, I
+[00:40:08] got some flack for it in the comments,
+[00:40:10] but there's two stars on this team. The
+[00:40:12] offensive rebounding kind of setup sets
+[00:40:14] up a pretty high floor for them. I'm
+[00:40:17] buying it a little bit too here, Will. I
+[00:40:19] I think Tennessee vers Virginia is going
+[00:40:21] to be a dog fight, like really really
+[00:40:24] close game. And I I would not behoove
+[00:40:26] anybody or or bismerch anybody for
+[00:40:28] picking either side there.
+[00:40:30] >> You would behoove the Who's Sounds like
+[00:40:32] >> the behoo the wahoos. Yes. All right,
+[00:40:36] for my fourth one, I'm gonna leave it to
+[00:40:37] you. Would you rather hear about Santa
+[00:40:38] Clara or Iowa State?
+[00:40:40] >> Santa Clara.
+[00:40:41] >> Okay. Santa Clara.
+[00:40:43] >> Sorry, Cyclones.
+[00:40:45] >> Yes. Yeah. Well, I mean, like people
+[00:40:46] already know they're really good.
+[00:40:48] Against top 100 competition, my number
+[00:40:50] is 24th. That's Santa Clara's ranking
+[00:40:52] against teams in the top 100 this year.
+[00:40:55] Really strong for the 10 line. I am a
+[00:40:58] gasast, shocked, floored, uh,
+[00:41:00] bamboozled, hoodwinkedked, and led
+[00:41:02] astray by the fact they are four and a
+[00:41:03] half point underdogs to Kentucky.
+[00:41:06] Have I I'm wondering if people have
+[00:41:08] watched Kentucky play this year.
+[00:41:11] >> Yeah, I maybe maybe they're just going
+[00:41:13] to live bet that game because KY's going
+[00:41:15] to get down 15 or Yeah,
+[00:41:17] >> it's erratic erratic.
+[00:41:18] >> Santa Clara better only build a
+[00:41:20] nine-point lead.
+[00:41:22] >> Yes. Don't get up.
+[00:41:23] >> Do not get up big. What this actually
+[00:41:24] feels like to me, and I don't think this
+[00:41:27] would pop up in a common comparison
+[00:41:29] tool, but it's just what it feels like
+[00:41:31] is do you remember when Witchaw played
+[00:41:33] Indiana in the round of 64 in one of the
+[00:41:35] Tom Green years?
+[00:41:37] >> Oo man, not immediately.
+[00:41:39] >> I think it was 15. So it was because
+[00:41:42] they played Kansas the next game. So
+[00:41:43] yeah, 2015.
+[00:41:44] >> Oh yeah. Yeah. Okay. So okay. So that
+[00:41:46] was the 7 710 game and then there's the
+[00:41:48] 72 with Kansas. Got it. Okay.
+[00:41:50] >> And a ton of people picked Indiana
+[00:41:51] because of the name. But Witchaw was
+[00:41:54] like clearly the better team and I think
+[00:41:56] won that game by four or six. It was
+[00:41:59] very close the whole way. But they
+[00:42:00] eventually, you know, pulled away at the
+[00:42:02] end and escaped and then went on to beat
+[00:42:04] Kansas in the round of 32. I don't know
+[00:42:06] that I can get there with Santa Clara
+[00:42:07] actually beating Iowa State, but if you
+[00:42:10] filter just for games against top 100
+[00:42:12] competition, which I believe is fair for
+[00:42:13] this round, Santa Clara 24th, UK 43rd,
+[00:42:17] they're going to have a shot volume
+[00:42:19] edge. They're playing a team that's
+[00:42:20] ranked 355th in Hasslt metrics away from
+[00:42:24] home metric to me. Easily the best value
+[00:42:27] play in any of the 8 n or 710 games.
+[00:42:30] >> Yeah, I'm a big fan of Santa Clair here
+[00:42:32] as well. It's partial Kentucky
+[00:42:34] skepticism and I know they got Cam
+[00:42:36] Williams back which helps the offense a
+[00:42:39] little bit, but I also saw somebody say
+[00:42:42] like, "Oh, Santa Clara can't play up
+[00:42:43] against Kentucky. Look what happened to
+[00:42:45] them against Gonzaga." Yeah, they lost
+[00:42:47] three times to Gonzaga, but they were
+[00:42:48] tied at halftime in Spokane. They're
+[00:42:51] winning after 30 minutes at home and
+[00:42:53] they're winning or like tied after 30
+[00:42:55] minutes in the WCC title game. Like they
+[00:42:57] played with Gonzaga all three times.
+[00:43:01] >> Kind of a dumb complaint because they
+[00:43:02] went two and one against St. Mary's.
+[00:43:05] >> Yeah. And I and I don't I don't mind if
+[00:43:08] you're playing with a team that's a
+[00:43:10] three seed and getting close to beating
+[00:43:11] them all three times. I don't They never
+[00:43:14] got ran off the floor. I know they lost
+[00:43:15] by 12 in one of the games and 11 in
+[00:43:17] another. Those are not reflective of how
+[00:43:19] those games went. Uh Gonzaga just kind
+[00:43:22] of extended late, made some free throws.
+[00:43:24] Santa Clara is really good. They've got
+[00:43:26] size. You can make the serious argument
+[00:43:28] they have the best NBA prospect on the
+[00:43:30] court with the the scouting love of
+[00:43:32] Allen Graves uh and and no acquaintance
+[00:43:35] for Kentucky to to be their top
+[00:43:37] prospect. So, yeah, I'm I'm also buying
+[00:43:40] Santa Clara. The game is in St. Louis.
+[00:43:44] It's going to be a heavy pro Kentucky
+[00:43:45] crowd because of how big Blue Nation
+[00:43:47] travels. But I think everybody else,
+[00:43:50] Iowa State fans, Missou fans are all
+[00:43:54] going to jump on board the Santa Clara
+[00:43:55] train in that arena, and that gives them
+[00:43:57] maybe a nice little bump uh in terms of
+[00:44:00] just potentially winning that outright.
+[00:44:05] >> All right, let's go to the West region.
+[00:44:07] That is that is the uh the Midwest there
+[00:44:09] from Will.
+[00:44:11] We'll start with I think this was the
+[00:44:14] one the number I was most excited about
+[00:44:16] as I went through that I that I
+[00:44:17] uncovered here. Number is two and that
+[00:44:21] is the number of top 30 defenses in this
+[00:44:23] entire region. The 16 team region that
+[00:44:26] should theoretically have a quarter of
+[00:44:28] the the distribution of top 30 defenses.
+[00:44:30] There's only two. It's Arizona and it's
+[00:44:32] Gonzaga. There are five top 45 defenses
+[00:44:36] or five more. You add in Villanova 35th,
+[00:44:38] Purdue 36th, Miami Florida 38th, Hawaii
+[00:44:41] 43rd, and Utah State 45th, but notably
+[00:44:45] your four seed, your five seed, your two
+[00:44:48] seed. There's not a lot of great
+[00:44:50] defenses here at top the bracket. And
+[00:44:53] Arkansas is really backcourt and offense
+[00:44:56] heavy. Wisconsin the same way. Does that
+[00:44:59] set up poorly for Arizona? It might
+[00:45:01] because we know that Michigan's already
+[00:45:03] lost to Wisconsin. they can play up
+[00:45:05] well. Purdue has beaten Michigan very
+[00:45:08] recently and they're not the same team
+[00:45:09] as Arizona, but dominance with size,
+[00:45:11] dominance around the rim. There are some
+[00:45:13] similarities there. I just found it
+[00:45:15] remarkable that we didn't end up with
+[00:45:17] any defenses here. And one of the other
+[00:45:18] elite defenses is Gonzaga.
+[00:45:21] >> Two teams that are built very similarly.
+[00:45:24] >> So I I guess if I was John Roststein and
+[00:45:26] naming the region here, Will, this would
+[00:45:28] be the region of offense.
+[00:45:31] >> This is for sure the most watchable
+[00:45:32] region. I would say this or the I think
+[00:45:34] the Midwest is pretty close, but this
+[00:45:36] seems seems like the most watchable.
+[00:45:38] Yeah. I And to go with this, you have to
+[00:45:42] think of like BYU's defense is
+[00:45:44] completely cratered post the Richie
+[00:45:46] Saunders injury and really before that.
+[00:45:48] Uh the Arkansas Arkansas, and I'm not
+[00:45:51] meaning this as disrespect, I'm just
+[00:45:53] meaning this as it is, is the Tik Tok
+[00:45:55] team uh of 2026 where people are just
+[00:45:59] going to watch the highlights and think
+[00:46:00] like, oh my god, this team is the
+[00:46:02] national champion. Uh and then it's
+[00:46:04] like, well, you got to watch Darius
+[00:46:05] Secuff play defense first before you get
+[00:46:07] there because it's not very fun for
+[00:46:08] anybody involved. But
+[00:46:10] >> yes,
+[00:46:10] >> I uh it is going to be interesting to
+[00:46:13] see if defense wins out and we get the
+[00:46:15] Arizona Gonzaga final, which feels
+[00:46:20] most probable to me. I would guess
+[00:46:23] depending on the status of Brad enough
+[00:46:26] or if we do get like a more offense
+[00:46:28] friendly final and it's probably still
+[00:46:30] Arizona, but like you could see Arizona
+[00:46:32] Purdue or god forbid Arkansas Purdue,
+[00:46:34] which would be pretty wild. Um yeah,
+[00:46:37] this is a fascinating region to me. I
+[00:46:39] don't I I know where I'm leaning, but I
+[00:46:42] I think the lack of defense played in it
+[00:46:45] is going to create some pretty wild
+[00:46:46] outcomes. Okay.
+[00:46:48] >> Oh, yeah. We I guess at the very end
+[00:46:49] we'll do um actual final four picks and
+[00:46:52] and title picks. Got to
+[00:46:53] >> get get the people what they want there.
+[00:46:55] >> All right. It ties a little bit into my
+[00:46:57] second number just kind of like
+[00:46:59] Arizona's path. The two numbers are
+[00:47:02] 6,114
+[00:47:04] and 5,95.
+[00:47:06] Those are the number of miles that would
+[00:47:09] be needed to travel for either Wisconsin
+[00:47:11] or Arkansas respectively to play in the
+[00:47:14] Sweet 16 since both both Arkansas and
+[00:47:17] Wisconsin have to go to Portland for the
+[00:47:19] first round. You have to go to Portland
+[00:47:20] and back and then they'd have to one way
+[00:47:22] to San Jose. And that's a lot of travel
+[00:47:25] in a week before they play Arizona who's
+[00:47:27] going to be in San Diego and then San
+[00:47:29] Jose. A little bit more of a cushy
+[00:47:31] proposition for them. Especially for
+[00:47:34] Arkansas. This stinks given that they
+[00:47:36] played on Sunday and won the SEC
+[00:47:39] tournament title and then they've got a
+[00:47:40] Thursday game in Portland. It's not a
+[00:47:43] great travel setup for them as
+[00:47:45] mentioned. Then they'd have to turn
+[00:47:46] around and go right back west or maybe
+[00:47:48] they stay west. I think sometimes
+[00:47:50] programs opt to do that where they just
+[00:47:52] won't go all the way back to Arkansas
+[00:47:53] and then all the way back to the West
+[00:47:55] Coast. I'm curious what the plan is
+[00:47:57] there, but I think that is a sneaky
+[00:48:00] strong part of the draw for Arizona that
+[00:48:03] they're not going to have to deal with
+[00:48:04] that. I know they charter in the NCA
+[00:48:06] tournament and it's it's somewhat cushy
+[00:48:08] travel, but it's still a long way to go
+[00:48:09] and it's a long time that you're not as
+[00:48:11] focused on basketball, you're not in the
+[00:48:12] gym working on scouting, etc. Uh, I just
+[00:48:16] thought that was notable that for a team
+[00:48:18] getting shipped out west, both Arkansas
+[00:48:20] and Wisconsin got stuck with a early
+[00:48:22] round west site and that makes it really
+[00:48:25] tough on them too.
+[00:48:26] >> Yeah. Uh, well, one big problem for Mick
+[00:48:29] Cronin. He would really hate this travel
+[00:48:31] plan,
+[00:48:32] >> though it would be going west.
+[00:48:34] >> He's got to go to Buffalo and then DC,
+[00:48:35] so I know he's not going to love what
+[00:48:37] he's got set up there.
+[00:48:38] >> But no, I think it's it's going to be a
+[00:48:40] really interesting thing. And we
+[00:48:41] mentioned this or I did in the selection
+[00:48:43] Sunday TV guide. Matt Norlander has been
+[00:48:45] all over this. The travel aspect of this
+[00:48:48] year's NC turn is going to be
+[00:48:50] fascinating. I never anticipated when we
+[00:48:52] signed up working for Baskin Interview
+[00:48:54] that we would be talking about a TSA
+[00:48:56] shutdown andor the government's uh
+[00:48:58] ability or inability to stay open
+[00:49:00] however they feel. Um but it could very
+[00:49:04] well affect who gets where at what time.
+[00:49:07] Norlander specifically mentioned, you
+[00:49:10] know, the in say sending out a memo
+[00:49:12] stating that like if you expect to
+[00:49:13] arrive at your site normally in a normal
+[00:49:15] year at like 12 p.m. on Tuesday, you
+[00:49:17] might not get there until 7 or 8:00 p.m.
+[00:49:19] that Tuesday and you're just going to
+[00:49:20] have to deal with it or a Wednesday. It
+[00:49:23] reminds me a lot of when Colorado State,
+[00:49:26] I think, played the first game of the
+[00:49:28] NCA tournament 2022 and didn't get a
+[00:49:30] travel itinerary until like Tuesday
+[00:49:33] afternoon. I know they didn't get to
+[00:49:34] their site until Wednesday, so I'm
+[00:49:37] wondering if that's going to affect
+[00:49:38] somebody, especially I do feel bad for
+[00:49:40] these first four teams who are going to
+[00:49:42] have to get shipped out somewhere. Uh
+[00:49:44] but it's just, you know, the name of the
+[00:49:46] game.
+[00:49:47] >> Yep. Was that the Colorado State team
+[00:49:48] that played Michigan 611 first game?
+[00:49:51] Okay.
+[00:49:52] >> Michigan was very popular 11 over6.
+[00:49:54] >> I fought back against it and made the
+[00:49:56] silly decision to pick a Mountain West
+[00:49:58] team in the NCA tournament there and it
+[00:50:00] did not work out well. Hunter Dickinson
+[00:50:02] and the Wolverines took that down. So
+[00:50:04] yeah, the the travel stuff is something
+[00:50:05] to watch just because like they're short
+[00:50:07] on charters and I think Norlander said
+[00:50:09] that's one of the small holdups on
+[00:50:12] expanding the tournament is that they'd
+[00:50:13] have to have figure out a bunch more
+[00:50:15] logistics with more teams quickly
+[00:50:17] turning around because you'd have so
+[00:50:19] many games on Tuesday and Wednesday. Now
+[00:50:21] just something to watch there.
+[00:50:24] >> All right, my third number here. This
+[00:50:27] one isn't as overarching of a storyline
+[00:50:29] about how the region is going to play
+[00:50:30] out. It's just something I'm excited
+[00:50:31] about. The number is two. That is the
+[00:50:34] number of assists Braden Smith needs
+[00:50:35] against Queens to set the all-time
+[00:50:38] record and break Bobby Hurley's mark a
+[00:50:40] top division one. Notably, Queens gave
+[00:50:44] up a hundred or over an average of over
+[00:50:47] a hundred in their five games against
+[00:50:48] power five competition, three of which
+[00:50:51] were turning teams. And they play the
+[00:50:53] number one offense in the country in
+[00:50:54] Purdue. I think Braden Smith is going to
+[00:50:56] get more than two assists here. Will I
+[00:50:58] think Purdue is going to rack up points
+[00:51:00] against that Queen's Civ Swiss cheese
+[00:51:03] defense?
+[00:51:04] I I I wonder what they're going to do if
+[00:51:06] they'll stop the game, like give him the
+[00:51:09] ball or like how how they'll react to
+[00:51:12] this in in the uh the fact that it's a
+[00:51:14] postseason NCA tournament game, but it's
+[00:51:16] an all-time record. So, I'm curious what
+[00:51:18] you think.
+[00:51:18] >> I think they should rush the court. I
+[00:51:20] think it should be like when Ovkin set
+[00:51:22] the goal record and the whole team, it
+[00:51:24] was like a regular season game and the
+[00:51:25] whole team came out and they stopped the
+[00:51:27] game for like 15 minutes. They should
+[00:51:28] tape the basketball
+[00:51:30] >> and write like what would the assist
+[00:51:31] number be? It's like a thousand
+[00:51:32] something, right?
+[00:51:33] >> It's 177 I think will be the record.
+[00:51:36] >> So they'll they'll write tape and it'll
+[00:51:37] be like 177 Braden Smith on it. Um so do
+[00:51:42] you know Queen's half court defensive
+[00:51:44] ranking at Synergy?
+[00:51:46] >> And this is despite being really bad
+[00:51:48] schedule. It has to be like 355th or
+[00:51:51] something, right?
+[00:51:52] >> 345th, which is I'm going to say a
+[00:51:55] problem when you're about to play
+[00:51:56] Purdue.
+[00:51:58] >> Um
+[00:51:59] I the I just realized Rothstein is the
+[00:52:03] sideline reporter for this game, which
+[00:52:04] makes it even better for the record.
+[00:52:06] >> Oh. Oh, yeah. In St. Louis, it's gonna
+[00:52:08] be beautiful.
+[00:52:09] >> I I will wager Purdue scores a 100red
+[00:52:11] here. I think that's a good bet.
+[00:52:14] >> Yeah. And I they might not even go over
+[00:52:16] 70 possessions. It could be a slow game.
+[00:52:19] >> Yeah,
+[00:52:19] >> they just might score 1.4 points per
+[00:52:21] possession. Like
+[00:52:22] >> I I will note Queens can and will score
+[00:52:24] in Purdue because Purdue's pick and roll
+[00:52:26] defense is not good. Uh and Queens pick
+[00:52:28] and roll offense is actually quite
+[00:52:30] efficient and very solid. So I think
+[00:52:31] that they're if Queens gets to like 76
+[00:52:33] here, that won't shock me. But they're
+[00:52:35] going to give up 100.
+[00:52:36] >> Yeah, they can they can shoot. They got
+[00:52:38] Schwiger in the front court can really
+[00:52:40] stretch the floor. I'm curious who if we
+[00:52:43] do get the u record breaking assist and
+[00:52:46] I strongly anticipate we will who it's
+[00:52:48] going to be to. It feels right that it
+[00:52:50] should be to TKR or lawyer like the two
+[00:52:52] guys he's played with all four years. If
+[00:52:55] it's to Oscar CL I'll feel a little less
+[00:52:58] excited just like 1% less excited about
+[00:53:00] it. If it's not one of his cohorts
+[00:53:01] that's been there for four years.
+[00:53:03] >> I I think it's going to happen by the
+[00:53:05] first media timeout. Like it'll be fast.
+[00:53:08] >> It might be the second basket of the
+[00:53:09] game in the first minute. Like it's very
+[00:53:11] possible that it happened super quickly
+[00:53:13] there.
+[00:53:16] >> All right. And my fourth number here, I
+[00:53:20] didn't I didn't shoehorn in a Missou
+[00:53:21] number. I I thought about it, but uh
+[00:53:24] there was a a UCL or a Miami reporter
+[00:53:26] that said something about like it's not
+[00:53:29] fair that Missou gets to play 12 minutes
+[00:53:30] from campus. It's like it's two hours
+[00:53:32] from campus. This isn't like a nextdoor
+[00:53:35] neighbor type scenario. St. Louis and
+[00:53:37] Colombia are not next door. But so like
+[00:53:39] >> are they going to travel that well? I
+[00:53:42] don't feel like you guys like this team.
+[00:53:44] >> Yeah, there's enough St. Louis residents
+[00:53:46] that are fans of of Missou, but you
+[00:53:48] know, they're going to be fighting for
+[00:53:49] tickets with Kentucky. Purdue fans are
+[00:53:51] going to travel super well and have a
+[00:53:52] bunch of people in the house.
+[00:53:54] >> Uh Iowa State, that fan base travels
+[00:53:57] incredibly well around the Midwest. So,
+[00:53:59] I don't think it's going to be a
+[00:54:00] complete overinfestation of
+[00:54:02] >> and I I didn't think about that aspect.
+[00:54:03] They will root against Missouri as a
+[00:54:05] former Big 12 foe.
+[00:54:07] >> Yeah. Yeah, definitely will. Uh, okay.
+[00:54:10] And Kentucky fans will root against
+[00:54:12] Missouri since Missouri won at Rup Arena
+[00:54:14] this year, etc.
+[00:54:15] >> Okay, last number is 1.18 verse 1.13.
+[00:54:20] That's the projected points per
+[00:54:21] possession per Evan Mia's matchup
+[00:54:23] simulator for a theoretical Arkansas
+[00:54:26] versus Wisconsin second round game. I'm
+[00:54:28] going to take the over on those numbers.
+[00:54:30] I think both teams score even more
+[00:54:32] efficiently than that. Uh that's I was
+[00:54:34] surprised they're even that low because
+[00:54:36] it's two top 10 offenses and both
+[00:54:38] defenses are outside the top 40 per
+[00:54:40] Evans numbers. I I just pray for that
+[00:54:43] game. I know Hawaii can kind of muck up
+[00:54:46] a little bit of what Arkansas wants to
+[00:54:48] do since they don't help off shooters
+[00:54:50] and at all. Arkansas's got great
+[00:54:52] one-on-one scorers. High Point somewhat
+[00:54:55] of a darling pick here despite that they
+[00:54:57] haven't played a top 100 team all
+[00:54:59] season. But I think back to last year in
+[00:55:01] that Wisconsin BYU game we got in the
+[00:55:03] second round and how fun that was up and
+[00:55:05] down offenses scoring like crazy. I want
+[00:55:08] to see that again in this matchup out in
+[00:55:10] Portland. I think we get something like
+[00:55:13] 95 to 90 where Thomas and Akuff combined
+[00:55:17] for 65. Boyd and Blackwell combined for
+[00:55:20] 60. That's that's the game. As soon as
+[00:55:22] the bracket came out I was like please
+[00:55:24] give me that matchup. Apologies to High
+[00:55:26] Point and Hawaii. I want to see those
+[00:55:28] two go at it up and down.
+[00:55:30] >> The high point thing is really
+[00:55:31] interesting to me because we have
+[00:55:33] essentially zero data outside of the
+[00:55:35] Purdue game last year and how they would
+[00:55:37] play. Uh, and they weren't awful in that
+[00:55:41] game, but I didn't feel that they
+[00:55:42] acquitted themselves beautifully either.
+[00:55:45] Uh, so I'm not I do feel though that
+[00:55:48] they could pull it off. I don't know.
+[00:55:50] I'm having a hard time with that one,
+[00:55:52] but I agree. If we can get Wisconsin,
+[00:55:53] Arkansas, it's going to be an offensive
+[00:55:55] explosion. uh because Arkansas is bad
+[00:55:58] defensively and Wisconsin is also bad
+[00:56:00] defensively. But I the interesting
+[00:56:03] aspect there because so many people have
+[00:56:05] are riding the Arkansas bandwagon.
+[00:56:07] Wisconsin does have a strange and innate
+[00:56:09] ability to play up or down to their
+[00:56:12] competition regardless of who it is and
+[00:56:14] regardless of where it is. I mean this
+[00:56:16] is a team that's won at Illinois, at
+[00:56:19] Michigan, and at Purdue. Probably three
+[00:56:21] of the very best wins you can have. Uh,
+[00:56:23] and also lost to Indiana, USC, Oregon,
+[00:56:26] and nearly lost to Washington in the Big
+[00:56:28] 10 tournament. Um, I don't really know
+[00:56:32] what we're gonna get.
+[00:56:33] >> Smacked at home by Minnesota, too. Like
+[00:56:35] they they they've got some strange
+[00:56:38] results on there, man.
+[00:56:39] >> Yeah. And like I just don't really know
+[00:56:42] what to expect with them. And that's why
+[00:56:44] I kind of wonder if High Point is live
+[00:56:46] in that first game, just because they're
+[00:56:49] I mean, High Point does play a very
+[00:56:52] aggressive style of defense. Wisconsin's
+[00:56:54] not much for turnovers, but they don't
+[00:56:55] force them either. They don't really
+[00:56:57] rebound well. So, I I'm curious about
+[00:57:00] that. I don't know that I can really get
+[00:57:02] all the way there. It does fit my stupid
+[00:57:05] note that I've said every year now that
+[00:57:07] an upset has happened in the first two
+[00:57:09] TV windows of the tournament for 13
+[00:57:11] years running. So, that one does fit,
+[00:57:14] but I don't know. I'm having a hard time
+[00:57:16] getting there.
+[00:57:18] >> Yeah, I I the Minnesota game, they're
+[00:57:20] down 35 to 17 at home against Minnesota.
+[00:57:22] It wasn't at the barn. This was at home,
+[00:57:24] the Cole Center. Uh couple of my buddies
+[00:57:26] that went to Wisconsin, some from
+[00:57:28] Milwaukee area, like, can we please get
+[00:57:31] through the first round game and start
+[00:57:32] playing good teams because that that's
+[00:57:34] the game that makes them most nervous
+[00:57:36] because they have played up so well and
+[00:57:38] they want to avoid that potential mid-
+[00:57:40] major. High Point is talented. They're
+[00:57:43] small, which is a problem, and they play
+[00:57:45] somewhat compact, and I don't think
+[00:57:48] pressure is going to work against Boyd
+[00:57:49] and Blackwell. So, I don't love the
+[00:57:51] matchup for High Point, but Wisconsin,
+[00:57:54] if they're lackadasical, and maybe Nolan
+[00:57:57] Winter's still a little gimpy on his
+[00:57:58] ankle, isn't quite back to 100%. There's
+[00:58:01] certainly a path there, but I'm hoping
+[00:58:04] hoping that we get that Arkansas versus
+[00:58:07] Wisconsin matchup. I I had zero as the
+[00:58:09] number of top 100 teams that High Point
+[00:58:11] played. I had a whole rant about how
+[00:58:14] they're literally next to Miami of Ohio
+[00:58:16] and Kenom and they played a worse
+[00:58:19] schedule than Miami and they lost four
+[00:58:20] times as evidence that it's not that
+[00:58:22] easy to do what Miami is doing. And then
+[00:58:25] zero is also the amount of FS that I
+[00:58:28] care that Missou's playing 120 miles
+[00:58:31] from campus. So we covered all that
+[00:58:33] >> concern number 10,000 for the committee.
+[00:58:35] I can't believe people care about that
+[00:58:36] at all. Yep. And I think I I want to say
+[00:58:39] it's Bowtology on Twitter. He does a
+[00:58:42] long thread going through taking the
+[00:58:44] S-curve that the committee does and then
+[00:58:46] how they slotted the bracket like
+[00:58:48] following bracketing principles. And it
+[00:58:50] makes total sense why Missou ended up
+[00:58:52] there because of the sites that were
+[00:58:54] available and the teams that were ahead
+[00:58:56] of them on the 10 line and yeah, it all
+[00:58:59] was like logically based considering
+[00:59:01] their rules.
+[00:59:02] >> Yeah. All right.
+[00:59:03] >> That's the West region. Quick aside here
+[00:59:05] because I I do want to get this on the
+[00:59:06] record for my idiot thing of 13 straight
+[00:59:08] tournaments first two TV windows.
+[00:59:11] >> Uh seven games would qualify here.
+[00:59:14] Obviously not TCU Ohio State. And I'm
+[00:59:16] just going to roll out Duke Sienna. I
+[00:59:17] know it'd be really funny. It's not
+[00:59:19] going to happen. Troy, Nebraska, South
+[00:59:21] Florida, Louisville, High Point,
+[00:59:22] Wisconsin, MCNE, Vandy, NDSU, Michigan
+[00:59:25] State, Hawaii, Arkansas.
+[00:59:27] >> There's a lot of candidates there, man.
+[00:59:29] Wow. Yeah,
+[00:59:30] >> lot of candidates. I if I I'm going to
+[00:59:32] do a quick upset draft here. So, first I
+[00:59:35] think you do, even though I don't like
+[00:59:36] it, have to take South Florida. I think
+[00:59:38] that's gotten way too popular. But they
+[00:59:40] they are the analytically most wise
+[00:59:43] candidate.
+[00:59:44] >> I'd take High Point second.
+[00:59:46] >> Oo,
+[00:59:47] >> I I like this Mcnes Vandy matchup just
+[00:59:50] doesn't really strike me as that good
+[00:59:51] for MC. I I'm not seeing it. I
+[00:59:55] >> My my second pick would be Troy. I I
+[00:59:59] think I would take Troy over Mcnes. Um
+[01:00:02] >> I would actually have Hawaii last. I've
+[01:00:05] got a bad feeling that's going to be a
+[01:00:06] blowout and a real bummer of a blowout,
+[01:00:08] too.
+[01:00:09] >> Yeah, I just the matchup edge there of
+[01:00:12] like, "Oh, we don't help off shooters.
+[01:00:13] We make you score one-on-one." And
+[01:00:14] Arkansas's like, "Well, we have Darius
+[01:00:16] Akov and Molly Thomas, so we're totally
+[01:00:18] all right with that."
+[01:00:18] >> North Dakota State, I wish they had
+[01:00:21] drawn like Virginia. I think they would
+[01:00:23] have been live if they had drawn
+[01:00:24] Virginia. Michigan State's a tough
+[01:00:25] matchup for them, though.
+[01:00:27] >> Yep. Yep. Agreed. Their their whole
+[01:00:29] advantage in the Summit is being the
+[01:00:30] biggest team and dominating the glass.
+[01:00:32] Well, what happens when you go play the
+[01:00:34] bigger bully on campus and they have to
+[01:00:36] play Michigan State in the paint.
+[01:00:38] >> Yeah.
+[01:00:40] >> Okay. There's the there's the upset
+[01:00:41] draft for the first window. Now we go to
+[01:00:43] Will for the South region. Let's
+[01:00:46] >> think about all the dumb you get to
+[01:00:47] hear in this show. That's so nice.
+[01:00:50] >> People love it. People do love stupid
+[01:00:52] stuff. Um the So my number to start us
+[01:00:56] off and again I try and go pod by pod to
+[01:00:59] try and hit on everything a little
+[01:01:00] evenly as best as I can. Uh my number
+[01:01:04] here is two over one because in terms of
+[01:01:08] games against top 100 competition, the
+[01:01:10] two seed is the favorite here, Houston.
+[01:01:14] Not one seed Florida. Houston's got 30%
+[01:01:16] odds. Florida 28% at Torvvic. Uh Florida
+[01:01:20] has become what I would call the cause
+[01:01:23] dujour of basketball uh literati which
+[01:01:27] is fine uh because they have been really
+[01:01:29] good over the last few months. They've
+[01:01:30] been playing exceptionally well really
+[01:01:32] good on the boards exceptional front
+[01:01:34] court and they did start hitting threes
+[01:01:37] for a little while there. Uh I think
+[01:01:40] they kind of got a bad draw. I'm going
+[01:01:42] to be honest here. Uh I noticed and it
+[01:01:45] was really funny uh for Fanta to do this
+[01:01:48] calling I think a Barcel person a child.
+[01:01:50] I do I will say I generally will support
+[01:01:53] that cause. Um I don't remember who it
+[01:01:55] was but that Iowa would not compete with
+[01:01:57] Florida. That is a non ballower take. If
+[01:02:01] you have watched Iowa I they would not
+[01:02:03] win but they will draw you into the mud
+[01:02:05] for 40 straight minutes and it will not
+[01:02:07] be a pleasant game to play or watch. It
+[01:02:09] reminds me a lot of when 38-1 Kentucky
+[01:02:11] played Mick Cronin and Cincinnati and
+[01:02:14] Kentucky won, but it was a deeply
+[01:02:16] unpleasant experience for all involved.
+[01:02:18] I think that game was like 64 to 53.
+[01:02:20] That strikes me as a very similar thing.
+[01:02:23] >> Yep. And Iowa like gave Iowa State a
+[01:02:25] tough game on the road. They nearly beat
+[01:02:28] Michigan in the final week of the
+[01:02:29] season. Like that it's not like they
+[01:02:31] can't play one and two seat level foes.
+[01:02:34] They've they've shown it. And both in
+[01:02:36] either potential Sweet 16 matchup of the
+[01:02:39] top seeds strikes me as not great for
+[01:02:41] Florida because we've already seen Vandy
+[01:02:43] beat Florida and arguably could have
+[01:02:45] beaten them twice. They were
+[01:02:46] exceptionally good in that home game,
+[01:02:47] but Florida shot the lights out. And
+[01:02:50] Nebraska is kind of the same thing. Five
+[01:02:53] out would really draw Florida's front
+[01:02:56] court out into some unique positions.
+[01:02:58] That actually reminds me of Nebraska
+[01:02:59] playing Michigan. And you could argue
+[01:03:01] Nebraska easily could have won that
+[01:03:03] game. So, I I think Florida got a really
+[01:03:05] tough draw even before you get to the
+[01:03:07] part of potentially playing a true road
+[01:03:10] game in the Elite 8, or playing
+[01:03:12] Illinois, who is also a really strong
+[01:03:14] team. So, I'm not taking Florida here.
+[01:03:16] I'm not buying it.
+[01:03:18] >> Yeah. Then Florida, I think people will
+[01:03:21] say like, well, they're going to
+[01:03:22] dominate the glass against almost
+[01:03:23] anybody they play. And that's almost
+[01:03:26] certainly true. Their front court is
+[01:03:27] huge. They're great in that department,
+[01:03:29] but that hasn't guaranteed them wins.
+[01:03:31] Like you go back to them getting rolled
+[01:03:34] by Vandy. I mean they were down 25 in
+[01:03:36] the second half of that game and they
+[01:03:38] outrebounded them 38 to 23. They got 20
+[01:03:40] offensive rebounds. Vandy only had 23
+[01:03:43] rebounds total. They're grabbing almost
+[01:03:45] 60% of their misses and they lost the
+[01:03:47] game by 25. Like that does not make them
+[01:03:50] completely untouchable.
+[01:03:52] They haven't been slowed down all that
+[01:03:54] much this year. It's been tough for for
+[01:03:56] teams to do that. South Carolina is one
+[01:03:58] of the few teams that tries in this
+[01:04:00] conference. They beat South Carolina by
+[01:04:02] 53 in a game or excuse me 55. Uh so it's
+[01:04:06] not always going to work. Uh Duke slowed
+[01:04:08] them down. Yukon slowed him down. Missou
+[01:04:11] slowed him down. Held them under 70
+[01:04:13] possessions. That's definitely what
+[01:04:14] Clemson or Iowa would try to do in the
+[01:04:16] second round. Just kind of throw them
+[01:04:18] off a little bit. Last year the second
+[01:04:20] round Yukon slowed him down and it took
+[01:04:22] Walter Clayton big time shot making down
+[01:04:24] the stretch for for Florida to escape
+[01:04:26] that game. I know this is like I think
+[01:04:29] the same region they came out of last
+[01:04:31] year. The bottom left on your brackets,
+[01:04:33] they were the fourth one seed last year
+[01:04:34] as well.
+[01:04:36] I I'm I'm struggling to see it too,
+[01:04:38] Will. I I think both the two and the
+[01:04:40] three seed are are very challenging
+[01:04:41] matchups for them and the shooting of
+[01:04:43] the four and five could be could be
+[01:04:45] tough.
+[01:04:46] >> Yeah, it's just not a great group for
+[01:04:47] them. And with Vandy specifically, you
+[01:04:49] mentioned not only plus 15 in rebound
+[01:04:52] margin in the SEC tournament loss, plus
+[01:04:54] 14 in the game that they probably should
+[01:04:56] have lost at Memorial and Vandy still
+[01:04:59] dropped 94 in them that game. So I think
+[01:05:01] that like my view of college sports in
+[01:05:05] general is that every team no matter how
+[01:05:06] good or bad they are has a kryptonite.
+[01:05:08] Like there is just bad matchups in
+[01:05:10] college hoops and Vandy seems to be
+[01:05:12] Florida's. I think any sort of five out
+[01:05:15] style could be and you know that type of
+[01:05:18] play it just doesn't set up well for a
+[01:05:21] deep run for the Gator.
+[01:05:23] >> Yep. Yep. Agreed. All right. Number two.
+[01:05:26] >> Uh number two here
+[01:05:29] I've got two. This is an interesting
+[01:05:31] one. 29th and 213th. This is surrounding
+[01:05:34] one specific game. These are the last 12
+[01:05:38] game rankings for Nebraska. 29th and
+[01:05:40] Troy 213th.
+[01:05:44] Um, not great. I think that game might
+[01:05:47] suck. Uh, unfortunately I but it it's
+[01:05:50] more of a bet against Nebraska to me.
+[01:05:52] They did start out exceptionally well.
+[01:05:55] Uh, obviously really good in those first
+[01:05:56] 20 games when they went 20 and0. Uh, but
+[01:05:59] they really struggled down the stretch
+[01:06:01] those final 12 games. I believe their
+[01:06:04] offense was something in the realm of
+[01:06:07] 108th or 109th in the country. Um I'm
+[01:06:12] going to take a quick look. 114th. I was
+[01:06:14] actually too charitable. So, and that
+[01:06:17] was despite outshooting their opponents
+[01:06:19] by 6% from three. So, the last 12 games
+[01:06:22] gave up 56% from two, only got back 25%
+[01:06:26] of their misses, heavily outrebounded.
+[01:06:29] They force a lot of threes and allow a
+[01:06:32] generally quite low hit rate from three,
+[01:06:34] which is nice. And I don't anticipate
+[01:06:37] that like Troy, for example, is going to
+[01:06:39] be the team to take advantage of that.
+[01:06:41] Troy takes a lot of threes, but doesn't
+[01:06:42] really hit them. Um,
+[01:06:45] but like if you set it up in a potential
+[01:06:47] round of 32 matchup with Vandy, that
+[01:06:49] strikes me as really bad for them. Like
+[01:06:52] I think Vandy could potentially run away
+[01:06:54] with that. Uh even a potential round of
+[01:06:57] 32 matchup with MC doesn't seem very
+[01:07:00] charitable to them. Like I I mean this
+[01:07:02] MCN team extraordinarily athletic,
+[01:07:04] forces a lot of turnovers, doesn't turn
+[01:07:06] it over much themselves.
+[01:07:08] I mean they can turn it into a free
+[01:07:10] throw shooting contest if they want. And
+[01:07:13] I I loved this Nebraska team. Had a
+[01:07:16] great time watching them. I just don't
+[01:07:19] feel that they set up very well for a
+[01:07:20] deep March Madness run.
+[01:07:22] >> Yeah, I would I would agree. I want them
+[01:07:24] to get that first program win. I I want
+[01:07:27] them to beat Troy. However, I can very
+[01:07:29] much envision the scenario where Cooper
+[01:07:31] and Kobe Campbell are reigning in some
+[01:07:34] threes over the top. You've got these
+[01:07:35] two redheads lighting up the team from
+[01:07:38] Lincoln, Nebraska. If you remove Victor
+[01:07:41] Valdez's 21% from deep for Troy, they're
+[01:07:44] actually a pretty solid shooting team. I
+[01:07:46] don't know if they're going to Scott
+[01:07:48] Cross is going to forbid him from
+[01:07:50] shooting threes. He probably should.
+[01:07:52] He's made two in his last eight games.
+[01:07:55] I'm not gonna add up exactly the
+[01:07:56] attempts, but it's something around two
+[01:07:58] for 25. Just stop shooting, Victor.
+[01:08:00] That's not your game. [laughter] Um, but
+[01:08:04] that team can kind of play with five
+[01:08:05] out. It doesn't phase them. They played
+[01:08:07] up early in the season. Remember that
+[01:08:09] back toback they won double OT at San
+[01:08:11] Diego State and then triple OT at USC
+[01:08:13] when USC actually had a pulse. That was
+[01:08:16] an impressive turnaround playing up
+[01:08:17] against good competition. I think that's
+[01:08:20] a dangerous game for Nebraska and a lot
+[01:08:22] of it always kind of flew in the face of
+[01:08:25] their 200 run to start the season that
+[01:08:28] they were high variance because they
+[01:08:30] take so many threes and they concede so
+[01:08:31] many threes. But I I'm kind of buying
+[01:08:35] Troy giving them a a tough game. I said
+[01:08:38] on the three-man weed pot I love like
+[01:08:40] first to 15 here. I think Troy can,
+[01:08:42] >> you know, jump out, get a couple of
+[01:08:44] shots in early and and maybe then
+[01:08:45] Nebraska settles in. But, uh, yeah, I I
+[01:08:48] I kind of buy that one being close
+[01:08:50] despite those recent rankings you cited.
+[01:08:53] >> Uh, have you heard Scott Cross talk?
+[01:08:56] >> Uh, I remember him talking about where
+[01:08:58] where did they stop on the way home from
+[01:09:01] their win or their conference tournament
+[01:09:02] win? I can't. It wasn't.
+[01:09:03] >> It was some bar in Pensacola.
+[01:09:06] >> Okay.
+[01:09:06] >> But his his voice I could listen to him
+[01:09:08] read the phone book, but I'm picturing
+[01:09:10] him just saying, "Victor, cut that
+[01:09:12] out." Something like that. like just
+[01:09:15] telling him to stop taking threes. He I
+[01:09:18] love talk.
+[01:09:20] >> He's good at a lot of other things. Stop
+[01:09:22] shooting 21% from three. That's all we
+[01:09:24] ask. [laughter]
+[01:09:25] >> My third number here for the third pod,
+[01:09:28] 39th.
+[01:09:30] That's UNCC's ranking since Caleb Wilson
+[01:09:32] got hurt. Neither their offense nor
+[01:09:34] their defense rank in the top 40
+[01:09:36] nationally.
+[01:09:37] VCU during that same span of time is
+[01:09:39] 29th. Uh there's already a lot that I
+[01:09:42] don't like about UNCC. They don't force
+[01:09:44] turnovers. They don't suppress shot
+[01:09:45] volume defensively well at all. They
+[01:09:47] have a like kind of an alarming number
+[01:09:49] of defensive rebounds against good
+[01:09:50] opponents or I guess offensive rebounds.
+[01:09:52] On the other end, uh against quad one
+[01:09:54] and two competition, there were just
+[01:09:57] five top 25 net teams this year uh to
+[01:09:59] finish with a negative combined rebound
+[01:10:01] and turnover margin. It was Alabama,
+[01:10:03] Texas Tech, Kansas, the Badgers, and
+[01:10:06] North Carolina. um against top 100 in
+[01:10:10] competition only. This is 37 VCU playing
+[01:10:12] 34 UNCC and that latter number included
+[01:10:14] a lot of Caleb Wilson games in it. I'm
+[01:10:18] selling the Tar Hills pretty hard here.
+[01:10:20] I'm wondering if there's a little bit
+[01:10:23] because I didn't I have not seen many
+[01:10:25] people actually take outside of like you
+[01:10:27] and I or like a Anthony Dundo type take
+[01:10:30] VCU. And I wonder if there's some buyer
+[01:10:32] remorse surrounding last year with VCU
+[01:10:35] losing to BYU when they were quite good
+[01:10:36] upset candidates. Um I would suggest to
+[01:10:40] those people that one, it's a different
+[01:10:42] coach,
+[01:10:43] and two, this UNCC team is nowhere near
+[01:10:46] as good as that uh BYU team was,
+[01:10:48] especially with how good BO is playing
+[01:10:50] down the stretch of that year. It's the
+[01:10:52] reverse logic this year. Like I look at
+[01:10:53] Yahoo right now. North Carolina uh is a
+[01:10:57] more popular pick to win their round of
+[01:11:00] 64 game than Louisville, which genuinely
+[01:11:03] surprises me. When I see that BYU is
+[01:11:05] 80%, I can actually rationalize that
+[01:11:07] because a lot of normies will just see
+[01:11:09] first four and not even think about it.
+[01:11:11] They'll just pick like the team that
+[01:11:12] exists over the hypothetical team that
+[01:11:15] doesn't.
+[01:11:16] >> But like UNCC's opponent exists and is
+[01:11:19] arguably better than them right now.
+[01:11:22] Yeah, I mean just based like not not to
+[01:11:25] make it like betting spreads, but that's
+[01:11:26] a two-point spread and Louisville South
+[01:11:29] Florida is five and a half. Like
+[01:11:30] mathematically VCU is more likely to
+[01:11:33] win. I would add that you mentioned how
+[01:11:36] North Carolina's not playing that well.
+[01:11:38] They're 350th in momentum per hometrics.
+[01:11:40] >> They're also 364th in away from home
+[01:11:43] ranking. Like this team has not been the
+[01:11:45] same outside of Chapel Hill. I know they
+[01:11:48] played with Clemson in the ACC
+[01:11:50] tournament, but Clemson had just lost
+[01:11:51] Carter Welling to a torn ACL. It's not
+[01:11:53] like they were suddenly this full
+[01:11:55] strength team. I'm a big buyer of VCU.
+[01:11:58] I'm going to run it back after I was on
+[01:11:59] VCU last year. Picked them to beat BYU.
+[01:12:02] It was very similar situation. 611 game
+[01:12:05] like I think basically a two-point
+[01:12:06] spread. Got red-hot VCU coming in here.
+[01:12:10] I'm I'm going back to the well there. I
+[01:12:12] just don't think Carolina has got the
+[01:12:15] the right I don't know the right
+[01:12:18] >> style and
+[01:12:20] >> Yeah, exactly. Uh and I I think Terren
+[01:12:22] Hill has a huge game off the bench
+[01:12:23] against that drop coverage. Like he just
+[01:12:25] comes in and
+[01:12:26] >> takes a bunch of jumpers off the bounce
+[01:12:28] and and that's what powers VCU to a win.
+[01:12:30] >> Uh one more note on this uh away from
+[01:12:33] home only ratings at Torvvic. Uh VCU
+[01:12:35] 32nd, UNCC 43rd and again several of
+[01:12:38] those UNCC games include Wilson.
+[01:12:41] >> Yeah. Yeah, Wilson was rather important
+[01:12:43] for this team for a long long time.
+[01:12:45] >> Yeah. All right. Final ranking or rating
+[01:12:48] or stat, whatever you want to call it
+[01:12:50] here from the South region. I've got two
+[01:12:54] surrounding the same team and they both
+[01:12:55] apply here. 18 for19 and 13 for 19.
+[01:13:00] The So John Gasaway's shot volume index,
+[01:13:02] which we've referenced many times on
+[01:13:04] here. If you're plus 10 or higher, you
+[01:13:07] are in seriously elite company.
+[01:13:10] Houston is one of 19 one or two seeds
+[01:13:14] since 2002 who've combined a plus 10 or
+[01:13:17] greater shot volume index with a top 10
+[01:13:19] ken pom ranking.
+[01:13:21] >> These teams 18 for9 in making the Sweet
+[01:13:24] 16, 13 for 19 in making the Elite 8.
+[01:13:27] >> That's pretty damn good. And so I this
+[01:13:31] also touches on another team.
+[01:13:34] >> Iowa State applies here as well. They
+[01:13:36] are also plus 10 and top 10. So, think
+[01:13:38] about that for bracket purposes. But I
+[01:13:41] bring this up because Houston is most
+[01:13:44] likely to play Illinois in the Sweet 16.
+[01:13:47] And whereas I really do enjoy this
+[01:13:48] Illinois team a lot and they're quite
+[01:13:50] fun, one through four seeds with minus
+[01:13:52] one or worse turnover margins per 100
+[01:13:54] win games less than expected in my
+[01:13:57] database. Illinois is almost at minus
+[01:13:59] two uh per 100 this year. Uh the teams
+[01:14:02] that apply this year, interestingly,
+[01:14:04] Michigan, but also Florida, Michigan
+[01:14:07] State, and Kansas. Uh just not like I I
+[01:14:11] definitely think Illinois is closer to
+[01:14:13] the MSU Kansas tier than the Michigan
+[01:14:14] Florida tier. Uh not great company to be
+[01:14:17] in. I am riding with the Cougars once
+[01:14:20] again, especially because these are
+[01:14:21] functional home games for them. I will
+[01:14:23] note for people who were and Gary Parish
+[01:14:26] had a really long complaint about this
+[01:14:27] on the if college basketball show. For
+[01:14:29] people complaining about this, I do
+[01:14:31] suggest that you think long and hard
+[01:14:34] about the size of Houston's fan base and
+[01:14:36] the size of Houston's alumni base,
+[01:14:38] neither of which are all that large. I
+[01:14:40] mean, you watch games at the Fertitta
+[01:14:41] Center and even against great opponents,
+[01:14:43] it is barely full. It only fits about 9
+[01:14:47] to 10k, I think, at home, something like
+[01:14:50] that.
+[01:14:50] >> Yeah. They built it smaller
+[01:14:52] intentionally. Yeah.
+[01:14:54] >> Yeah. It's not a big arena. And even
+[01:14:56] last year when the final four was in San
+[01:14:58] Antonio and you and I were both there, I
+[01:15:00] would say even for Monday, there were
+[01:15:02] more Florida fans than Houston fans. And
+[01:15:04] that was despite that being a quite
+[01:15:05] short drive. It's just not a giant fan
+[01:15:08] base the way that like a Florida is or
+[01:15:10] even an Illinois is. So I I just
+[01:15:13] >> for center 7 7,000
+[01:15:15] >> 7,000. So like kind of like a higher end
+[01:15:17] mid- major stadium, which is what it was
+[01:15:19] intend originally intended for. But I I
+[01:15:22] don't buy that being this gigantic homec
+[01:15:25] court advantage for them. So I it wasn't
+[01:15:28] a big deal last year when Purdue played
+[01:15:29] Houston functionally at home. And I
+[01:15:31] don't think it's going to be a big deal
+[01:15:32] this year. Houston gets to play Illinois
+[01:15:33] andor whoever comes from the upper half
+[01:15:35] of the bracket at home.
+[01:15:37] >> Yeah, I I I buy that as well. Maybe
+[01:15:40] incremental advantage, but it's not like
+[01:15:42] going to swing the ma the matchup. I saw
+[01:15:44] some Florida fans like we had to play
+[01:15:46] quasi road game against them in the
+[01:15:47] final four last year. That's not really
+[01:15:49] what that was. Also, this is much closer
+[01:15:52] to a road game. It's actually in
+[01:15:54] Houston. But Houston's advantages, to
+[01:15:56] your point, are much more statistical in
+[01:15:59] their turnover margin dominance, their
+[01:16:00] offensive rebounding. It's it's not
+[01:16:03] going to be they win because of the
+[01:16:04] crowd. They win because of having three
+[01:16:06] guys who started the national title game
+[01:16:07] last year and dominance with a NBA
+[01:16:11] prospect, guard, lottery pick, and
+[01:16:14] Flemings. Samson, a great coach. Um,
+[01:16:17] yeah, I Houston I I was very impressed
+[01:16:22] by the fact that I know they got down
+[01:16:23] big against Arizona in the Big 12 title
+[01:16:25] game, then they put on a 140 run on the
+[01:16:27] Wildcats, get back in that game, showed
+[01:16:30] a little more of the high-end potential.
+[01:16:32] I think if they'd have gotten double
+[01:16:34] digit, lost that game, and never really
+[01:16:36] competed in the second half, I would
+[01:16:38] have faded a little bit of my faith in
+[01:16:39] them, would have lost some of it. But I
+[01:16:41] like seeing that comeback attempt and
+[01:16:44] I'm buying Houston out of this region.
+[01:16:46] Spoiler. I'm I'm going to be picking the
+[01:16:48] Cougars. I don't I seems like Will might
+[01:16:50] be hinting at that direction as well. Uh
+[01:16:53] I did have a realization the other day.
+[01:16:55] I guess I'll go two realizations. One is
+[01:16:57] that outside of Tennessee, I've watched
+[01:16:59] Houston more than any other team postco.
+[01:17:02] And this is despite my father going to
+[01:17:03] Michigan and Michigan being really good
+[01:17:05] in this stretch. I have probably missed
+[01:17:07] like I miss like maybe five Houston
+[01:17:09] games a year. So, I don't know if I'm a
+[01:17:11] fan now or like I'm at least 27% Cougar
+[01:17:14] and as a male that is important. Um, but
+[01:17:18] huge
+[01:17:18] >> I believe
+[01:17:20] so Houston's 140 run I know is the
+[01:17:24] largest of any team against Arizona this
+[01:17:26] year and I think Evan tweeted this out.
+[01:17:28] It was either the first or second kill
+[01:17:30] shot Arizona had given up all season.
+[01:17:33] >> I think it was the second. I I did the
+[01:17:35] West region with him on uh on his pod
+[01:17:37] and I think they gave one up in garbage
+[01:17:39] time of a blowout victory. Okay. At some
+[01:17:41] point, maybe in a byame earlier in the
+[01:17:43] season. Yep.
+[01:17:43] >> So like a re the first real kill shot by
+[01:17:46] a real opponent against that does speak
+[01:17:48] to me that Houston has that power to run
+[01:17:51] with just about anybody.
+[01:17:53] >> Yep. I was I was just as impressed by
+[01:17:55] that that same statistic. So very very
+[01:17:58] notable. Uh all right, Will, let's quick
+[01:18:00] do final four and title picks. Let's
+[01:18:03] give those people Oh, and then I'm gonna
+[01:18:04] make you Will Stradamus the Tuesday
+[01:18:06] first four games.
+[01:18:08] >> All right, I'm gonna go with my final
+[01:18:09] four real quick and then we'll close
+[01:18:11] with yours. I'm going uh clockwise here.
+[01:18:15] Duke, I've got out of the East region. I
+[01:18:18] just can't identify who would beat them
+[01:18:20] and I understand like we have the whole
+[01:18:22] Foster and Gangba entry. A lot of
+[01:18:24] smarties are fading Duke right now and
+[01:18:27] good for them. I'm happy for you. You
+[01:18:29] know, you're you can you know talk you
+[01:18:32] can confess to that. I would imagine
+[01:18:33] with Catholic priests. I didn't grow up
+[01:18:34] Catholic. You would know better. Um but
+[01:18:37] did you Yeah, you did. Right.
+[01:18:39] >> I did. Yeah. K through eight, baby. Oh,
+[01:18:40] yeah.
+[01:18:41] >> Okay. Because I was figuring Wisconsin
+[01:18:42] is just automatic. Um but [laughter]
+[01:18:45] it's like here it was just like it was
+[01:18:47] automatic you were Baptist or whatever.
+[01:18:49] Um but yeah, Duke wise I like I don't
+[01:18:52] buy the Kansas thing like you St. John's
+[01:18:55] is an interesting matchup, but again,
+[01:18:56] I'm having a hard time. Like, I think
+[01:18:58] St. John's is a complicated path there.
+[01:19:01] And once they actually get there, it
+[01:19:02] feels like Duke is just better. Um, the
+[01:19:06] best and most interesting match up from
+[01:19:08] the bottom half is MSU, but MSU is
+[01:19:11] imperfect. I really hated how they
+[01:19:14] played against UCLA. I thought that was
+[01:19:16] an awful performance. Uh, and their
+[01:19:20] entire vibe right now just doesn't seem
+[01:19:23] great to me that like their you got a
+[01:19:28] nut kicker which is not great. Uh, you
+[01:19:30] never really want to have that on your
+[01:19:31] team. And the the turnover margin thing,
+[01:19:35] I understand that they are two-way
+[01:19:36] dominant on the boards which is awesome,
+[01:19:38] but at some point the fact that you give
+[01:19:40] up a ton of three-point attempts and
+[01:19:42] aren't really very good at perimeter
+[01:19:43] pressure defensively is going to matter.
+[01:19:46] and whether that's Louisville or, you
+[01:19:49] know, potentially a Yukon game or
+[01:19:51] potentially even UCLA again, like I
+[01:19:54] don't really love that for them. So, I
+[01:19:55] got Duke coming out of that side. I am
+[01:19:58] going Michigan on the uh Sorry, wait,
+[01:20:01] I'm out of spot here. I'm going to go
+[01:20:03] Purdue from the West region.
+[01:20:05] >> Okay.
+[01:20:06] >> Uh I don't love it, but a lot of people
+[01:20:09] are really fading Purdue right now. I
+[01:20:10] would also consider Gonzaga if you're
+[01:20:12] looking for a bracket value play here.
+[01:20:14] Purdue, Purdue, Oregon would be my pick
+[01:20:16] here. And it really goes to show you how
+[01:20:19] tired I am. I wrote the house stats and
+[01:20:21] history post and somebody just text me
+[01:20:22] and said, "You picked Purdue to lose
+[01:20:24] twice." Uh, so uh that one I mean harsh
+[01:20:29] but fair. Uh if they lose twice, it
+[01:20:31] would be the first time ever. Um I think
+[01:20:34] >> it would be a new Matt Painter
+[01:20:35] accomplishment.
+[01:20:36] >> Emotionally, you can for sure lose
+[01:20:37] twice. Um so I I'm picking Purdue. I
+[01:20:42] would also consider Gonzaga. I reserve
+[01:20:44] the right to change that. Michigan out
+[01:20:46] of the Midwest. Michigan has somehow out
+[01:20:49] of nowhere become the one seed with plus
+[01:20:51] bracket value, which I never anticipated
+[01:20:53] would happen this entire season. I
+[01:20:55] thought the whole way that of all teams
+[01:20:57] it would be Arizona because people
+[01:20:59] wouldn't be in the Arizona bandwagon or
+[01:21:01] they would start thinking about, you
+[01:21:02] know, Tommy Lloyd hasn't made a final
+[01:21:04] four or whatever. But no, statistically
+[01:21:06] Michigan is your best value pick among
+[01:21:08] the ones.
+[01:21:09] >> Yep.
+[01:21:09] >> Uh and then I've got Houston out of the
+[01:21:11] South. uh title game. I am going
+[01:21:13] Michigan over Duke. As I mentioned,
+[01:21:15] Michigan is this year's bracket value
+[01:21:16] team of the year. Somehow the pick to
+[01:21:19] win it in just 14% of brackets despite
+[01:21:21] being between 18 and 27% odds wise to
+[01:21:23] win it elsewhere.
+[01:21:25] >> All right, there you have it. Mr. Will
+[01:21:27] Warren's picks for the Final Four in the
+[01:21:30] title game. I am going to make that leap
+[01:21:32] in the East to start off my final four
+[01:21:34] and go with St. John's over Duke.
+[01:21:36] >> I my biggest like I think they can beat
+[01:21:39] Duke if they play Duke. I'm worried they
+[01:21:41] will lose to Northern Iowa and it will
+[01:21:42] look stupid on day one. So,
+[01:21:45] unfortunately, I have to run that risk.
+[01:21:47] I guess it's a Friday night game, so day
+[01:21:48] two. But I I'll I'll take the chance. I
+[01:21:52] think St. John's can make the run there.
+[01:21:54] I'm going with Arizona out of the West.
+[01:21:56] I like the setup for them. The fact that
+[01:21:58] they're not going to face an elite
+[01:22:00] defense, think they can outsize Purdue.
+[01:22:03] Gonna ride with you on Michigan in the
+[01:22:05] Midwest. thought about Iowa State
+[01:22:08] forcing a bunch of turnovers, getting
+[01:22:09] into their decision- making a little
+[01:22:10] bit, but uh I'm going to stick with
+[01:22:12] Michigan as well. And then Houston in
+[01:22:15] the South. So, we've got the two the
+[01:22:17] same on the bottom of the bracket and
+[01:22:19] differing on top. My title picks going
+[01:22:21] to be Arizona over Houston rematch of
+[01:22:23] the Big 12 title game. Can Arizona get a
+[01:22:27] triple sweep of Kelvin Samson? Would
+[01:22:29] this be the most depressing back-to-back
+[01:22:31] title game losses? It's like the Buffalo
+[01:22:34] Bills of of college basketball if this
+[01:22:36] were to happen. So that would be
+[01:22:38] depressing for Houston, but just buying
+[01:22:41] the Arizona team and and the the high
+[01:22:43] floor plus high ceiling now they've got
+[01:22:45] their their whole eightman rotation
+[01:22:46] healthy. So there you have it. That's
+[01:22:49] our picks. Let's close well with Tuesday
+[01:22:51] night in the playin games. We got NC
+[01:22:54] State and Texas. We've also got the
+[01:22:57] UNMBC Howard game which I am actually
+[01:22:59] excited for. I'm like kind of pumped for
+[01:23:01] that one.
+[01:23:03] Uh but and feel free to pick any other
+[01:23:05] NIT game that intrigues you.
+[01:23:07] >> Quickly, did you realize Houston's
+[01:23:09] already lost back-to-back title games
+[01:23:11] before?
+[01:23:12] >> Oh god, no. Did the slam jam state and
+[01:23:15] Georgetown?
+[01:23:17] >> Geez. Okay. Well, sorry, Houston. Sorry.
+[01:23:20] >> I did went I did go looking because
+[01:23:21] obviously Butler is the last team to do
+[01:23:23] that back toback, but I didn't realize
+[01:23:24] Houston had done it twice before.
+[01:23:27] >> Yeah, I didn't either.
+[01:23:28] >> That would be a huge bummer. Okay,
+[01:23:29] tonight's games I am going to go
+[01:23:34] I think I picked Howard to win the first
+[01:23:37] four game over UNMBC. They're gonna
+[01:23:39] generate a couple extra possessions and
+[01:23:40] in a dead even game that does matter to
+[01:23:42] me. It was the same reason I took
+[01:23:44] Alabama State over I think St. Francis
+[01:23:46] last year. Um I I would lean them. I
+[01:23:50] don't really feel like that's one with a
+[01:23:52] ton of separation in either distance. Uh
+[01:23:54] so any little tiny margin I can take,
+[01:23:57] I'll take it. Uh the other one I am
+[01:24:00] going to lean Texas over NC State which
+[01:24:02] I don't love. Um the the vibes for both
+[01:24:06] are bad, but one of them will be
+[01:24:09] >> by terrible.
+[01:24:10] >> So that kind of that little region
+[01:24:14] actually if Gonzaga weren't in it, it
+[01:24:16] would remind me so much of the um who is
+[01:24:19] it? Wisconsin, LSU, Iowa State grouping
+[01:24:21] from four years ago where was three just
+[01:24:24] awful basketball teams. But somebody was
+[01:24:26] legally required to make the Sweet 16
+[01:24:28] and it was Iowa State.
+[01:24:30] >> Uh, somebody is legally required to go
+[01:24:32] to the Sweet 16 from that pod. It's
+[01:24:34] obviously going to be Gonzaga as your
+[01:24:35] most likely pick, but if like Texas or
+[01:24:38] NC State goes in a run, nobody's going
+[01:24:39] to be shocked, but I would pick Texas.
+[01:24:42] Shot volume tracks as a pure draw. So,
+[01:24:44] I'm going to lean Texas because they are
+[01:24:46] plus 6% from two-point land against a
+[01:24:49] tougher schedule than NC State.
+[01:24:52] When all else is equal, I kind of go
+[01:24:55] that route. But if you were to gonna
+[01:24:58] tell me that NC State wins it just by
+[01:25:00] having the much better back court,
+[01:25:01] doesn't really shock me either.
+[01:25:03] >> Yeah, that that you were talking bad
+[01:25:06] vibes there. I I get a little bit of
+[01:25:07] flashback to the 2021 UCLA team that
+[01:25:11] lost four straight entering the NCA
+[01:25:13] tournament, gets a playing game, and
+[01:25:15] then goes on this shotmaking tear and
+[01:25:17] makes the final four, nearly beats
+[01:25:18] undefeated Gonzaga. They I just look
+[01:25:21] back at this because it's remarkable to
+[01:25:23] me. They started the NCA tournament 45th
+[01:25:24] in Ken
+[01:25:25] >> Pound.
+[01:25:26] >> They finished it 13th because the Pack
+[01:25:29] 12 everybody played good in the
+[01:25:31] postseason. Like zero Oregon State made
+[01:25:32] the Elite 8.
+[01:25:33] >> US I remember doing the Yeah, I remember
+[01:25:36] doing the math that like every team shot
+[01:25:37] 50% from three in the postseason. It was
+[01:25:40] this rising tide like Utah didn't play a
+[01:25:41] postseason game and they rose 25 spots
+[01:25:43] in Ken Pal or something like that.
+[01:25:45] [laughter]
+[01:25:45] It was completely absurd. Uh, but yeah,
+[01:25:49] maybe maybe you get one of these bad
+[01:25:50] vibe teams to get hot like UCLA did that
+[01:25:52] year. Both. I mean, NC State's got like
+[01:25:55] the swagger to suddenly start playing
+[01:25:58] well and they're start talking crap to
+[01:26:00] the the crowd. I'll pick NC State and I
+[01:26:04] will pick UNMBC. So, we're we're
+[01:26:05] headto-head.
+[01:26:06] >> Sweet. NIT, I'll take a couple here. I
+[01:26:09] like UC Irvine to take down UNLV. I
+[01:26:11] think UCI is just going to be a little
+[01:26:13] more motivated. Uh especially given I
+[01:26:17] mean they have a reasonable path to go
+[01:26:18] back-toback NIT Final Fours which would
+[01:26:20] be pretty cool. Uh others I think Auburn
+[01:26:24] takes care of South Alabama. I don't
+[01:26:26] think that I think it will be close
+[01:26:28] though. I wouldn't be shocked if that's
+[01:26:29] like weirdly close. The the other game
+[01:26:33] among these that I'm actually quite
+[01:26:34] looking forward to uh Stephen F. Austin
+[01:26:36] Tulsa seems like a lot of fun. I could
+[01:26:38] really get into that. I would take Tulsa
+[01:26:40] by like six or so, but seems like a
+[01:26:42] really interesting game. I I can't lie
+[01:26:45] to you and be like, I'm gonna watch
+[01:26:47] these over the first four, but I will at
+[01:26:49] least flip the channel during halftime.
+[01:26:52] Yep. I'll keep an eye on them. I'm going
+[01:26:53] to be I fly to Vegas in four hours, five
+[01:26:56] hours. I will probably lay a wager down.
+[01:26:58] What What do you think real quick of
+[01:27:00] Yale after they blew the Ivy title game?
+[01:27:04] >> Are they gonna do this one against UNC
+[01:27:06] Wilmington?
+[01:27:06] >> Disgusting. Upsetting. So, I'm I'm going
+[01:27:10] to save it for a separate show, my rant
+[01:27:12] on why the IV tournament shouldn't
+[01:27:13] exist. But I do kind of think like UNCCW
+[01:27:16] could run away with that just because
+[01:27:17] Yale I mean they were literally what 10
+[01:27:21] seconds from a tournament bid. I had for
+[01:27:25] some reason I I had the uh Okay, it's
+[01:27:27] not for some reason. It's because I had
+[01:27:28] a bet on the game, but I had the the
+[01:27:30] live odds up. They were minus like
+[01:27:32] 20,000 to to win with 11 seconds left.
+[01:27:35] Up four. It was an epic collapse where
+[01:27:39] they just made every wrong decision. I
+[01:27:40] mean, they made their free throws and
+[01:27:42] still blew it.
+[01:27:42] >> Yeah. So, I But now, I will say there's
+[01:27:45] an opposite end to this of like could
+[01:27:48] UNCW be really demoralized after getting
+[01:27:50] blown out as the one seed. But I do
+[01:27:53] agree like Yale's
+[01:27:56] Yale's vibes are going to be much worse.
+[01:27:57] Like how do you turn around
+[01:28:00] two days later for a home game against a
+[01:28:02] fairly good UNCCW team after blowing
+[01:28:05] what looked like a surefire tournament
+[01:28:07] bid? That's that's going to be a really
+[01:28:09] hard one to rationalize.
+[01:28:11] >> Yep. All right, that wraps it up. Any
+[01:28:13] any final thoughts, Will, on either the
+[01:28:15] bracket or the tournament or I'm not
+[01:28:17] going to have you do your IV tournament
+[01:28:19] rant here, but we but uh anything else
+[01:28:21] for the people before we let them go
+[01:28:23] watch the NCA tournament? Uh top game of
+[01:28:25] the round 64. What would you have? Like
+[01:28:28] your favorite.
+[01:28:29] >> Oh boy. It might be Louisville South
+[01:28:31] Florida. I'm really pumped for that one.
+[01:28:35] Gosh. Obviously VCU UNCC is a really
+[01:28:38] tight spread. It's not Clemson Iowa.
+[01:28:40] I'll tell you that much. [laughter]
+[01:28:43] >> You know what? I'll go Texas Tech Akan.
+[01:28:45] Texas Tech Akan.
+[01:28:46] >> I'm gonna go Georgia St. Louis. I don't
+[01:28:48] think either of these teams can stop the
+[01:28:50] other for a second. Uh Georgia's press
+[01:28:54] defense is fun and gives up a billion
+[01:28:56] transition points. St. Louis can't stop
+[01:28:58] a soul right now. So I that one if you
+[01:29:02] were like that game's going to be an 88
+[01:29:04] to 86 final could completely believe it.
+[01:29:07] I think that's going to be a lot of fun
+[01:29:08] to watch. And it's in the like I I
+[01:29:11] always think of the Thursday and Friday
+[01:29:12] late nights, especially in the Eastern
+[01:29:14] time, as the loopy zone where it's like
+[01:29:17] something weird usually happens in one
+[01:29:19] of those late windows and it's like
+[01:29:22] either a major upset or like a game that
+[01:29:24] just goes completely bonkers and it
+[01:29:26] feels like Georgia Slooh is this year's
+[01:29:28] game. I think the Murray State San
+[01:29:31] Francisco was a late night game on a
+[01:29:33] Thursday and also the uh late night
+[01:29:35] Friday game, the Florida Colorado game
+[01:29:37] that just went
+[01:29:38] >> completely nuts. I think both teams hit
+[01:29:40] triple digits in that game uh a few
+[01:29:42] years back was a 7-10 game that was late
+[01:29:43] night on a Friday. So yeah, I I could
+[01:29:45] definitely see the after dark getting
+[01:29:47] weird between those two.
+[01:29:48] >> So and just for a quick example looking
+[01:29:50] back here, Thursday night 2024, that was
+[01:29:54] the Samford, Kansas game, which was
+[01:29:57] insane. Thursday night 2023. Uh just a
+[01:30:01] quick look through it here.
+[01:30:03] >> Nothing absurd with that one, but
+[01:30:05] Tennessee did nearly blow a 20point lead
+[01:30:07] to Louisiana. Houston had a weird
+[01:30:10] struggle fest with Northern Kentucky.
+[01:30:12] >> Oh, that's right. That game was weirdly
+[01:30:14] I was like, "Wow, are we going to lose
+[01:30:16] one seed to 16 here?"
+[01:30:18] >> Yeah, almost two in the same tournament.
+[01:30:19] And then like you mentioned 2022, San
+[01:30:21] Francisco Murray, but also Akan nearly
+[01:30:24] upsetting UCLA. So the late window on
+[01:30:27] Thursday is unusually potent.
+[01:30:30] >> Yeah. And I I I'm almost positive
+[01:30:33] Kentucky St. Peters was a later Thursday
+[01:30:35] night game, too. I
+[01:30:36] >> think so.
+[01:30:38] >> So, uh maybe late afternoon or
+[01:30:40] something. But all right, that wraps it
+[01:30:41] up for us here. We went long because we
+[01:30:43] want people to have content before the
+[01:30:45] NCAA tournament.
+[01:30:47] >> Happy to talk all four regions with
+[01:30:49] Will. Thank you to Trillley Donovan for
+[01:30:52] our platform here and for setting up
+[01:30:54] Basket Under Review. We love it. We're
+[01:30:56] happy to contribute it to it all season.
+[01:30:58] We'll have some more, you know, more
+[01:30:59] like a season ending referendum after
+[01:31:01] the NCA tournament. Uh, but thank you
+[01:31:04] everybody for tuning in. Shout out to
+[01:31:05] Corey Aldis, our producer behind the
+[01:31:07] scenes. Sam Freyer for all the graphics
+[01:31:09] at Bas Review and his team of course.
+[01:31:12] Uh, to Homefield Apparel for sponsoring
+[01:31:14] the show. And again, to all you
+[01:31:16] listeners for tuning in, thank you.
+[01:31:17] Hopefully you enjoyed this episode.
+[01:31:19] We'll be back next week breaking down
+[01:31:20] the Sweet 16 and Elite 8. Until then,
+[01:31:24] enjoy the basketball.
+[01:31:27] [music]

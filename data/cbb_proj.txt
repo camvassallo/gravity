@@ -1,0 +1,262 @@
+Team	Second Round	Third Round	Fourth Round	Quarterfinal Round	Semifinal Round	Final Round	WIN
+% to Reach	% to Reach	% to Reach	% to Reach	% to Reach	% to Reach
+Blue Devils
+Duke
+Blue Devils
+95%	84%	70%	56%	40%	27%
+Wolverines
+Michigan
+Wolverines
+94%	70%	56%	38%	24%	14%
+Wildcats
+Arizona
+Wildcats
+95%	74%	57%	36%	21%	11%
+Gators
+Florida
+Gators
+98%	72%	49%	28%	13%	7%
+Bulldogs
+Gonzaga
+Bulldogs
+92%	69%	45%	25%	13%	7%
+Cyclones
+Iowa St.
+Cyclones
+92%	67%	45%	24%	13%	6%
+Fighting Illini
+Illinois
+Fighting Illini
+92%	63%	36%	21%	9%	5%
+Cougars
+Houston
+Cougars
+92%	61%	34%	20%	9%	4%
+Boilermakers
+Purdue
+Boilermakers
+92%	64%	32%	15%	7%	3%
+Huskies
+UConn
+Huskies
+87%	64%	36%	13%	6%	2%
+Cavaliers
+Virginia
+Cavaliers
+85%	51%	23%	10%	4%	1%
+Cardinals
+Louisville
+Cardinals
+64%	37%	22%	7%	3%	1%
+Spartans
+Michigan St.
+Spartans
+80%	42%	23%	8%	3%	1%
+Commodores
+Vanderbilt
+Commodores
+68%	40%	17%	8%	3%	<1%
+Billikens
+Saint Louis
+Billikens
+61%	20%	12%	6%	2%	<1%
+Red Storm
+St. John's (NY)
+Red Storm
+70%	45%	12%	6%	3%	<1%
+Gaels
+Saint Mary's (CA)
+Gaels
+69%	30%	14%	7%	2%	<1%
+Razorbacks
+Arkansas
+Razorbacks
+78%	48%	17%	7%	3%	<1%
+Huskers
+Nebraska
+Huskers
+83%	44%	18%	7%	2%	<1%
+Volunteers
+Tennessee
+Volunteers
+66%	33%	14%	5%	2%	<1%
+Red Raiders
+Texas Tech
+Red Raiders
+59%	34%	10%	4%	2%	<1%
+Crimson Tide
+Alabama
+Crimson Tide
+70%	36%	10%	4%	1%	<1%
+Aggies
+Utah St.
+Aggies
+63%	18%	9%	4%	1%	<1%
+Jayhawks
+Kansas
+Jayhawks
+77%	37%	8%	3%	1%	<1%
+Cougars
+BYU
+Cougars
+61%	20%	9%	3%	<1%	<1%
+Hurricanes
+Miami (FL)
+Hurricanes
+67%	26%	9%	3%	1%	<1%
+Tar Heels
+North Carolina
+Tar Heels
+52%	19%	7%	3%	<1%	<1%
+Hawkeyes
+Iowa
+Hawkeyes
+56%	17%	8%	3%	<1%	<1%
+Broncos
+Santa Clara
+Broncos
+51%	16%	7%	2%	<1%	<1%
+Wildcats
+Kentucky
+Wildcats
+49%	15%	7%	2%	<1%	<1%
+Rams
+VCU
+Rams
+48%	16%	6%	2%	<1%	<1%
+Bulldogs
+Georgia
+Bulldogs
+39%	9%	5%	2%	<1%	<1%
+Bulls
+South Fla.
+Bulls
+36%	16%	7%	2%	<1%	<1%
+Buckeyes
+Ohio St.
+Buckeyes
+60%	10%	5%	2%	<1%	<1%
+Badgers
+Wisconsin
+Badgers
+50%	23%	6%	2%	<1%	<1%
+Panthers
+High Point
+Panthers
+50%	23%	6%	2%	<1%	<1%
+Zips
+Akron
+Zips
+41%	21%	5%	2%	<1%	<1%
+Bruins
+UCLA
+Bruins
+63%	23%	8%	2%	<1%	<1%
+Tigers
+Clemson
+Tigers
+44%	11%	4%	1%	<1%	<1%
+Cowboys
+McNeese
+Cowboys
+32%	13%	4%	<1%	<1%	<1%
+Longhorns
+Texas
+Longhorns
+39%	9%	3%	<1%	<1%	<1%
+Mustangs
+SMU
+Mustangs
+54%	20%	8%	2%	<1%	<1%	<1%
+Wildcats
+Villanova
+Wildcats
+37%	7%	3%	<1%	<1%	<1%
+Aggies
+Texas A&M
+Aggies
+31%	8%	2%	<1%	<1%	<1%
+Panthers
+UNI
+Panthers
+30%	14%	2%	<1%	<1%	<1%
+Horned Frogs
+TCU
+Horned Frogs
+40%	5%	2%	<1%	<1%	<1%
+Tigers
+Missouri
+Tigers
+33%	8%	2%	<1%	<1%	<1%
+Knights
+UCF
+Knights
+37%	10%	3%	<1%	<1%	<1%
+RedHawks
+Miami (OH)
+RedHawks
+46%	14%	5%	1%	<1%	<1%	<1%
+Pride
+Hofstra
+Pride
+30%	9%	1%	<1%	<1%	<1%
+Rainbow Warriors
+Hawaii
+Rainbow Warriors
+22%	7%	1%	<1%	<1%	<1%
+Bison
+North Dakota St.
+Bison
+20%	4%	1%	<1%	<1%	<1%
+Lancers
+California Baptist
+Lancers
+23%	5%	<1%	<1%	<1%	<1%
+Paladins
+Furman
+Paladins
+13%	4%	<1%	<1%	<1%	<1%
+Saints
+Siena
+Saints
+5%	1%	<1%	<1%	<1%	<1%
+Raiders
+Wright St.
+Raiders
+15%	3%	<1%	<1%	<1%	<1%
+Trojans
+Troy
+Trojans
+17%	3%	<1%	<1%	<1%	<1%
+Tigers
+Tennessee St.
+Tigers
+8%	2%	<1%	<1%	<1%	<1%
+Bison
+Howard
+Bison
+6%	<1%	<1%	<1%	<1%	<1%
+Owls
+Kennesaw St.
+Owls
+8%	2%	<1%	<1%	<1%	<1%
+Quakers
+Penn
+Quakers
+8%	1%	<1%	<1%	<1%	<1%
+Vandals
+Idaho
+Vandals
+8%	1%	<1%	<1%	<1%	<1%
+Royals
+Queens (NC)
+Royals
+8%	1%	<1%	<1%	<1%	<1%
+Sharks
+LIU
+Sharks
+5%	<1%	<1%	<1%	<1%	<1%
+Panthers
+Prairie View
+Panthers
+2%	<1%	<1%	<1%	<1%	<1%

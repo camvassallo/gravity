@@ -1,0 +1,94 @@
+{
+  "method": "consensus_aggregate_with_sentiment",
+  "sources": [
+    "torvik",
+    "evan_miya",
+    "kenpom",
+    "cbb_analytics"
+  ],
+  "sentiment_applied": true,
+  "regions": {
+    "East": {
+      "winner": "Duke",
+      "path": [
+        "Duke",
+        "Ohio St.",
+        "St. John's",
+        "Kansas",
+        "Louisville",
+        "Michigan St.",
+        "UCLA",
+        "UConn",
+        "Duke",
+        "St. John's",
+        "Michigan St.",
+        "UConn",
+        "Duke",
+        "UConn",
+        "Duke"
+      ]
+    },
+    "West": {
+      "winner": "Arizona",
+      "path": [
+        "Arizona",
+        "Utah St.",
+        "Wisconsin",
+        "Arkansas",
+        "BYU",
+        "Gonzaga",
+        "Miami FL",
+        "Purdue",
+        "Arizona",
+        "Arkansas",
+        "Gonzaga",
+        "Purdue",
+        "Arizona",
+        "Purdue",
+        "Arizona"
+      ]
+    },
+    "South": {
+      "winner": "Florida",
+      "path": [
+        "Florida",
+        "Iowa",
+        "Vanderbilt",
+        "Nebraska",
+        "VCU",
+        "Illinois",
+        "Saint Mary's",
+        "Houston",
+        "Florida",
+        "Vanderbilt",
+        "Illinois",
+        "Houston",
+        "Florida",
+        "Houston",
+        "Florida"
+      ]
+    },
+    "Midwest": {
+      "winner": "Michigan",
+      "path": [
+        "Michigan",
+        "Georgia",
+        "Texas Tech",
+        "Alabama",
+        "Tennessee",
+        "Virginia",
+        "Santa Clara",
+        "Iowa St.",
+        "Michigan",
+        "Texas Tech",
+        "Virginia",
+        "Iowa St.",
+        "Michigan",
+        "Iowa St.",
+        "Michigan"
+      ]
+    }
+  },
+  "final_four": {},
+  "champion": "Michigan"
+}

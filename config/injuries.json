@@ -1,6 +1,7 @@
 {
   "2026": {
     "Alabama": [
+      "Aden Holloway",
       "Charles Bediako",
       "Collins Onyejiaka",
       "Davion Hannah"
@@ -17,7 +18,8 @@
       "Vijay Wallace"
     ],
     "Auburn": [
-      "Emeka Opurum"
+      "Emeka Opurum",
+      "KeShawn Murphy"
     ],
     "BYU": [
       "Brody Kozlowski",
@@ -184,6 +186,7 @@
     ],
     "Louisville": [
       "London Johnson",
+      "Mikel Brown",
       "Mouhamed Camara"
     ],
     "Marquette": [
@@ -312,6 +315,9 @@
     "Siena": [
       "Tasman Goodrick"
     ],
+    "SMU": [
+      "B.J. Edwards"
+    ],
     "South Carolina": [
       "Abu Yarmah",
       "Cam Scott"
@@ -414,11 +420,12 @@
   },
   "_out_pending_2026": {
     "_note": "Players currently 'Out' - review and move to main section as needed",
+    "Alabama": [
+      "Aden Holloway",
+      "Collins Onyejiaka"
+    ],
     "Arizona St.": [
       "Marcus Adams"
-    ],
-    "Arkansas": [
-      "Karter Knox"
     ],
     "Arkansas Pine Bluff": [
       "Jaquan Scott"
@@ -440,17 +447,12 @@
     ],
     "Charlotte": [
       "David Gomez",
-      "Frank Oguche"
+      "Frank Oguche",
+      "Major Freeman"
     ],
     "Creighton": [
       "Josh Townley-Thomas",
       "Liam McChesney"
-    ],
-    "Davidson": [
-      "Joe Hurlburt"
-    ],
-    "Dayton": [
-      "Evan Dickey"
     ],
     "DePaul": [
       "Jeremy Lorenz"
@@ -465,6 +467,9 @@
     "Delaware St.": [
       "Camian Shell"
     ],
+    "Duke": [
+      "Caleb Foster"
+    ],
     "Eastern Kentucky": [
       "Amarr Knox"
     ],
@@ -475,16 +480,18 @@
       "Jack Whitbourn",
       "Ryan Pettis"
     ],
-    "George Washington": [
-      "Mohamed Binzagr",
-      "Ty Bevins"
-    ],
     "Georgetown": [
       "Gabriel Landeira",
       "Hashem Asadallah"
     ],
     "Georgia St.": [
       "Clash Peters"
+    ],
+    "Gonzaga": [
+      "Braden Huff"
+    ],
+    "Howard": [
+      "Shane Frazier"
     ],
     "Idaho": [
       "Kristian Gonzalez"
@@ -507,7 +514,17 @@
       "Robert Miller"
     ],
     "La Salle": [
-      "Josue Grullon"
+      "Eric Acker"
+    ],
+    "Lehigh": [
+      "Bube Momah",
+      "Caesar Burrows"
+    ],
+    "Liberty": [
+      "Kaden Metheny"
+    ],
+    "Louisville": [
+      "Mikel Brown"
     ],
     "Loyola Chicago": [
       "Caleb Reese",
@@ -519,15 +536,20 @@
     "Marist": [
       "Jason Schofield"
     ],
-    "Maryland": [
-      "Lukas Sotell",
-      "Pharrel Payne"
+    "Maryland-Baltimore County": [
+      "Daylon Dickerson",
+      "Devin Ceaser",
+      "Jake Stout"
     ],
     "Memphis": [
       "Ashton Hardaway"
     ],
     "Miami FL": [
       "Treyvon Maddox"
+    ],
+    "Miami OH": [
+      "Blake Anderson",
+      "Leshawn Stowers"
     ],
     "Middle Tennessee": [
       "Brandon Oloumou",
@@ -538,21 +560,24 @@
     "Minnesota": [
       "Chance Stephens"
     ],
-    "Mississippi": [
-      "Koren Johnson"
-    ],
     "N.C. A&T": [
       "Zamoku Weluche-Ume"
     ],
     "NC State": [
       "Colt Langdon"
     ],
-    "New Mexico": [
-      "Kevin Patton",
-      "Milos Vicentic"
+    "Nebraska": [
+      "Henry Burt",
+      "Ugnius Jarusevicius"
     ],
     "New Orleans": [
       "James White"
+    ],
+    "Oklahoma St.": [
+      "Andrija Vukovic",
+      "Anthony Roy",
+      "Isaiah Coleman",
+      "Vyctorius Miller"
     ],
     "Oregon": [
       "Devon Pryor"
@@ -561,10 +586,9 @@
       "Ryan Altman"
     ],
     "Prairie View": [
-      "Doug Young"
-    ],
-    "Providence": [
-      "Rich Barron"
+      "Doug Young",
+      "Marcel Bryant",
+      "Ryan Bolton Jr"
     ],
     "Rhode Island": [
       "Jaymien Aponte"
@@ -576,18 +600,17 @@
       "Baye Fall",
       "Chris Nwuli"
     ],
+    "SMU": [
+      "B.J. Edwards"
+    ],
     "Sacramento St.": [
       "Jeremiah Cherry"
-    ],
-    "Saint Joseph's": [
-      "Owen Verna",
-      "Steven Solano",
-      "Will Lange"
     ],
     "San Diego": [
       "Ty-Laur Johnson"
     ],
     "San Diego St.": [
+      "Elzie Harrington",
       "Miles Heide"
     ],
     "San Francisco": [
@@ -604,16 +627,18 @@
     "Santa Clara": [
       "Gehrig Normand"
     ],
-    "Seton Hall": [
-      "Patrick Suemnick"
-    ],
     "Siena": [
       "Owen Schlager",
       "Reid Ducharme",
       "Tajae Jones"
     ],
+    "South Alabama": [
+      "Adam Olsen",
+      "Peyton Law"
+    ],
     "St. Bonaventure": [
       "Amar'e Marshall",
+      "Ilia Ermakov",
       "Xander Wedlow"
     ],
     "Stanford": [
@@ -625,14 +650,14 @@
     "Tennessee St.": [
       "Brandon Weston"
     ],
+    "Texas": [
+      "Lassina Traore"
+    ],
     "Texas Southern": [
       "Oumar Koureissi"
     ],
     "Tulsa": [
-      "Terrance Ford"
-    ],
-    "UAB": [
-      "Ahmad Robinson"
+      "David Green"
     ],
     "UC Santa Barbara": [
       "Jason Fontenet"
@@ -645,9 +670,6 @@
     ],
     "UNC Wilmington": [
       "Gavin Walsh"
-    ],
-    "UNLV": [
-      "Ladji Dembele"
     ],
     "UTEP": [
       "David Tubek"
@@ -666,16 +688,15 @@
       "Joy Ighovodja"
     ],
     "Wyoming": [
+      "Jared Harris",
       "Matija Belic"
-    ],
-    "Xavier": [
-      "Gabriel Pozzato",
-      "Luke Naser",
-      "Michael Wolf"
     ]
   },
   "_weights_2026": {
     "_note": "Partial availability weights: 0.0=out, 0.5=GTD, 1.0=healthy",
-    "UCLA": {"Tyler Bilodeau": 0.5}
+    "Arkansas": {"Karter Knox": 0.5},
+    "Duke": {"Patrick Ngongba": 0.5},
+    "UCLA": {"Tyler Bilodeau": 0.5},
+    "Wisconsin": {"Nolan Winter": 0.5, "Jack Janicki": 0.5}
   }
 }

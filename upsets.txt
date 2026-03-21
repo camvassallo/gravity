@@ -1,0 +1,46 @@
+First, let's set some ground rules. We defined an "upset" as when the winning team in an NCAA tournament game was seeded at least five seed lines worse than the losing team. There are too many common matchups where the difference in seeding is only one seed line (e.g. the 8/9 game in the first round, the common 4/5 game in the second round and a 1/2 matchup in the Elite Eight, for example), so it seems to take away from the spirit of an "upset" to say that a No. 9 seed beating a No. 8 seed is an upset.
+
+Using this definition of an upset, there have been at least 10 upsets in 15 of the past 40 seasons. The annual average is a little more than eight per year. There have been as few as three upsets (2007) and as many as 14 (2021 and 2022) but the sweet spot is obviously somewhere in between. There were nine in 2023 and 2024. However, there were only four in 2025.
+
+If you're a calculated risk taker, try for 11 upsets. That's happened five times (1986, 2002, 2006, 2011 and 2013). If you want to play it somewhat safe — i.e. "How many upset picks is too few?" — then five to seven is a good number to try to hit. There have been only 13 NCAA tournaments in the last 40 years in which there were fewer than seven upsets in a single NCAA tournament — and only twice since 2010. The 2007 and 2025 tournaments are the only years in which there fewer than five upsets.
+
+Here's the full breakdown.
+
+ 	Avg	Least	Most
+Total Upsets	8.3	3 (2007)	14 (2021 and 2022)
+First Round	4.6	1 (2000)	8 (2016)
+Second Round	3	0 (5 occasions)	6 (1996, 1990, 2018)
+Sweet 16	0.25	0 (29 occasions)	1 (11 occasions)
+Elite Eight	0.30	0 (28 occasions)	2 (2011)
+Final Four	0.10	0 (37 occasions)	2 (2014)
+So, to answer the first question posed earlier, 15 upsets is probably too many to pick and five is probably too few.
+
+Now, onto an equally important question: Where should those upset picks be made? Looking at the averages listed above, around half of your total upset picks should come in the first round, given both the number of games in that round and the quality of teams that advance each round.
+
+Here's a breakdown for the first round of each upset based on seed lines, the number of times such an upset has occurred since 1985 and the percentage of the time such an upset has happened.
+
+FIRST ROUND UPSET	FREQUENCY	PCT
+No. 11 seed over No. 6 seed	62	38.75%
+No. 12 seed over No. 5 seed	57	35.63%
+No. 13 seed over No. 4 seed	33	20.63%
+No. 14 seed over No. 3 seed	23	14.38%
+No. 15 seed over No. 2 seed	11	6.88%
+No. 16 seed over No. 1 seed	2	1.25%
+The individual matchups for upsets, in terms of seeding, become less common after the first round, based on the results of the first round games. But in keeping with the rule that an upset is defined by a seed ranked at least five spots worse, we combined some of the seed lines within individual four-team pods (e.g. a No. 7/No. 10 seed upsetting a No. 2 seed or a No. 8/No. 9 seed upsetting a No. 1 seed), to provide a clearer picture for how many upsets you should pick in your bracket.
+
+Related: 7 signs you're picking too many upsets
+
+Teams seeded No. 7 or No. 10 have upset a No. 2 seed 47 times in the past 40 tournaments (roughly 1.2 per year), so history tells us you should probably pick at least one No. 2 seed to lose in the second round. Even in 2025, when there were only four total upsets all tournament, No. 10 Arkansas upset No. 2 St. John's in the second round. On average, a No. 1 seed has lost about once every other year in the second round.
+
+Here's the full second round breakdown:
+
+Second Round upset	Frequency
+7 seed vs. 2 seed	27
+11 seed vs. 3 seed	20
+10 seed vs. 2 seed	20
+8 seed vs. 1 seed	16
+12 seed vs. 4 seed	13
+9 seed vs. 1 seed	6
+15 seed vs. 7 seed	4
+13 seed vs. 5 seed	3
+14 seed vs. 6 seed	2
