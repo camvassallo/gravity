@@ -112,21 +112,33 @@ def load_miya() -> dict[str, dict[str, float]]:
 
 
 def load_kenpom() -> dict[str, dict[str, float]]:
-    """KenPom uses raw counts out of ~1M simulations."""
+    """KenPom projections — post-S16 format: Team,E8,F4,Final,Champ (percentages)."""
     teams = {}
     with open(DATA / "kenpom_proj.csv") as f:
         reader = csv.DictReader(f)
         for row in reader:
             team = normalize(row["Team"])
-            # Convert raw counts to percentages (out of 1M)
-            teams[team] = {
-                "R32": float(row["Rd2"]) / 10000,
-                "S16": float(row["Swt16"]) / 10000,
-                "E8": float(row["Elite8"]) / 10000,
-                "F4": float(row["Final4"]) / 10000,
-                "F2": float(row["Final"]) / 10000,
-                "Champ": float(row["Champ"]) / 10000,
-            }
+            # Post-S16: only E8+ columns, all teams at 100% through S16
+            if "Rd2" in row:
+                # Legacy format: raw counts out of ~1M simulations
+                teams[team] = {
+                    "R32": float(row["Rd2"]) / 10000,
+                    "S16": float(row["Swt16"]) / 10000,
+                    "E8": float(row["Elite8"]) / 10000,
+                    "F4": float(row["Final4"]) / 10000,
+                    "F2": float(row["Final"]) / 10000,
+                    "Champ": float(row["Champ"]) / 10000,
+                }
+            else:
+                # Current format: percentages, E8+ only
+                teams[team] = {
+                    "R32": 100.0,
+                    "S16": 100.0,
+                    "E8": float(row["E8"]),
+                    "F4": float(row["F4"]),
+                    "F2": float(row["Final"]),
+                    "Champ": float(row["Champ"]),
+                }
     return teams
 
 
@@ -154,41 +166,23 @@ def load_cbb() -> dict[str, dict[str, float]]:
 # Applied to all rounds.
 
 SENTIMENT_ADJUSTMENTS = {
-    # === Strong consensus bullish (underseeded / bracket value) ===
-    "St. John's": 1.20,       # "Most underseeded team" — universal, data-driven
-    "Wisconsin": 1.18,         # Universal sleeper, wins at Michigan/Illinois/Purdue
-    "Vanderbilt": 1.15,        # "Closer to a 3 than a 5", beat Florida by 17
+    # === Post-R32 Sweet 16 adjustments (eliminated teams removed) ===
 
-    # === Moderate bullish ===
-    "Michigan": 1.08,          # Bracket value darling (14% public vs 18-27% model)
-    "Illinois": 1.08,          # "Least discussed threat", massive bracket value
+    # === Bullish ===
+    "Michigan": 1.08,          # Bracket value darling, dominant through R32 (95-72)
+    "Illinois": 1.08,          # "Least discussed threat", dominant R32 (76-55 vs VCU)
     "Tennessee": 1.06,         # 46% OREB rate historically elite, bully ball floor
-    "Texas Tech": 1.05,        # McCasland coaching, still 14th at Torvik post-Toppin
-    "UCLA": 1.10,              # Dent elite since Feb 18, ranked 8th recent form
-    "Arkansas": 1.05,          # SEC tourney champs, Akoff averaging 30+
+    "St. John's": 1.10,        # Underseeded, upset Kansas in R32 (67-65)
+    "Arkansas": 1.05,          # SEC tourney champs, Acuff 36pts in R32
 
-    # === Upset-specific boosts (applied to underdogs) ===
-    "VCU": 1.30,               # ~8/9 sources pick over UNC, model-favored by 1
-    "Santa Clara": 1.30,       # ~8/9 sources pick over Kentucky, data-backed
-    "South Florida": 1.25,     # ~7/9 sources pick over Louisville
-    "Hofstra": 1.35,           # ~6/9 sources, top-5 2PT defense, Alabama weakened
-    "Troy": 1.15,              # ~4/9 sources, #1 opponent strength adjustment
-    "Texas A&M": 1.10,         # ~4/9 sources over St. Mary's
+    # === Bearish ===
+    "Alabama": 0.80,           # Holloway OUT, 3 GTD, 12pt efficiency drop
+    "UConn": 0.90,             # Faded 2-seed, beat UCLA 73-57 but inconsistent
+    "Iowa": 0.95,              # 9-seed, upset Florida but facing tougher competition now
+    "Texas": 0.95,             # 11-seed, upset Gonzaga but limited ceiling
 
-    # === Bearish (models too high) ===
-    "Florida": 0.88,           # 6/9 sources fade, brutal draw, Vandy beat by 17
-    "UConn": 0.85,             # Universal distrust, weakest 2 seed
-    "Alabama": 0.80,           # Holloway out, 12pt efficiency drop, worst D on 1-6 lines
-    "North Carolina": 0.75,    # Very bearish, 350th momentum, Wilson out
-    "Kentucky": 0.80,          # "Hot garbage", 355th away from home
-    "Louisville": 0.82,        # Paper tiger, multiple sources pick against
-    "Kansas": 0.90,            # 138th rebound/TO differential, tough draw
-    "Villanova": 0.85,         # "Most mid team", zero faith vs quality
-    "BYU": 0.88,               # Saunders out, 363rd momentum
-    "Saint Mary's": 0.90,      # 359th away from home, A&M pressure concern
-
-    # === Polarizing (slight fade — bear case stronger) ===
-    "Purdue": 0.95,            # Sharp split but "four days don't define a season"
+    # === Neutral/slight lean ===
+    "Purdue": 0.97,            # Slight fade — Cox GTD, but dominant through R32
 }
 
 # ── Injury adjustments ──────────────────────────────────────────────────────
@@ -196,16 +190,20 @@ SENTIMENT_ADJUSTMENTS = {
 # These stack with sentiment adjustments.
 
 INJURY_ADJUSTMENTS = {
-    # === Confirmed OUT (not reflected in published simulations) ===
-    "Alabama": 0.78,           # Holloway OUT (arrested): 61.6% Min, 16.8 PPG, BPM 6.10
-    "Louisville": 0.82,        # Mikel Brown Jr OUT (back): 46.4% Min, 18.2 PPG (team 12-1 w/o him softens blow)
-    "SMU": 0.60,               # B.J. Edwards OUT (ankle): 69.8% Min, BPM 8.07 — team's engine, devastating
+    # === Post-R32 S16 injury adjustments ===
+    # Only adjustments NOT already reflected in updated simulation models.
+
+    # === Confirmed OUT ===
+    "Alabama": 0.80,           # Holloway OUT (suspension) + Bristow/Hannah/Onyejiaka all GTD
+    "Illinois": 0.95,          # Rodgers OUT (knee): rotation wing, team deep enough
+    "Nebraska": 0.97,          # Burt OUT (knee): rotation piece
+    "Arkansas": 0.94,          # Knox OUT (knee): upgraded from GTD to OUT
 
     # === GTD / questionable — partial discount ===
-    "Wisconsin": 0.88,         # Nolan Winter GTD (ankle): 67.6% Min, BPM 9.23 — best player + Janicki GTD
-    "Duke": 0.96,              # Foster OUT for tournament; Ngongba GTD but expected to return. Deep enough to absorb
-    "UCLA": 0.92,              # Bilodeau GTD (knee): 68% Min, leading scorer; already 0.5 weight in model
-    "Arkansas": 0.95,          # Knox GTD (knee): 35% Min, rotation piece; deep team
+    "Duke": 0.98,              # Foster GTD (foot) — upgraded from OUT, positive trend
+    "Michigan": 0.98,          # Grady GTD (lower leg): rotation guard
+    "Purdue": 0.98,            # Cox GTD (knee): rotation guard
+    "Texas": 0.97,             # Pope GTD + Traore OUT: role players
 }
 
 
