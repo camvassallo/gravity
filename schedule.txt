@@ -400,258 +400,129 @@ Benchmark International Arena
 -0.64
 
  FanMatchTM
-for Saturday, March 21st (10 games)
+for Saturday, March 21st (Ratings archive)
 try Visual FanMatch
 03/20 03/22
 Game	Prediction	Time (ET)	Location	Thrill
 Score	Come
 back	Excite
 ment
-10 Vanderbilt vs. 13 Nebraska NCAA	Vanderbilt 75-74 (52%) [68]	8:45 pm
- TNT
+13 Nebraska 74, 10 Vanderbilt 72 [64] NCAA
+MVP: Tyler Tanner (27p/2r/4a/4s)
+Vanderbilt 75-74 (52%) [68]	box
+win prob
 Oklahoma City, OK
 Paycom Center
 86.6
 1
+5
 
+2.50
 
-
-
-20 Louisville vs. 9 Michigan St. NCAA	Michigan St. 77-75 (59%) [69]	2:45 pm
- CBS
+9 Michigan St. 77, 20 Louisville 69 [67] NCAA
+MVP: Coen Carr (21p/10r/2b/1s)
+Michigan St. 77-75 (59%) [69]	box
+win prob
 Buffalo, NY
 KeyBank Center
 85.2
 2
+4
 
+0.90
 
-
-
-33 Texas vs. 12 Gonzaga NCAA	Gonzaga 79-74 (68%) [68]	7:10 pm
- TBS
+33 Texas 74, 12 Gonzaga 68 [64] NCAA
+MVP: Dailyn Swain (11p/6r/6a/1s)
+Gonzaga 79-74 (68%) [68]	box
+win prob
 Portland, OR
 Moda Center
 76.2
 3
+8
 
+1.96
 
-
-
-34 Texas A&M vs. 5 Houston NCAA	Houston 77-67 (80%) [66]	6:10 pm
- TNT
+5 Houston 88, 34 Texas A&M 57 [65] NCAA
+MVP: Chris Cenac Jr. (17p/9r/1b)
+Houston 77-67 (80%) [66]	box
+win prob
 Oklahoma City, OK
 Paycom Center
 65.2
 4
+4
 
+-0.28
 
-
-
-42 VCU vs. 7 Illinois NCAA	Illinois 83-74 (81%) [67]	7:50 pm
- CBS
+7 Illinois 76, 42 VCU 55 [66] NCAA
+MVP: Andrej Stojakovic (21p/4r/1a/1b)
+Illinois 83-74 (81%) [67]	box
+win prob
 Greenville, SC
 Bon Secours Wellness Arena
 64.2
 5
+2
 
+0.11
 
-
-
-32 Saint Louis vs. 3 Michigan NCAA	Michigan 87-74 (88%) [74]	12:10 pm
- CBS
+3 Michigan 95, 32 Saint Louis 72 [71] NCAA
+MVP: Yaxel Lendeborg (25p/6r/1a/1b)
+Michigan 87-74 (88%) [74]	box
+win prob
 Buffalo, NY
 KeyBank Center
 58.8
 6
+4
 
+0.65
 
-
-
-69 Dayton at 105 UNC Wilmington	Dayton 69-68 (55%) [65]	7:00 pm
- ESPN+
+69 Dayton 80, 105 UNC Wilmington 61 [64]
+MVP: De'Shayne Montgomery (20p/2r/2a/3s)
+Dayton 69-68 (55%) [65]	box
+win prob
 Wilmington, NC
 Trask Coliseum
 55.7
 7
+10
 
+0.35
 
-
-
-43 TCU vs. 2 Duke NCAA	Duke 76-63 (88%) [66]	5:15 pm
- CBS
+2 Duke 81, 43 TCU 58 [69] NCAA
+MVP: Cameron Boozer (19p/11r/4a/1b/3s)
+Duke 76-63 (88%) [66]	box
+win prob
 Greenville, SC
 Bon Secours Wellness Arena
 53.8
 8
+3
 
+0.92
 
-
-
-88 High Point vs. 16 Arkansas NCAA	Arkansas 92-80 (87%) [73]	9:45 pm
- TBS
+16 Arkansas 94, 88 High Point 88 [77] NCAA
+MVP: Darius Acuff Jr. (36p/1r/6a/1s)
+Arkansas 92-80 (87%) [73]	box
+win prob
 Portland, OR
 Moda Center
 48.1
 9
+5
 
+2.63
 
-
-
-116 Liberty at 74 Nevada	Nevada 78-70 (78%) [64]	9:00 pm
- ESPN+
+74 Nevada 73, 116 Liberty 63 [62]
+MVP: Elijah Price (15p/10r/1a/1b)
+Nevada 78-70 (78%) [64]	box
+win prob
 Reno, NV
 Lawlor Events Center
 38.1
 10
-
-
-
-
-FanMatchTM
-for Sunday, March 22nd (14 games)
-try Visual FanMatch
-03/21 03/23
-Game	Prediction	Time (ET)	Location	Thrill
-Score	Come
-back	Excite
-ment
-19 Texas Tech vs. 18 Alabama NCAA	Alabama 86-85 (51%) [71]	9:45 pm
- TBS
-Tampa, FL
-Benchmark International Arena
-88.9
-1
-
-
-
-
-14 Tennessee vs. 17 Virginia NCAA	Tennessee 70-69 (51%) [64]	6:10 pm
- TNT
-Philadelphia, PA
-Xfinity Mobile Arena
-84.5
-2
-
-
-
-
-15 St. John's vs. 21 Kansas NCAA	St. John's 73-71 (56%) [70]	5:15 pm
- CBS
-San Diego, CA
-Viejas Arena
-83.7
-3
-
-
-
-
-28 UCLA vs. 11 Connecticut NCAA	Connecticut 72-68 (63%) [63]	8:45 pm
- TNT
-Philadelphia, PA
-Xfinity Mobile Arena
-79.1
-4
-
-
-
-
-30 Miami FL vs. 8 Purdue NCAA	Purdue 80-73 (73%) [65]	12:10 pm
- CBS
-St. Louis, MO
-Enterprise Center
-74.2
-5
-
-
-
-
-23 Iowa vs. 4 Florida NCAA	Florida 77-69 (75%) [66]	7:10 pm
- TBS
-Tampa, FL
-Benchmark International Arena
-72.9
 6
 
-
-
-
-27 Kentucky vs. 6 Iowa St. NCAA	Iowa St. 77-70 (75%) [68]	2:45 pm
- CBS
-St. Louis, MO
-Enterprise Center
-72.3
-7
-
-
-
-
-29 Utah St. vs. 1 Arizona NCAA	Arizona 84-72 (85%) [70]	7:50 pm
- truTV
-San Diego, CA
-Viejas Arena
-62.5
-8
-
-
-
-
-83 Wichita St. at 67 Oklahoma St.	Oklahoma St. 82-76 (71%) [71]	8:30 pm
- ESPN2
-Stillwater, OK
-Gallagher-Iba Arena
-52.0
-9
-
-
-
-
-81 George Washington at 49 New Mexico	New Mexico 85-76 (78%) [71]	8:00 pm
- ESPN+
-Albuquerque, NM
-The Pit
-49.3
-10
-
-
-
-
-104 UNLV at 63 Tulsa	Tulsa 86-78 (77%) [70]	7:00 pm
- ESPNU
-Tulsa, OK
-Reynolds Center
-44.3
-11
-
-
-
-
-103 Illinois St. at 75 Wake Forest	Wake Forest 77-70 (74%) [67]	4:30 pm
- ESPN2
-Winston-Salem, NC
-Joel Coliseum
-43.2
-12
-
-
-
-
-110 Saint Joseph's at 73 California	California 75-68 (75%) [69]	9:00 pm
- ESPNU
-Berkeley, CA
-Haas Pavilion
-42.3
-13
-
-
-
-
-115 Seattle at 39 Auburn	Auburn 78-65 (88%) [68]	6:30 pm
- ESPN2
-Auburn, AL
-Neville Arena
-30.9
-14
-
-
-
-
+1.64

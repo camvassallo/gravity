@@ -47,6 +47,9 @@ ALIASES = {
     # CBB proj names
     "UConn": "UConn",
     "South Florida": "South Florida",
+    "Miami (FL)": "Miami FL",
+    "St. John's (NY)": "St. John's",
+    "Utah State": "Utah St.",
     # KenPom region codes
 }
 
@@ -58,6 +61,11 @@ def normalize(name: str) -> str:
 
 # ── Loaders ─────────────────────────────────────────────────────────────────
 
+def _tv(val: str) -> float:
+    """Convert Torvik cell: '✓' → 100.0, number string → float."""
+    return 100.0 if val.strip() == "✓" else float(val)
+
+
 def load_torvik() -> dict[str, dict[str, float]]:
     """Returns {team: {R32, S16, E8, F4, F2, Champ}} in percentages."""
     teams = {}
@@ -66,12 +74,12 @@ def load_torvik() -> dict[str, dict[str, float]]:
         for row in reader:
             team = normalize(row["Team"])
             teams[team] = {
-                "R32": float(row["R32"]) if row["R32"] != "✓" else 100.0,
-                "S16": float(row["S16"]),
-                "E8": float(row["E8"]),
-                "F4": float(row["F4"]),
-                "F2": float(row["F2"]),
-                "Champ": float(row["Champ"]),
+                "R32": _tv(row["R32"]),
+                "S16": _tv(row["S16"]),
+                "E8": _tv(row["E8"]),
+                "F4": _tv(row["F4"]),
+                "F2": _tv(row["F2"]),
+                "Champ": _tv(row["Champ"]),
             }
     return teams
 

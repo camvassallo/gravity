@@ -1,69 +1,69 @@
 Seed,Region,Team,Conf,R64,R32,S16,E8,F4,F2,Champ
-1,East,Duke,ACC,✓,98.4,83.9,66.5,50.9,32.7,20.1
-1,Midwest,Michigan,B10,✓,98.5,86.7,66.7,47.4,30,17.8
-1,West,Arizona,B12,✓,98.9,83.4,64.1,44.5,26.3,15
-1,South,Florida,SEC,✓,99.1,79.4,56.4,32.3,17.7,9.3
-2,South,Houston,B12,✓,96.2,76,45.1,25.9,13.7,6.8
-3,South,Illinois,B10,✓,96.3,76.2,41.5,22.7,11.6,5.6
-2,West,Purdue,B10,✓,97.2,77.5,52.2,25.5,11.7,5.3
-2,Midwest,Iowa St.,B12,✓,97.8,75.4,48.7,22.3,11.4,5.2
-2,East,Connecticut,BE,✓,96.1,68.2,39.2,14.8,6.1,2.4
-3,West,Gonzaga,WCC,✓,93.7,65.7,30.2,11.5,4.3,1.6
-3,East,Michigan St.,B10,✓,90.4,53.5,28,9.9,3.6,1.3
-5,South,Vanderbilt,SEC,✓,84.2,50.5,19.9,8,3.2,1.1
-3,Midwest,Virginia,ACC,✓,92.2,52,23.2,8,3.1,1.1
-5,Midwest,Texas Tech,B12,✓,83.1,48.8,15.8,7.5,3,1
-5,East,St. John's,BE,✓,82.3,49.5,14.9,7.5,2.7,1
-6,Midwest,Tennessee,SEC,✓,76.1,40.2,17.5,6,2.3,0.8
-6,East,Louisville,ACC,✓,74.5,37.9,18.9,6,2.1,0.7
-4,West,Arkansas,SEC,✓,89.1,50.4,15.4,6.7,2.2,0.6
-4,Midwest,Alabama,SEC,✓,85.7,44.4,12.7,5.4,1.9,0.6
-5,West,Wisconsin,B10,✓,84.8,45.1,13.5,5.7,1.8,0.6
-4,South,Nebraska,B10,✓,91.9,45,15.3,5.3,1.8,0.6
-4,East,Kansas,B12,✓,85.4,43.2,11.2,5.1,1.6,0.5
-7,East,UCLA,B10,✓,70.2,25.4,10.5,2.7,0.8,0.3
-8,East,Ohio St.,B10,✓,68.4,12.8,5.8,2.3,0.6,0.2
-7,South,Saint Mary's,WCC,✓,59.7,15.4,5.1,1.6,0.5,0.1
-6,South,North Carolina,ACC,✓,63.4,16.8,4.8,1.4,0.4,0.1
-9,South,Iowa,B10,✓,53.9,11.7,4.8,1.3,0.4,0.1
-7,West,Miami FL,ACC,✓,57.2,13.7,5.2,1.2,0.3,0.1
-9,West,Utah St.,MWC,✓,53.8,9.3,3.8,1.2,0.3,0.1
-10,Midwest,Santa Clara,WCC,✓,51.6,13,4.8,1.1,0.3,0.1
-7,Midwest,Kentucky,SEC,✓,48.4,11.4,4,0.9,0.2,0.1
-6,West,BYU,B12,✓,54.6,19.3,5.7,1.4,0.3,0
-8,South,Clemson,ACC,✓,46.1,8.8,3.1,0.8,0.2,0
-8,West,Villanova,BE,✓,46.2,7.2,2.8,0.8,0.2,0
-8,Midwest,Georgia,SEC,✓,54.1,7.5,2.5,0.7,0.2,0
-10,West,Missouri,SEC,✓,42.8,8.5,2.8,0.6,0.1,0
-11,West,N.C. State,ACC,55,26.1,8.5,2.3,0.6,0.1,0
-10,South,Texas A&M,SEC,✓,40.3,8.1,2.1,0.5,0.1,0
-9,Midwest,Saint Louis,A10,✓,45.9,5.7,1.6,0.4,0.1,0
-11,East,South Florida,Amer,✓,25.5,7.2,1.8,0.3,0,0
-11,West,Texas,SEC,45,19.3,5.6,1.4,0.3,0,0
-11,Midwest,SMU,ACC,70.9,20,6.2,1.6,0.2,0,0
-10,East,UCF,B12,✓,29.8,6,1.4,0.2,0,0
-11,South,VCU,A10,✓,36.6,6.6,1.3,0.2,0,0
-9,East,TCU,B12,✓,31.6,3.2,0.9,0.2,0,0
-12,East,Northern Iowa,MVC,✓,17.7,4.9,0.5,0.1,0,0
-12,Midwest,Akron,MAC,✓,16.9,4.2,0.5,0.1,0,0
-12,South,McNeese St.,Slnd,✓,15.8,3.7,0.4,0,0,0
-12,West,High Point,BSth,✓,15.2,2.8,0.3,0,0,0
-13,Midwest,Hofstra,CAA,✓,14.3,2.6,0.2,0,0,0
-14,East,North Dakota St.,Sum,✓,9.6,1.5,0.2,0,0,0
-13,East,Cal Baptist,WAC,✓,14.6,2.4,0.1,0,0,0
-13,West,Hawaii,BW,✓,10.9,1.8,0.1,0,0,0
-14,Midwest,Wright St.,Horz,✓,7.8,0.9,0.1,0,0,0
-14,West,Kennesaw St.,CUSA,✓,6.3,0.8,0.1,0,0,0
-11,Midwest,Miami OH,MAC,29.1,3.9,0.7,0.1,0,0,0
-13,South,Troy,SB,✓,8.1,0.8,0,0,0,0
-15,South,Idaho,BSky,✓,3.8,0.5,0,0,0,0
-15,East,Furman,SC,✓,3.9,0.4,0,0,0,0
-14,South,Penn,Ivy,✓,3.7,0.4,0,0,0,0
-15,West,Queens,ASun,✓,2.8,0.3,0,0,0,0
-15,Midwest,Tennessee St.,OVC,✓,2.2,0.2,0,0,0,0
-16,East,Siena,MAAC,✓,1.6,0.2,0,0,0,0
-16,West,LIU,NEC,✓,1.1,0.1,0,0,0,0
-16,Midwest,UMBC,AE,53.2,0.9,0.1,0,0,0,0
-16,Midwest,Howard,MEAC,46.8,0.7,0.1,0,0,0,0
-16,South,Prairie View A&M,SWAC,50,0.5,0,0,0,0,0
-16,South,Lehigh,Pat,50,0.4,0,0,0,0,0
+1,Midwest,Michigan,B10,✓,✓,✓,74,50.6,31.2,18.2
+1,East,Duke,ACC,✓,✓,✓,73.7,52.9,30.7,17.1
+2,South,Houston,B12,✓,✓,✓,55.2,33.8,19.2,10.2
+3,South,Illinois,B10,✓,✓,✓,44.8,25.1,13,6.3
+3,East,Michigan St.,B10,✓,✓,✓,54.2,19.2,6.9,2.6
+4,West,Arkansas,SEC,✓,✓,✓,29.4,13.4,4.1,1.2
+4,South,Nebraska,B10,✓,✓,✓,34.5,10,3.5,1.1
+11,West,Texas,SEC,✓,✓,✓,25.7,5.3,0.9,0.2
+1,West,Arizona,B12,✓,✓,83.6,64.1,46.2,27.3,15.9
+2,Midwest,Iowa St.,B12,✓,✓,78.3,50.7,23.2,12,5.6
+1,South,Florida,SEC,✓,✓,77.9,56.4,29,16.5,8.8
+2,West,Purdue,B10,✓,✓,77.3,61.9,29.8,13.8,6.2
+2,East,Connecticut,BE,✓,✓,64.2,32.7,11.7,4.2,1.6
+5,East,St. John's,BE,✓,✓,57,16.4,8.5,3.2,1.1
+5,Midwest,Texas Tech,B12,✓,✓,54.8,15,6.8,2.7,1
+6,Midwest,Tennessee,SEC,✓,✓,53.6,23.3,7.8,3,1
+3,Midwest,Virginia,ACC,✓,✓,46.4,18.6,5.6,1.9,0.6
+4,Midwest,Alabama,SEC,✓,✓,45.2,10.9,4.5,1.6,0.5
+4,East,Kansas,B12,✓,✓,43,9.9,4.5,1.4,0.4
+7,East,UCLA,B10,✓,✓,35.8,13.1,3.2,0.8,0.2
+7,West,Miami FL,ACC,✓,✓,22.7,12.4,2.9,0.6,0.1
+9,South,Iowa,B10,✓,✓,22.1,9.1,2.1,0.6,0.1
+7,Midwest,Kentucky,SEC,✓,✓,21.7,7.4,1.5,0.3,0.1
+9,West,Utah St.,MWC,✓,✓,16.4,6.5,2.3,0.5,0.1
+3,West,Gonzaga,WCC,✓,✓,0,0,0,0,0
+12,West,High Point,BSth,✓,✓,0,0,0,0,0
+6,East,Louisville,ACC,✓,✓,0,0,0,0,0
+9,Midwest,Saint Louis,A10,✓,✓,0,0,0,0,0
+9,East,TCU,B12,✓,✓,0,0,0,0,0
+10,South,Texas A&M,SEC,✓,✓,0,0,0,0,0
+11,South,VCU,A10,✓,✓,0,0,0,0,0
+5,South,Vanderbilt,SEC,✓,✓,0,0,0,0,0
+12,Midwest,Akron,MAC,✓,0,0,0,0,0,0
+6,West,BYU,B12,✓,0,0,0,0,0,0
+13,East,Cal Baptist,WAC,✓,0,0,0,0,0,0
+8,South,Clemson,ACC,✓,0,0,0,0,0,0
+15,East,Furman,SC,✓,0,0,0,0,0,0
+8,Midwest,Georgia,SEC,✓,0,0,0,0,0,0
+13,West,Hawaii,BW,✓,0,0,0,0,0,0
+13,Midwest,Hofstra,CAA,✓,0,0,0,0,0,0
+16,Midwest,Howard,MEAC,✓,0,0,0,0,0,0
+15,South,Idaho,BSky,✓,0,0,0,0,0,0
+14,West,Kennesaw St.,CUSA,✓,0,0,0,0,0,0
+16,West,LIU,NEC,✓,0,0,0,0,0,0
+12,South,McNeese St.,Slnd,✓,0,0,0,0,0,0
+11,Midwest,Miami OH,MAC,✓,0,0,0,0,0,0
+10,West,Missouri,SEC,✓,0,0,0,0,0,0
+6,South,North Carolina,ACC,✓,0,0,0,0,0,0
+14,East,North Dakota St.,Sum,✓,0,0,0,0,0,0
+12,East,Northern Iowa,MVC,✓,0,0,0,0,0,0
+8,East,Ohio St.,B10,✓,0,0,0,0,0,0
+14,South,Penn,Ivy,✓,0,0,0,0,0,0
+16,South,Prairie View A&M,SWAC,✓,0,0,0,0,0,0
+15,West,Queens,ASun,✓,0,0,0,0,0,0
+7,South,Saint Mary's,WCC,✓,0,0,0,0,0,0
+10,Midwest,Santa Clara,WCC,✓,0,0,0,0,0,0
+16,East,Siena,MAAC,✓,0,0,0,0,0,0
+11,East,South Florida,Amer,✓,0,0,0,0,0,0
+15,Midwest,Tennessee St.,OVC,✓,0,0,0,0,0,0
+13,South,Troy,SB,✓,0,0,0,0,0,0
+10,East,UCF,B12,✓,0,0,0,0,0,0
+8,West,Villanova,BE,✓,0,0,0,0,0,0
+5,West,Wisconsin,B10,✓,0,0,0,0,0,0
+14,Midwest,Wright St.,Horz,✓,0,0,0,0,0,0
+16,South,Lehigh,Pat,0,0,0,0,0,0,0
+11,West,N.C. State,ACC,0,0,0,0,0,0,0
+11,Midwest,SMU,ACC,0,0,0,0,0,0,0
+16,Midwest,UMBC,AE,0,0,0,0,0,0,0
