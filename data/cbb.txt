@@ -2,73 +2,49 @@ Team	First Round	Second Round	Sweet 16	Elite 8	Final Four	Championship	WIN
 % to Reach	% to Reach	% to Reach	% to Reach	% to Reach	% to Reach
 Blue Devils
 Duke Blue Devils
-80%	62%	42%	27%
+78%	59%	41%	26%
 Wolverines
 Michigan Wolverines
-77%	52%	35%	20%
+77%	50%	31%	18%
 Wildcats
 Arizona Wildcats
-76%	55%	39%	21%	11%
-Fighting Illini
-Illinois Fighting Illini
-50%	29%	13%	7%
+72%	49%	27%	14%
 Cyclones
 Iowa St. Cyclones
-74%	49%	23%	13%	6%
+67%	32%	17%	8%
+Fighting Illini
+Illinois Fighting Illini
+50%	34%	16%	8%
 Cougars
 Houston Cougars
-50%	29%	13%	6%
-Gators
-Florida Gators
-74%	49%	25%	12%	6%
+50%	34%	15%	7%
 Boilermakers
 Purdue Boilermakers
-67%	49%	23%	10%	4%
-Spartans
-Michigan St. Spartans
-55%	16%	7%	2%
-Razorbacks
-Arkansas Razorbacks
-34%	18%	6%	2%
+74%	32%	13%	5%
 Huskies
 UConn Huskies
-70%	36%	11%	4%	2%
+52%	16%	7%	3%
+Spartans
+Michigan St. Spartans
+48%	14%	6%	2%
 Huskers
 Nebraska Huskers
-40%	14%	4%	2%
-Cavaliers
-Virginia Cavaliers
-53%	22%	7%	3%	1%
+58%	20%	7%	2%
 Red Storm
 St. John's (NY) Red Storm
-60%	13%	6%	2%	<1%
+22%	10%	4%	1%
+Razorbacks
+Arkansas Razorbacks
+28%	13%	4%	1%
 Volunteers
 Tennessee Volunteers
-47%	18%	6%	2%	<1%
-Red Raiders
-Texas Tech Red Raiders
-53%	13%	5%	2%	<1%
-Hurricanes
-Miami (FL) Hurricanes
-33%	20%	6%	2%	<1%
-Aggies
-Utah St. Aggies
-24%	11%	5%	1%	<1%
-Crimson Tide
-Alabama Crimson Tide
-47%	10%	4%	1%	<1%
-Longhorns
-Texas Longhorns
-31%	8%	2%	<1%
+33%	10%	4%	1%
 Hawkeyes
 Iowa Hawkeyes
-26%	11%	3%	<1%	<1%
-Wildcats
-Kentucky Wildcats
-26%	10%	3%	<1%	<1%
-Jayhawks
-Kansas Jayhawks
-40%	6%	3%	<1%	<1%
-Bruins
-UCLA Bruins
-30%	10%	2%	<1%	<1%
+42%	12%	3%	<1%
+Crimson Tide
+Alabama Crimson Tide
+23%	8%	3%	<1%
+Longhorns
+Texas Longhorns
+26%	6%	1%	<1%
