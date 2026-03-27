@@ -166,23 +166,18 @@ def load_cbb() -> dict[str, dict[str, float]]:
 # Applied to all rounds.
 
 SENTIMENT_ADJUSTMENTS = {
-    # === Post-R32 Sweet 16 adjustments (eliminated teams removed) ===
+    # === Post-S16 E8 adjustments (eliminated teams removed) ===
 
     # === Bullish ===
-    "Michigan": 1.08,          # Bracket value darling, dominant through R32 (95-72)
-    "Illinois": 1.08,          # "Least discussed threat", dominant R32 (76-55 vs VCU)
-    "Tennessee": 1.06,         # 46% OREB rate historically elite, bully ball floor
-    "St. John's": 1.10,        # Underseeded, upset Kansas in R32 (67-65)
-    "Arkansas": 1.05,          # SEC tourney champs, Acuff 36pts in R32
+    "Illinois": 1.10,          # Upset Houston 65-55, hot defensive streak
+    "Iowa": 1.10,              # Cinderella run: upset Florida (1S) + Nebraska (4S)
+    "Michigan": 1.05,          # Dominant throughout (101-80, 95-72)
+    "St. John's": 1.08,        # Underseeded, upset Kansas in R32 (67-65)
 
     # === Bearish ===
-    "Alabama": 0.80,           # Holloway OUT, 3 GTD, 12pt efficiency drop
-    "UConn": 0.90,             # Faded 2-seed, beat UCLA 73-57 but inconsistent
-    "Iowa": 0.95,              # 9-seed, upset Florida but facing tougher competition now
-    "Texas": 0.95,             # 11-seed, upset Gonzaga but limited ceiling
-
-    # === Neutral/slight lean ===
-    "Purdue": 0.97,            # Slight fade — Cox GTD, but dominant through R32
+    "Alabama": 0.80,           # Holloway GTD(susp) + Bristow/Hannah/Onyejiaka/Bediako OUT
+    "UConn": 0.92,             # Faded all tournament, inconsistent
+    "Purdue": 0.96,            # Barely beat 11-seed Texas 79-77
 }
 
 # ── Injury adjustments ──────────────────────────────────────────────────────
@@ -190,20 +185,18 @@ SENTIMENT_ADJUSTMENTS = {
 # These stack with sentiment adjustments.
 
 INJURY_ADJUSTMENTS = {
-    # === Post-R32 S16 injury adjustments ===
-    # Only adjustments NOT already reflected in updated simulation models.
+    # === Post-S16 injury adjustments (eliminated teams removed) ===
 
     # === Confirmed OUT ===
-    "Alabama": 0.80,           # Holloway OUT (suspension) + Bristow/Hannah/Onyejiaka all GTD
+    "Alabama": 0.80,           # Bristow OUT (ankle) + Hannah/Onyejiaka/Bediako OUT, Holloway GTD
     "Illinois": 0.95,          # Rodgers OUT (knee): rotation wing, team deep enough
-    "Nebraska": 0.97,          # Burt OUT (knee): rotation piece
-    "Arkansas": 0.94,          # Knox OUT (knee): upgraded from GTD to OUT
 
     # === GTD / questionable — partial discount ===
-    "Duke": 0.98,              # Foster GTD (foot) — upgraded from OUT, positive trend
-    "Michigan": 0.98,          # Grady GTD (lower leg): rotation guard
-    "Purdue": 0.98,            # Cox GTD (knee): rotation guard
-    "Texas": 0.97,             # Pope GTD + Traore OUT: role players
+    "Duke": 0.98,              # Foster GTD (foot), Ngongba GTD (undisclosed)
+    "Michigan": 0.97,          # Grady OUT (lower leg), L.J. Cason OUT (knee, season)
+    "Michigan St.": 0.98,      # Glenn OUT (knee, season), Ugochukwu OUT (foot, season)
+    "Tennessee": 0.97,         # Phillips OUT (shoulder, season)
+    "Iowa": 0.99,              # McCollum OUT (foot, season): minimal impact
 }
 
 

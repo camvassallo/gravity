@@ -703,50 +703,62 @@ Neville Arena
 
 0.17
 
- FanMatchTM
-for Thursday, March 26th (4 games)
+FanMatchTM
+for Thursday, March 26th (Ratings archive)
 try Visual FanMatch
 03/25 03/27
 Game	Prediction	Time (ET)	Location	Thrill
 Score	Come
 back	Excite
 ment
-6 Illinois vs. 4 Houston NCAA	Houston 72-71 (53%) [63]	10:05 pm
- TBS
+6 Illinois 65, 4 Houston 55 [58] NCAA
+MVP: Keaton Wagler (13p/12r/3a/2b/1s)
+Houston 72-71 (53%) [63]	box
+win prob
 Houston, TX
 Toyota Center
 89.2
 1
+3
 
+0.41
 
-
-
-22 Iowa vs. 13 Nebraska NCAA	Nebraska 69-66 (58%) [63]	7:30 pm
- TBS
+22 Iowa 77, 13 Nebraska 71 [60] NCAA
+MVP: Pryce Sandfort (25p/5r/2a/1s)
+Nebraska 69-66 (58%) [63]	box
+win prob
 Houston, TX
 Toyota Center
 81.2
 2
+10
 
+2.03
 
-
-
-17 Arkansas vs. 2 Arizona NCAA	Arizona 88-79 (79%) [73]	9:45 pm
- CBS
+2 Arizona 109, 17 Arkansas 88 [80] NCAA
+MVP: Brayden Burries (23p/5r/2a)
+Arizona 88-79 (79%) [73]	box
+win prob
 San Jose, CA
 SAP Center at San Jose
 74.1
 3
+0
 
+-0.14
 
-
-
-31 Texas vs. 8 Purdue NCAA	Purdue 82-74 (75%) [64]	7:10 pm
- CBS
+8 Purdue 79, 31 Texas 77 [61] NCAA
+MVP: Tramon Mark (29p/3r/1s)
+Purdue 82-74 (75%) [64]	box
+win prob
 San Jose, CA
 SAP Center at San Jose
 72.2
 4
+4
+
+1.99
+
 
 
 

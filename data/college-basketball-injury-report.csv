@@ -1,19 +1,14 @@
 ﻿Player,Team,Pos,Injury,Status,Est. Return
-C.J. Cox,Purdue,G,Knee,Game Time Decision,Subscribers Only
-Jordan Pope,Texas,G,Undisclosed,Game Time Decision,Subscribers Only
-Keitenn Bristow,Alabama,F,Ankle,Game Time Decision,Subscribers Only
 Caleb Foster,Duke,G,Foot,Game Time Decision,Subscribers Only
-Winters Grady,Michigan,G,Lower Leg,Game Time Decision,Subscribers Only
-Davion Hannah,Alabama,G,Undisclosed,Game Time Decision,Subscribers Only
+Aden Holloway,Alabama,G,Suspension,Game Time Decision,Subscribers Only
 Joshua Jefferson,Iowa State,F,Ankle,Game Time Decision,Subscribers Only
 Xzavion Mitchell,Iowa State,F,Undisclosed,Game Time Decision,Subscribers Only
-Collins Onyejiaka,Alabama,C,Undisclosed,Game Time Decision,Subscribers Only
-Jaylin Stewart,Connecticut,F,Knee,Game Time Decision,Subscribers Only
-Henry Burt,Nebraska,F,Knee,Out,Subscribers Only
-Karter Knox,Arkansas,F,Knee,Out,Subscribers Only
+Patrick Ngongba,Duke,C,Undisclosed,Game Time Decision,Subscribers Only
 Ty Rodgers,Illinois,F,Knee,Out,Subscribers Only
-Lassina Traore,Texas,F,Knee,Out,Subscribers Only
-Aden Holloway,Alabama,G,Suspension,Out,Subscribers Only
+Keitenn Bristow,Alabama,F,Ankle,Out,Subscribers Only
+Winters Grady,Michigan,G,Lower Leg,Out,Subscribers Only
+Davion Hannah,Alabama,G,Undisclosed,Out,Subscribers Only
+Collins Onyejiaka,Alabama,C,Undisclosed,Out,Subscribers Only
 Jaylen Crocker-Johnson,Minnesota,F,Foot,Game Time Decision,Subscribers Only
 Jeff Nwankwo,Oklahoma,G,Undisclosed,Game Time Decision,Subscribers Only
 Sebastian Rancik,Colorado,F,Concussion,Game Time Decision,Subscribers Only
@@ -70,6 +65,7 @@ Marcel Bryant,Prairie View,F,Undisclosed,Out,Subscribers Only
 Dorin Buca,Kansas State,C,Undisclosed,Game Time Decision,Subscribers Only
 Bhan Buom,Boise State,F,Undisclosed,Out,Subscribers Only
 Antwan Burnett,Missouri State,F,Undisclosed,Game Time Decision,Subscribers Only
+Henry Burt,Nebraska,F,Knee,Out,Subscribers Only
 Markus Burton,Notre Dame,G,Ankle,Game Time Decision,Subscribers Only
 Emmanuel Callas,San Diego,G,Undisclosed,Game Time Decision,Subscribers Only
 Mouhamed Camara,Louisville,F,Redshirt,Out For Season,Subscribers Only
@@ -144,16 +140,16 @@ De'Ante Green,South Florida,F,Achilles,Out For Season,Subscribers Only
 Zyair Greene,Indiana State,G,Undisclosed,Game Time Decision,Subscribers Only
 Reggie Grodin,Penn State,G,Redshirt,Out For Season,Subscribers Only
 Josue Grullon,La Salle,G,Undisclosed,Game Time Decision,Subscribers Only
+Christian Hammond,Santa Clara,G,Transfer Portal,Out,Subscribers Only
 Donald Hand,Boston College,G,Knee,Game Time Decision,Subscribers Only
 JaVaughn Hannah,San Jose State,G,Calf,Game Time Decision,Subscribers Only
 Amani Hansberry,Virginia Tech,F,Undisclosed,Game Time Decision,Subscribers Only
 Ashton Hardaway,Memphis,F,Calf,Out,Subscribers Only
-Jaylen Harrell,Providence,G,Knee,Game Time Decision,Subscribers Only
 Elzie Harrington,San Diego State,G,Lower Leg,Game Time Decision,Subscribers Only
-Jared Harris,Wyoming,G,Toe,Game Time Decision,Subscribers Only
 Dominick Harris,Loyola-Chicago,G,Undisclosed,Game Time Decision,Subscribers Only
 Josiah Harris,Cleveland State,F,Concussion,Game Time Decision,Subscribers Only
 Josh Harris,Indiana,F,Foot,Out,Subscribers Only
+Jared Harris,Wyoming,G,Toe,Game Time Decision,Subscribers Only
 DeShawn Harris-Smith,Georgetown,G,Personal,Game Time Decision,Subscribers Only
 Carlos Hart,Eastern Michigan,G,Suspension,Out,Subscribers Only
 Jalen Haynes,Cincinnati,F,Knee,Out For Season,Subscribers Only
@@ -171,6 +167,7 @@ Tyler Houser,Delaware,C,Undisclosed,Out For Season,Subscribers Only
 Jax Howard,Middle Tennessee St.,G,Undisclosed,Out,Subscribers Only
 Braden Huff,Gonzaga,F,Kneecap,Game Time Decision,Subscribers Only
 Luke Hunger,George Washington,F,Foot,Game Time Decision,Subscribers Only
+Aaron Hunkin-Claytor,Hawaii,G,Toe,Out,Subscribers Only
 Keiveon Hunt,Jackson State,G,Knee,Out For Season,Subscribers Only
 Ryan Hunt,TCU,C,Not Injury Related,Out For Season,Subscribers Only
 Jovan Icitovic,Arizona State,F,Redshirt,Game Time Decision,Subscribers Only
@@ -198,6 +195,7 @@ Sean Jones,Marquette,G,Toe,Out For Season,Subscribers Only
 Dorian Jones,Rutgers,G,Redshirt,Out For Season,Subscribers Only
 Tanner Jones,Central Florida,G,Undisclosed,Out,Subscribers Only
 Sin'Cere Jones,Virginia Tech,F,Foot,Game Time Decision,Subscribers Only
+Tajae Jones,Siena,F,Back,Out,Subscribers Only
 Papa Amadou Kante,Pittsburgh,F,Knee,Game Time Decision,Subscribers Only
 Bouna Kebe,Delaware,F,Undisclosed,Out,Subscribers Only
 Jamyron Keller,Louisiana-Lafayette,G,Foot,Out For Season,Subscribers Only
@@ -205,6 +203,7 @@ Mikey Kelvin,Florida International,F,Undisclosed,Out For Season,Subscribers Only
 Franck Kepnang,Washington,C,Leg,Game Time Decision,Subscribers Only
 George Kimble,Vanderbilt,G,Knee,Out For Season,Subscribers Only
 Amarr Knox,Eastern Kentucky,G,Not Injury Related,Out,Subscribers Only
+Karter Knox,Arkansas,F,Knee,Out,Subscribers Only
 Sterling Knox,Loyola-Chicago,G,Not Injury Related,Out For Season,Subscribers Only
 Brody Kozlowski,BYU,F,Redshirt,Out For Season,Subscribers Only
 Amar Kuljuhovic,Missouri State,F,Undisclosed,Game Time Decision,Subscribers Only
@@ -229,9 +228,8 @@ JJ Mandaquit,Washington,G,Foot,Out For Season,Subscribers Only
 Jon Mani,Colorado,G,Redshirt,Out For Season,Subscribers Only
 Evan Manjikian,UCLA,F,Undisclosed,Game Time Decision,Subscribers Only
 Stephon Marbury II,California,G,Undisclosed,Game Time Decision,Subscribers Only
-Marqus Marion,Wake Forest,F,Chest,Game Time Decision,Subscribers Only
-Amar'e Marshall,St. Bonaventure,G,Foot,Out,Subscribers Only
 Jaeden Marshall,La Salle,G,Leg,Game Time Decision,Subscribers Only
+Amar'e Marshall,St. Bonaventure,G,Foot,Out,Subscribers Only
 Ivan Matlekovic,North Carolina,F,Hand,Out,Subscribers Only
 Jackson McAndrew,Creighton,F,Foot,Out For Season,Subscribers Only
 Liam McChesney,Creighton,F,Undisclosed,Out,Subscribers Only
@@ -323,8 +321,9 @@ Zion Sampaio,Florida Atlantic,G,Undisclosed,Out For Season,Subscribers Only
 Jorge Santos,Florida International,F,Undisclosed,Out For Season,Subscribers Only
 Richie Saunders,BYU,F,Knee,Out For Season,Subscribers Only
 Owen Schlager,Siena,G,Ribs,Out,Subscribers Only
-Cam Scott,South Carolina,G,Redshirt,Out For Season,Subscribers Only
+Rikus Schulte,Fordham,F,Transfer Portal,Out,Subscribers Only
 Jaquan Scott,Arkansas-Pine Bluff,F,Transfer Portal,Out,Subscribers Only
+Cam Scott,South Carolina,G,Redshirt,Out For Season,Subscribers Only
 Bryant Selebangue,Western Kentucky,F,Achilles,Out For Season,Subscribers Only
 Louie Semona,Western Kentucky,F,Back,Out,Subscribers Only
 Camian Shell,Delaware State,G,Not Injury Related,Out,Subscribers Only
@@ -350,6 +349,7 @@ Dyllan Thompson,Georgia Tech,F,Undisclosed,Game Time Decision,Subscribers Only
 JT Toppin,Texas Tech,F,Knee,Out For Season,Subscribers Only
 Brendan Tousignaut,Kennesaw State,G,Undisclosed,Out For Season,Subscribers Only
 Josh Townley-Thomas,Creighton,F,Foot,Out,Subscribers Only
+Lassina Traore,Texas,F,Knee,Out,Subscribers Only
 Mady Traore,Washington,F,Foot,Out For Season,Subscribers Only
 JJ Traynor,Murray State,F,Undisclosed,Out,Subscribers Only
 David Tubek,UTEP,F,Calf,Out,Subscribers Only

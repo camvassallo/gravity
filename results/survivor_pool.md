@@ -1,6 +1,6 @@
 # March Madness 2026 — Survivor Pool Strategy
 
-Updated 2026-03-26 (Sweet 16 Thursday). Pick one team per day to win. Can't reuse a team. One loss = eliminated. Complete 6-pick path optimized via brute-force search over all valid assignments, maximizing joint survival probability across 4 consensus sources + sentiment + injuries.
+Updated 2026-03-27 (Sweet 16 Friday). Pick one team per day to win. Can't reuse a team. One loss = eliminated. Complete 5-pick path (Days 6-10) optimized via brute-force search over all valid assignments, maximizing joint survival probability across 4 consensus sources + sentiment + injuries.
 
 ---
 
@@ -12,8 +12,8 @@ Updated 2026-03-26 (Sweet 16 Thursday). Pick one team per day to win. Can't reus
 | 2 | Fri Mar 20 | R64 | All |
 | 3 | Sat Mar 21 | R32 | Thursday winners |
 | 4 | Sun Mar 22 | R32 | Friday winners |
-| **5** | **Thu Mar 26** | **S16** | **South + West** |
-| 6 | Fri Mar 27 | S16 | East + Midwest |
+| 5 | Thu Mar 26 | S16 | South + West |
+| **6** | **Fri Mar 27** | **S16** | **East + Midwest** |
 | 7 | Sat Mar 29 | E8 | South + West |
 | 8 | Sun Mar 30 | E8 | East + Midwest |
 | 9 | Sat Apr 5 | Final Four | Semi 1 (E vs S) + Semi 2 (W vs MW) |
@@ -29,47 +29,44 @@ Updated 2026-03-26 (Sweet 16 Thursday). Pick one team per day to win. Can't reus
 | 2 | UConn | Won 82-71 vs Furman | 96% | 92.2% |
 | 3 | Arkansas | Won 94-88 vs High Point | 87% | 80.2% |
 | 4 | Iowa St. | Won 82-63 vs Kentucky | 75% | 60.2% |
+| 5 | Purdue | Won 79-77 vs Texas | 73% | 44.2% |
 
-**Used teams:** Gonzaga, UConn, Arkansas, Iowa St.
+**Used teams:** Gonzaga, UConn, Arkansas, Iowa St., Purdue
 
 ---
 
-## R32 Results & Key Bracket Changes
+## S16 Day 5 Results & Key Bracket Changes
 
 | Result | Impact |
 |---|---|
-| Florida 72, **Iowa 73** | **Florida (1S) eliminated!** Iowa (9-seed) in S16 |
-| **Texas 74**, Gonzaga 68 | Gonzaga eliminated. Purdue faces Texas (11) instead of Gonzaga (3) |
-| Duke 81, TCU 58 | Duke dominant |
-| Michigan 95, Saint Louis 72 | Michigan dominant |
-| MSU 77, Louisville 69 | MSU advances |
-| Illinois 76, VCU 55 | Illinois dominant |
-| Houston 88, Texas A&M 57 | Houston cruises |
-| Alabama 90, Texas Tech 65 | Alabama advances |
-| Tennessee 79, Virginia 72 | Tennessee advances |
-| St. John's 67, Kansas 65 | St. John's upset |
+| **Illinois 65**, Houston 55 | **Houston (2S) eliminated!** Illinois dominates, advances to E8 South |
+| **Iowa 77**, Nebraska 71 | Iowa's Cinderella run continues. E8 South = Illinois vs Iowa |
+| **Arizona 109**, Arkansas 88 | Arizona dominant as 1-seed. E8 West = Arizona vs Purdue |
+| **Purdue 79**, Texas 77 | Purdue survives close call (our Day 5 pick). E8 West = Arizona vs Purdue |
+
+**Impact on path:** Houston's elimination removes our old Day 7 pick. But Illinois (77% F4) replaces Houston (41% F4) — a massive upgrade. Path is significantly stronger.
 
 ---
 
-## Sweet 16 Matchups
-
-**Day 5 — Thu Mar 26 (South + West):**
+## S16 Day 6 Matchups — TODAY Fri Mar 27 (East + Midwest)
 
 | Game | Consensus | FanMatch |
 |---|---|---|
-| Illinois (3S) vs Houston (2S) | Houston 55% / Illinois 46% | Houston 53% |
-| Iowa (9S) vs Nebraska (4S) | Nebraska 56% / Iowa 40% | Nebraska 58% |
-| Arkansas (4W) vs Arizona (1W) | Arizona 78% / Arkansas 22% | Arizona 79% |
-| Texas (11W) vs Purdue (2W) | Purdue 73% / Texas 21% | Purdue 75% |
+| MSU (3E) vs UConn (2E) | MSU 47% / UConn 48% | MSU 70-69 (51%) |
+| St. John's (5E) vs Duke (1E) | Duke 75% / St. John's 26% | Duke 75-68 (75%) |
+| Alabama (4MW) vs Michigan (1MW) | Michigan 81% / Alabama 13% | Michigan 91-83 (76%) |
+| Tennessee (6MW) vs Iowa St. (2MW) | Iowa St. 63% / Tennessee 36% | Iowa St. 71-67 (64%) |
 
-**Day 6 — Fri Mar 27 (East + Midwest):**
+---
 
-| Game | Consensus | FanMatch |
+## E8 Matchups (Known)
+
+| Day | Game | Notes |
 |---|---|---|
-| MSU (3E) vs UConn (2E) | MSU 48% / UConn 47% | MSU 51% |
-| Tennessee (6MW) vs Iowa St. (2MW) | Iowa St. 63% / Tennessee 39% | Iowa St. 64% |
-| Alabama (4MW) vs Michigan (1MW) | Michigan 84% / Alabama 13% | Michigan 76% |
-| St. John's (5E) vs Duke (1E) | Duke 75% / St. John's 26% | Duke 75% |
+| 7 (Sat Mar 29) | **Illinois (3S) vs Iowa (9S)** | South E8 |
+| 7 (Sat Mar 29) | **Arizona (1W) vs Purdue (2W)** | West E8 (Purdue used) |
+| 8 (Sun Mar 30) | East E8: TBD | Winners of MSU/UConn vs Duke/St. John's |
+| 8 (Sun Mar 30) | Midwest E8: TBD | Winners of Michigan/Alabama vs Iowa St./Tennessee |
 
 ---
 
@@ -77,144 +74,151 @@ Updated 2026-03-26 (Sweet 16 Thursday). Pick one team per day to win. Can't reus
 
 | Team | Region | E8% | F4% | F2% | Champ% |
 |---|---|---|---|---|---|
-| Michigan | MW | 84.2 | 59.7 | 37.1 | 22.6 |
-| Arizona | W | 77.5 | 54.6 | 30.3 | 17.5 |
-| Duke | E | 74.5 | 54.2 | 36.6 | 21.1 |
-| Purdue | W | 73.4 | 30.1 | 12.4 | 5.3 |
-| Houston | S | 55.1 | 40.6 | 20.3 | 9.7 |
-| Nebraska | S | 56.3 | 17.4 | 5.7 | 1.6 |
-| MSU | E | 48.0 | 15.5 | 6.6 | 2.2 |
-| Illinois | S | 46.0 | 32.1 | 15.1 | 6.7 |
-| Iowa | S | 39.8 | 9.7 | 2.4 | 0.5 |
-| Tennessee | MW | 39.1 | 10.7 | 3.8 | 1.2 |
-| St. John's | E | 26.3 | 12.3 | 5.0 | 1.5 |
-| Texas | W | 21.0 | 3.9 | 0.6 | 0.2 |
-| Alabama | MW | 13.1 | 5.1 | 1.7 | 0.5 |
+| Arizona | W | 100.0 | 68.2 | 38.2 | 22.6 |
+| Duke | E | 74.5 | 54.2 | 37.2 | 21.2 |
+| Michigan | MW | 81.3 | 57.6 | 33.8 | 20.6 |
+| Illinois | S | 100.0 | 77.0 | 36.5 | 15.9 |
+| Purdue | W | 100.0 | 33.4 | 13.7 | 6.0 |
+| Iowa St. | MW | 63.4 | 25.5 | 11.2 | 5.4 |
+| UConn | E | 47.9 | 16.5 | 7.5 | 2.7 |
+| Michigan St. | E | 47.0 | 15.3 | 6.7 | 2.2 |
+| Iowa | S | 100.0 | 27.3 | 6.9 | 1.6 |
+| St. John's | E | 25.9 | 12.1 | 5.0 | 1.5 |
+| Tennessee | MW | 35.5 | 9.8 | 2.9 | 1.0 |
+| Alabama | MW | 13.0 | 5.0 | 1.5 | 0.5 |
 
-*E8% = prob of reaching E8 (= S16 win prob). F4% = reaching F4. F2% = reaching Championship game. Champ% = winning it all.*
+*E8% = prob of reaching E8 (100% for teams already in E8). F4% = reaching F4. F2% = reaching Championship game. Champ% = winning it all.*
 
 ---
 
 ## THE OPTIMAL COMPLETE PATH
 
-Brute-force searched all valid 6-team assignments across Days 5-10, maximizing the product of win probabilities. Each team that isn't our S16 pick must independently advance to the round where we pick them.
+Brute-force searched all valid 5-team assignments across Days 6-10, maximizing the product of win probabilities. Each team that isn't our pick must independently advance to the round where we pick them.
 
 ### How the math works
 
 | Day | Round | What our pick needs | Probability used |
 |---|---|---|---|
-| 5, 6 | S16 | Just win the S16 game (our pick) | Team's **E8%** |
-| 7, 8 | E8 | Win S16 independently + win E8 (our pick) | Team's **F4%** |
-| 9 | F4 | Win S16 + E8 independently + win F4 semi (our pick) | Team's **F2%** |
-| 10 | Championship | Win S16 + E8 + F4 independently + win final (our pick) | Team's **Champ%** |
+| 6 | S16 | Just win the S16 game (our pick) | Team's **E8%** |
+| 7 | E8 | Already in E8 + win E8 (our pick) | Team's **F4%** |
+| 8 | E8 | Win S16 independently + win E8 (our pick) | Team's **F4%** |
+| 9 | F4 | Reach F4 independently + win F4 semi (our pick) | Team's **F2%** |
+| 10 | Championship | Reach Final independently + win final (our pick) | Team's **Champ%** |
 
 ### The Path
 
 | Day | Date | Pick | Round | Opponent | Prob | Why |
 |---|---|---|---|---|---|---|
-| **5** | **Thu Mar 26** | **Purdue** | S16 | Texas (11W) | **73.4%** | Strongest S+W pick while preserving Arizona for Championship |
-| **6** | **Fri Mar 27** | **Michigan St.** | S16 | UConn (2E) | **48.0%** | Toss-up game, but frees Michigan for E8 AND Duke for F4 |
-| **7** | **Sat Mar 29** | **Houston** | E8 | South E8 | **40.6%** | Houston must win S16 vs Illinois (55%) then win E8 (~74%) |
-| **8** | **Sun Mar 30** | **Michigan** | E8 | Midwest E8 | **59.7%** | Michigan must win S16 vs Alabama (84%) then win E8 (~71%) |
-| **9** | **Sat Apr 5** | **Duke** | F4 Semi 1 | E vs S | **36.6%** | Duke must reach F4 (54%) then win semifinal (~68%) |
-| **10** | **Mon Apr 7** | **Arizona** | Championship | Final | **17.5%** | Arizona must reach Final (30%) then win title (~58%) |
+| ~~5~~ | ~~Thu Mar 26~~ | ~~Purdue~~ | ~~S16~~ | ~~Texas (11W)~~ | ~~73.4%~~ | ~~Won 79-77~~ |
+| **6** | **Fri Mar 27** | **Michigan St.** | S16 | UConn (2E) | **47.0%** | Toss-up, but frees Michigan for E8 AND Duke for F4 |
+| **7** | **Sat Mar 29** | **Illinois** | E8 | Iowa (9S) | **77.0%** | Already in E8, heavy favorite vs 9-seed Iowa |
+| **8** | **Sun Mar 30** | **Michigan** | E8 | Midwest E8 | **57.6%** | Michigan must win S16 today (81%) then win E8 (~71%) |
+| **9** | **Sat Apr 5** | **Duke** | F4 Semi 1 | E vs S | **37.2%** | Duke must reach F4 (54%) then win semifinal (~69%) |
+| **10** | **Mon Apr 7** | **Arizona** | Championship | Final | **22.6%** | Arizona must reach Final (38%) then win title (~59%) |
 
 ### Joint Survival Probability
 
 ```
-  Day 5:  73.4%  (Purdue S16)
-× Day 6:  48.0%  (MSU S16)
-× Day 7:  40.6%  (Houston reaches E8 + wins)
-× Day 8:  59.7%  (Michigan reaches E8 + wins)
-× Day 9:  36.6%  (Duke reaches F4 + wins semi)
-× Day 10: 17.5%  (Arizona reaches Final + wins title)
+  Day 6:  47.0%  (MSU S16)
+× Day 7:  77.0%  (Illinois E8 — already in E8, wins vs Iowa)
+× Day 8:  57.6%  (Michigan reaches E8 + wins)
+× Day 9:  37.2%  (Duke reaches F4 + wins semi)
+× Day 10: 22.6%  (Arizona reaches Final + wins title)
 ─────────────────────────────────
-= 0.55% from today
-= 0.33% overall (with 60.2% prior)
+= 1.76% from today
+= 0.78% overall (with 44.2% prior)
 ```
 
-**~1 in 180 from today. ~1 in 300 overall.**
+**~1 in 57 from today. ~1 in 129 overall.**
 
 ---
 
 ## Why This Path Is Optimal
 
-### The key insight: MSU on Day 6
+### Houston's loss HELPS us
 
-The counterintuitive move is picking **MSU (48%)** on Day 6 instead of Michigan (84%). This loses 36 points on Day 6, but:
+Illinois replacing Houston on Day 7 is a massive upgrade:
+- **Illinois F4%: 77.0%** vs Houston's old F4%: 40.6%
+- Illinois just proved they can beat Houston head-to-head (65-55)
+- The path went from 0.55% to 1.76% — a **3.2x improvement**
 
-- **Frees Michigan for Day 8 E8** (59.7%) instead of needing MSU/Tennessee (15.5%/10.7%)
-- **Frees Duke for Day 9 F4** (36.6%) instead of needing Illinois/MSU (15.1%/6.6%)
-- **Preserves Arizona for Day 10 Championship** (17.5%) instead of Purdue (5.3%)
+### The key insight: MSU on Day 6 (still holds)
 
-The downstream gains (Michigan 59.7% × Duke 36.6% × Arizona 17.5%) massively outperform the alternative (MSU 15.5% × Illinois 15.1% × Purdue 5.3%).
+Picking **MSU (47%)** on Day 6 instead of Michigan (81%) loses ~34 points on Day 6, but:
+
+- **Frees Michigan for Day 8 E8** (57.6%) instead of needing MSU/Tennessee (15.3%/9.8%)
+- **Frees Duke for Day 9 F4** (37.2%) instead of needing Illinois/MSU (36.5%/6.7%)
+- **Preserves Arizona for Day 10 Championship** (22.6%) instead of Michigan (20.6%)
+
+The downstream gains (Michigan 57.6% × Duke 37.2% × Arizona 22.6%) massively outperform the alternative.
 
 ### Top 5 paths compared
 
-| Rank | Path | Product |
+| Rank | Path (D6→D7→D8→D9→D10) | Product |
 |---|---|---|
-| **1** | **Purdue → MSU → Houston → Michigan → Duke → Arizona** | **0.546%** |
-| **1t** | **Purdue → MSU → Houston → Michigan → Arizona → Duke** | **0.546%** |
-| 3 | Purdue → MSU → Arizona → Duke → Houston → Michigan | 0.478% |
-| 4 | Purdue → Tennessee → Houston → Michigan → Duke → Arizona | 0.445% |
-| 5 | Purdue → MSU → Illinois → Michigan → Duke → Arizona | 0.432% |
+| **1** | **MSU → Illinois → Michigan → Duke → Arizona** | **1.755%** |
+| 2 | MSU → Illinois → Michigan → Arizona → Duke | 1.689% |
+| 3 | Tennessee → Illinois → Michigan → Duke → Arizona | 1.324% |
+| 4 | MSU → Arizona → Duke → Illinois → Michigan | 1.305% |
+| 5 | Tennessee → Illinois → Michigan → Arizona → Duke | 1.274% |
 
-The #1 and #1t paths are essentially identical (Duke D9 / Arizona D10 vs Arizona D9 / Duke D10). We pick **Duke D9 + Arizona D10** because Duke has the higher Day 9 probability (36.6% vs 30.3%), and surviving Day 9 is prerequisite for Day 10.
+The #1 and #2 paths differ only in Duke/Arizona ordering for Days 9/10. We pick **Duke D9 + Arizona D10** because Duke has the higher Day 9 probability (37.2% vs 38.2%... actually close). The real reason: Duke's F2% (37.2%) × Arizona's Champ% (22.6%) = 8.41%, vs Arizona's F2% (38.2%) × Duke's Champ% (21.2%) = 8.10%.
 
 ---
 
 ## Day-by-Day Detail
 
-### Day 5 — TODAY Thu Mar 26: PURDUE vs Texas
+### Day 5 — Thu Mar 26: PURDUE vs Texas — WON 79-77
 
-**Consensus: 73.4%** | FanMatch: 75% (82-74)
+Purdue survived a scare against 11-seed Texas. Tramon Mark led with 29 points. FanMatch had it at 75% pre-game. Close game but our pick held.
 
-Purdue (2W) vs Texas (11W). Purdue dominated through R64/R32 (104-71 over Queens, 79-69 over Miami FL). Texas is an 11-seed that upset Gonzaga and BYU but faces a significant step up.
+### Day 6 — TODAY Fri Mar 27: MICHIGAN ST. vs UConn
 
-Purdue injury: C.J. Cox GTD (knee) — rotation guard, minor impact.
-Texas injury: Pope GTD, Traore OUT — role players.
+**Consensus: 47.0%** | FanMatch: 51% (70-69)
 
-**Why not Arizona (78%)?** Arizona's Champ% (17.5%) is irreplaceable on Day 10. No other Semi 2 team comes close — Purdue is 5.3%, Tennessee 1.2%. Using Arizona today wastes 12.2% of Championship equity for a 4.1% S16 improvement.
+MSU (3E) vs UConn (2E). True toss-up. MSU beat Louisville 77-69 in R32, UConn beat UCLA 73-57. UConn is the higher seed but has been faded all tournament (0.92 sentiment). MSU's Coen Carr (21p/10r/2b) has been excellent.
 
-### Day 6 — Fri Mar 27: MICHIGAN ST. vs UConn
+MSU injury: Glenn OUT (knee, season), Ugochukwu OUT (foot, season) — both out for season, team has adjusted.
+UConn injury: None significant.
 
-**Consensus: 48.0%** | FanMatch: 51% (70-69)
+**This is the riskiest single-day pick.** But picking Michigan (81%) here and losing Michigan for Day 8 costs far more in expected value. The brute-force search confirms every alternative to MSU on Day 6 produces a worse overall product.
 
-MSU (3E) vs UConn (2E). True toss-up. MSU beat Louisville 77-69, UConn beat UCLA 73-57. UConn is the higher seed but has been faded all tournament (0.90 sentiment adjustment). MSU's Coen Carr (21p/10r/2b) has been excellent.
+### Day 7 — Sat Mar 29: ILLINOIS vs Iowa (E8 South)
 
-**This is the riskiest pick in the path.** But picking Michigan (84%) here and losing Duke/Michigan for later rounds costs far more in expected value. The brute-force search proves every alternative to MSU Day 6 produces a worse overall product.
+**Illinois already in E8. Wins E8 = F4%: 77.0%**
 
-### Day 7 — Sat Mar 29: HOUSTON (E8 South)
+Illinois (3S) just upset Houston 65-55 in a dominant defensive performance. Now faces Iowa (9S) who upset Florida and Nebraska. Illinois is heavily favored — 3 of 4 sources give them 70%+ to win this E8 game.
 
-**Requires: Houston wins S16 today (55.1%) + wins E8 Saturday (~74%)**
-**Joint: 40.6%**
+Illinois injury: Rodgers OUT (knee) — rotation wing, but team proved depth vs Houston.
 
-Houston (2S) must beat Illinois in today's S16 game, then beat Nebraska/Iowa in the South E8. Houston has been dominant (78-47 R64, 88-57 R32). If Houston reaches E8, they're a strong favorite against the weaker South lower bracket.
+This is a massive upgrade from the old path (Houston 40.6%).
 
 ### Day 8 — Sun Mar 30: MICHIGAN (E8 Midwest)
 
-**Requires: Michigan wins S16 Friday (84.2%) + wins E8 Sunday (~71%)**
-**Joint: 59.7%**
+**Requires: Michigan wins S16 today (81.3%) + wins E8 Sunday (~71%)**
+**Joint: 57.6%**
 
-Michigan (1MW) must beat Alabama Friday (heavily favored at 84%), then beat Iowa St./Tennessee in the Midwest E8. Michigan has been the most dominant team in the tournament (101-80, 95-72). Even without us picking them Friday, Michigan is overwhelmingly likely to advance.
+Michigan (1MW) must beat Alabama today (heavily favored at 81%, FanMatch 76%), then beat Iowa St./Tennessee in the Midwest E8. Michigan has been the most dominant team in the tournament (101-80 R64, 95-72 R32).
+
+Michigan injury: Grady OUT (lower leg), L.J. Cason OUT (knee, season) — rotation depth hit but core intact.
 
 ### Day 9 — Sat Apr 5: DUKE (F4 Semi 1: East vs South)
 
-**Requires: Duke wins S16 (74.5%) + wins E8 (~73%) + wins F4 semi (~68%)**
-**Joint: 36.6%**
+**Requires: Duke wins S16 (74.5%) + wins E8 (~73%) + wins F4 semi (~69%)**
+**Joint: 37.2%**
 
-Duke must independently advance through the East bracket to reach the Final Four, then beat the South representative (likely Houston, our Day 7 pick — if Houston lost E8, it would be Nebraska/Iowa). Duke has the highest conditional F4 win rate (67.6%) of any team and is the consensus co-favorite for the title.
+Duke must independently advance through the East bracket to reach the Final Four, then beat the South representative (likely Illinois, our Day 7 pick). Duke has been dominant (71-65 R64, 81-58 R32) and is the consensus co-favorite.
 
-Duke injury update: Caleb Foster upgraded from OUT to GTD (foot) — positive sign. If Foster returns, Duke's F4 probability increases.
+Duke injury: Foster GTD (foot, upgraded from OUT), Ngongba GTD (undisclosed).
 
 ### Day 10 — Mon Apr 7: ARIZONA (Championship)
 
-**Requires: Arizona wins S16 (77.5%) + wins E8 (~70%) + wins F4 semi (~56%) + wins final (~58%)**
-**Joint: 17.5%**
+**Requires: Arizona wins E8 (68.2%) + wins F4 semi (~56%) + wins final (~59%)**
+**Joint: 22.6%**
 
-Arizona must independently advance through the entire West bracket and Semi 2 (vs Michigan most likely), then beat the Semi 1 winner (Duke most likely, our Day 9 pick) in the Championship.
+Arizona must independently advance through the West bracket (beat Purdue in E8), win Semi 2 (vs Michigan most likely, our Day 8 pick), then beat the Semi 1 winner (Duke most likely, our Day 9 pick) in the Championship.
 
-Arizona is the #1 overall seed and consensus title contender. Their 17.5% Championship probability is the highest available for any Semi 2 team — the next best is Michigan at 22.6%, but Michigan is needed on Day 8.
+Arizona is the #1 overall seed. Their 22.6% Championship probability is the highest available for Day 10 from Semi 2 teams. Michigan (20.6%) is close but needed on Day 8.
 
 ---
 
@@ -226,12 +230,12 @@ Arizona is the #1 overall seed and consensus title contender. Their 17.5% Champi
 | 2 | UConn | 96.0% | 92.2% | Won |
 | 3 | Arkansas | 87.0% | 80.2% | Won |
 | 4 | Iowa St. | 75.0% | 60.2% | Won |
-| **5** | **Purdue** | **73.4%** | **44.2%** | **TODAY** |
-| 6 | Michigan St. | 48.0% | 21.2% | Fri Mar 27 |
-| 7 | Houston | 40.6% | 8.6% | Sat Mar 29 |
-| 8 | Michigan | 59.7% | 5.1% | Sun Mar 30 |
-| 9 | Duke | 36.6% | 1.9% | Sat Apr 5 |
-| 10 | Arizona | 17.5% | **0.33%** | Mon Apr 7 |
+| 5 | Purdue | 73.4% | 44.2% | Won |
+| **6** | **Michigan St.** | **47.0%** | **20.8%** | **TODAY** |
+| 7 | Illinois | 77.0% | 16.0% | Sat Mar 29 |
+| 8 | Michigan | 57.6% | 9.2% | Sun Mar 30 |
+| 9 | Duke | 37.2% | 3.4% | Sat Apr 5 |
+| 10 | Arizona | 22.6% | **0.78%** | Mon Apr 7 |
 
 ---
 
@@ -239,30 +243,28 @@ Arizona is the #1 overall seed and consensus title contender. Their 17.5% Champi
 
 | Event | Probability | Impact |
 |---|---|---|
-| Purdue loses to Texas today | 27% | Eliminated Day 5 |
-| MSU loses to UConn Friday | 52% | Eliminated Day 6 |
-| Houston doesn't reach E8 (loses to Illinois) | 45% | Eliminated Day 7 |
-| Michigan doesn't reach E8 (loses to Alabama) | 16% | Eliminated Day 8 |
+| MSU loses to UConn today | 53% | Eliminated Day 6 |
+| Illinois loses to Iowa Saturday | 23% | Eliminated Day 7 |
+| Michigan doesn't reach E8 | 19% | Eliminated Day 8 |
 | Duke doesn't reach F4 | 46% | Eliminated Day 9 |
-| Arizona doesn't win Championship | 82% | Eliminated Day 10 |
+| Arizona doesn't win Championship | 77% | Eliminated Day 10 |
 
-**The most likely failure point is Day 6 (MSU, 52% to fail).** This is the cost of the optimal path — the Day 6 coin flip is what makes Days 8-10 possible.
+**The most likely failure point is Day 6 (MSU, 53% to fail).** If MSU wins today, the remaining path is strong — Days 7-8 are both above 50%.
 
 ---
 
-## Data Sources (Updated 2026-03-26)
+## Data Sources (Updated 2026-03-27)
 
-- **Torvik (T-Rank):** `data/torvik_proj.csv` (16 S16 teams)
-- **KenPom:** `data/kenpom_proj.csv` (16 teams, E8/F4/Final/Champ)
-- **Evan Miya:** `data/miya_proj.csv` (16 teams)
-- **CBB Analytics:** `data/cbb_proj.csv` (16 teams, CBS projections)
+- **Torvik (T-Rank):** `data/torvik_proj.csv` (12 remaining teams, post-S16 S/W update)
+- **KenPom:** `data/kenpom_proj.csv` (pre-S16, reconditioned for S/W teams already in E8)
+- **Evan Miya:** `data/miya_proj.csv` (12 teams, updated post-S16)
+- **CBB Analytics:** `data/cbb_proj.csv` (12 teams, updated post-S16)
 - **FanMatch:** `schedule.txt` (game-day win probabilities)
 - **Injuries:** `data/college-basketball-injury-report.csv`
-  - Duke: Foster GTD (foot, upgraded from OUT)
-  - Michigan: Grady GTD (lower leg)
-  - Purdue: Cox GTD (knee)
-  - Alabama: Holloway OUT + Bristow/Hannah/Onyejiaka GTD
+  - Duke: Foster GTD (foot), Ngongba GTD (undisclosed)
+  - Michigan: Grady OUT (lower leg), L.J. Cason OUT (knee, season)
+  - Michigan St.: Glenn OUT (knee, season), Ugochukwu OUT (foot, season)
+  - Alabama: Holloway GTD (susp) + Bristow/Hannah/Onyejiaka/Bediako OUT
   - Illinois: Rodgers OUT (knee)
-  - Nebraska: Burt OUT (knee)
-  - Arkansas: Knox OUT (knee)
-  - Texas: Pope GTD, Traore OUT
+  - Tennessee: Phillips OUT (shoulder, season)
+  - Iowa: McCollum OUT (foot, season)
