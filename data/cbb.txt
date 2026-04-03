@@ -1,38 +1,14 @@
 Team	First Round	Second Round	Sweet 16	Elite 8	Final Four	Championship	WIN
 % to Reach	% to Reach	% to Reach	% to Reach	% to Reach	% to Reach
-Blue Devils
-Duke Blue Devils
-78%	59%	41%	25%
-Wildcats
-Arizona Wildcats
-65%	35%	19%
 Wolverines
 Michigan Wolverines
-77%	50%	29%	17%
+54%	35%
+Wildcats
+Arizona Wildcats
+46%	28%
 Fighting Illini
 Illinois Fighting Illini
-72%	34%	16%
-Cyclones
-Iowa St. Cyclones
-67%	32%	16%	8%
-Boilermakers
-Purdue Boilermakers
-35%	14%	6%
+61%	25%
 Huskies
 UConn Huskies
-52%	17%	7%	3%
-Spartans
-Michigan St. Spartans
-48%	14%	6%	2%
-Hawkeyes
-Iowa Hawkeyes
-28%	7%	2%
-Red Storm
-St. John's (NY) Red Storm
-22%	10%	4%	1%
-Volunteers
-Tennessee Volunteers
-33%	10%	3%	1%
-Crimson Tide
-Alabama Crimson Tide
-23%	8%	2%	<1%
+39%	12%

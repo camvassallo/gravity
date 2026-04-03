@@ -1,13 +1,5 @@
 Seed	Region	Team	Conf	R64	R32	S16	E8	F4	F2	Champ
-1	West	Arizona	B12	✓	✓	✓	✓	64.3	37.8	22.8
-3	South	Illinois	B10	✓	✓	✓	✓	74.8	40	19.3
-1	East	Duke	ACC	✓	✓	✓	70	48.7	30.3	16.4
-1	Midwest	Michigan	B10	✓	✓	✓	73.8	48.5	26.7	16
-2	West	Purdue	B10	✓	✓	✓	✓	35.7	16	7.4
-2	Midwest	Iowa St.	B12	✓	✓	✓	61.9	27.9	12	5.9
-2	East	Connecticut	BE	✓	✓	✓	51.2	19.1	8.6	3
-3	East	Michigan St.	B10	✓	✓	✓	48.8	17.5	7.4	2.5
-5	East	St. John's	BE	✓	✓	✓	30	14.8	6.3	2.1
-9	South	Iowa	B10	✓	✓	✓	✓	25.2	7.4	1.8
-6	Midwest	Tennessee	SEC	✓	✓	✓	38.1	12.9	4.1	1.6
-4	Midwest	Alabama	SEC	✓	✓	✓	26.2	10.7	3.4	1.2
+1	Midwest	Michigan	B10	✓	✓	✓	✓	✓	51.6	33.2
+1	West	Arizona	B12	✓	✓	✓	✓	✓	48.4	30.6
+3	South	Illinois	B10	✓	✓	✓	✓	✓	61.3	24.5
+2	East	Connecticut	BE	✓	✓	✓	✓	✓	38.7	11.7
